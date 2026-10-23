@@ -19,16 +19,46 @@ void main() {
     expect(index.estimatePage(99, 1), 1);
   });
 
-  test('khatma only moves forward and persists', () async {
+  test('khatma counts distinct pages read, never shrinks, and persists', () async {
     SharedPreferences.setMockInitialValues({});
     final prefs = await SharedPreferences.getInstance();
     final c = ProviderContainer(overrides: [sharedPreferencesProvider.overrideWithValue(prefs)]);
     addTearDown(c.dispose);
     final ctrl = c.read(readingProgressProvider.notifier);
-    ctrl.markRead(2, 100, page: 30);
-    ctrl.markRead(1, 3, page: 1);
-    expect(c.read(readingProgressProvider).pagesRead, 30);
-    expect(c.read(readingProgressProvider).surah, 1);
-    expect(prefs.getInt('quran.pagesRead'), 30);
+    ctrl.markRead(2, 100, pages: [30, 31, 32]);
+    ctrl.markRead(1, 3, pages: [1, 31]); // page 31 again: still counted once
+    final p = c.read(readingProgressProvider);
+    expect(p.pagesRead, 4);
+    expect(p.surah, 1);
+    expect(p.khatma, closeTo(4 / 604, 1e-9));
+    expect(prefs.getString('quran.readPages'), '1,30,31,32');
+
+    // Jumping to the last surah no longer fakes a finished khatma.
+    ctrl.markRead(114, 1, pages: [604]);
+    expect(c.read(readingProgressProvider).pagesRead, 5);
+
+    final again = ProviderContainer(overrides: [sharedPreferencesProvider.overrideWithValue(prefs)]);
+    addTearDown(again.dispose);
+    expect(again.read(readingProgressProvider).readPages, {1, 30, 31, 32, 604});
+  });
+
+  test('starting a new khatma clears pages but keeps the bookmark', () async {
+    SharedPreferences.setMockInitialValues({});
+    final prefs = await SharedPreferences.getInstance();
+    final c = ProviderContainer(overrides: [sharedPreferencesProvider.overrideWithValue(prefs)]);
+    addTearDown(c.dispose);
+    final ctrl = c.read(readingProgressProvider.notifier);
+    ctrl.markRead(18, 10, pages: [293, 294]);
+    ctrl.resetKhatma();
+    final p = c.read(readingProgressProvider);
+    expect((p.surah, p.ayah, p.pagesRead), (18, 10, 0));
+  });
+
+  test('corrupt saved pages are ignored', () async {
+    SharedPreferences.setMockInitialValues({'quran.readPages': '5,x,9999,-3,7'});
+    final prefs = await SharedPreferences.getInstance();
+    final c = ProviderContainer(overrides: [sharedPreferencesProvider.overrideWithValue(prefs)]);
+    addTearDown(c.dispose);
+    expect(c.read(readingProgressProvider).readPages, {5, 7});
   });
 }

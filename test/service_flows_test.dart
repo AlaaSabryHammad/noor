@@ -10,6 +10,7 @@ import 'package:noor/features/library/favorites.dart';
 import 'package:noor/features/prayer/alert_sync.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
+import 'package:noor/features/quran/quran_data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _NoopScheduler implements NotificationScheduler {
@@ -19,8 +20,8 @@ class _NoopScheduler implements NotificationScheduler {
   Future<void> replaceAll(List<PlannedAlert> alerts) async {}
 }
 
-Future<ProviderContainer> _open(WidgetTester tester, String route) async {
-  SharedPreferences.setMockInitialValues({});
+Future<ProviderContainer> _open(WidgetTester tester, String route, {bool keepPrefs = false}) async {
+  if (!keepPrefs) SharedPreferences.setMockInitialValues({});
   final prefs = await SharedPreferences.getInstance();
   tester.view.physicalSize = const Size(390 * 3, 844 * 3);
   tester.view.devicePixelRatio = 3;
@@ -85,6 +86,49 @@ void main() {
     await tester.pump();
     expect(find.byIcon(Icons.check_circle_rounded), findsOneWidget);
     await tester.pump(const Duration(seconds: 2)); // let the auto-advance timer finish
+  });
+
+  testWidgets('reader opens at the requested ayah deep inside a long surah', (tester) async {
+    await _open(tester, '/quran/reader/2?ayah=255');
+    // Ayat al-Kursi is ayah 255 of 286; the lazy list must have jumped there.
+    Finder rich(String word) => find.byWidgetPredicate((w) => w is RichText && normalizeArabic(w.text.toPlainText()).contains(word));
+    expect(rich('القيوم'), findsWidgets);
+    expect(rich('ذلك الكتاب لا ريب'), findsNothing); // ayah 2 (first paragraph) is far above
+  });
+
+  testWidgets('reader resumes the saved bookmark and records pages read', (tester) async {
+    SharedPreferences.setMockInitialValues({'quran.lastSurah': 18, 'quran.lastAyah': 60});
+    final c = await _open(tester, '/quran/reader/18', keepPrefs: true);
+    await tester.pump(const Duration(seconds: 1)); // bookmark debounce
+    final p = c.read(readingProgressProvider);
+    expect(p.surah, 18);
+    expect(p.ayah, greaterThanOrEqualTo(55)); // near where we left off, not ayah 1
+    expect(p.pagesRead, greaterThan(0));
+  });
+
+  testWidgets('translation mode shows one card per ayah and can be switched back', (tester) async {
+    await _open(tester, '/quran/reader/1');
+    await tester.tap(find.text('ترجمة المعاني'));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Entirely Merciful'), findsWidgets);
+    await tester.tap(find.text('مصحف'));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Entirely Merciful'), findsNothing);
+  });
+
+  testWidgets('quran search finds ayahs by plain-letter words and jumps by reference', (tester) async {
+    await _open(tester, '/quran');
+    await tester.enterText(find.byType(TextField), 'كرسيه'); // plain letters, no harakat
+    await tester.pump(const Duration(milliseconds: 400));
+    for (var i = 0; i < 6; i++) {
+      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 80)));
+      await tester.pump(const Duration(milliseconds: 100));
+    }
+    expect(find.textContaining('البقرة', findRichText: true), findsWidgets);
+
+    await tester.enterText(find.byType(TextField), '2:255');
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.textContaining('اذهب إلى السورة'), findsOneWidget);
   });
 
   testWidgets('quran duas come straight from the dataset', (tester) async {

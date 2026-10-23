@@ -17,6 +17,12 @@ abstract final class NoorFormat {
     return s.replaceAllMapped(RegExp(r'\d'), (m) => _arDigits[int.parse(m[0]!)]);
   }
 
+  /// Arabic-Indic (and Persian) digits → Latin, for parsing user input.
+  static String latinDigits(String s) => s.replaceAllMapped(RegExp('[٠-٩۰-۹]'), (m) {
+        final c = m[0]!.codeUnitAt(0);
+        return '${c >= 0x06F0 ? c - 0x06F0 : c - 0x0660}';
+      });
+
   /// 12-hour clock: "٤:٢٢ ص" / "4:22 AM".
   static String time(BuildContext c, DateTime t, {bool withPeriod = true}) {
     final h12 = t.hour % 12 == 0 ? 12 : t.hour % 12;

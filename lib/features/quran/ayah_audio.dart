@@ -61,8 +61,48 @@ abstract interface class AyahAudio {
   Future<void> start({required String reciterId, required int surah, required int fromAyah, required int total});
   Future<void> pause();
   Future<void> resume();
+
+  /// Jumps to [ayah] of the playlist started with [start].
+  Future<void> skipTo(int ayah);
+
+  /// 1.0 = normal speed.
+  Future<void> setSpeed(double speed);
+
+  /// Loop the current ayah until turned off.
+  Future<void> setRepeatOne(bool on);
   Future<void> dispose();
 }
+
+/// Playback options shared by the reader and the audio screen, persisted.
+class PlaybackPrefs {
+  const PlaybackPrefs({this.speed = 1, this.repeatOne = false});
+  final double speed;
+  final bool repeatOne;
+}
+
+const playbackSpeeds = [0.75, 1.0, 1.25, 1.5];
+
+class PlaybackPrefsController extends Notifier<PlaybackPrefs> {
+  @override
+  PlaybackPrefs build() {
+    final p = ref.watch(sharedPreferencesProvider);
+    final s = p.getDouble('audio.speed') ?? 1;
+    return PlaybackPrefs(speed: playbackSpeeds.contains(s) ? s : 1, repeatOne: p.getBool('audio.repeatOne') ?? false);
+  }
+
+  void cycleSpeed() {
+    final next = playbackSpeeds[(playbackSpeeds.indexOf(state.speed) + 1) % playbackSpeeds.length];
+    state = PlaybackPrefs(speed: next, repeatOne: state.repeatOne);
+    ref.read(sharedPreferencesProvider).setDouble('audio.speed', next);
+  }
+
+  void toggleRepeat() {
+    state = PlaybackPrefs(speed: state.speed, repeatOne: !state.repeatOne);
+    ref.read(sharedPreferencesProvider).setBool('audio.repeatOne', state.repeatOne);
+  }
+}
+
+final playbackPrefsProvider = NotifierProvider<PlaybackPrefsController, PlaybackPrefs>(PlaybackPrefsController.new);
 
 class JustAudioAyahAudio implements AyahAudio {
   final _player = AudioPlayer();
@@ -103,6 +143,21 @@ class JustAudioAyahAudio implements AyahAudio {
       _errors.add(e);
     }
   }
+
+  @override
+  Future<void> skipTo(int ayah) async {
+    try {
+      await _player.seek(Duration.zero, index: ayah - _from);
+    } catch (e) {
+      _errors.add(e);
+    }
+  }
+
+  @override
+  Future<void> setSpeed(double speed) => _player.setSpeed(speed);
+
+  @override
+  Future<void> setRepeatOne(bool on) => _player.setLoopMode(on ? LoopMode.one : LoopMode.off);
 
   @override
   Future<void> pause() => _player.pause();

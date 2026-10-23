@@ -25,12 +25,15 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
-    final now = ref.watch(nowProvider);
+    // Only the hour and the civil date matter here; the per-second clock is
+    // watched by the hero card alone so the rest of the screen stays still.
+    final hour = ref.watch(nowProvider.select((n) => n.hour));
+    final today = ref.watch(todayProvider);
     final day = ref.watch(prayerDayProvider);
     final loc = ref.watch(prayerLocationProvider);
-    final settings = ref.watch(settingsProvider);
+    final hijriOffset = ref.watch(settingsProvider.select((s) => s.hijriOffset));
     final t = context.noor;
-    final greeting = day.isFriday ? l.greetingFriday : (now.hour < 12 ? l.greetingMorning : l.greetingEvening);
+    final greeting = day.isFriday ? l.greetingFriday : (hour < 12 ? l.greetingMorning : l.greetingEvening);
 
     return SafeArea(
       bottom: false,
@@ -53,7 +56,7 @@ class HomeScreen extends ConsumerWidget {
                   ),
                 ),
                 ScreenTitle(greeting),
-                Text(NoorFormat.fullDateLine(context, now, hijriOffset: settings.hijriOffset), style: Theme.of(context).textTheme.bodySmall),
+                Text(NoorFormat.fullDateLine(context, today, hijriOffset: hijriOffset), style: Theme.of(context).textTheme.bodySmall),
               ]),
             ),
             const SizedBox(width: 12),
@@ -73,7 +76,7 @@ class HomeScreen extends ConsumerWidget {
             ]),
           ]),
           const SizedBox(height: 18),
-          NextPrayerHero(day: day, now: now, method: ref.watch(effectiveMethodProvider)),
+          NextPrayerHero(day: day, method: ref.watch(effectiveMethodProvider)),
           const SizedBox(height: 16),
           if (day.isFriday) ...[_FridayCard(), const SizedBox(height: 16)],
           const _ContinueReadingCard(),
@@ -97,15 +100,15 @@ class HomeScreen extends ConsumerWidget {
 }
 
 /// The signature card: next prayer, live countdown, five-prayer strip.
-class NextPrayerHero extends StatelessWidget {
-  const NextPrayerHero({super.key, required this.day, required this.now, required this.method});
+class NextPrayerHero extends ConsumerWidget {
+  const NextPrayerHero({super.key, required this.day, required this.method});
   final PrayerMethod method;
   final PrayerDay day;
-  final DateTime now;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
+    final now = ref.watch(nowProvider);
     final next = day.next(now);
     final prev = day.previous(now);
     final period = prev.kind == PrayerKind.sunrise ? l.duhaTime : l.timeOf(prayerName(l, prev.kind, friday: day.isFriday));

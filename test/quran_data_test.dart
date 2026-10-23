@@ -32,6 +32,32 @@ void main() {
     }
   });
 
+  group('search', () {
+    test('normalizeArabic folds diacritics, alef/ya/ta-marbuta forms', () {
+      expect(normalizeArabic('ٱلرَّحْمَٰنِ'), 'الرحمن');
+      expect(normalizeArabic('إِنَّ ٱللَّهَ'), 'ان الله');
+      expect(normalizeArabic('الْمَدِينَةِ'), normalizeArabic('المدينه'));
+      expect(normalizeArabic('مُوسَىٰ'), 'موسي');
+    });
+
+    test('a bare-letter query finds the vowelled Uthmani ayah', () async {
+      final hits = await repo.search('الله لا اله الا هو الحي القيوم');
+      expect(hits, isNotEmpty);
+      expect((hits.first.surah, hits.first.ayah), (2, 255)); // Ayat al-Kursi ranks first as a phrase match
+    });
+
+    test('English translation is searchable; short or empty queries return nothing', () async {
+      final hits = await repo.search('hearts are assured');
+      expect(hits.any((h) => h.surah == 13 && h.ayah == 28), isTrue);
+      expect(await repo.search(''), isEmpty);
+      expect(await repo.search('ا'), isEmpty);
+    });
+
+    test('limit is respected', () async {
+      expect((await repo.search('الله', limit: 10)).length, 10);
+    });
+  });
+
   test('page lookup is exact', () async {
     final index = await repo.index();
     expect(index.estimatePage(1, 1), 1);

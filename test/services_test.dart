@@ -110,8 +110,8 @@ void main() {
     });
 
     test('Quranic adhkar match the dataset verbatim', () {
-      final q = _json('quran');
-      final kursi = ((q['text'] as Map)['2'] as List)[254]['ar'];
+      final baqarah = jsonDecode(File('assets/data/quran/002.json').readAsStringSync()) as List;
+      final kursi = (baqarah[254] as Map)['ar'];
       final kursiInAdhkar = ((_json('adhkar')['evening'] as List).first as Map)['ar'];
       expect(kursiInAdhkar, kursi);
     });

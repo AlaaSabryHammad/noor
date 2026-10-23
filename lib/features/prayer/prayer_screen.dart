@@ -24,12 +24,10 @@ class PrayerScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
-    final now = ref.watch(nowProvider);
     final day = ref.watch(prayerDayProvider);
     final loc = ref.watch(prayerLocationProvider);
     final alerts = ref.watch(prayerAlertsProvider);
     final t = context.noor;
-    final next = day.next(now);
 
     return SafeArea(
       bottom: false,
@@ -52,6 +50,11 @@ class PrayerScreen extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 16),
+          // Only this block follows the per-second clock.
+          Consumer(builder: (context, ref, _) {
+            final now = ref.watch(nowProvider);
+            final next = day.next(now);
+            return Column(children: [
           HeroSurface(
             padding: const EdgeInsets.fromLTRB(10, 18, 10, 16),
             child: Column(children: [
@@ -107,6 +110,8 @@ class PrayerScreen extends ConsumerWidget {
                 ),
             ]),
           ),
+            ]);
+          }),
           const SizedBox(height: 12),
           Row(spacing: 10, crossAxisAlignment: CrossAxisAlignment.start, children: [
             Expanded(

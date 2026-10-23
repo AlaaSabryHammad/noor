@@ -41,7 +41,11 @@ GoRouter buildRouter() => GoRouter(
         ),
         GoRoute(
           path: '/quran/reader/:surah',
-          builder: (_, s) => ReaderScreen(surah: int.tryParse(s.pathParameters['surah'] ?? '') ?? 1, autoplay: s.uri.queryParameters['play'] == '1'),
+          builder: (_, s) => ReaderScreen(
+            surah: (int.tryParse(s.pathParameters['surah'] ?? '') ?? 1).clamp(1, 114),
+            ayah: int.tryParse(s.uri.queryParameters['ayah'] ?? ''),
+            autoplay: s.uri.queryParameters['play'] == '1',
+          ),
         ),
         GoRoute(path: '/adhkar/session/:category', builder: (_, s) => DhikrSessionScreen(category: s.pathParameters['category'] ?? 'morning')),
         GoRoute(path: '/qibla', builder: (_, _) => const QiblaScreen()),
