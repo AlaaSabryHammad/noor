@@ -60,4 +60,4 @@ Rebuild the data with the scripts in `tool/` (see `tool/README.md`).
 
 ## Firebase (accounts)
 
-See [docs/FIREBASE.md](docs/FIREBASE.md). Until a Firebase project is linked, `lib/firebase_options.dart` is a placeholder and the app runs without accounts.
+Linked to the Firebase project `noor-app-alaa-4829` (Email/Password, Google and Anonymous sign-in enabled). Setup, how to re-create it for a fork, and the pre-release checklist are in [docs/FIREBASE.md](docs/FIREBASE.md). If Firebase cannot start the app simply runs without accounts.

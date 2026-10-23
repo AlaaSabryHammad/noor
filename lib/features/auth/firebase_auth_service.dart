@@ -5,10 +5,11 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import 'auth_service.dart';
 
-/// OAuth *web* client id of the Firebase project (needed by Google Sign-In on
-/// Android to obtain an ID token). Pass it at build time:
+/// OAuth *web* client id of the Firebase project "noor-app-alaa-4829" (Google
+/// Sign-In needs it on Android to obtain an ID token). It is a public
+/// identifier, not a secret. Point a fork at its own project with:
 ///   flutter run --dart-define=GOOGLE_SERVER_CLIENT_ID=xxxx.apps.googleusercontent.com
-const googleServerClientId = String.fromEnvironment('GOOGLE_SERVER_CLIENT_ID');
+const googleServerClientId = String.fromEnvironment('GOOGLE_SERVER_CLIENT_ID', defaultValue: '849515368017-r16cjtsm34a5568u75iki9stf21ujf8f.apps.googleusercontent.com');
 
 AppUser? _map(fb.User? u) => u == null ? null : AppUser(uid: u.uid, displayName: u.displayName, email: u.email, photoUrl: u.photoURL, isAnonymous: u.isAnonymous);
 

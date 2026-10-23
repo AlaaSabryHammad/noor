@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>GIDClientID</key>
+	<string>849515368017-rlkjdt5i12i032viga2gs5g3kovtj7kg.apps.googleusercontent.com</string>
+	<key>GIDServerClientID</key>
+	<string>849515368017-r16cjtsm34a5568u75iki9stf21ujf8f.apps.googleusercontent.com</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.849515368017-rlkjdt5i12i032viga2gs5g3kovtj7kg</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>NOOR uses your location only to calculate prayer times and the Qibla direction on your device.</string>
 	<key>CFBundleLocalizations</key>

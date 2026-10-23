@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "849515368017",
+    "project_id": "noor-app-alaa-4829",
+    "storage_bucket": "noor-app-alaa-4829.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849515368017:android:f641355b92e8c2cd00f270",
+        "android_client_info": {
+          "package_name": "app.noor.noor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849515368017-c2go7j2ejpklj88gcsfm2eqnl0egh08q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.noor.noor",
+            "certificate_hash": "e916dfde5c75a8aaa30a1ae4b09277d89c5b250d"
+          }
+        },
+        {
+          "client_id": "849515368017-r16cjtsm34a5568u75iki9stf21ujf8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDPVzs2I_bknmnv6HV_s87TLXsVxEDiqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849515368017-r16cjtsm34a5568u75iki9stf21ujf8f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "849515368017-rlkjdt5i12i032viga2gs5g3kovtj7kg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.noor.noor"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
