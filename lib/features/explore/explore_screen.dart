@@ -40,8 +40,9 @@ class _ExploreScreenState extends State<ExploreScreen> {
         _Service(Icons.timeline_rounded, l.svcSeerah, '/seerah', gold: true),
         _Service(Icons.school_outlined, l.svcAcademy, '/academy'),
         _Service(Icons.auto_stories_outlined, l.svcStories, '/stories', gold: true),
-        _Service(Icons.local_library_outlined, l.svcLibrary, '/library'),
-        _Service(Icons.forum_outlined, l.svcAsk, '/ask', gold: true),
+        _Service(Icons.library_books_outlined, l.svcBooks, '/books'),
+        _Service(Icons.bookmarks_outlined, l.svcLibrary, '/library', gold: true),
+        _Service(Icons.forum_outlined, l.svcAsk, '/ask'),
       ]),
       (l.groupSeasons, [
         _Service(Icons.calendar_month_outlined, l.svcCalendar, '/calendar'),
@@ -64,7 +65,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
           const SizedBox(height: 14),
           NoorSearchField(hint: l.searchAll, onChanged: (v) => setState(() => _q = v.trim())),
           for (final (title, items) in groups)
-            if (items.any((s) => s.label.contains(_q))) ...[
+            if (items.any((s) => s.label.toLowerCase().contains(_q.toLowerCase()))) ...[
               const SizedBox(height: 20),
               SectionTitle(title),
               const SizedBox(height: 10),
@@ -77,7 +78,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 crossAxisSpacing: 10,
                 childAspectRatio: .9,
                 children: [
-                  for (final s in items.where((s) => s.label.contains(_q)))
+                  for (final s in items.where((s) => s.label.toLowerCase().contains(_q.toLowerCase())))
                     NoorCard(
                       radius: 20,
                       padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),

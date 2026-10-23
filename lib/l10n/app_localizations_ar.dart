@@ -273,9 +273,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get deviceHeading => 'اتجاه الجهاز';
 
   @override
-  String get simulateHeading => 'محاكاة الاتجاه (إلى أن يُربط مستشعر البوصلة)';
-
-  @override
   String get calibrationHint =>
       'للمعايرة: حرّك الهاتف على شكل الرقم ٨ بعيدًا عن المعادن.';
 
@@ -394,6 +391,9 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get svcStories => 'قصص الأنبياء';
+
+  @override
+  String get svcBooks => 'الكتب';
 
   @override
   String get svcLibrary => 'المكتبة';

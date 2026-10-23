@@ -9,31 +9,66 @@ import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
+import 'compass.dart';
 import 'prayer_providers.dart';
 
-/// Device heading source. The app ships a simulated source; wire
-/// `flutter_compass` (or sensors_plus + magnetometer fusion) for production
-/// and expose its accuracy so the UI can ask for calibration.
-final headingProvider = NotifierProvider<HeadingController, double>(HeadingController.new);
+/// Within this many degrees of the Qibla counts as "facing" it.
+const qiblaTolerance = 4.0;
 
-class HeadingController extends Notifier<double> {
+class QiblaScreen extends ConsumerStatefulWidget {
+  const QiblaScreen({super.key});
   @override
-  double build() => 212;
-  void set(double v) => state = v % 360;
+  ConsumerState<QiblaScreen> createState() => _QiblaScreenState();
 }
 
-class QiblaScreen extends ConsumerWidget {
-  const QiblaScreen({super.key});
+class _QiblaScreenState extends ConsumerState<QiblaScreen> {
+  double _heading = 0; // smoothed, 0–360
+  double _turns = 0; // unbounded, so the dial never spins backwards across north
+  bool _aligned = false;
+  bool _seeded = false;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  void initState() {
+    super.initState();
+    // Events arrive asynchronously, so feeding from here never runs inside initState.
+    ref.listenManual(compassProvider, (_, next) {
+      next.when(
+        data: (r) => _feed(r.heading),
+        error: (_, _) => _feed(ref.read(manualHeadingProvider), smooth: false), // no sensor: fall back to the slider
+        loading: () {},
+      );
+    });
+    ref.listenManual(manualHeadingProvider, (_, v) {
+      if (ref.read(compassProvider).hasError) _feed(v, smooth: false);
+    });
+  }
+
+  void _feed(double heading, {bool smooth = true}) {
+    final next = !_seeded || !smooth ? heading : smoothAngle(_heading, heading);
+    final bearing = ref.read(prayerDayProvider).qiblaBearing;
+    final nowAligned = angleDelta(next, bearing).abs() <= qiblaTolerance;
+    if (nowAligned && !_aligned) HapticFeedback.mediumImpact();
+    setState(() {
+      _turns += _seeded ? angleDelta(_heading, next) : next;
+      _heading = next;
+      _aligned = nowAligned;
+      _seeded = true;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     final t = context.noor;
     final bearing = ref.watch(prayerDayProvider).qiblaBearing;
-    final heading = ref.watch(headingProvider);
-    final diff = ((bearing - heading + 540) % 360) - 180;
-    final aligned = diff.abs() <= 4;
-    final status = aligned ? l.facingQibla : (diff > 0 ? l.turnRight(NoorFormat.digits(context, diff.abs().round())) : l.turnLeft(NoorFormat.digits(context, diff.abs().round())));
+    final compass = ref.watch(compassProvider);
+    final manual = compass.hasError;
+    final reading = compass.value;
+    final diff = angleDelta(_heading, bearing); // + → turn right
+    final aligned = _seeded && diff.abs() <= qiblaTolerance;
+    final status = !_seeded
+        ? NoorFormat.tr(context, 'جارٍ قراءة البوصلة…', 'Reading the compass…')
+        : (aligned ? l.facingQibla : (diff > 0 ? l.turnRight(NoorFormat.digits(context, diff.abs().round())) : l.turnLeft(NoorFormat.digits(context, diff.abs().round()))));
 
     return Scaffold(
       body: SafeArea(
@@ -63,9 +98,9 @@ class QiblaScreen extends ConsumerWidget {
                   child: DecoratedBox(
                     decoration: BoxDecoration(shape: BoxShape.circle, color: t.surface, border: Border.all(color: t.border), boxShadow: t.cardShadow),
                     child: AnimatedRotation(
-                      turns: -heading / 360,
-                      duration: context.reduceMotion ? Duration.zero : const Duration(milliseconds: 500),
-                      curve: NoorMotion.curve,
+                      turns: -_turns / 360,
+                      duration: context.reduceMotion ? Duration.zero : const Duration(milliseconds: 250),
+                      curve: Curves.easeOut,
                       child: CustomPaint(
                         painter: _RosePainter(t: t, bearing: bearing, labels: NoorFormat.isAr(context) ? const ['ش', 'ق', 'ج', 'غ'] : const ['N', 'E', 'S', 'W']),
                         size: Size.infinite,
@@ -75,7 +110,7 @@ class QiblaScreen extends ConsumerWidget {
                 ),
                 IgnorePointer(
                   child: Column(mainAxisSize: MainAxisSize.min, children: [
-                    Directionality(textDirection: TextDirection.ltr, child: Text('${heading.round()}°', style: NoorText.numerals(size: 34, color: t.text, weight: FontWeight.w700))),
+                    Directionality(textDirection: TextDirection.ltr, child: Text('${_heading.round()}°', style: NoorText.numerals(size: 34, color: t.text, weight: FontWeight.w700))),
                     Text(l.deviceHeading, style: Theme.of(context).textTheme.bodySmall),
                   ]),
                 ),
@@ -86,23 +121,27 @@ class QiblaScreen extends ConsumerWidget {
               padding: const EdgeInsets.all(16),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text('${l.qiblaDirection}: ${l.degFromNorth(NoorFormat.digits(context, bearing.round()))}', style: const TextStyle(fontWeight: FontWeight.w600)),
-                const SizedBox(height: 10),
-                Text(l.simulateHeading, style: Theme.of(context).textTheme.bodySmall),
-                Slider(
-                  value: heading,
-                  max: 359,
-                  label: '${heading.round()}°',
-                  onChanged: (v) {
-                    final wasAligned = aligned;
-                    ref.read(headingProvider.notifier).set(v);
-                    final nd = ((bearing - v + 540) % 360) - 180;
-                    if (!wasAligned && nd.abs() <= 4) HapticFeedback.mediumImpact();
-                  },
-                ),
+                if (manual) ...[
+                  const SizedBox(height: 10),
+                  Text(NoorFormat.tr(context, 'لا يحتوي جهازك على بوصلة. حرّك الشريط لمعاينة الاتجاه.', 'This device has no compass. Drag the slider to preview the direction.'), style: Theme.of(context).textTheme.bodySmall),
+                  Slider(value: ref.watch(manualHeadingProvider).clamp(0, 359), max: 359, label: '${ref.watch(manualHeadingProvider).round()}°', onChanged: ref.read(manualHeadingProvider.notifier).set),
+                ],
               ]),
             ),
             const SizedBox(height: 12),
+            if (reading?.needsCalibration ?? false)
+              Container(
+                margin: const EdgeInsets.only(bottom: 12),
+                padding: const EdgeInsets.all(14),
+                decoration: BoxDecoration(color: t.goldSoft, borderRadius: BorderRadius.circular(16), border: Border.all(color: t.goldLine)),
+                child: Row(spacing: 10, children: [
+                  Icon(Icons.warning_amber_rounded, color: t.goldText),
+                  Expanded(child: Text(NoorFormat.tr(context, 'دقة البوصلة منخفضة. حرّك الجهاز على شكل ٨ لمعايرته.', 'Compass accuracy is low. Move the device in a figure-eight to calibrate it.'), style: TextStyle(color: t.goldText, height: 1.6))),
+                ]),
+              ),
             Text(l.calibrationHint, textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodySmall),
+            const SizedBox(height: 6),
+            Text(NoorFormat.tr(context, 'ابتعد عن المعادن والمغناطيس. قد يختلف الاتجاه بضع درجات بسبب الانحراف المغناطيسي.', 'Keep away from metal and magnets. The direction may be off by a few degrees due to magnetic declination.'), textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodySmall),
           ],
         ),
       ),
@@ -136,10 +175,13 @@ class _RosePainter extends CustomPainter {
     final qa = bearing * math.pi / 180;
     final qDir = Offset(math.sin(qa), -math.cos(qa));
     final kaaba = c + qDir * r * .7;
-    canvas.drawLine(c, kaaba, Paint()
-      ..color = t.gold
-      ..strokeWidth = 2.5
-      ..strokeCap = StrokeCap.round);
+    canvas.drawLine(
+        c,
+        kaaba,
+        Paint()
+          ..color = t.gold
+          ..strokeWidth = 2.5
+          ..strokeCap = StrokeCap.round);
     // Kaaba glyph: black cube with gold band (kiswah).
     canvas.save();
     canvas.translate(kaaba.dx, kaaba.dy);

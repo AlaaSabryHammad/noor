@@ -273,10 +273,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get deviceHeading => 'Device heading';
 
   @override
-  String get simulateHeading =>
-      'Simulated heading (until the compass sensor is wired)';
-
-  @override
   String get calibrationHint =>
       'To calibrate, move your phone in a figure-8 away from metal.';
 
@@ -395,6 +391,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get svcStories => 'Prophets’ stories';
+
+  @override
+  String get svcBooks => 'Books';
 
   @override
   String get svcLibrary => 'Library';

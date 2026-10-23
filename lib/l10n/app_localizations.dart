@@ -572,12 +572,6 @@ abstract class AppLocalizations {
   /// **'اتجاه الجهاز'**
   String get deviceHeading;
 
-  /// No description provided for @simulateHeading.
-  ///
-  /// In ar, this message translates to:
-  /// **'محاكاة الاتجاه (إلى أن يُربط مستشعر البوصلة)'**
-  String get simulateHeading;
-
   /// No description provided for @calibrationHint.
   ///
   /// In ar, this message translates to:
@@ -811,6 +805,12 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'قصص الأنبياء'**
   String get svcStories;
+
+  /// No description provided for @svcBooks.
+  ///
+  /// In ar, this message translates to:
+  /// **'الكتب'**
+  String get svcBooks;
 
   /// No description provided for @svcLibrary.
   ///

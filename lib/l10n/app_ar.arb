@@ -94,7 +94,6 @@
   "turnLeft": "استدر يسارًا {deg}°",
   "@turnLeft": {"placeholders": {"deg": {"type": "String"}}},
   "deviceHeading": "اتجاه الجهاز",
-  "simulateHeading": "محاكاة الاتجاه (إلى أن يُربط مستشعر البوصلة)",
   "calibrationHint": "للمعايرة: حرّك الهاتف على شكل الرقم ٨ بعيدًا عن المعادن.",
 
   "adhkarTitle": "الأذكار",
@@ -137,6 +136,7 @@
   "svcSeerah": "السيرة النبوية",
   "svcAcademy": "الأكاديمية",
   "svcStories": "قصص الأنبياء",
+  "svcBooks": "الكتب",
   "svcLibrary": "المكتبة",
   "svcAsk": "اسأل وتعلّم",
   "svcCalendar": "التقويم الهجري",

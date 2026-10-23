@@ -7,6 +7,7 @@ import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
+import '../books/books_screens.dart';
 import '../services/service_widgets.dart';
 import 'favorites.dart';
 
@@ -18,6 +19,7 @@ class LibraryScreen extends ConsumerStatefulWidget {
 
 class _LibraryScreenState extends ConsumerState<LibraryScreen> {
   String _kind = 'all';
+  String _tab = 'saved';
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +34,17 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
       ('name', NoorFormat.tr(context, 'أسماء', 'Names')),
     ];
     final items = saved.where((e) => _kind == 'all' || e.kind == _kind).toList();
+    final tabs = NoorSegmented<String>(
+      values: const ['saved', 'books'],
+      labels: [NoorFormat.tr(context, 'محفوظاتي', 'Saved'), l.svcBooks],
+      selected: _tab,
+      onChanged: (v) => setState(() => _tab = v),
+    );
+    if (_tab == 'books') return ServiceScaffold(title: l.svcLibrary, children: [tabs, const SizedBox(height: 14), const BooksView()]);
 
     return ServiceScaffold(title: l.svcLibrary, children: [
+      tabs,
+      const SizedBox(height: 14),
       SizedBox(
         height: 40,
         child: ListView(scrollDirection: Axis.horizontal, children: [

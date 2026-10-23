@@ -83,7 +83,6 @@
   "turnRight": "Turn right {deg}°",
   "turnLeft": "Turn left {deg}°",
   "deviceHeading": "Device heading",
-  "simulateHeading": "Simulated heading (until the compass sensor is wired)",
   "calibrationHint": "To calibrate, move your phone in a figure-8 away from metal.",
 
   "adhkarTitle": "Adhkar",
@@ -125,6 +124,7 @@
   "svcSeerah": "Seerah",
   "svcAcademy": "Academy",
   "svcStories": "Prophets’ stories",
+  "svcBooks": "Books",
   "svcLibrary": "Library",
   "svcAsk": "Ask & learn",
   "svcCalendar": "Hijri calendar",

@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 
 import '../features/adhkar/adhkar_screen.dart';
+import '../features/books/books_screens.dart';
 import '../features/explore/explore_screen.dart';
 import '../features/home/home_screen.dart';
 import '../features/library/library_screen.dart';
@@ -61,6 +62,9 @@ GoRouter buildRouter() => GoRouter(
         GoRoute(path: '/academy/:id', builder: (_, s) => CourseScreen(courseId: s.pathParameters['id'] ?? '')),
         GoRoute(path: '/stories', builder: (_, _) => const StoriesScreen()),
         GoRoute(path: '/library', builder: (_, _) => const LibraryScreen()),
+        GoRoute(path: '/books', builder: (_, _) => const BooksScreen()),
+        GoRoute(path: '/books/:id', builder: (_, s) => BookScreen(bookId: s.pathParameters['id'] ?? '')),
+        GoRoute(path: '/books/:id/:section', builder: (_, s) => SectionScreen(bookId: s.pathParameters['id'] ?? '', section: int.tryParse(s.pathParameters['section'] ?? '') ?? 1)),
         GoRoute(path: '/ask', builder: (_, _) => const FaqScreen()),
         GoRoute(path: '/calendar', builder: (_, _) => const CalendarScreen()),
         GoRoute(path: '/ramadan', builder: (_, _) => const RamadanScreen()),
