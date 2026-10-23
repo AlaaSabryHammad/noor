@@ -36,7 +36,7 @@ final compassSourceProvider = Provider<CompassSource>((ref) => const SensorCompa
 final compassProvider = StreamProvider<CompassReading>((ref) {
   final s = ref.watch(compassSourceProvider).readings;
   return s ?? Stream.error(const CompassUnavailable());
-});
+}, retry: (_, _) => null); // a missing sensor is final: surface it instead of retrying in the background
 
 class CompassUnavailable implements Exception {
   const CompassUnavailable();

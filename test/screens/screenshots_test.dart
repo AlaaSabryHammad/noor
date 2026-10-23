@@ -10,9 +10,15 @@ import 'package:go_router/go_router.dart';
 import 'package:noor/app/app.dart';
 import 'package:noor/core/providers.dart';
 import 'package:noor/features/prayer/alert_sync.dart';
+import 'package:noor/features/prayer/compass.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+class _NoCompass implements CompassSource {
+  @override
+  Stream<CompassReading>? get readings => null;
+}
 
 class _NoopScheduler implements NotificationScheduler {
   @override
@@ -74,6 +80,12 @@ void main() {
     ('planner_ar_dark', '/planner', 'ar', 'dark'),
     ('mosques_ar_light', '/mosques', 'ar', 'light'),
     ('audio_ar_light', '/audio', 'ar', 'light'),
+    ('books_ar_light', '/books', 'ar', 'light'),
+    ('book_sections_en_light', '/books/bukhari', 'en', 'light'),
+    ('book_nawawi_ar_light', '/books/nawawi/1', 'ar', 'light'),
+    ('reader_deep_ar_light', '/quran/reader/2?ayah=255', 'ar', 'light'),
+    ('about_ar_light', '/about', 'ar', 'light'),
+    ('account_ar_light', '/account', 'ar', 'light'),
   ];
   for (final (name, route, lang, theme) in cases) {
     testWidgets(name, (tester) async {
@@ -86,6 +98,7 @@ void main() {
         overrides: [
           sharedPreferencesProvider.overrideWithValue(prefs),
           notificationSchedulerProvider.overrideWithValue(_NoopScheduler()),
+          compassSourceProvider.overrideWithValue(_NoCompass()),
           nowProvider.overrideWithValue(DateTime(2026, 10, 23, 10, 42, 18)),
           contentLoaderProvider.overrideWithValue((p) async => File(p).readAsStringSync()),
         ],

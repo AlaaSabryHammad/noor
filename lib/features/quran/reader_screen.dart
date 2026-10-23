@@ -19,7 +19,7 @@ import 'quran_data.dart';
 enum _Mode { mushaf, translation }
 
 /// Ayahs grouped into one lazily built paragraph in mushaf mode.
-const _chunkSize = 6;
+const _chunkSize = 3;
 
 const _basmala = 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ';
 
@@ -50,8 +50,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
 
   final _scroll = ItemScrollController();
   final _positions = ItemPositionsListener.create();
-  Timer? _saveTimer;
+  Timer? _saveTimer, _highlightTimer;
   int _lastAutoItem = -1;
+  int? _highlight; // ayah opened via search / a link: marked for a few seconds
 
   bool get _hasBasmala => widget.surah != 1 && widget.surah != 9; // Tanzil keeps it inside ayah 1 elsewhere
   int get _headerCount => _hasBasmala ? 2 : 1;
@@ -63,11 +64,18 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
     final saved = ref.read(readingProgressProvider);
     _current = _topAyah = widget.ayah ?? (saved.surah == widget.surah ? saved.ayah : 1);
     _positions.itemPositions.addListener(_onPositions);
+    if (widget.ayah != null) {
+      _highlight = widget.ayah;
+      _highlightTimer = Timer(const Duration(seconds: 4), () {
+        if (mounted) setState(() => _highlight = null);
+      });
+    }
   }
 
   @override
   void dispose() {
     _saveTimer?.cancel();
+    _highlightTimer?.cancel();
     _positions.itemPositions.removeListener(_onPositions);
     for (final s in _subs) {
       s.cancel();
@@ -320,7 +328,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
             key: ValueKey('c$n'),
             ayahs: part,
             fs: fs,
-            activeAyah: _playing ? _current : null,
+            activeAyah: _playing ? _current : _highlight,
             first: n == 0,
             last: n == chunks - 1,
             onTap: (a) => _onTapAyah(a, list.length),
@@ -333,7 +341,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
           child: _AyahCard(
             ayah: a,
             fs: fs,
-            active: _playing && a.number == _current,
+            active: (_playing && a.number == _current) || a.number == _highlight,
             saved: _savedItem(a),
             onTafsir: () => _openTafsir(context, a, list.length),
             onCopy: () => _copy(context, a),
@@ -556,6 +564,7 @@ class _PlayerBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     final t = context.noor;
+    final rtl = Directionality.of(context) == TextDirection.rtl; // previous/next arrows follow the reading direction
     return Container(
       margin: const EdgeInsets.fromLTRB(12, 0, 12, 14),
       padding: const EdgeInsets.fromLTRB(14, 12, 14, 10),
@@ -599,14 +608,14 @@ class _PlayerBar extends StatelessWidget {
               icon: Icon(repeatOne ? Icons.repeat_one_rounded : Icons.repeat_rounded, color: repeatOne ? t.primary : t.textSecondary, size: 22),
             ),
             const Spacer(),
-            IconButton(tooltip: NoorFormat.tr(context, 'الآية السابقة', 'Previous ayah'), onPressed: current > 1 ? onPrev : null, style: IconButton.styleFrom(fixedSize: const Size(40, 40)), icon: const Icon(Icons.skip_previous_rounded, size: 26)),
+            IconButton(tooltip: NoorFormat.tr(context, 'الآية السابقة', 'Previous ayah'), onPressed: current > 1 ? onPrev : null, style: IconButton.styleFrom(fixedSize: const Size(40, 40)), icon: Icon(rtl ? Icons.skip_next_rounded : Icons.skip_previous_rounded, size: 26)),
             IconButton.filled(
               tooltip: playing ? l.pause : l.play,
               style: IconButton.styleFrom(backgroundColor: t.primary, foregroundColor: t.onPrimary, fixedSize: const Size(48, 48)),
               onPressed: onToggle,
               icon: Icon(playing ? Icons.pause_rounded : Icons.play_arrow_rounded, size: 28),
             ),
-            IconButton(tooltip: NoorFormat.tr(context, 'الآية التالية', 'Next ayah'), onPressed: current < total ? onNext : null, style: IconButton.styleFrom(fixedSize: const Size(40, 40)), icon: const Icon(Icons.skip_next_rounded, size: 26)),
+            IconButton(tooltip: NoorFormat.tr(context, 'الآية التالية', 'Next ayah'), onPressed: current < total ? onNext : null, style: IconButton.styleFrom(fixedSize: const Size(40, 40)), icon: Icon(rtl ? Icons.skip_previous_rounded : Icons.skip_next_rounded, size: 26)),
           ]),
         ]),
         ),

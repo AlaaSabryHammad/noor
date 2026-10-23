@@ -7,6 +7,7 @@ import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
+import '../auth/auth_service.dart';
 import 'settings_controller.dart';
 
 Future<void> showSettingsSheet(BuildContext context) => showModalBottomSheet(context: context, isScrollControlled: true, builder: (_) => const SettingsSheet());
@@ -59,6 +60,21 @@ class SettingsSheet extends ConsumerWidget {
             const SizedBox(height: 4),
             Text(l.settingsNote, style: Theme.of(context).textTheme.bodySmall),
             const Divider(height: 24),
+            Consumer(builder: (context, ref, _) {
+              final user = ref.watch(authUserProvider).value;
+              final available = ref.watch(authServiceProvider).available;
+              return ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const IconBadge(icon: Icons.person_outline_rounded, gold: true, size: 40),
+                title: Text(user == null || user.isAnonymous ? NoorFormat.tr(context, 'حسابي', 'My account') : (user.label.isEmpty ? NoorFormat.tr(context, 'حسابي', 'My account') : user.label), style: const TextStyle(fontWeight: FontWeight.w600)),
+                subtitle: Text(!available ? NoorFormat.tr(context, 'غير متاح في هذا الإصدار', 'Not available in this build') : (user == null ? NoorFormat.tr(context, 'سجّل الدخول (اختياري)', 'Sign in (optional)') : (user.isAnonymous ? NoorFormat.tr(context, 'زائر', 'Guest') : (user.email ?? ''))), style: Theme.of(context).textTheme.bodySmall),
+                trailing: Icon(Icons.chevron_right_rounded, color: t.textSecondary),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  context.push('/account');
+                },
+              );
+            }),
             ListTile(
               contentPadding: EdgeInsets.zero,
               leading: const IconBadge(icon: Icons.info_outline_rounded, size: 40),

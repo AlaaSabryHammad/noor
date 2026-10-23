@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 
 import '../features/adhkar/adhkar_screen.dart';
+import '../features/auth/account_screen.dart';
 import '../features/books/books_screens.dart';
 import '../features/explore/explore_screen.dart';
 import '../features/home/home_screen.dart';
@@ -72,6 +73,7 @@ GoRouter buildRouter() => GoRouter(
         GoRoute(path: '/hajj', builder: (_, _) => const HajjScreen()),
         GoRoute(path: '/kids', builder: (_, _) => const KidsScreen()),
         GoRoute(path: '/mosques', builder: (_, _) => const MosquesScreen()),
+        GoRoute(path: '/account', builder: (_, _) => const AccountScreen()),
         GoRoute(path: '/about', builder: (_, _) => const AboutScreen()),
         GoRoute(path: '/soon/:service', builder: (_, s) => ComingSoonScreen(service: s.pathParameters['service'] ?? '')),
       ],
