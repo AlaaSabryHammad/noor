@@ -24,6 +24,7 @@ import '../features/services/ramadan_screen.dart';
 import '../features/services/seerah_screen.dart';
 import '../features/services/stories_screen.dart';
 import '../features/services/zakat_screen.dart';
+import '../features/settings/about_screen.dart';
 import '../features/tasbeeh/tasbeeh_screen.dart';
 import 'shell.dart';
 
@@ -71,6 +72,7 @@ GoRouter buildRouter() => GoRouter(
         GoRoute(path: '/hajj', builder: (_, _) => const HajjScreen()),
         GoRoute(path: '/kids', builder: (_, _) => const KidsScreen()),
         GoRoute(path: '/mosques', builder: (_, _) => const MosquesScreen()),
+        GoRoute(path: '/about', builder: (_, _) => const AboutScreen()),
         GoRoute(path: '/soon/:service', builder: (_, s) => ComingSoonScreen(service: s.pathParameters['service'] ?? '')),
       ],
     );

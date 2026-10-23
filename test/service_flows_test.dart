@@ -11,6 +11,7 @@ import 'package:noor/features/prayer/alert_sync.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
 import 'package:noor/features/quran/quran_data.dart';
+import 'package:noor/features/settings/settings_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _NoopScheduler implements NotificationScheduler {
@@ -129,6 +130,23 @@ void main() {
     await tester.enterText(find.byType(TextField), '2:255');
     await tester.pump(const Duration(milliseconds: 400));
     expect(find.textContaining('اذهب إلى السورة'), findsOneWidget);
+  });
+
+  testWidgets('settings sheet scrolls, changes Quran text size, and links to the credits screen', (tester) async {
+    final c = await _open(tester, '/home');
+    await tester.tap(find.byIcon(Icons.tune_rounded));
+    await tester.pumpAndSettle();
+    expect(find.text('حجم خط القرآن'), findsOneWidget);
+    final before = c.read(settingsProvider).quranFontSize;
+    await tester.drag(find.byType(Slider), const Offset(120, 0));
+    await tester.pump();
+    expect(c.read(settingsProvider).quranFontSize, isNot(before));
+
+    await tester.ensureVisible(find.text('حول التطبيق والإسناد'));
+    await tester.tap(find.text('حول التطبيق والإسناد'));
+    await tester.pumpAndSettle();
+    expect(find.text('المصادر والإسناد'), findsOneWidget);
+    expect(find.text('CC BY 3.0'), findsOneWidget);
   });
 
   testWidgets('quran duas come straight from the dataset', (tester) async {
