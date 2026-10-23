@@ -134,10 +134,13 @@ class NextPrayerHero extends ConsumerWidget {
                 Text(NoorFormat.time(context, day.wall(next.time)), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: NoorTokens.onHeroAccent)),
               ]),
             ),
-            Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-              Text(l.remaining, style: const TextStyle(fontSize: 11.5, color: Color(0xBFFFFFFF))),
-              Directionality(textDirection: TextDirection.ltr, child: Text(NoorFormat.countdown(next.time.difference(now)), style: NoorText.numerals())),
-            ]),
+            // Shrinks the figure on narrow screens instead of overflowing.
+            Flexible(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+                Text(l.remaining, style: const TextStyle(fontSize: 11.5, color: Color(0xBFFFFFFF))),
+                FittedBox(fit: BoxFit.scaleDown, child: Directionality(textDirection: TextDirection.ltr, child: Text(NoorFormat.countdown(next.time.difference(now)), style: NoorText.numerals()))),
+              ]),
+            ),
           ]),
           NoorProgressBar(value: day.progress(now), height: 4, color: NoorTokens.onHeroAccent, track: const Color(0x24FFFFFF)),
           Row(spacing: 4, children: [

@@ -253,14 +253,14 @@ class _DhikrCard extends StatelessWidget {
                     onTap: onCount,
                     child: SizedBox.square(
                       dimension: 68,
-                      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                      child: MediaQuery.withClampedTextScaling(maxScaleFactor: 1.1, child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                         AnimatedSwitcher(
                           duration: context.reduceMotion ? Duration.zero : NoorMotion.press,
                           transitionBuilder: (c, a) => ScaleTransition(scale: a, child: c),
                           child: Text(NoorFormat.digits(context, remaining), key: ValueKey(remaining), style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: t.onPrimary)),
                         ),
                         Text(l.tap, style: TextStyle(fontSize: 9.5, color: t.onPrimary.withValues(alpha: .85))),
-                      ]),
+                      ])),
                     ),
                   ),
                 ),

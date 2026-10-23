@@ -60,7 +60,11 @@ class HeroSurface extends StatelessWidget {
               onTap: onTap,
               child: CustomPaint(
                 painter: const StarPatternPainter(color: Color(0x1AFFFFFF)),
-                child: DefaultTextStyle.merge(style: const TextStyle(color: NoorTokens.onHero), child: Padding(padding: padding, child: child)),
+                // Hero cards carry big fixed-width figures (countdowns), so their text scales only up to 1.25×.
+                child: MediaQuery.withClampedTextScaling(
+                  maxScaleFactor: 1.25,
+                  child: DefaultTextStyle.merge(style: const TextStyle(color: NoorTokens.onHero), child: Padding(padding: padding, child: child)),
+                ),
               ),
             ),
           ),

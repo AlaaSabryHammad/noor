@@ -69,14 +69,12 @@ class _ExploreScreenState extends State<ExploreScreen> {
               const SizedBox(height: 20),
               SectionTitle(title),
               const SizedBox(height: 10),
-              GridView.count(
-                crossAxisCount: 3,
+              GridView(
                 shrinkWrap: true,
                 padding: EdgeInsets.zero,
                 physics: const NeverScrollableScrollPhysics(),
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                childAspectRatio: .9,
+                // Cell height follows the system text size so labels never overflow.
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10, mainAxisExtent: 112 + 56 * (MediaQuery.textScalerOf(context).scale(13) / 13 - 1).clamp(0, 1.5)),
                 children: [
                   for (final s in items.where((s) => s.label.toLowerCase().contains(_q.toLowerCase())))
                     NoorCard(

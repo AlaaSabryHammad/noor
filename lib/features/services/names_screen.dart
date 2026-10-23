@@ -34,14 +34,11 @@ class _NamesScreenState extends ConsumerState<NamesScreen> {
             .where((n) => _q.isEmpty || (n['ar'] as String).contains(_q) || (n['en'] as String).toLowerCase().contains(_q) || (n['tr'] as String).toLowerCase().contains(_q) || '${n['n']}' == _q)
             .toList();
         return Column(children: [
-          GridView.count(
-            crossAxisCount: 3,
+          GridView(
             shrinkWrap: true,
             padding: EdgeInsets.zero,
             physics: const NeverScrollableScrollPhysics(),
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
-            childAspectRatio: .8,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10, mainAxisExtent: 132 + 110 * (MediaQuery.textScalerOf(context).scale(13) / 13 - 1).clamp(0, 1.5)),
             children: [
               for (final n in list)
                 NoorCard(

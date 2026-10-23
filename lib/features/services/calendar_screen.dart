@@ -98,7 +98,10 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
       const SizedBox(height: 12),
       NoorCard(
         padding: const EdgeInsets.fromLTRB(10, 12, 10, 12),
-        child: Column(spacing: 6, children: [
+        // Day cells have a fixed size, so their digits scale only a little.
+        child: MediaQuery.withClampedTextScaling(
+          maxScaleFactor: 1.15,
+          child: Column(spacing: 6, children: [
           Row(children: [for (final d in dow) Expanded(child: Center(child: Text(d, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: t.textSecondary))))]),
           for (var week = 0; week < ((lead + days) / 7).ceil(); week++)
             Row(children: [
@@ -111,7 +114,7 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
                     final isToday = isThisMonth && day == today.hDay;
                     final isFriday = g.weekday == DateTime.friday;
                     return Container(
-                      height: 50,
+                      constraints: const BoxConstraints(minHeight: 50),
                       margin: const EdgeInsets.all(1.5),
                       decoration: BoxDecoration(
                         color: isToday ? t.primary : (eventDays.contains(day) ? t.goldSoft : Colors.transparent),
@@ -119,14 +122,15 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
                         border: eventDays.contains(day) && !isToday ? Border.all(color: t.goldLine) : null,
                       ),
                       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                        Text(NoorFormat.digits(context, day), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: isToday ? t.onPrimary : (isFriday ? t.primary : t.text))),
-                        Text(NoorFormat.digits(context, g.day), style: TextStyle(fontSize: 9.5, color: isToday ? t.onPrimary.withValues(alpha: .8) : t.textSecondary)),
+                        Text(NoorFormat.digits(context, day), style: TextStyle(height: 1.2, fontSize: 15, fontWeight: FontWeight.w700, color: isToday ? t.onPrimary : (isFriday ? t.primary : t.text))),
+                        Text(NoorFormat.digits(context, g.day), style: TextStyle(height: 1.2, fontSize: 9.5, color: isToday ? t.onPrimary.withValues(alpha: .8) : t.textSecondary)),
                       ]),
                     );
                   }(),
                 ),
             ]),
         ]),
+        ),
       ),
       const SizedBox(height: 12),
       if (!isThisMonth)

@@ -68,20 +68,23 @@ class PrayerScreen extends ConsumerWidget {
                   ),
                   child: Align(
                     alignment: const Alignment(0, .75),
-                    child: Column(mainAxisSize: MainAxisSize.min, children: [
-                      Text(l.nextPrayer, style: const TextStyle(fontSize: 12, color: Color(0xC7FFFFFF))),
-                      Text(prayerName(l, next.kind, friday: day.isFriday), style: NoorText.display(context, size: 30, color: Colors.white)),
-                      Directionality(textDirection: TextDirection.ltr, child: Text(NoorFormat.countdown(next.time.difference(now)), style: NoorText.numerals(size: 20, color: NoorTokens.onHeroAccent))),
-                    ]),
+                    // Sits inside a fixed-ratio arc, so it shrinks rather than overflowing at large text sizes.
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Column(mainAxisSize: MainAxisSize.min, children: [
+                        Text(l.nextPrayer, style: const TextStyle(fontSize: 12, color: Color(0xC7FFFFFF))),
+                        Text(prayerName(l, next.kind, friday: day.isFriday), style: NoorText.display(context, size: 30, color: Colors.white)),
+                        Directionality(textDirection: TextDirection.ltr, child: Text(NoorFormat.countdown(next.time.difference(now)), style: NoorText.numerals(size: 20, color: NoorTokens.onHeroAccent))),
+                      ]),
+                    ),
                   ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18),
-                child: Row(children: [
-                  Text('${l.sunrise} ${NoorFormat.time(context, day.wall(day.timeOf(PrayerKind.sunrise)))}', style: const TextStyle(fontSize: 11, color: Color(0xB3FFFFFF))),
-                  const Spacer(),
-                  Text('${l.maghrib} ${NoorFormat.time(context, day.wall(day.timeOf(PrayerKind.maghrib)))}', style: const TextStyle(fontSize: 11, color: Color(0xB3FFFFFF))),
+                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, spacing: 8, children: [
+                  Flexible(child: Text('${l.sunrise} ${NoorFormat.time(context, day.wall(day.timeOf(PrayerKind.sunrise)))}', maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, color: Color(0xB3FFFFFF)))),
+                  Flexible(child: Text('${l.maghrib} ${NoorFormat.time(context, day.wall(day.timeOf(PrayerKind.maghrib)))}', maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, color: Color(0xB3FFFFFF)))),
                 ]),
               ),
             ]),
@@ -174,7 +177,9 @@ class _PrayerRow extends StatelessWidget {
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: isNext ? t.primaryLine : Colors.transparent),
       ),
-      child: Row(spacing: 12, children: [
+      child: MediaQuery.withClampedTextScaling(
+        maxScaleFactor: 1.2,
+        child: Row(spacing: 8, children: [
         Container(
           width: 40,
           height: 40,
@@ -183,11 +188,14 @@ class _PrayerRow extends StatelessWidget {
         ),
         Expanded(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(name, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: dim ? t.textSecondary : t.text)),
-            if (note.isNotEmpty) Text(note, style: Theme.of(context).textTheme.bodySmall),
+            Text(name, maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: dim ? t.textSecondary : t.text)),
+            if (note.isNotEmpty) Text(note, maxLines: 2, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.bodySmall),
           ]),
         ),
-        Text(NoorFormat.time(context, shown), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: dim ? t.textSecondary : t.text)),
+        ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 92),
+          child: FittedBox(fit: BoxFit.scaleDown, child: Text(NoorFormat.time(context, shown), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: dim ? t.textSecondary : t.text))),
+        ),
         if (slot.kind.isPrayer)
           IconButton(
             tooltip: alertOn ? l.alertOn(name) : l.alertOff(name),
@@ -199,6 +207,7 @@ class _PrayerRow extends StatelessWidget {
         else
           const SizedBox(width: 44),
       ]),
+      ),
     );
   }
 }

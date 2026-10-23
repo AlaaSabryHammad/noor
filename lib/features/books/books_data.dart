@@ -188,8 +188,10 @@ final booksCatalogProvider = FutureProvider<List<Book>>((ref) => ref.watch(books
 final bookProvider = FutureProvider.family<Book?, String>((ref, id) async => (await ref.watch(booksCatalogProvider.future)).where((b) => b.id == id).firstOrNull);
 
 typedef SectionKey = (String bookId, int section);
+/// No automatic retries: a failed download surfaces at once so the screen can
+/// offer its own "try again" button instead of spinning in the background.
 final bookSectionProvider = FutureProvider.family<List<BookHadith>, SectionKey>((ref, key) async {
   final book = await ref.watch(bookProvider(key.$1).future);
   if (book == null) return const [];
   return ref.watch(booksRepositoryProvider).section(book, key.$2);
-});
+}, retry: (_, _) => null);

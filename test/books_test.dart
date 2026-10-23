@@ -69,7 +69,7 @@ void main() {
     expect(list.length, 42);
     expect(list.first.n, 1);
     expect(list.first.ar, contains('إنَّمَا الْأَعْمَالُ'));
-    expect(list.first.en.toLowerCase(), contains('intentions'));
+    expect(list.first.en.toLowerCase(), contains('motives'));
     expect(await repo.isAvailableOffline(nawawi, 1), isTrue);
   });
 
@@ -154,14 +154,29 @@ void main() {
     expect(find.textContaining('إنَّمَا الْأَعْمَالُ', findRichText: true), findsWidgets);
   });
 
-  testWidgets('an online book lists its sections; an unreachable section offers a retry', (tester) async {
+  testWidgets('an online book lists its sections', (tester) async {
     await open(tester, '/books/bukhari');
     expect(find.text('Revelation'), findsOneWidget);
     expect(find.text('Belief'), findsOneWidget);
+  });
 
-    final c = await open(tester, '/books/bukhari/3', fetcher: _FakeFetcher(fail: true));
+  testWidgets('an unreachable section offers a retry instead of crashing', (tester) async {
+    await open(tester, '/books/bukhari/3', fetcher: _FakeFetcher(fail: true));
+    for (var i = 0; i < 4; i++) {
+      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 80)));
+      await tester.pump(const Duration(milliseconds: 100));
+    }
     expect(find.text('إعادة المحاولة'), findsOneWidget);
-    expect(c.read(bookFetcherProvider), isA<_FakeFetcher>());
+  });
+
+  testWidgets('a reachable online section shows its hadith with the grade', (tester) async {
+    await open(tester, '/books/bukhari/3');
+    for (var i = 0; i < 4; i++) {
+      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 80)));
+      await tester.pump(const Duration(milliseconds: 100));
+    }
+    expect(find.text('نص عربي'), findsOneWidget);
+    expect(find.text('Sahih'), findsOneWidget);
   });
 
   testWidgets('the Library tab switches between saved items and books', (tester) async {

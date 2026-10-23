@@ -35,7 +35,10 @@ class NoorShell extends StatelessWidget {
             child: Container(
               height: 72,
               decoration: BoxDecoration(color: t.navBackground, borderRadius: BorderRadius.circular(26), border: Border.all(color: t.border)),
-              child: Row(children: [
+              // The bar has a fixed height, so its labels scale only a little with system text size.
+              child: MediaQuery.withClampedTextScaling(
+                maxScaleFactor: 1.15,
+                child: Row(children: [
                 for (var i = 0; i < items.length; i++)
                   Expanded(
                     child: Semantics(
@@ -57,12 +60,15 @@ class NoorShell extends StatelessWidget {
                             child: Icon(shell.currentIndex == i ? items[i].$2 : items[i].$1, size: 22, color: shell.currentIndex == i ? t.primary : t.textSecondary),
                           ),
                           Text(items[i].$3,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(fontSize: 11, fontWeight: shell.currentIndex == i ? FontWeight.w700 : FontWeight.w500, color: shell.currentIndex == i ? t.primary : t.textSecondary)),
                         ]),
                       ),
                     ),
                   ),
               ]),
+              ),
             ),
           ),
         ),

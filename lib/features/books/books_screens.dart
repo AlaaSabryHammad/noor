@@ -71,7 +71,7 @@ class _Pill extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
       decoration: BoxDecoration(color: t.sunk, borderRadius: BorderRadius.circular(99)),
-      child: Row(mainAxisSize: MainAxisSize.min, spacing: 5, children: [Icon(icon, size: 14, color: t.textSecondary), Text(text, style: TextStyle(fontSize: 11.5, color: t.textSecondary, fontWeight: FontWeight.w500))]),
+      child: Row(mainAxisSize: MainAxisSize.min, spacing: 5, children: [Icon(icon, size: 14, color: t.textSecondary), Flexible(child: Text(text, maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11.5, color: t.textSecondary, fontWeight: FontWeight.w500)))]),
     );
   }
 }

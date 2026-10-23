@@ -562,7 +562,9 @@ class _PlayerBar extends StatelessWidget {
       decoration: BoxDecoration(color: t.surface, borderRadius: BorderRadius.circular(24), border: Border.all(color: t.border), boxShadow: t.cardShadow),
       child: SafeArea(
         top: false,
-        child: Column(mainAxisSize: MainAxisSize.min, spacing: 8, children: [
+        child: MediaQuery.withClampedTextScaling(
+          maxScaleFactor: 1.15,
+          child: Column(mainAxisSize: MainAxisSize.min, spacing: 8, children: [
           NoorProgressBar(value: current / total, height: 3),
           Row(spacing: 10, children: [
             const IconBadge(icon: Icons.headphones_outlined, size: 38),
@@ -580,7 +582,7 @@ class _PlayerBar extends StatelessWidget {
               ]),
             ),
           ]),
-          Row(spacing: 6, children: [
+          Row(spacing: 2, children: [
             ActionChip(
               label: Text('${speed == speed.roundToDouble() ? speed.toInt() : speed}×', style: TextStyle(fontFamily: NoorFonts.latinUi, fontWeight: FontWeight.w700, color: t.primary, fontSize: 12.5)),
               tooltip: NoorFormat.tr(context, 'سرعة التلاوة', 'Playback speed'),
@@ -593,20 +595,21 @@ class _PlayerBar extends StatelessWidget {
               tooltip: NoorFormat.tr(context, 'تكرار الآية', 'Repeat ayah'),
               isSelected: repeatOne,
               onPressed: onRepeat,
-              style: IconButton.styleFrom(backgroundColor: repeatOne ? t.primarySoft : Colors.transparent, fixedSize: const Size(44, 44)),
+              style: IconButton.styleFrom(backgroundColor: repeatOne ? t.primarySoft : Colors.transparent, fixedSize: const Size(40, 40)),
               icon: Icon(repeatOne ? Icons.repeat_one_rounded : Icons.repeat_rounded, color: repeatOne ? t.primary : t.textSecondary, size: 22),
             ),
             const Spacer(),
-            IconButton(tooltip: NoorFormat.tr(context, 'الآية السابقة', 'Previous ayah'), onPressed: current > 1 ? onPrev : null, style: IconButton.styleFrom(fixedSize: const Size(44, 44)), icon: const Icon(Icons.skip_previous_rounded, size: 26)),
+            IconButton(tooltip: NoorFormat.tr(context, 'الآية السابقة', 'Previous ayah'), onPressed: current > 1 ? onPrev : null, style: IconButton.styleFrom(fixedSize: const Size(40, 40)), icon: const Icon(Icons.skip_previous_rounded, size: 26)),
             IconButton.filled(
               tooltip: playing ? l.pause : l.play,
-              style: IconButton.styleFrom(backgroundColor: t.primary, foregroundColor: t.onPrimary, fixedSize: const Size(52, 52)),
+              style: IconButton.styleFrom(backgroundColor: t.primary, foregroundColor: t.onPrimary, fixedSize: const Size(48, 48)),
               onPressed: onToggle,
               icon: Icon(playing ? Icons.pause_rounded : Icons.play_arrow_rounded, size: 28),
             ),
-            IconButton(tooltip: NoorFormat.tr(context, 'الآية التالية', 'Next ayah'), onPressed: current < total ? onNext : null, style: IconButton.styleFrom(fixedSize: const Size(44, 44)), icon: const Icon(Icons.skip_next_rounded, size: 26)),
+            IconButton(tooltip: NoorFormat.tr(context, 'الآية التالية', 'Next ayah'), onPressed: current < total ? onNext : null, style: IconButton.styleFrom(fixedSize: const Size(40, 40)), icon: const Icon(Icons.skip_next_rounded, size: 26)),
           ]),
         ]),
+        ),
       ),
     );
   }
