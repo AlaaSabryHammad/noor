@@ -1,0 +1,227 @@
+{
+ "_note": "Summaries of Quranic narratives and basic rulings. Verify against a scholar-reviewed source before release; for rulings consult qualified scholars.",
+ "quiz": [
+  {
+   "qAr": "كم عدد أركان الإسلام؟",
+   "qEn": "How many pillars does Islam have?",
+   "options": [
+    {
+     "ar": "٣",
+     "en": "3"
+    },
+    {
+     "ar": "٥",
+     "en": "5"
+    },
+    {
+     "ar": "٧",
+     "en": "7"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "ما هو كتاب المسلمين المقدس؟",
+   "qEn": "What is the holy book of Muslims?",
+   "options": [
+    {
+     "ar": "القرآن الكريم",
+     "en": "The Quran"
+    },
+    {
+     "ar": "الإنجيل",
+     "en": "The Injil"
+    },
+    {
+     "ar": "الزبور",
+     "en": "The Zabur"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "كم صلاة نصلي في اليوم والليلة؟",
+   "qEn": "How many prayers do we pray each day?",
+   "options": [
+    {
+     "ar": "٣",
+     "en": "3"
+    },
+    {
+     "ar": "٤",
+     "en": "4"
+    },
+    {
+     "ar": "٥",
+     "en": "5"
+    }
+   ],
+   "answer": 2
+  },
+  {
+   "qAr": "في أي شهر نصوم؟",
+   "qEn": "In which month do we fast?",
+   "options": [
+    {
+     "ar": "رمضان",
+     "en": "Ramadan"
+    },
+    {
+     "ar": "شوال",
+     "en": "Shawwal"
+    },
+    {
+     "ar": "رجب",
+     "en": "Rajab"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "ما اسم آخر الأنبياء؟",
+   "qEn": "Who is the last Prophet?",
+   "options": [
+    {
+     "ar": "موسى عليه السلام",
+     "en": "Musa"
+    },
+    {
+     "ar": "محمد ﷺ",
+     "en": "Muhammad ﷺ"
+    },
+    {
+     "ar": "عيسى عليه السلام",
+     "en": "‘Isa"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "إلى أين نتجه في الصلاة؟",
+   "qEn": "Which direction do we face in prayer?",
+   "options": [
+    {
+     "ar": "الكعبة في مكة",
+     "en": "The Ka‘bah in Makkah"
+    },
+    {
+     "ar": "الشمال",
+     "en": "North"
+    },
+    {
+     "ar": "المسجد الأقصى",
+     "en": "Al-Aqsa"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "ماذا نقول قبل الأكل؟",
+   "qEn": "What do we say before eating?",
+   "options": [
+    {
+     "ar": "الحمد لله",
+     "en": "Alhamdulillah"
+    },
+    {
+     "ar": "بسم الله",
+     "en": "Bismillah"
+    },
+    {
+     "ar": "سبحان الله",
+     "en": "SubhanAllah"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "كم عدد سور القرآن الكريم؟",
+   "qEn": "How many surahs are in the Quran?",
+   "options": [
+    {
+     "ar": "١١٤",
+     "en": "114"
+    },
+    {
+     "ar": "٩٩",
+     "en": "99"
+    },
+    {
+     "ar": "٣٠",
+     "en": "30"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "ما أول سورة في المصحف؟",
+   "qEn": "What is the first surah in the Quran?",
+   "options": [
+    {
+     "ar": "البقرة",
+     "en": "Al-Baqarah"
+    },
+    {
+     "ar": "الفاتحة",
+     "en": "Al-Fatihah"
+    },
+    {
+     "ar": "الإخلاص",
+     "en": "Al-Ikhlas"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "ماذا نقول عند العطاس؟",
+   "qEn": "What do we say after sneezing?",
+   "options": [
+    {
+     "ar": "الحمد لله",
+     "en": "Alhamdulillah"
+    },
+    {
+     "ar": "بسم الله",
+     "en": "Bismillah"
+    },
+    {
+     "ar": "الله أكبر",
+     "en": "Allahu Akbar"
+    }
+   ],
+   "answer": 0
+  }
+ ],
+ "manners": [
+  {
+   "titleAr": "السلام",
+   "titleEn": "Salam",
+   "bodyAr": "نبدأ لقاءنا بقول: السلام عليكم",
+   "bodyEn": "We greet with: As-salamu ‘alaykum"
+  },
+  {
+   "titleAr": "الصدق",
+   "titleEn": "Honesty",
+   "bodyAr": "المسلم صادق ولا يكذب",
+   "bodyEn": "A Muslim is truthful and does not lie"
+  },
+  {
+   "titleAr": "بر الوالدين",
+   "titleEn": "Kindness to parents",
+   "bodyAr": "نحسن إلى والدينا ونطيعهما بالمعروف",
+   "bodyEn": "We are kind to our parents and obey them in what is good"
+  },
+  {
+   "titleAr": "النظافة",
+   "titleEn": "Cleanliness",
+   "bodyAr": "النظافة من الإيمان",
+   "bodyEn": "Cleanliness is part of faith"
+  },
+  {
+   "titleAr": "مساعدة الآخرين",
+   "titleEn": "Helping others",
+   "bodyAr": "نبتسم ونساعد من يحتاج مساعدتنا",
+   "bodyEn": "We smile and help those in need"
+  }
+ ]
+}

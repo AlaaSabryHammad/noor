@@ -1,0 +1,123 @@
+{
+ "_note": "Summaries of Quranic narratives and basic rulings. Verify against a scholar-reviewed source before release; for rulings consult qualified scholars.",
+ "categories": {
+  "faith": {
+   "ar": "الإيمان",
+   "en": "Faith"
+  },
+  "prayer": {
+   "ar": "الصلاة",
+   "en": "Prayer"
+  },
+  "fasting": {
+   "ar": "الصيام",
+   "en": "Fasting"
+  },
+  "zakat": {
+   "ar": "الزكاة",
+   "en": "Zakat"
+  },
+  "hajj": {
+   "ar": "الحج",
+   "en": "Hajj"
+  }
+ },
+ "items": [
+  {
+   "id": "f1",
+   "cat": "faith",
+   "qAr": "ما هي الشهادتان؟",
+   "qEn": "What is the Shahadah?",
+   "aAr": "قول: أشهد أن لا إله إلا الله وأشهد أن محمدًا رسول الله، وهي مفتاح الدخول في الإسلام وأول أركانه.",
+   "aEn": "Saying: I bear witness that there is no god but Allah and that Muhammad is the Messenger of Allah. It is the entry into Islam and its first pillar."
+  },
+  {
+   "id": "f2",
+   "cat": "faith",
+   "qAr": "كم عدد أركان الإسلام وأركان الإيمان؟",
+   "qEn": "How many pillars of Islam and faith are there?",
+   "aAr": "أركان الإسلام خمسة، وأركان الإيمان ستة.",
+   "aEn": "Islam has five pillars and faith has six."
+  },
+  {
+   "id": "f3",
+   "cat": "prayer",
+   "qAr": "كم عدد الصلوات المفروضة في اليوم؟",
+   "qEn": "How many prayers are obligatory each day?",
+   "aAr": "خمس صلوات: الفجر والظهر والعصر والمغرب والعشاء.",
+   "aEn": "Five: Fajr, Dhuhr, ‘Asr, Maghrib and ‘Isha."
+  },
+  {
+   "id": "f4",
+   "cat": "prayer",
+   "qAr": "ما هي القبلة؟",
+   "qEn": "What is the Qibla?",
+   "aAr": "اتجاه الكعبة المشرفة في مكة المكرمة، يستقبله المسلمون في صلاتهم.",
+   "aEn": "The direction of the Ka‘bah in Makkah, which Muslims face in prayer."
+  },
+  {
+   "id": "f5",
+   "cat": "prayer",
+   "qAr": "ما صلاة الجمعة؟",
+   "qEn": "What is the Friday prayer?",
+   "aAr": "صلاة تُؤدى جماعةً يوم الجمعة وقت الظهر وتسبقها خطبتان، وهي واجبة على الرجال المقيمين المكلفين.",
+   "aEn": "A congregational prayer held on Friday at midday preceded by two sermons; it is obligatory on resident adult men."
+  },
+  {
+   "id": "f6",
+   "cat": "fasting",
+   "qAr": "متى يبدأ الصيام وينتهي؟",
+   "qEn": "When does the fast begin and end?",
+   "aAr": "يبدأ من طلوع الفجر الصادق وينتهي بغروب الشمس، مع الامتناع عن الطعام والشراب والمفطرات.",
+   "aEn": "From true dawn until sunset, abstaining from food, drink and other things that break the fast."
+  },
+  {
+   "id": "f7",
+   "cat": "fasting",
+   "qAr": "ما هي ليلة القدر؟",
+   "qEn": "What is Laylat al-Qadr?",
+   "aAr": "ليلة نزل فيها القرآن وهي خير من ألف شهر، وتُلتمس في الوتر من العشر الأواخر من رمضان.",
+   "aEn": "The night in which the Quran was revealed, better than a thousand months, sought in the odd nights of the last ten of Ramadan."
+  },
+  {
+   "id": "f8",
+   "cat": "zakat",
+   "qAr": "ما مقدار الزكاة؟",
+   "qEn": "How much is zakat?",
+   "aAr": "ربع العشر، أي ٢٫٥٪ من المال الذي بلغ النصاب وحال عليه الحول.",
+   "aEn": "One-fortieth, i.e. 2.5% of wealth that reaches the nisab and has been held for a lunar year."
+  },
+  {
+   "id": "f9",
+   "cat": "zakat",
+   "qAr": "ما هو النصاب؟",
+   "qEn": "What is the nisab?",
+   "aAr": "ما يعادل ٨٥ غرامًا من الذهب أو ٥٩٥ غرامًا من الفضة، ويختلف تقديره باختلاف الأسعار.",
+   "aEn": "The equivalent of 85 grams of gold or 595 grams of silver; its value changes with prices."
+  },
+  {
+   "id": "f10",
+   "cat": "zakat",
+   "qAr": "ما زكاة الفطر؟",
+   "qEn": "What is Zakat al-Fitr?",
+   "aAr": "صدقة تُخرج في آخر رمضان عن كل فرد، طعامًا يقتاته أهل البلد، وتُؤدى قبل صلاة العيد.",
+   "aEn": "A charity given at the end of Ramadan for each person, in staple food, paid before the Eid prayer."
+  },
+  {
+   "id": "f11",
+   "cat": "hajj",
+   "qAr": "على من يجب الحج؟",
+   "qEn": "Upon whom is Hajj obligatory?",
+   "aAr": "على المسلم البالغ العاقل المستطيع ماديًا وبدنيًا، مرة واحدة في العمر.",
+   "aEn": "On every adult sane Muslim who is financially and physically able, once in a lifetime."
+  },
+  {
+   "id": "f12",
+   "cat": "hajj",
+   "qAr": "ما الفرق بين الحج والعمرة؟",
+   "qEn": "What is the difference between Hajj and ‘Umrah?",
+   "aAr": "الحج له وقت محدد في ذي الحجة ومناسك في منى وعرفة ومزدلفة، أما العمرة فتجوز في أي وقت وهي الإحرام والطواف والسعي والحلق أو التقصير.",
+   "aEn": "Hajj has a fixed time in Dhul-Hijjah with rites at Mina, ‘Arafah and Muzdalifah; ‘Umrah can be done any time and consists of ihram, tawaf, sa‘i and shaving or trimming."
+  }
+ ]
+}

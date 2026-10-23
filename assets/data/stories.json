@@ -1,0 +1,126 @@
+{
+ "_note": "Summaries of Quranic narratives and basic rulings. Verify against a scholar-reviewed source before release; for rulings consult qualified scholars.",
+ "items": [
+  {
+   "id": "p1",
+   "nameAr": "آدم",
+   "nameEn": "Adam",
+   "bodyAr": "خلق الله آدم عليه السلام من طين وأسجد له الملائكة تكريمًا، فامتنع إبليس تكبّرًا. أسكنه الله وزوجه الجنة ونهاهما عن شجرة، فوسوس لهما الشيطان فأكلا منها، ثم تابا فتاب الله عليهما وأهبطهما إلى الأرض.",
+   "bodyEn": "Allah created Adam from clay and had the angels prostrate to him in honour; Iblis refused out of arrogance. Adam and his wife lived in Paradise and were forbidden one tree. Satan whispered to them, they ate from it, then repented and Allah accepted their repentance and sent them down to earth.",
+   "refAr": "البقرة ٣٠–٣٩ · الأعراف ١١–٢٥",
+   "refEn": "Al-Baqarah 30–39 · Al-A‘raf 11–25",
+   "lessonAr": "التوبة بعد الخطأ باب مفتوح.",
+   "lessonEn": "Repentance after a mistake is always open."
+  },
+  {
+   "id": "p2",
+   "nameAr": "نوح",
+   "nameEn": "Nuh (Noah)",
+   "bodyAr": "دعا نوح عليه السلام قومه إلى عبادة الله وحده قرابة ألف سنة إلا خمسين عامًا فلم يؤمن معه إلا قليل. أمره الله ببناء السفينة، ونجّاه ومن آمن معه من الطوفان.",
+   "bodyEn": "Nuh called his people to worship Allah alone for nine hundred and fifty years, yet only a few believed. Allah commanded him to build the ark and saved him and the believers from the flood.",
+   "refAr": "هود ٢٥–٤٩ · نوح",
+   "refEn": "Hud 25–49 · Nuh",
+   "lessonAr": "الصبر على الدعوة وعاقبة الإيمان النجاة.",
+   "lessonEn": "Patience in calling to Allah; salvation lies with faith."
+  },
+  {
+   "id": "p3",
+   "nameAr": "هود وصالح",
+   "nameEn": "Hud and Salih",
+   "bodyAr": "أرسل الله هودًا إلى قوم عاد، وصالحًا إلى ثمود، فدعوا قومهما إلى التوحيد. كذّب القومان رسولهما فأهلكهم الله، ونجّى الرسولين والمؤمنين.",
+   "bodyEn": "Allah sent Hud to ‘Ad and Salih to Thamud. Both called their people to monotheism; both peoples denied their messenger and were destroyed, while the prophets and believers were saved.",
+   "refAr": "هود ٥٠–٦٨ · الأعراف ٦٥–٧٩",
+   "refEn": "Hud 50–68 · Al-A‘raf 65–79",
+   "lessonAr": "القوة والمال لا تغني عن الحق.",
+   "lessonEn": "Strength and wealth cannot replace truth."
+  },
+  {
+   "id": "p4",
+   "nameAr": "إبراهيم",
+   "nameEn": "Ibrahim (Abraham)",
+   "bodyAr": "خليل الله إبراهيم عليه السلام تأمّل في الكون حتى عرف ربه، وحطّم أصنام قومه وألقوه في النار فجعلها الله بردًا وسلامًا عليه. ثم هاجر، ورفع مع ابنه إسماعيل قواعد الكعبة.",
+   "bodyEn": "Ibrahim, the Friend of Allah, reflected on the universe until he knew his Lord. He broke his people’s idols and was thrown into the fire, which Allah made cool and safe. He later migrated and, with his son Isma‘il, raised the foundations of the Ka‘bah.",
+   "refAr": "الأنبياء ٥١–٧٣ · البقرة ١٢٤–١٢٩ · الصافات ٨٣–١١١",
+   "refEn": "Al-Anbiya 51–73 · Al-Baqarah 124–129 · As-Saffat 83–111",
+   "lessonAr": "التوحيد والتسليم لأمر الله.",
+   "lessonEn": "Pure monotheism and submission to Allah."
+  },
+  {
+   "id": "p5",
+   "nameAr": "لوط",
+   "nameEn": "Lut (Lot)",
+   "bodyAr": "أرسل الله لوطًا إلى قومه ينهاهم عن فاحشة لم يسبقهم بها أحد، فأصرّوا وكذّبوا، فنجّاه الله وأهله إلا امرأته وأمطر عليهم حجارة.",
+   "bodyEn": "Lut was sent to a people who practised an immorality no one before them had committed. They persisted and denied him; Allah saved him and his family except his wife, and rained stones upon the people.",
+   "refAr": "هود ٧٧–٨٣ · الأعراف ٨٠–٨٤",
+   "refEn": "Hud 77–83 · Al-A‘raf 80–84",
+   "lessonAr": "الفطرة السليمة تحتاج إلى حماية.",
+   "lessonEn": "Sound nature must be protected."
+  },
+  {
+   "id": "p6",
+   "nameAr": "يوسف",
+   "nameEn": "Yusuf (Joseph)",
+   "bodyAr": "رأى يوسف رؤيا في صغره، فكاده إخوته وألقوه في الجب، ثم بيع في مصر، وصبر على فتنة وسجن، ثم مكّن الله له وصار على خزائن الأرض، وجمع الله شمله بأهله.",
+   "bodyEn": "As a child Yusuf saw a dream. His brothers plotted against him and cast him into a well; he was sold in Egypt, endured temptation and prison, and Allah gave him authority over the land’s treasuries and reunited him with his family.",
+   "refAr": "سورة يوسف",
+   "refEn": "Surah Yusuf (12)",
+   "lessonAr": "«أحسن القصص»: الصبر والعفو والثقة بتدبير الله.",
+   "lessonEn": "“The best of stories”: patience, forgiveness and trust in Allah’s plan."
+  },
+  {
+   "id": "p7",
+   "nameAr": "أيوب",
+   "nameEn": "Ayyub (Job)",
+   "bodyAr": "ابتلاه الله في جسده وماله وأهله فصبر صبرًا جميلًا ولم يشكُ إلا إلى الله، فكشف الله ضرّه وأعاد إليه أهله ومثلهم معهم.",
+   "bodyEn": "Allah tested Ayyub in his body, wealth and family. He was patient with beautiful patience, complaining only to Allah, who removed his affliction and restored his family and more.",
+   "refAr": "الأنبياء ٨٣–٨٤ · ص ٤١–٤٤",
+   "refEn": "Al-Anbiya 83–84 · Sad 41–44",
+   "lessonAr": "الصبر على البلاء ثمرته الفرج.",
+   "lessonEn": "Patience in hardship is followed by relief."
+  },
+  {
+   "id": "p8",
+   "nameAr": "موسى",
+   "nameEn": "Musa (Moses)",
+   "bodyAr": "وُلد موسى عليه السلام في زمن فرعون الذي كان يقتل أبناء بني إسرائيل، فحفظه الله وربّاه في قصر فرعون. ثم كلّمه الله وأرسله إلى فرعون وقومه، وشقّ له البحر فنجا هو ومن معه وأغرق الله فرعون.",
+   "bodyEn": "Musa was born when Pharaoh was killing the sons of Bani Isra’il; Allah protected him and he was raised in Pharaoh’s palace. Allah spoke to him and sent him to Pharaoh. The sea was parted for him, so he and his people were saved and Pharaoh was drowned.",
+   "refAr": "القصص ٣–٤٣ · طه ٩–٧٩",
+   "refEn": "Al-Qasas 3–43 · Ta-Ha 9–79",
+   "lessonAr": "الله ينصر المستضعفين بالإيمان والصبر.",
+   "lessonEn": "Allah supports the oppressed through faith and patience."
+  },
+  {
+   "id": "p9",
+   "nameAr": "داود وسليمان",
+   "nameEn": "Dawud and Sulayman",
+   "bodyAr": "آتى الله داود الزبور وألان له الحديد وسخّر معه الجبال والطير. وورث سليمان ملكه، فسخّر الله له الريح والجن، وفهّمه منطق الطير والنمل، وكان شاكرًا.",
+   "bodyEn": "Allah gave Dawud the Zabur, softened iron for him and made the mountains and birds glorify with him. Sulayman inherited his kingdom; Allah subjected the wind and jinn to him and taught him the speech of birds and ants, and he remained thankful.",
+   "refAr": "النمل ١٥–٤٤ · ص ١٧–٤٠",
+   "refEn": "An-Naml 15–44 · Sad 17–40",
+   "lessonAr": "النعمة تقتضي الشكر.",
+   "lessonEn": "Blessings call for gratitude."
+  },
+  {
+   "id": "p10",
+   "nameAr": "يونس",
+   "nameEn": "Yunus (Jonah)",
+   "bodyAr": "ذهب يونس عليه السلام مغاضبًا قبل أن يؤذن له، فالتقمه الحوت، فنادى في الظلمات بدعاء التوحيد والتوبة المذكور في سورة الأنبياء (٨٧)، فنجّاه الله.",
+   "bodyEn": "Yunus left his people in anger before being permitted, and the whale swallowed him. In the depths he called out: “There is no god but You, glory to You, I was among the wrongdoers,” and Allah saved him.",
+   "refAr": "الأنبياء ٨٧–٨٨ · الصافات ١٣٩–١٤٨",
+   "refEn": "Al-Anbiya 87–88 · As-Saffat 139–148",
+   "lessonAr": "دعاء ذي النون فرجٌ لكل كرب.",
+   "lessonEn": "The supplication of Dhun-Nun relieves every distress."
+  },
+  {
+   "id": "p11",
+   "nameAr": "عيسى",
+   "nameEn": "‘Isa (Jesus)",
+   "bodyAr": "وُلد عيسى عليه السلام من مريم العذراء بأمر الله دون أب، وتكلّم في المهد، وأيّده الله بالمعجزات بإذنه، ودعا بني إسرائيل إلى عبادة الله وحده، ورفعه الله إليه.",
+   "bodyEn": "‘Isa was born to the virgin Maryam by Allah’s command without a father and spoke in the cradle. Allah supported him with miracles by His permission; he called Bani Isra’il to worship Allah alone, and Allah raised him to Himself.",
+   "refAr": "مريم ١٦–٣٦ · آل عمران ٤٥–٥٩",
+   "refEn": "Maryam 16–36 · Al ‘Imran 45–59",
+   "lessonAr": "عبد الله ورسوله وكلمته ألقاها إلى مريم.",
+   "lessonEn": "The servant and messenger of Allah, His word cast to Maryam."
+  }
+ ]
+}

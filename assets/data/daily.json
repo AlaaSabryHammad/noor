@@ -1,0 +1,23 @@
+{
+ "ayah": {
+  "ar": "أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+  "en": "Unquestionably, by the remembrance of Allah hearts are assured.",
+  "refAr": "سورة الرعد · الآية ٢٨",
+  "refEn": "Ar-Ra‘d 13:28",
+  "quranic": true
+ },
+ "hadith": {
+  "ar": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+  "en": "Actions are only by intentions, and every person will have only what they intended.",
+  "refAr": "متفق عليه · البخاري (١) ومسلم (١٩٠٧)",
+  "refEn": "Agreed upon · Al-Bukhari 1, Muslim 1907",
+  "quranic": false
+ },
+ "dua": {
+  "ar": "رَبَّنَآ ءَاتِنَا فِى ٱلدُّنْيَا حَسَنَةً وَفِى ٱلْءَاخِرَةِ حَسَنَةً وَقِنَا عَذَابَ ٱلنَّارِ",
+  "en": "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
+  "refAr": "سورة البقرة · الآية ٢٠١",
+  "refEn": "Al-Baqarah 2:201",
+  "quranic": true
+ }
+}

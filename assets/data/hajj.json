@@ -1,0 +1,82 @@
+{
+ "_note": "Summaries of Quranic narratives and basic rulings. Verify against a scholar-reviewed source before release; for rulings consult qualified scholars.",
+ "steps": [
+  {
+   "kind": "umrah",
+   "titleAr": "الإحرام",
+   "titleEn": "Ihram",
+   "bodyAr": "تغتسل وتلبس ثياب الإحرام وتنوي العمرة من الميقات، وتكثر من التلبية: لبيك اللهم لبيك، لبيك لا شريك لك لبيك، إن الحمد والنعمة لك والملك، لا شريك لك.",
+   "bodyEn": "Bathe, wear the ihram garments and make the intention for ‘Umrah at the miqat, repeating the talbiyah: Labbayk Allahumma labbayk, labbayk la sharika laka labbayk, innal-hamda wan-ni‘mata laka wal-mulk, la sharika lak."
+  },
+  {
+   "kind": "umrah",
+   "titleAr": "الطواف",
+   "titleEn": "Tawaf",
+   "bodyAr": "تطوف بالكعبة سبعة أشواط تبدأ من الحجر الأسود وتجعل الكعبة عن يسارك.",
+   "bodyEn": "Circle the Ka‘bah seven times starting at the Black Stone, keeping the Ka‘bah on your left."
+  },
+  {
+   "kind": "umrah",
+   "titleAr": "ركعتا الطواف",
+   "titleEn": "Two rak‘ahs after tawaf",
+   "bodyAr": "تصلي ركعتين خلف مقام إبراهيم إن تيسّر، ثم تشرب من ماء زمزم.",
+   "bodyEn": "Pray two rak‘ahs behind the Station of Ibrahim if possible, then drink Zamzam water."
+  },
+  {
+   "kind": "umrah",
+   "titleAr": "السعي",
+   "titleEn": "Sa‘i",
+   "bodyAr": "تسعى بين الصفا والمروة سبعة أشواط، تبدأ بالصفا وتنتهي بالمروة.",
+   "bodyEn": "Walk between Safa and Marwah seven times, beginning at Safa and ending at Marwah."
+  },
+  {
+   "kind": "umrah",
+   "titleAr": "الحلق أو التقصير",
+   "titleEn": "Shaving or trimming",
+   "bodyAr": "يحلق الرجل رأسه أو يقصّر، وتقصّر المرأة قدر أنملة، فتنتهي العمرة.",
+   "bodyEn": "Men shave or trim the hair; women trim a fingertip’s length. The ‘Umrah is complete."
+  },
+  {
+   "kind": "hajj",
+   "titleAr": "٨ ذو الحجة · يوم التروية",
+   "titleEn": "8 Dhul-Hijjah · Tarwiyah",
+   "bodyAr": "تحرم بالحج وتذهب إلى منى، وتصلي فيها الظهر والعصر والمغرب والعشاء والفجر قصرًا دون جمع.",
+   "bodyEn": "Enter ihram for Hajj and go to Mina, praying each prayer there shortened but not combined."
+  },
+  {
+   "kind": "hajj",
+   "titleAr": "٩ ذو الحجة · يوم عرفة",
+   "titleEn": "9 Dhul-Hijjah · ‘Arafah",
+   "bodyAr": "الوقوف بعرفة هو ركن الحج الأعظم: «الحج عرفة». تجمع الظهر والعصر جمع تقديم وتكثر من الدعاء حتى الغروب.",
+   "bodyEn": "Standing at ‘Arafah is the essence of Hajj: “Hajj is ‘Arafah.” Combine Dhuhr and ‘Asr and supplicate until sunset."
+  },
+  {
+   "kind": "hajj",
+   "titleAr": "ليلة العاشر · مزدلفة",
+   "titleEn": "Night of the 10th · Muzdalifah",
+   "bodyAr": "تنفر بعد الغروب إلى مزدلفة فتجمع المغرب والعشاء وتبيت بها، وتلتقط الحصى.",
+   "bodyEn": "Leave ‘Arafah after sunset for Muzdalifah, combine Maghrib and ‘Isha, spend the night and collect pebbles."
+  },
+  {
+   "kind": "hajj",
+   "titleAr": "١٠ ذو الحجة · يوم النحر",
+   "titleEn": "10 Dhul-Hijjah · Eid day",
+   "bodyAr": "ترمي جمرة العقبة بسبع حصيات، ثم تنحر هديك، ثم تحلق أو تقصّر، ثم تطوف طواف الإفاضة وتسعى.",
+   "bodyEn": "Stone Jamrat al-‘Aqabah with seven pebbles, offer your sacrifice, shave or trim, then perform Tawaf al-Ifadah and sa‘i."
+  },
+  {
+   "kind": "hajj",
+   "titleAr": "١١–١٣ ذو الحجة · أيام التشريق",
+   "titleEn": "11–13 Dhul-Hijjah · Tashriq",
+   "bodyAr": "تبيت بمنى وترمي الجمرات الثلاث كل يوم بعد الزوال، كل واحدة بسبع حصيات.",
+   "bodyEn": "Stay at Mina and stone the three jamarat each day after midday, seven pebbles each."
+  },
+  {
+   "kind": "hajj",
+   "titleAr": "طواف الوداع",
+   "titleEn": "Farewell tawaf",
+   "bodyAr": "إذا أردت مغادرة مكة تطوف طواف الوداع ليكون آخر عهدك بالبيت.",
+   "bodyEn": "Before leaving Makkah, perform the farewell tawaf so that the House is your last stop."
+  }
+ ]
+}

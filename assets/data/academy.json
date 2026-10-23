@@ -1,0 +1,217 @@
+{
+ "_note": "Summaries of Quranic narratives and basic rulings. Verify against a scholar-reviewed source before release; for rulings consult qualified scholars.",
+ "courses": [
+  {
+   "id": "wudu",
+   "titleAr": "الوضوء",
+   "titleEn": "Wudu",
+   "icon": "water_drop",
+   "lessons": [
+    {
+     "titleAr": "النية",
+     "titleEn": "Intention",
+     "bodyAr": "تنوي بقلبك رفع الحدث واستباحة الصلاة، ولا يُشرع التلفظ بها.",
+     "bodyEn": "Intend in your heart to purify yourself for prayer; no need to say it aloud."
+    },
+    {
+     "titleAr": "التسمية",
+     "titleEn": "Say Bismillah",
+     "bodyAr": "تقول: بسم الله.",
+     "bodyEn": "Say: Bismillah."
+    },
+    {
+     "titleAr": "غسل الكفين",
+     "titleEn": "Wash the hands",
+     "bodyAr": "تغسل كفيك ثلاث مرات.",
+     "bodyEn": "Wash both hands three times."
+    },
+    {
+     "titleAr": "المضمضة والاستنشاق",
+     "titleEn": "Rinse mouth and nose",
+     "bodyAr": "تتمضمض وتستنشق وتستنثر ثلاثًا.",
+     "bodyEn": "Rinse your mouth and sniff water into your nose and blow it out, three times."
+    },
+    {
+     "titleAr": "غسل الوجه",
+     "titleEn": "Wash the face",
+     "bodyAr": "تغسل وجهك كله ثلاث مرات، من منابت الشعر إلى أسفل الذقن، ومن الأذن إلى الأذن.",
+     "bodyEn": "Wash the whole face three times, from the hairline to the chin and ear to ear."
+    },
+    {
+     "titleAr": "غسل اليدين",
+     "titleEn": "Wash the arms",
+     "bodyAr": "تغسل يديك مع المرفقين ثلاثًا، اليمنى ثم اليسرى.",
+     "bodyEn": "Wash the arms up to and including the elbows, three times, right then left."
+    },
+    {
+     "titleAr": "مسح الرأس والأذنين",
+     "titleEn": "Wipe the head and ears",
+     "bodyAr": "تمسح رأسك كله مرة واحدة، ثم أذنيك.",
+     "bodyEn": "Wipe over the whole head once, then the ears."
+    },
+    {
+     "titleAr": "غسل الرجلين",
+     "titleEn": "Wash the feet",
+     "bodyAr": "تغسل رجليك مع الكعبين ثلاثًا، اليمنى ثم اليسرى.",
+     "bodyEn": "Wash the feet including the ankles, three times, right then left."
+    },
+    {
+     "titleAr": "الدعاء بعد الوضوء",
+     "titleEn": "Dua after wudu",
+     "bodyAr": "تقول: أشهد أن لا إله إلا الله وحده لا شريك له، وأشهد أن محمدًا عبده ورسوله.",
+     "bodyEn": "Say: I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger."
+    }
+   ]
+  },
+  {
+   "id": "prayer",
+   "titleAr": "كيف أصلي",
+   "titleEn": "How to pray",
+   "icon": "mosque",
+   "lessons": [
+    {
+     "titleAr": "النية والاستقبال",
+     "titleEn": "Intention and facing the Qibla",
+     "bodyAr": "تستقبل القبلة وتنوي الصلاة التي تريدها بقلبك.",
+     "bodyEn": "Face the Qibla and intend the prayer in your heart."
+    },
+    {
+     "titleAr": "تكبيرة الإحرام",
+     "titleEn": "Opening takbir",
+     "bodyAr": "تقول: الله أكبر، رافعًا يديك حذو منكبيك أو أذنيك.",
+     "bodyEn": "Say Allahu Akbar, raising the hands to the shoulders or ears."
+    },
+    {
+     "titleAr": "القيام وقراءة الفاتحة",
+     "titleEn": "Standing and Al-Fatihah",
+     "bodyAr": "تضع يدك اليمنى على اليسرى على صدرك، وتقرأ دعاء الاستفتاح ثم الفاتحة، ثم ما تيسّر من القرآن.",
+     "bodyEn": "Place the right hand over the left on the chest, recite the opening supplication, then Al-Fatihah, then something of the Quran."
+    },
+    {
+     "titleAr": "الركوع",
+     "titleEn": "Bowing (ruku‘)",
+     "bodyAr": "تكبّر وتركع وظهرك مستوٍ، وتقول: سبحان ربي العظيم، ثلاثًا.",
+     "bodyEn": "Say Allahu Akbar and bow with a straight back, saying: Subhana Rabbiyal-‘Azim, three times."
+    },
+    {
+     "titleAr": "الاعتدال",
+     "titleEn": "Rising",
+     "bodyAr": "تقول: سمع الله لمن حمده، ثم: ربنا ولك الحمد.",
+     "bodyEn": "Rise saying: Sami‘a Allahu liman hamidah, then: Rabbana wa lakal-hamd."
+    },
+    {
+     "titleAr": "السجود",
+     "titleEn": "Prostration (sujud)",
+     "bodyAr": "تكبّر وتسجد على سبعة أعضاء: الجبهة والأنف واليدين والركبتين وأطراف القدمين، وتقول: سبحان ربي الأعلى، ثلاثًا.",
+     "bodyEn": "Say Allahu Akbar and prostrate on seven points: forehead and nose, both hands, both knees and the toes, saying: Subhana Rabbiyal-A‘la, three times."
+    },
+    {
+     "titleAr": "الجلوس بين السجدتين",
+     "titleEn": "Sitting between prostrations",
+     "bodyAr": "تجلس مطمئنًا وتقول: رب اغفر لي، ثم تسجد الثانية.",
+     "bodyEn": "Sit calmly saying: Rabbigh-fir li, then make the second prostration."
+    },
+    {
+     "titleAr": "التشهد",
+     "titleEn": "The tashahhud",
+     "bodyAr": "في الركعة الثانية والأخيرة تجلس وتقرأ التشهد والصلاة الإبراهيمية.",
+     "bodyEn": "In the second and final rak‘ah, sit and recite the tashahhud and the Ibrahimi salawat."
+    },
+    {
+     "titleAr": "التسليم",
+     "titleEn": "The salam",
+     "bodyAr": "تسلّم عن يمينك ثم عن يسارك: السلام عليكم ورحمة الله.",
+     "bodyEn": "Give salam to the right and then to the left: As-salamu ‘alaykum wa rahmatullah."
+    },
+    {
+     "titleAr": "عدد الركعات",
+     "titleEn": "Number of rak‘ahs",
+     "bodyAr": "الفجر ٢، الظهر ٤، العصر ٤، المغرب ٣، العشاء ٤.",
+     "bodyEn": "Fajr 2, Dhuhr 4, ‘Asr 4, Maghrib 3, ‘Isha 4."
+    }
+   ]
+  },
+  {
+   "id": "pillars",
+   "titleAr": "أركان الإسلام",
+   "titleEn": "Pillars of Islam",
+   "icon": "account_balance",
+   "lessons": [
+    {
+     "titleAr": "الشهادتان",
+     "titleEn": "The testimony of faith",
+     "bodyAr": "شهادة أن لا إله إلا الله وأن محمدًا رسول الله.",
+     "bodyEn": "Testifying that there is no god but Allah and that Muhammad is His Messenger."
+    },
+    {
+     "titleAr": "الصلاة",
+     "titleEn": "Prayer",
+     "bodyAr": "إقامة الصلوات الخمس في أوقاتها.",
+     "bodyEn": "Establishing the five daily prayers at their times."
+    },
+    {
+     "titleAr": "الزكاة",
+     "titleEn": "Zakat",
+     "bodyAr": "إخراج جزء معلوم من المال لمستحقيه.",
+     "bodyEn": "Giving a set portion of wealth to those entitled."
+    },
+    {
+     "titleAr": "الصوم",
+     "titleEn": "Fasting",
+     "bodyAr": "صيام شهر رمضان من الفجر إلى المغرب.",
+     "bodyEn": "Fasting Ramadan from dawn to sunset."
+    },
+    {
+     "titleAr": "الحج",
+     "titleEn": "Hajj",
+     "bodyAr": "حج بيت الله الحرام لمن استطاع إليه سبيلًا.",
+     "bodyEn": "Pilgrimage to the Sacred House for whoever is able."
+    }
+   ]
+  },
+  {
+   "id": "iman",
+   "titleAr": "أركان الإيمان",
+   "titleEn": "Pillars of Faith",
+   "icon": "auto_awesome",
+   "lessons": [
+    {
+     "titleAr": "الإيمان بالله",
+     "titleEn": "Belief in Allah",
+     "bodyAr": "الإيمان بوجود الله وربوبيته وألوهيته وأسمائه وصفاته.",
+     "bodyEn": "Believing in Allah’s existence, lordship, divinity, names and attributes."
+    },
+    {
+     "titleAr": "الإيمان بالملائكة",
+     "titleEn": "Belief in the angels",
+     "bodyAr": "عباد مكرمون يطيعون الله ولا يعصونه.",
+     "bodyEn": "Honoured servants who obey Allah and never disobey."
+    },
+    {
+     "titleAr": "الإيمان بالكتب",
+     "titleEn": "Belief in the Books",
+     "bodyAr": "القرآن والتوراة والإنجيل والزبور وصحف إبراهيم وموسى.",
+     "bodyEn": "The Quran, Tawrah, Injil, Zabur and the scrolls of Ibrahim and Musa."
+    },
+    {
+     "titleAr": "الإيمان بالرسل",
+     "titleEn": "Belief in the Messengers",
+     "bodyAr": "من آدم إلى محمد ﷺ خاتم النبيين.",
+     "bodyEn": "From Adam to Muhammad ﷺ, the Seal of the Prophets."
+    },
+    {
+     "titleAr": "الإيمان باليوم الآخر",
+     "titleEn": "Belief in the Last Day",
+     "bodyAr": "البعث والحساب والجنة والنار.",
+     "bodyEn": "Resurrection, reckoning, Paradise and the Fire."
+    },
+    {
+     "titleAr": "الإيمان بالقدر",
+     "titleEn": "Belief in the Decree",
+     "bodyAr": "أن كل شيء بعلم الله وتقديره، خيره وشره.",
+     "bodyEn": "That everything occurs by Allah’s knowledge and decree, its good and its bad."
+    }
+   ]
+  }
+ ]
+}

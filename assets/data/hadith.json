@@ -1,0 +1,179 @@
+{
+ "_note": "Verify wording and numbering against a scholar-reviewed edition before release.",
+ "topics": {
+  "faith": {
+   "ar": "الإيمان",
+   "en": "Faith"
+  },
+  "character": {
+   "ar": "الأخلاق",
+   "en": "Character"
+  },
+  "knowledge": {
+   "ar": "العلم",
+   "en": "Knowledge"
+  },
+  "worship": {
+   "ar": "العبادة",
+   "en": "Worship"
+  },
+  "dhikr": {
+   "ar": "الذكر",
+   "en": "Remembrance"
+  }
+ },
+ "items": [
+  {
+   "id": "h1",
+   "topic": "faith",
+   "ar": "بُنِيَ الْإِسْلَامُ عَلَىٰ خَمْسٍ: شَهَادَةِ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامِ الصَّلَاةِ، وَإِيتَاءِ الزَّكَاةِ، وَحَجِّ الْبَيْتِ، وَصَوْمِ رَمَضَانَ",
+   "en": "Islam is built upon five: the testimony that there is no god but Allah and that Muhammad is the Messenger of Allah, establishing the prayer, giving zakat, pilgrimage to the House, and fasting Ramadan.",
+   "sourceAr": "متفق عليه · البخاري (٨) ومسلم (١٦) · الأربعون النووية (٣)",
+   "sourceEn": "Agreed upon · Al-Bukhari 8, Muslim 16 · Forty Hadith an-Nawawi 3"
+  },
+  {
+   "id": "h2",
+   "topic": "faith",
+   "ar": "الدِّينُ النَّصِيحَةُ. قُلْنَا: لِمَنْ؟ قَالَ: لِلَّهِ، وَلِكِتَابِهِ، وَلِرَسُولِهِ، وَلِأَئِمَّةِ الْمُسْلِمِينَ وَعَامَّتِهِمْ",
+   "en": "Religion is sincere advice. We said: For whom? He said: For Allah, His Book, His Messenger, and the leaders of the Muslims and their common folk.",
+   "sourceAr": "رواه مسلم (٥٥) · الأربعون النووية (٧)",
+   "sourceEn": "Muslim 55 · Forty Hadith an-Nawawi 7"
+  },
+  {
+   "id": "h3",
+   "topic": "character",
+   "ar": "مِنْ حُسْنِ إِسْلَامِ الْمَرْءِ تَرْكُهُ مَا لَا يَعْنِيهِ",
+   "en": "Part of the excellence of a person's Islam is leaving what does not concern them.",
+   "sourceAr": "رواه الترمذي (٢٣١٧) · الأربعون النووية (١٢)",
+   "sourceEn": "At-Tirmidhi 2317 · Forty Hadith an-Nawawi 12"
+  },
+  {
+   "id": "h4",
+   "topic": "character",
+   "ar": "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّىٰ يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ",
+   "en": "None of you truly believes until he loves for his brother what he loves for himself.",
+   "sourceAr": "متفق عليه · البخاري (١٣) ومسلم (٤٥) · الأربعون النووية (١٣)",
+   "sourceEn": "Agreed upon · Al-Bukhari 13, Muslim 45 · Forty Hadith an-Nawawi 13"
+  },
+  {
+   "id": "h5",
+   "topic": "character",
+   "ar": "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ",
+   "en": "Whoever believes in Allah and the Last Day, let him speak good or remain silent.",
+   "sourceAr": "متفق عليه · البخاري (٦٠١٨) ومسلم (٤٧) · الأربعون النووية (١٥)",
+   "sourceEn": "Agreed upon · Al-Bukhari 6018, Muslim 47 · Forty Hadith an-Nawawi 15"
+  },
+  {
+   "id": "h6",
+   "topic": "character",
+   "ar": "قَالَ رَجُلٌ لِلنَّبِيِّ ﷺ: أَوْصِنِي. قَالَ: لَا تَغْضَبْ. فَرَدَّدَ مِرَارًا، قَالَ: لَا تَغْضَبْ",
+   "en": "A man said to the Prophet ﷺ: Advise me. He said: Do not become angry. The man repeated it several times, and he said: Do not become angry.",
+   "sourceAr": "رواه البخاري (٦١١٦) · الأربعون النووية (١٦)",
+   "sourceEn": "Al-Bukhari 6116 · Forty Hadith an-Nawawi 16"
+  },
+  {
+   "id": "h7",
+   "topic": "character",
+   "ar": "لَيْسَ الشَّدِيدُ بِالصُّرَعَةِ، إِنَّمَا الشَّدِيدُ الَّذِي يَمْلِكُ نَفْسَهُ عِنْدَ الْغَضَبِ",
+   "en": "The strong person is not the one who overpowers others; the strong person is the one who controls himself in anger.",
+   "sourceAr": "متفق عليه · البخاري (٦١١٤) ومسلم (٢٦٠٩)",
+   "sourceEn": "Agreed upon · Al-Bukhari 6114, Muslim 2609"
+  },
+  {
+   "id": "h8",
+   "topic": "character",
+   "ar": "اتَّقِ اللَّهَ حَيْثُمَا كُنْتَ، وَأَتْبِعِ السَّيِّئَةَ الْحَسَنَةَ تَمْحُهَا، وَخَالِقِ النَّاسَ بِخُلُقٍ حَسَنٍ",
+   "en": "Fear Allah wherever you are, follow a bad deed with a good one and it will erase it, and treat people with good character.",
+   "sourceAr": "رواه الترمذي (١٩٨٧) · الأربعون النووية (١٨)",
+   "sourceEn": "At-Tirmidhi 1987 · Forty Hadith an-Nawawi 18"
+  },
+  {
+   "id": "h9",
+   "topic": "character",
+   "ar": "الْمُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ",
+   "en": "A Muslim is one from whose tongue and hand the Muslims are safe.",
+   "sourceAr": "متفق عليه · البخاري (١٠) ومسلم (٤١)",
+   "sourceEn": "Agreed upon · Al-Bukhari 10, Muslim 41"
+  },
+  {
+   "id": "h10",
+   "topic": "character",
+   "ar": "مَنْ لَا يَرْحَمْ لَا يُرْحَمْ",
+   "en": "Whoever does not show mercy will not be shown mercy.",
+   "sourceAr": "متفق عليه · البخاري (٥٩٩٧) ومسلم (٢٣١٨)",
+   "sourceEn": "Agreed upon · Al-Bukhari 5997, Muslim 2318"
+  },
+  {
+   "id": "h11",
+   "topic": "character",
+   "ar": "الرَّاحِمُونَ يَرْحَمُهُمُ الرَّحْمَٰنُ، ارْحَمُوا مَنْ فِي الْأَرْضِ يَرْحَمْكُمْ مَنْ فِي السَّمَاءِ",
+   "en": "The merciful are shown mercy by the Most Merciful. Be merciful to those on earth and the One above the heavens will be merciful to you.",
+   "sourceAr": "رواه أبو داود (٤٩٤١) والترمذي (١٩٢٤)",
+   "sourceEn": "Abu Dawud 4941 · At-Tirmidhi 1924"
+  },
+  {
+   "id": "h12",
+   "topic": "character",
+   "ar": "تَبَسُّمُكَ فِي وَجْهِ أَخِيكَ لَكَ صَدَقَةٌ",
+   "en": "Your smiling in the face of your brother is charity.",
+   "sourceAr": "رواه الترمذي (١٩٥٦)",
+   "sourceEn": "At-Tirmidhi 1956"
+  },
+  {
+   "id": "h13",
+   "topic": "character",
+   "ar": "الْكَلِمَةُ الطَّيِّبَةُ صَدَقَةٌ",
+   "en": "A good word is charity.",
+   "sourceAr": "متفق عليه · البخاري (٢٩٨٩) ومسلم (١٠٠٩)",
+   "sourceEn": "Agreed upon · Al-Bukhari 2989, Muslim 1009"
+  },
+  {
+   "id": "h14",
+   "topic": "faith",
+   "ar": "إِنَّ اللَّهَ لَا يَنْظُرُ إِلَىٰ صُوَرِكُمْ وَأَمْوَالِكُمْ، وَلَٰكِنْ يَنْظُرُ إِلَىٰ قُلُوبِكُمْ وَأَعْمَالِكُمْ",
+   "en": "Allah does not look at your appearances or your wealth, but He looks at your hearts and your deeds.",
+   "sourceAr": "رواه مسلم (٢٥٦٤)",
+   "sourceEn": "Muslim 2564"
+  },
+  {
+   "id": "h15",
+   "topic": "knowledge",
+   "ar": "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
+   "en": "The best of you are those who learn the Quran and teach it.",
+   "sourceAr": "رواه البخاري (٥٠٢٧)",
+   "sourceEn": "Al-Bukhari 5027"
+  },
+  {
+   "id": "h16",
+   "topic": "knowledge",
+   "ar": "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ",
+   "en": "Whoever travels a path seeking knowledge, Allah makes easy for him a path to Paradise.",
+   "sourceAr": "رواه مسلم (٢٦٩٩)",
+   "sourceEn": "Muslim 2699"
+  },
+  {
+   "id": "h17",
+   "topic": "worship",
+   "ar": "الطُّهُورُ شَطْرُ الْإِيمَانِ",
+   "en": "Purification is half of faith.",
+   "sourceAr": "رواه مسلم (٢٢٣)",
+   "sourceEn": "Muslim 223"
+  },
+  {
+   "id": "h18",
+   "topic": "worship",
+   "ar": "أَحَبُّ الْأَعْمَالِ إِلَى اللَّهِ أَدْوَمُهَا وَإِنْ قَلَّ",
+   "en": "The most beloved deeds to Allah are the most consistent, even if small.",
+   "sourceAr": "متفق عليه · البخاري (٦٤٦٤) ومسلم (٧٨٣)",
+   "sourceEn": "Agreed upon · Al-Bukhari 6464, Muslim 783"
+  },
+  {
+   "id": "h19",
+   "topic": "dhikr",
+   "ar": "كَلِمَتَانِ خَفِيفَتَانِ عَلَى اللِّسَانِ، ثَقِيلَتَانِ فِي الْمِيزَانِ، حَبِيبَتَانِ إِلَى الرَّحْمَٰنِ: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ",
+   "en": "Two phrases are light on the tongue, heavy on the scale, and beloved to the Most Merciful: Glory and praise to Allah; Glory to Allah the Magnificent.",
+   "sourceAr": "متفق عليه · البخاري (٦٤٠٦) ومسلم (٢٦٩٤)",
+   "sourceEn": "Agreed upon · Al-Bukhari 6406, Muslim 2694"
+  }
+ ]
+}
