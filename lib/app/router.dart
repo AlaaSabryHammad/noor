@@ -6,6 +6,7 @@ import '../features/adhkar/hisn_screen.dart';
 import '../features/audio/audio_home_screen.dart';
 import '../features/audio/now_playing_screen.dart';
 import '../features/audio/reciter_screen.dart';
+import '../features/audio/video_screen.dart';
 import '../features/auth/account_screen.dart';
 import '../features/books/books_screens.dart';
 import '../features/explore/explore_screen.dart';
@@ -30,7 +31,10 @@ import '../features/services/ramadan_screen.dart';
 import '../features/services/seerah_screen.dart';
 import '../features/services/stories_screen.dart';
 import '../features/services/zakat_screen.dart';
+import '../features/search/search.dart';
+import '../features/services/qada_screen.dart';
 import '../features/settings/about_screen.dart';
+import '../features/spotlights/spotlights.dart';
 import '../features/settings/privacy_screen.dart';
 import '../features/tasbeeh/tasbeeh_screen.dart';
 import 'shell.dart';
@@ -68,7 +72,8 @@ GoRouter buildRouter() => GoRouter(
           path: '/audio',
           builder: (_, s) => AudioHomeScreen(initialTab: AudioTab.values.where((t) => t.name == s.uri.queryParameters['tab']).firstOrNull ?? AudioTab.reciters),
         ),
-        GoRoute(path: '/audio/reciter/:id', builder: (_, s) => ReciterScreen(reciterId: int.tryParse(s.pathParameters['id'] ?? '') ?? 0)),
+        GoRoute(path: '/audio/reciter/:id', builder: (_, s) => ReciterScreen(reciterId: int.tryParse(s.pathParameters['id'] ?? '') ?? 0, moshafId: int.tryParse(s.uri.queryParameters['moshaf'] ?? ''))),
+        GoRoute(path: '/audio/video/:id', builder: (_, s) => VideoScreen(videoId: int.tryParse(s.pathParameters['id'] ?? '') ?? 0)),
         GoRoute(
           path: '/audio/player',
           pageBuilder: (_, s) => CustomTransitionPage(
@@ -78,6 +83,10 @@ GoRouter buildRouter() => GoRouter(
           ),
         ),
         GoRoute(path: '/khutab', builder: (_, _) => const KhutabScreen()),
+        GoRoute(path: '/spotlights', builder: (_, _) => const SpotlightsScreen()),
+        GoRoute(path: '/spotlights/:id', builder: (_, s) => SpotlightScreen(id: s.pathParameters['id'] ?? '')),
+        GoRoute(path: '/search', builder: (_, s) => SearchScreen(initialQuery: s.uri.queryParameters['q'] ?? '')),
+        GoRoute(path: '/qada', builder: (_, _) => const QadaScreen()),
         GoRoute(path: '/khutab/:id', builder: (_, s) => KhutbaScreen(id: s.pathParameters['id'] ?? '')),
         GoRoute(path: '/hadith', builder: (_, _) => const HadithScreen()),
         GoRoute(path: '/seerah', builder: (_, _) => const SeerahScreen()),

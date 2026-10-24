@@ -224,7 +224,7 @@ class _KhutbaScreenState extends ConsumerState<KhutbaScreen> {
             Expanded(child: Divider(color: t.goldLine)),
           ]),
           const SizedBox(height: 14),
-          for (final b in p.blocks) Padding(padding: const EdgeInsets.only(bottom: 14), child: _Block(block: b, ar: ar, fs: fs, translation: _translation)),
+          for (final b in p.blocks) Padding(padding: const EdgeInsets.only(bottom: 14), child: KhutbaBlockView(block: b, ar: ar, fs: fs, translation: _translation)),
         ],
         const SizedBox(height: 10),
         Text(
@@ -237,8 +237,9 @@ class _KhutbaScreenState extends ConsumerState<KhutbaScreen> {
   }
 }
 
-class _Block extends StatelessWidget {
-  const _Block({required this.block, required this.ar, required this.fs, required this.translation});
+/// One block of a sermon or spotlight: prose, an ayah in the mushaf face, or a hadith with its source.
+class KhutbaBlockView extends StatelessWidget {
+  const KhutbaBlockView({super.key, required this.block, required this.ar, required this.fs, required this.translation});
   final KhutbaBlock block;
   final bool ar, translation;
   final double fs;

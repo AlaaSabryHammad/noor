@@ -788,6 +788,30 @@ abstract class AppLocalizations {
   /// **'إذاعة القرآن'**
   String get svcRadio;
 
+  /// No description provided for @svcQada.
+  ///
+  /// In ar, this message translates to:
+  /// **'متتبّع القضاء'**
+  String get svcQada;
+
+  /// No description provided for @svcSpotlights.
+  ///
+  /// In ar, this message translates to:
+  /// **'الإضاءات'**
+  String get svcSpotlights;
+
+  /// No description provided for @svcSearch.
+  ///
+  /// In ar, this message translates to:
+  /// **'البحث الشامل'**
+  String get svcSearch;
+
+  /// No description provided for @svcLessons.
+  ///
+  /// In ar, this message translates to:
+  /// **'الدروس الصوتية'**
+  String get svcLessons;
+
   /// No description provided for @svcHadith.
   ///
   /// In ar, this message translates to:

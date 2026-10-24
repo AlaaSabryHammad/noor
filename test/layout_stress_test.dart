@@ -33,6 +33,7 @@ const routes = [
   '/duas', '/names', '/planner', '/zakat', '/audio', '/hadith', '/seerah', '/academy', '/academy/prayer', '/academy/tajweed',
   '/stories', '/library', '/ask', '/calendar', '/ramadan', '/hajj', '/kids', '/mosques', '/books', '/books/bukhari', '/books/nawawi/1', '/about', '/account', '/privacy', '/hisn', '/adhkar/session/hisn_27',
   '/audio?tab=radio', '/audio?tab=favorites', '/audio/reciter/123', '/audio/player', '/khutab', '/khutab/taqwa', '/khutab/farewell',
+  '/audio?tab=lessons', '/audio/reciter/118?moshaf=0', '/spotlights', '/spotlights/last-ten', '/spotlights/istighfar', '/search?q=%D8%A7%D9%84%D8%B5%D8%A8%D8%B1', '/qada', '/ask',
 ];
 
 void main() {

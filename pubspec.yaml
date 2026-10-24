@@ -30,10 +30,12 @@ dependencies:
   just_audio: ^0.10.6
   path_provider: ^2.1.6
   scrollable_positioned_list: ^0.3.8
+  share_plus: ^13.3.1
   shared_preferences: ^2.5.6
   sign_in_with_apple: ^8.2.0
   timezone: ^0.11.2
   url_launcher: ^6.3.3
+  video_player: ^2.14.1
 
 dev_dependencies:
   flutter_test:

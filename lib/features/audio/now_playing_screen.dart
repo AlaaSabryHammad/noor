@@ -129,7 +129,10 @@ class _Playing extends ConsumerWidget {
                       child: FittedBox(
                         child: track.live
                             ? const Icon(Icons.radio_rounded, color: Colors.white, size: 64)
-                            : Text(track.titleAr.replaceFirst('سورة ', ''), textDirection: TextDirection.rtl, style: NoorText.quran(context, size: 40, color: Colors.white).copyWith(height: 1.5)),
+                            : Column(mainAxisSize: MainAxisSize.min, children: [
+                                if (track.tafsirId != null) Text('تفسير', style: NoorText.display(context, size: 18, color: NoorTokens.onHeroAccent)),
+                                Text(track.artAr ?? track.titleAr.replaceFirst('سورة ', ''), textDirection: TextDirection.rtl, style: NoorText.quran(context, size: 40, color: Colors.white).copyWith(height: 1.5)),
+                              ]),
                       ),
                     ),
                   ),

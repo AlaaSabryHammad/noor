@@ -383,6 +383,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get svcRadio => 'Quran radio';
 
   @override
+  String get svcQada => 'Make-up tracker';
+
+  @override
+  String get svcSpotlights => 'Spotlights';
+
+  @override
+  String get svcSearch => 'Search everything';
+
+  @override
+  String get svcLessons => 'Audio lessons';
+
+  @override
   String get svcHadith => 'Hadith';
 
   @override

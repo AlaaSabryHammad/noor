@@ -161,6 +161,55 @@ void main() {
       expect(catalog.radio(3)!.thematic, isFalse); // Ahmad al-Ajmy
       expect(catalog.radio(91)!.thematic, isFalse); // Ibrahim al-Dosari
       expect(catalog.radio(116)!.nameEn, isNot(startsWith('Radio ')));
+      expect(catalog.radio(116)!.kind, RadioKind.lesson); // tafsir series
+      expect(catalog.radio(10906)!.kind, RadioKind.quran); // morning adhkar
+      expect(catalog.radio(109046)!.kind, RadioKind.translation);
+      expect(catalog.radio(3)!.kind, RadioKind.reciter);
+    });
+
+    test('recording styles come from moshaf_type; murattal is the default recording', () {
+      final styles = {for (final r in catalog.reciters) for (final m in r.moshaf) m.style};
+      expect(styles, containsAll(RecitationStyle.values));
+      expect(styleOf(11), RecitationStyle.murattal);
+      expect(styleOf(12), RecitationStyle.mujawwad);
+      expect(styleOf(213), RecitationStyle.muallim);
+      // Husary has five recordings; the complete murattal Hafs one comes first.
+      final husary = catalog.reciter(118)!;
+      expect(husary.moshaf.first.style, RecitationStyle.murattal);
+      expect(husary.moshaf.first.rewayaId, 1);
+      expect(husary.moshaf.first.complete, isTrue);
+      expect(husary.moshaf.any((m) => m.style == RecitationStyle.mujawwad), isTrue);
+    });
+
+    test('audio tafsir covers every surah in order and finds the part for an ayah', () {
+      expect({for (final p in catalog.tafsir) p.surah}, hasLength(114));
+      expect(catalog.tafsirName, contains('الطبري'));
+      final baqara = catalog.tafsirOf(2);
+      expect(baqara.length, greaterThan(5));
+      expect(baqara.first.from, 1);
+      final i = catalog.tafsirIndexFor(2, 255);
+      expect(catalog.tafsir[i].surah, 2);
+      expect(catalog.tafsir[i].covers(255), isTrue);
+      expect(catalog.tafsir[catalog.tafsirIndexFor(1, 3)].wholeSurah, isTrue);
+      expect(catalog.tafsirIndexFor(200, 1), -1);
+    });
+
+    test('videos parse with their category', () {
+      expect(catalog.videos.length, greaterThan(40));
+      expect(catalog.videos.every((v) => v.url.startsWith('https://')), isTrue);
+      expect(catalog.videoTypes[2], isNotEmpty);
+      expect(videoTypeName(2, catalog.videoTypes[2]!, false), contains('Prophet'));
+      expect(catalog.video(catalog.videos.first.id), isNotNull);
+    });
+
+    test('continue-listening labels for a surah, a radio and the tafsir', () {
+      final surahs = [const Surah(number: 2, nameAr: 'البقرة', nameEn: 'Al-Baqara', revelation: Revelation.medinan, ayahCount: 286, startPage: 2)];
+      expect(describeLastListen(const LastListen(reciterId: 123, surah: 2), catalog, surahs, true)!.title, 'سورة البقرة');
+      expect(describeLastListen(const LastListen(radioId: 116), catalog, surahs, false)!.subtitle, 'Live');
+      final part = catalog.tafsirOf(2).first;
+      expect(describeLastListen(LastListen(tafsirId: part.id), catalog, surahs, true)!.title, 'تفسير سورة البقرة');
+      expect(describeLastListen(const LastListen(reciterId: 999999, surah: 2), catalog, surahs, true), isNull);
+      expect(LastListen.fromJson({'t': part.id})!.tafsirId, part.id);
     });
 
     test('partial surah lists parse; empty recordings are dropped', () {
@@ -183,22 +232,26 @@ void main() {
       final fetcher = _Fetcher((u) {
         final q = u.toString();
         final lang = q.contains('language=ar') ? 'ar' : 'en';
-        return jsonEncode(q.contains('/reciters') ? {'reciters': (snap['reciters'] as Map)[lang]} : {'radios': (snap['radios'] as Map)[lang]});
+        if (q.contains('/reciters')) return jsonEncode({'reciters': (snap['reciters'] as Map)[lang]});
+        if (q.contains('/radios')) return jsonEncode({'radios': (snap['radios'] as Map)[lang]});
+        if (q.contains('/tafsir')) return jsonEncode({'tafasir': snap['tafsir']});
+        if (q.contains('/video_types')) return jsonEncode({'video_types': ((snap['videos'] as Map)['types'] as Map)['ar']});
+        return jsonEncode({'videos': (snap['videos'] as Map)['items']});
       });
       final repo = AudioCatalogRepository(loader: (p) async => File(p).readAsStringSync(), fetcher: fetcher, cache: cache);
       expect((await repo.load()).reciters.length, greaterThan(200));
       await repo.refresh();
-      expect(fetcher.asked, hasLength(4));
-      expect(cache.m.keys, contains('audio-catalog'));
+      expect(fetcher.asked, hasLength(7));
+      expect(cache.m.keys, contains('audio-catalog-v2'));
 
       // A tiny answer is ignored rather than replacing the cached catalogue.
       final small = _MemoryCache();
-      final bad = AudioCatalogRepository(loader: (p) async => File(p).readAsStringSync(), fetcher: _Fetcher((u) => jsonEncode({'reciters': [], 'radios': []})), cache: small);
+      final bad = AudioCatalogRepository(loader: (p) async => File(p).readAsStringSync(), fetcher: _Fetcher((u) => jsonEncode({'reciters': [], 'radios': [], 'tafasir': {'soar': []}, 'videos': [], 'video_types': []})), cache: small);
       await bad.refresh();
       expect(small.m, isEmpty);
 
       // A broken cache falls back to the bundled file.
-      cache.m['audio-catalog'] = '{nope';
+      cache.m['audio-catalog-v2'] = '{nope';
       expect((await repo.load()).reciters, isNotEmpty);
     });
   });
@@ -286,7 +339,7 @@ void main() {
       final (c, b) = await _player();
       final p = c.read(quranPlayerProvider.notifier);
       p.cycleSpeed();
-      final radio = radioTrack(const QuranRadio(id: 5, nameAr: 'إذاعة', nameEn: 'Radio', url: 'https://r/x', thematic: true));
+      final radio = radioTrack(const QuranRadio(id: 5, nameAr: 'إذاعة', nameEn: 'Radio', url: 'https://r/x', kind: RadioKind.lesson));
       await p.playQueue([radio]);
       expect(b.speed, 1);
       await p.seek(const Duration(seconds: 30));
@@ -360,12 +413,29 @@ void main() {
     testWidgets('radio tab plays a live station; the full player shows LIVE', (tester) async {
       final (c, backend) = await pump(tester);
       await go(tester, '/audio?tab=radio');
-      await tester.tap(find.text('تفسير القران الكريم'));
+      await tester.tap(find.text('العامة - متنوعة لمختلف القراء'));
       await tester.pump();
       expect(c.read(quranPlayerProvider).current!.live, isTrue);
       expect(backend.loaded.single.host, 'backup.qurango.net');
       await go(tester, '/audio/player');
       expect(find.text('مباشر'), findsOneWidget);
+    });
+
+    testWidgets('lessons tab plays the audio tafsir from a surah onwards', (tester) async {
+      final (c, backend) = await pump(tester);
+      await go(tester, '/audio?tab=lessons');
+      expect(find.text('التفسير الصوتي'), findsOneWidget);
+      await tester.ensureVisible(find.text('تفسير سورة البقرة'));
+      await tester.tap(find.text('تفسير سورة البقرة'));
+      for (var i = 0; i < 3; i++) {
+        await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 30)));
+        await tester.pump();
+      }
+      final current = c.read(quranPlayerProvider).current!;
+      expect(current.tafsirId, isNotNull);
+      expect(current.surah, 2);
+      expect(backend.loaded.length, greaterThan(300)); // the whole tafsir, starting at al-Baqarah
+      expect(c.read(lastListenProvider)!.tafsirId, current.tafsirId);
     });
 
     testWidgets('home and player fit a 320 dp phone with large text while audio plays', (tester) async {

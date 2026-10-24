@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
+import '../../core/utils/noor_format.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -33,12 +34,15 @@ class _ExploreScreenState extends State<ExploreScreen> {
         _Service(Icons.auto_stories_rounded, Localizations.localeOf(context).languageCode == 'ar' ? 'حصن المسلم' : 'Hisn al-Muslim', '/hisn', gold: true),
         _Service(Icons.auto_awesome_outlined, l.svcNames, '/names', gold: true),
         _Service(Icons.checklist_rounded, l.svcPlanner, '/planner'),
+        _Service(Icons.event_repeat_rounded, l.svcQada, '/qada'),
         _Service(Icons.savings_outlined, l.svcZakat, '/zakat', gold: true),
         _Service(Icons.headphones_outlined, l.svcAudio, '/audio'),
         _Service(Icons.radio_outlined, l.svcRadio, '/audio?tab=radio', gold: true),
       ]),
       (l.groupKnowledge, [
+        _Service(Icons.wb_twilight_rounded, l.svcSpotlights, '/spotlights'),
         _Service(Icons.record_voice_over_outlined, l.svcKhutab, '/khutab', gold: true),
+        _Service(Icons.school_rounded, l.svcLessons, '/audio?tab=lessons'),
         _Service(Icons.receipt_long_outlined, l.svcHadith, '/hadith'),
         _Service(Icons.timeline_rounded, l.svcSeerah, '/seerah', gold: true),
         _Service(Icons.school_outlined, l.svcAcademy, '/academy'),
@@ -67,6 +71,23 @@ class _ExploreScreenState extends State<ExploreScreen> {
           ScreenTitle(l.exploreTitle),
           const SizedBox(height: 14),
           NoorSearchField(hint: l.searchAll, onChanged: (v) => setState(() => _q = v.trim())),
+          // Beyond the service names: one tap searches the content itself.
+          const SizedBox(height: 10),
+          NoorCard(
+            radius: 16,
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+            onTap: () => context.push('/search?q=${Uri.encodeQueryComponent(_q)}'),
+            child: Row(spacing: 10, children: [
+              Icon(Icons.manage_search_rounded, color: context.noor.primary),
+              Expanded(
+                child: Text(
+                  _q.isEmpty ? l.svcSearch : NoorFormat.tr(context, 'ابحث عن «$_q» في القرآن وكل المحتوى', 'Search “$_q” in the Quran and all content'),
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: context.noor.primary),
+                ),
+              ),
+              Icon(Directionality.of(context) == TextDirection.rtl ? Icons.chevron_left_rounded : Icons.chevron_right_rounded, color: context.noor.textSecondary),
+            ]),
+          ),
           for (final (title, items) in groups)
             if (items.any((s) => s.label.toLowerCase().contains(_q.toLowerCase()))) ...[
               const SizedBox(height: 20),

@@ -13,8 +13,10 @@ Run everything from the project root with Python 3 (`python -I tool/<script>.py`
 | `build_hadith_seerah.py .` | `assets/data/hadith.json`, `seerah.json`. |
 | `build_learn.py .` | `stories`, `academy`, `faq`, `hajj`, `kids` JSON. |
 | `build_daily.py .` | `assets/data/daily.json`: rotating ayah / hadith / dua pools for the home screen (run after the scripts above). |
-| `build_audio.py .` | `assets/data/audio.json`: reciter and radio catalogue from the mp3quran.net API (needs internet). The app also refreshes it in the background. |
+| `build_audio.py .` | `assets/data/audio.json`: reciter, radio, audio-tafsir and video catalogue from the mp3quran.net API (needs internet). The app also refreshes it in the background. |
 | `build_khutab.py .` | `assets/data/khutab.json`: the Friday sermons. Quranic quotations are copied from the Quran files (excerpts matched word by word); the script stops if one does not match. |
+| `build_spotlights.py .` | `assets/data/spotlights.json`: seasonal spotlights; Quranic quotations go through `quran_quote.py` like the sermons. |
+| `quran_quote.py` | Not run directly: shared helpers that copy (and cut) Quranic text from the Quran files for the sermon and spotlight scripts. |
 | `build_books.py` | `assets/data/books/*` from the open hadith-api dataset (needs internet). |
 | `build_privacy.py . --email you@example.com` | The privacy policy: `assets/data/privacy.json` (in-app) and `site/privacy/index.html` (public page). The contact e-mail is passed on the command line, not stored. |
 | `make_icons.py` | App icon: `assets/icon/noor_icon.png`, Android mipmaps, iOS AppIcon set (needs Pillow). |

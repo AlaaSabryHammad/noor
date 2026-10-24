@@ -1,0 +1,609 @@
+{
+ "_note": "Seasonal spotlights written for NOOR. Quranic text copied from assets/data/quran (Tanzil, CC BY 3.0). Hadith cited by collection and number. Review by a qualified scholar is required before publication.",
+ "spotlights": [
+  {
+   "id": "last-ten",
+   "titleAr": "العشر الأواخر وليلة القدر",
+   "titleEn": "The last ten nights",
+   "summaryAr": "أفضل ليالي العام، وفيها ليلة خير من ألف شهر.",
+   "summaryEn": "The best nights of the year, with a night better than a thousand months.",
+   "seasons": [
+    [
+     9,
+     20,
+     30
+    ]
+   ],
+   "blocks": [
+    {
+     "t": "p",
+     "ar": "كان النبي ﷺ يخصّ العشر الأواخر من رمضان بمزيد من الاجتهاد: يحيي الليل، ويوقظ أهله، ويعتكف في المسجد، يلتمس ليلة القدر.",
+     "en": "The Prophet ﷺ gave the last ten nights of Ramadan extra devotion: he spent the nights in worship, woke his family and secluded himself in the mosque, seeking Laylat al-Qadr."
+    },
+    {
+     "t": "ayah",
+     "ar": "إِنَّآ أَنزَلْنَٰهُ فِى لَيْلَةِ ٱلْقَدْرِ وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ لَيْلَةُ ٱلْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ تَنَزَّلُ ٱلْمَلَٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ سَلَٰمٌ هِىَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ",
+     "en": "Indeed, We sent the Qur'an down during the Night of Decree. And what can make you know what is the Night of Decree? The Night of Decree is better than a thousand months. The angels and the Spirit descend therein by permission of their Lord for every matter. Peace it is until the emergence of dawn.",
+     "refAr": "سورة القدر: ١–٥",
+     "refEn": "Al-Qadr 97:1–5"
+    },
+    {
+     "t": "hadith",
+     "ar": "«كان رسولُ الله ﷺ يجتهدُ في العشرِ الأواخرِ ما لا يجتهدُ في غيرِه»",
+     "en": "“The Messenger of Allah ﷺ would strive in the last ten nights more than at any other time.”",
+     "refAr": "رواه مسلم (١١٧٥)",
+     "refEn": "Muslim 1175"
+    },
+    {
+     "t": "hadith",
+     "ar": "«مَن قام ليلةَ القدرِ إيمانًا واحتسابًا غُفِر له ما تقدّم من ذنبِه»",
+     "en": "“Whoever stands in prayer on Laylat al-Qadr out of faith and hoping for reward will have his past sins forgiven.”",
+     "refAr": "متفق عليه: البخاري (١٩٠١) ومسلم (٧٦٠)",
+     "refEn": "al-Bukhari 1901, Muslim 760"
+    },
+    {
+     "t": "hadith",
+     "ar": "قالت عائشة رضي الله عنها: يا رسولَ الله، أرأيتَ إن علمتُ أيُّ ليلةٍ ليلةُ القدر، ما أقولُ فيها؟ قال: «قولي: اللهمَّ إنك عفوٌّ تحبُّ العفوَ فاعفُ عنّي»",
+     "en": "‘A’ishah asked: “O Messenger of Allah, if I knew which night is Laylat al-Qadr, what should I say in it?” He said: “Say: O Allah, You are Pardoning and love to pardon, so pardon me.”",
+     "refAr": "رواه الترمذي (٣٥١٣) وابن ماجه (٣٨٥٠)",
+     "refEn": "at-Tirmidhi 3513, Ibn Majah 3850"
+    }
+   ],
+   "actions": [
+    {
+     "route": "/quran/reader/97",
+     "labelAr": "اقرأ سورة القدر",
+     "labelEn": "Read Surat al-Qadr"
+    },
+    {
+     "route": "/ramadan",
+     "labelAr": "متابعة رمضان",
+     "labelEn": "Ramadan tracker"
+    },
+    {
+     "route": "/tasbeeh",
+     "labelAr": "المسبحة",
+     "labelEn": "Tasbeeh"
+    }
+   ]
+  },
+  {
+   "id": "ramadan",
+   "titleAr": "شهر رمضان",
+   "titleEn": "The month of Ramadan",
+   "summaryAr": "شهر الصيام والقيام والقرآن.",
+   "summaryEn": "The month of fasting, night prayer and the Quran.",
+   "seasons": [
+    [
+     9,
+     1,
+     19
+    ]
+   ],
+   "blocks": [
+    {
+     "t": "p",
+     "ar": "رمضان موسم يتضاعف فيه الأجر، فاجعل لك فيه وردًا ثابتًا من القرآن، وحافظ على التراويح، وأكثر من الصدقة والدعاء عند الفطر.",
+     "en": "Ramadan is a season of multiplied reward: keep a fixed daily portion of Quran, hold on to tarawih, and give charity and make du‘a at the time of breaking the fast."
+    },
+    {
+     "t": "ayah",
+     "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُتِبَ عَلَيْكُمُ ٱلصِّيَامُ كَمَا كُتِبَ عَلَى ٱلَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ",
+     "en": "O you who have believed, decreed upon you is fasting as it was decreed upon those before you that you may become righteous -",
+     "refAr": "سورة البقرة: ١٨٣",
+     "refEn": "Al-Baqara 2:183"
+    },
+    {
+     "t": "hadith",
+     "ar": "«مَن صام رمضانَ إيمانًا واحتسابًا غُفِر له ما تقدّم من ذنبِه»",
+     "en": "“Whoever fasts Ramadan out of faith and hoping for reward will have his past sins forgiven.”",
+     "refAr": "متفق عليه: البخاري (٣٨) ومسلم (٧٦٠)",
+     "refEn": "al-Bukhari 38, Muslim 760"
+    },
+    {
+     "t": "hadith",
+     "ar": "«مَن قام رمضانَ إيمانًا واحتسابًا غُفِر له ما تقدّم من ذنبِه»",
+     "en": "“Whoever stands in prayer during Ramadan out of faith and hoping for reward will have his past sins forgiven.”",
+     "refAr": "متفق عليه: البخاري (٣٧) ومسلم (٧٥٩)",
+     "refEn": "al-Bukhari 37, Muslim 759"
+    }
+   ],
+   "actions": [
+    {
+     "route": "/ramadan",
+     "labelAr": "متابعة رمضان",
+     "labelEn": "Ramadan tracker"
+    },
+    {
+     "route": "/khutab/ramadan",
+     "labelAr": "خطبة استقبال رمضان",
+     "labelEn": "Ramadan khutbah"
+    },
+    {
+     "route": "/quran",
+     "labelAr": "ختمة القرآن",
+     "labelEn": "Quran khatma"
+    }
+   ]
+  },
+  {
+   "id": "shawwal",
+   "titleAr": "ستٌّ من شوال",
+   "titleEn": "Six days of Shawwal",
+   "summaryAr": "أتبِع رمضان بستٍّ من شوال يكن كصيام الدهر.",
+   "summaryEn": "Follow Ramadan with six days of Shawwal for the reward of a lifetime of fasting.",
+   "seasons": [
+    [
+     10,
+     1,
+     30
+    ]
+   ],
+   "blocks": [
+    {
+     "t": "p",
+     "ar": "بعد العيد يُستحب صيام ستة أيام من شوال، متتابعةً أو متفرقة. ومن كان عليه قضاء من رمضان فالأولى عند كثير من العلماء أن يبدأ بالقضاء.",
+     "en": "After Eid it is recommended to fast six days of Shawwal, together or apart. Whoever owes days from Ramadan is advised by many scholars to make them up first."
+    },
+    {
+     "t": "hadith",
+     "ar": "«مَن صام رمضانَ ثم أتبعه ستًّا من شوّال كان كصيامِ الدهر»",
+     "en": "“Whoever fasts Ramadan and follows it with six days of Shawwal, it is as if he fasted for a lifetime.”",
+     "refAr": "رواه مسلم (١١٦٤)",
+     "refEn": "Muslim 1164"
+    }
+   ],
+   "actions": [
+    {
+     "route": "/qada",
+     "labelAr": "متتبّع القضاء",
+     "labelEn": "Make-up tracker"
+    },
+    {
+     "route": "/planner",
+     "labelAr": "مخطط العبادات",
+     "labelEn": "Worship planner"
+    }
+   ]
+  },
+  {
+   "id": "dhulhijjah",
+   "titleAr": "عشر ذي الحجة ويوم عرفة",
+   "titleEn": "The ten days of Dhul-Hijjah",
+   "summaryAr": "أحبّ الأيام إلى الله للعمل الصالح، وفيها يوم عرفة.",
+   "summaryEn": "The days most beloved to Allah for good deeds, with the Day of Arafah.",
+   "seasons": [
+    [
+     11,
+     25,
+     30
+    ],
+    [
+     12,
+     1,
+     13
+    ]
+   ],
+   "blocks": [
+    {
+     "t": "ayah",
+     "ar": "وَٱلْفَجْرِ وَلَيَالٍ عَشْرٍ",
+     "en": "By the dawn And [by] ten nights",
+     "refAr": "سورة الفجر: ١–٢",
+     "refEn": "Al-Fajr 89:1–2"
+    },
+    {
+     "t": "hadith",
+     "ar": "«ما مِن أيامٍ العملُ الصالحُ فيها أحبُّ إلى اللهِ من هذه الأيام» يعني أيامَ العشر، قالوا: يا رسولَ الله، ولا الجهادُ في سبيلِ الله؟ قال: «ولا الجهادُ في سبيلِ الله، إلا رجلٌ خرج بنفسِه ومالِه فلم يرجعْ من ذلك بشيء»",
+     "en": "“There are no days in which righteous deeds are more beloved to Allah than these days,” meaning the ten days. They said: “Not even jihad in the path of Allah?” He said: “Not even jihad in the path of Allah, except a man who went out with his life and his wealth and returned with nothing of it.”",
+     "refAr": "رواه أبو داود (٢٤٣٨)، وأصله في البخاري (٩٦٩)",
+     "refEn": "Abu Dawud 2438; its origin is in al-Bukhari 969"
+    },
+    {
+     "t": "hadith",
+     "ar": "«صيامُ يومِ عرفة، أحتسبُ على اللهِ أن يكفِّرَ السنةَ التي قبلَه والسنةَ التي بعدَه»",
+     "en": "“Fasting the Day of Arafah, I hope from Allah that it will expiate the year before it and the year after it.”",
+     "refAr": "رواه مسلم (١١٦٢)",
+     "refEn": "Muslim 1162"
+    },
+    {
+     "t": "hadith",
+     "ar": "«خيرُ الدعاءِ دعاءُ يومِ عرفة، وخيرُ ما قلتُ أنا والنبيّون من قبلي: لا إله إلا اللهُ وحدَه لا شريكَ له، له الملكُ وله الحمدُ وهو على كلِّ شيءٍ قدير»",
+     "en": "“The best supplication is the supplication of the Day of Arafah, and the best of what I and the prophets before me have said is: there is no god but Allah alone, without partner; His is the dominion and His the praise, and He has power over all things.”",
+     "refAr": "رواه الترمذي (٣٥٨٥)",
+     "refEn": "at-Tirmidhi 3585"
+    }
+   ],
+   "actions": [
+    {
+     "route": "/khutab/dhulhijjah",
+     "labelAr": "خطبة عشر ذي الحجة",
+     "labelEn": "Dhul-Hijjah khutbah"
+    },
+    {
+     "route": "/hajj",
+     "labelAr": "دليل الحج والعمرة",
+     "labelEn": "Hajj & Umrah guide"
+    },
+    {
+     "route": "/tasbeeh",
+     "labelAr": "التكبير والتهليل",
+     "labelEn": "Takbir and tahlil"
+    }
+   ]
+  },
+  {
+   "id": "muharram",
+   "titleAr": "شهر الله المحرّم وعاشوراء",
+   "titleEn": "Muharram and Ashura",
+   "summaryAr": "أفضل الصيام بعد رمضان، وصيام عاشوراء يكفّر سنة.",
+   "summaryEn": "The best fasting after Ramadan; fasting Ashura expiates a year.",
+   "seasons": [
+    [
+     1,
+     1,
+     10
+    ]
+   ],
+   "blocks": [
+    {
+     "t": "p",
+     "ar": "المحرّم أول شهور السنة الهجرية وأحد الأشهر الحرم، ويُستحب الإكثار فيه من الصيام، وآكده يوم عاشوراء (العاشر)، ويُستحب أن يُصام معه التاسع.",
+     "en": "Muharram opens the Hijri year and is one of the sacred months. Fasting in it is encouraged, above all ‘Ashura (the tenth), together with the ninth."
+    },
+    {
+     "t": "hadith",
+     "ar": "«أفضلُ الصيامِ بعد رمضانَ شهرُ اللهِ المحرّم، وأفضلُ الصلاةِ بعد الفريضةِ صلاةُ الليل»",
+     "en": "“The best fasting after Ramadan is in Allah’s month of Muharram, and the best prayer after the obligatory prayer is the night prayer.”",
+     "refAr": "رواه مسلم (١١٦٣)",
+     "refEn": "Muslim 1163"
+    },
+    {
+     "t": "hadith",
+     "ar": "«صيامُ يومِ عاشوراء، أحتسبُ على اللهِ أن يكفِّرَ السنةَ التي قبلَه»",
+     "en": "“Fasting the day of ‘Ashura, I hope from Allah that it will expiate the year before it.”",
+     "refAr": "رواه مسلم (١١٦٢)",
+     "refEn": "Muslim 1162"
+    },
+    {
+     "t": "hadith",
+     "ar": "«لئن بقيتُ إلى قابلٍ لأصومنَّ التاسع»",
+     "en": "“If I live until next year, I will fast the ninth.”",
+     "refAr": "رواه مسلم (١١٣٤)",
+     "refEn": "Muslim 1134"
+    }
+   ],
+   "actions": [
+    {
+     "route": "/calendar",
+     "labelAr": "التقويم الهجري",
+     "labelEn": "Hijri calendar"
+    },
+    {
+     "route": "/planner",
+     "labelAr": "مخطط العبادات",
+     "labelEn": "Worship planner"
+    }
+   ]
+  },
+  {
+   "id": "shaban",
+   "titleAr": "شعبان: تهيئةٌ لرمضان",
+   "titleEn": "Sha‘ban: preparing for Ramadan",
+   "summaryAr": "شهرٌ تُرفع فيه الأعمال، وموسم لقضاء ما فات من الصيام.",
+   "summaryEn": "A month in which deeds are raised, and the time to make up missed fasts.",
+   "seasons": [
+    [
+     8,
+     1,
+     30
+    ]
+   ],
+   "blocks": [
+    {
+     "t": "hadith",
+     "ar": "قالت عائشة رضي الله عنها: «ما رأيتُ رسولَ الله ﷺ استكمل صيامَ شهرٍ إلا رمضان، وما رأيتُه أكثرَ صيامًا منه في شعبان»",
+     "en": "‘A’ishah said: “I never saw the Messenger of Allah ﷺ fast a complete month except Ramadan, and I never saw him fast more in any month than in Sha‘ban.”",
+     "refAr": "متفق عليه: البخاري (١٩٦٩) ومسلم (١١٥٦)",
+     "refEn": "al-Bukhari 1969, Muslim 1156"
+    },
+    {
+     "t": "hadith",
+     "ar": "«ذلك شهرٌ يغفلُ الناسُ عنه بين رجبٍ ورمضان، وهو شهرٌ تُرفعُ فيه الأعمالُ إلى ربِّ العالمين، فأحبُّ أن يُرفعَ عملي وأنا صائم»",
+     "en": "“That is a month people neglect, between Rajab and Ramadan. It is a month in which deeds are raised to the Lord of the worlds, and I love for my deeds to be raised while I am fasting.”",
+     "refAr": "رواه النسائي (٢٣٥٧)",
+     "refEn": "an-Nasa’i 2357"
+    },
+    {
+     "t": "hadith",
+     "ar": "قالت عائشة رضي الله عنها: «كان يكونُ عليَّ الصومُ من رمضان، فما أستطيعُ أن أقضيَه إلا في شعبان»",
+     "en": "‘A’ishah said: “I would owe fasts from Ramadan and could not make them up except in Sha‘ban.”",
+     "refAr": "متفق عليه: البخاري (١٩٥٠) ومسلم (١١٤٦)",
+     "refEn": "al-Bukhari 1950, Muslim 1146"
+    },
+    {
+     "t": "p",
+     "ar": "فاقضِ ما عليك من صيام قبل دخول رمضان، وابدأ وردك من القرآن من الآن.",
+     "en": "Make up any fasts you owe before Ramadan arrives, and begin your daily Quran portion now."
+    }
+   ],
+   "actions": [
+    {
+     "route": "/qada",
+     "labelAr": "متتبّع القضاء",
+     "labelEn": "Make-up tracker"
+    },
+    {
+     "route": "/khutab/ramadan",
+     "labelAr": "خطبة استقبال رمضان",
+     "labelEn": "Ramadan khutbah"
+    },
+    {
+     "route": "/ramadan",
+     "labelAr": "رمضان",
+     "labelEn": "Ramadan"
+    }
+   ]
+  },
+  {
+   "id": "sacred-months",
+   "titleAr": "الأشهر الحُرُم",
+   "titleEn": "The sacred months",
+   "summaryAr": "ذو القعدة وذو الحجة والمحرّم ورجب: يعظُم فيها الذنب والأجر.",
+   "summaryEn": "Dhul-Qa‘dah, Dhul-Hijjah, Muharram and Rajab: sins and good deeds weigh more.",
+   "seasons": [
+    [
+     7,
+     1,
+     30
+    ],
+    [
+     11,
+     1,
+     24
+    ],
+    [
+     12,
+     14,
+     30
+    ],
+    [
+     1,
+     11,
+     30
+    ]
+   ],
+   "blocks": [
+    {
+     "t": "ayah",
+     "ar": "إِنَّ عِدَّةَ ٱلشُّهُورِ عِندَ ٱللَّهِ ٱثْنَا عَشَرَ شَهْرًا فِى كِتَٰبِ ٱللَّهِ يَوْمَ خَلَقَ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ مِنْهَآ أَرْبَعَةٌ حُرُمٌ ذَٰلِكَ ٱلدِّينُ ٱلْقَيِّمُ فَلَا تَظْلِمُوا۟ فِيهِنَّ أَنفُسَكُمْ وَقَٰتِلُوا۟ ٱلْمُشْرِكِينَ كَآفَّةً كَمَا يُقَٰتِلُونَكُمْ كَآفَّةً وَٱعْلَمُوٓا۟ أَنَّ ٱللَّهَ مَعَ ٱلْمُتَّقِينَ",
+     "en": "Indeed, the number of months with Allah is twelve [lunar] months in the register of Allah [from] the day He created the heavens and the earth; of these, four are sacred. That is the correct religion, so do not wrong yourselves during them. And fight against the disbelievers collectively as they fight against you collectively. And know that Allah is with the righteous [who fear Him].",
+     "refAr": "سورة التوبة: ٣٦",
+     "refEn": "At-Tawba 9:36"
+    },
+    {
+     "t": "hadith",
+     "ar": "«إنّ الزمانَ قد استدار كهيئتِه يومَ خلق اللهُ السماواتِ والأرض، السنةُ اثنا عشرَ شهرًا، منها أربعةٌ حُرُم: ثلاثٌ متوالياتٌ: ذو القعدة وذو الحجة والمحرّم، ورجبُ مُضَرَ الذي بين جمادى وشعبان»",
+     "en": "“Time has come round to its form on the day Allah created the heavens and the earth. The year is twelve months, four of them sacred: three in succession — Dhul-Qa‘dah, Dhul-Hijjah and Muharram — and the Rajab of Mudar, between Jumada and Sha‘ban.”",
+     "refAr": "متفق عليه: البخاري (٣١٩٧) ومسلم (١٦٧٩)",
+     "refEn": "al-Bukhari 3197, Muslim 1679"
+    },
+    {
+     "t": "p",
+     "ar": "قال المفسرون في قوله تعالى: ﴿فلا تظلموا فيهن أنفسكم﴾: إن الذنب فيها أعظم، كما أن العمل الصالح فيها أعظم أجرًا. ولم يثبت في تخصيص رجب بصلاة أو صيام معيّن حديث صحيح، فيُكتفى بالطاعات المشروعة عامة.",
+     "en": "Commentators say of “so do not wrong yourselves during them” that sins in these months are graver, just as good deeds carry greater reward. No authentic hadith singles out Rajab for a particular prayer or fast, so the usual acts of worship suffice."
+    }
+   ],
+   "actions": [
+    {
+     "route": "/calendar",
+     "labelAr": "التقويم الهجري",
+     "labelEn": "Hijri calendar"
+    },
+    {
+     "route": "/khutab/taqwa",
+     "labelAr": "خطبة التقوى",
+     "labelEn": "Khutbah on taqwa"
+    }
+   ]
+  },
+  {
+   "id": "white-days",
+   "titleAr": "الأيام البيض",
+   "titleEn": "The white days",
+   "summaryAr": "صيام ١٣ و١٤ و١٥ من كل شهر هجري كصيام الدهر.",
+   "summaryEn": "Fasting the 13th, 14th and 15th of each Hijri month equals a lifetime of fasting.",
+   "seasons": [
+    [
+     0,
+     11,
+     15
+    ]
+   ],
+   "blocks": [
+    {
+     "t": "hadith",
+     "ar": "«يا أبا ذرّ، إذا صمتَ من الشهرِ ثلاثةَ أيام فصُمْ ثلاثَ عشرة، وأربعَ عشرة، وخمسَ عشرة»",
+     "en": "“O Abu Dharr, if you fast three days of the month, fast the thirteenth, fourteenth and fifteenth.”",
+     "refAr": "رواه الترمذي (٧٦١) والنسائي (٢٤٢٤)",
+     "refEn": "at-Tirmidhi 761, an-Nasa’i 2424"
+    },
+    {
+     "t": "hadith",
+     "ar": "«صومُ ثلاثةِ أيامٍ من كلِّ شهرٍ صومُ الدهرِ كلِّه»",
+     "en": "“Fasting three days of every month is like fasting for a lifetime.”",
+     "refAr": "متفق عليه: البخاري (١٩٧٩) ومسلم (١١٥٩)",
+     "refEn": "al-Bukhari 1979, Muslim 1159"
+    },
+    {
+     "t": "p",
+     "ar": "سُمّيت بيضًا لابيضاض لياليها بالقمر. انظر تواريخها في التقويم الهجري، وتذكّر أن تعديل اليوم الهجري متاح في الإعدادات.",
+     "en": "They are called white for their moonlit nights. See their dates in the Hijri calendar; the Hijri day can be adjusted in Settings."
+    }
+   ],
+   "actions": [
+    {
+     "route": "/calendar",
+     "labelAr": "التقويم الهجري",
+     "labelEn": "Hijri calendar"
+    },
+    {
+     "route": "/planner",
+     "labelAr": "مخطط العبادات",
+     "labelEn": "Worship planner"
+    }
+   ]
+  },
+  {
+   "id": "salawat",
+   "titleAr": "الصلاة على النبي ﷺ",
+   "titleEn": "Blessings on the Prophet ﷺ",
+   "summaryAr": "صلاةٌ واحدة يُصلّي الله عليك بها عشرًا.",
+   "summaryEn": "One blessing from you, ten from Allah.",
+   "seasons": [],
+   "blocks": [
+    {
+     "t": "ayah",
+     "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+     "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+     "refAr": "سورة الأحزاب: ٥٦",
+     "refEn": "Al-Ahzaab 33:56"
+    },
+    {
+     "t": "hadith",
+     "ar": "«مَن صلّى عليَّ صلاةً صلّى اللهُ عليه بها عشرًا»",
+     "en": "“Whoever sends one blessing upon me, Allah sends ten blessings upon him.”",
+     "refAr": "رواه مسلم (٤٠٨)",
+     "refEn": "Muslim 408"
+    },
+    {
+     "t": "hadith",
+     "ar": "«البخيلُ مَن ذُكِرتُ عنده فلم يُصلِّ عليَّ»",
+     "en": "“The miser is the one in whose presence I am mentioned and he does not send blessings upon me.”",
+     "refAr": "رواه الترمذي (٣٥٤٦)",
+     "refEn": "at-Tirmidhi 3546"
+    },
+    {
+     "t": "p",
+     "ar": "أكثِر منها يوم الجمعة وليلتها، وعند ذكره ﷺ، وفي التشهد، وبعد الأذان.",
+     "en": "Send them often on Friday and its night, whenever he ﷺ is mentioned, in the tashahhud and after the adhan."
+    }
+   ],
+   "actions": [
+    {
+     "route": "/tasbeeh",
+     "labelAr": "المسبحة",
+     "labelEn": "Tasbeeh"
+    },
+    {
+     "route": "/khutab/jumuah",
+     "labelAr": "خطبة يوم الجمعة",
+     "labelEn": "Khutbah on Friday"
+    }
+   ]
+  },
+  {
+   "id": "istighfar",
+   "titleAr": "الاستغفار",
+   "titleEn": "Seeking forgiveness",
+   "summaryAr": "بابٌ من الرحمة: يمحو الذنب ويجلب الرزق.",
+   "summaryEn": "A door of mercy: it erases sins and brings provision.",
+   "seasons": [],
+   "blocks": [
+    {
+     "t": "ayah",
+     "ar": "فَقُلْتُ ٱسْتَغْفِرُوا۟ رَبَّكُمْ إِنَّهُۥ كَانَ غَفَّارًا يُرْسِلِ ٱلسَّمَآءَ عَلَيْكُم مِّدْرَارًا وَيُمْدِدْكُم بِأَمْوَٰلٍ وَبَنِينَ وَيَجْعَل لَّكُمْ جَنَّٰتٍ وَيَجْعَل لَّكُمْ أَنْهَٰرًا",
+     "en": "And said, 'Ask forgiveness of your Lord. Indeed, He is ever a Perpetual Forgiver. He will send [rain from] the sky upon you in [continuing] showers And give you increase in wealth and children and provide for you gardens and provide for you rivers.",
+     "refAr": "سورة نوح: ١٠–١٢",
+     "refEn": "Nooh 71:10–12"
+    },
+    {
+     "t": "hadith",
+     "ar": "«واللهِ إني لأستغفرُ اللهَ وأتوبُ إليه في اليومِ أكثرَ من سبعين مرة»",
+     "en": "“By Allah, I seek Allah’s forgiveness and turn to Him in repentance more than seventy times a day.”",
+     "refAr": "رواه البخاري (٦٣٠٧)",
+     "refEn": "al-Bukhari 6307"
+    },
+    {
+     "t": "hadith",
+     "ar": "«سيّدُ الاستغفارِ أن تقول: اللهمَّ أنت ربي لا إله إلا أنت، خلقتني وأنا عبدُك، وأنا على عهدِك ووعدِك ما استطعت، أعوذُ بك من شرِّ ما صنعت، أبوءُ لك بنعمتِك عليَّ، وأبوءُ لك بذنبي فاغفرْ لي، فإنه لا يغفرُ الذنوبَ إلا أنت»",
+     "en": "“The master of seeking forgiveness is to say: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and promise as far as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.”",
+     "refAr": "رواه البخاري (٦٣٠٦)",
+     "refEn": "al-Bukhari 6306"
+    }
+   ],
+   "actions": [
+    {
+     "route": "/tasbeeh",
+     "labelAr": "المسبحة",
+     "labelEn": "Tasbeeh"
+    },
+    {
+     "route": "/adhkar/session/morning",
+     "labelAr": "أذكار الصباح",
+     "labelEn": "Morning adhkar"
+    },
+    {
+     "route": "/khutab/repentance",
+     "labelAr": "خطبة التوبة",
+     "labelEn": "Khutbah on repentance"
+    }
+   ]
+  },
+  {
+   "id": "dhikr",
+   "titleAr": "ذكر الله",
+   "titleEn": "Remembering Allah",
+   "summaryAr": "حياة القلوب وطمأنينتها.",
+   "summaryEn": "The life and calm of the heart.",
+   "seasons": [],
+   "blocks": [
+    {
+     "t": "ayah",
+     "ar": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+     "en": "Those who have believed and whose hearts are assured by the remembrance of Allah. Unquestionably, by the remembrance of Allah hearts are assured.",
+     "refAr": "سورة الرعد: ٢٨",
+     "refEn": "Ar-Ra'd 13:28"
+    },
+    {
+     "t": "ayah",
+     "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱذْكُرُوا۟ ٱللَّهَ ذِكْرًا كَثِيرًا وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا",
+     "en": "O you who have believed, remember Allah with much remembrance And exalt Him morning and afternoon.",
+     "refAr": "سورة الأحزاب: ٤١–٤٢",
+     "refEn": "Al-Ahzaab 33:41–42"
+    },
+    {
+     "t": "hadith",
+     "ar": "«مَثَلُ الذي يذكرُ ربَّه والذي لا يذكرُ ربَّه مَثَلُ الحيِّ والميّت»",
+     "en": "“The likeness of one who remembers his Lord and one who does not is that of the living and the dead.”",
+     "refAr": "رواه البخاري (٦٤٠٧)",
+     "refEn": "al-Bukhari 6407"
+    },
+    {
+     "t": "hadith",
+     "ar": "«كلمتان خفيفتان على اللسان، ثقيلتان في الميزان، حبيبتان إلى الرحمن: سبحان اللهِ وبحمدِه، سبحان اللهِ العظيم»",
+     "en": "“Two phrases are light on the tongue, heavy on the scale and beloved to the Most Merciful: Glory be to Allah and praise be to Him; glory be to Allah the Almighty.”",
+     "refAr": "متفق عليه: البخاري (٦٤٠٦) ومسلم (٢٦٩٤)",
+     "refEn": "al-Bukhari 6406, Muslim 2694"
+    }
+   ],
+   "actions": [
+    {
+     "route": "/tasbeeh",
+     "labelAr": "المسبحة",
+     "labelEn": "Tasbeeh"
+    },
+    {
+     "route": "/adhkar",
+     "labelAr": "الأذكار",
+     "labelEn": "Adhkar"
+    },
+    {
+     "route": "/hisn",
+     "labelAr": "حصن المسلم",
+     "labelEn": "Hisn al-Muslim"
+    }
+   ]
+  }
+ ]
+}

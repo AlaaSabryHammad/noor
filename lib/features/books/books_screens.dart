@@ -9,6 +9,7 @@ import '../../core/utils/noor_format.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../library/favorites.dart';
+import '../library/share_image.dart';
 import '../services/service_widgets.dart';
 import 'books_data.dart';
 
@@ -225,6 +226,7 @@ class _SectionScreenState extends ConsumerState<SectionScreen> {
                               showNoorSnack(context, l.copied);
                             },
                           ),
+                          ShareImageButton(item: item),
                           SaveButton(item: item, tooltip: l.save),
                         ]),
                         Padding(

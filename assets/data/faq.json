@@ -25,6 +25,22 @@
    "ar": "الحج",
    "en": "Hajj"
   },
+  "transactions": {
+   "ar": "المعاملات",
+   "en": "Transactions"
+  },
+  "family": {
+   "ar": "الأسرة",
+   "en": "Family"
+  },
+  "women": {
+   "ar": "أحكام النساء",
+   "en": "Women’s rulings"
+  },
+  "manners": {
+   "ar": "الآداب",
+   "en": "Manners"
+  },
   "quran": {
    "ar": "القرآن",
    "en": "The Quran"
@@ -113,6 +129,14 @@
   },
   {
    "id": "f11",
+   "cat": "purity",
+   "qAr": "ما حكم المسح على الخفين؟",
+   "qEn": "May one wipe over leather socks (khuffs)?",
+   "aAr": "جائز إذا لُبسا على طهارة، ومدته يوم وليلة للمقيم وثلاثة أيام بلياليها للمسافر، ويُمسح أعلاهما.",
+   "aEn": "Yes, if they were put on in a state of purity. The period is a day and a night for a resident and three days and nights for a traveller, wiping over the top."
+  },
+  {
+   "id": "f12",
    "cat": "prayer",
    "qAr": "كم عدد الصلوات المفروضة في اليوم؟",
    "qEn": "How many prayers are obligatory each day?",
@@ -120,7 +144,7 @@
    "aEn": "Five: Fajr, Dhuhr, ‘Asr, Maghrib and ‘Isha."
   },
   {
-   "id": "f12",
+   "id": "f13",
    "cat": "prayer",
    "qAr": "ما هي القبلة؟",
    "qEn": "What is the Qibla?",
@@ -128,7 +152,7 @@
    "aEn": "The direction of the Ka‘bah in Makkah, which Muslims face in prayer."
   },
   {
-   "id": "f13",
+   "id": "f14",
    "cat": "prayer",
    "qAr": "ما صلاة الجمعة؟",
    "qEn": "What is the Friday prayer?",
@@ -136,7 +160,7 @@
    "aEn": "A congregational prayer held on Friday at midday preceded by two sermons; it is obligatory on resident adult men."
   },
   {
-   "id": "f14",
+   "id": "f15",
    "cat": "prayer",
    "qAr": "ما أوقات الصلوات الخمس؟",
    "qEn": "What are the times of the five prayers?",
@@ -144,7 +168,7 @@
    "aEn": "Fajr from true dawn to sunrise; Dhuhr from the sun’s decline; ‘Asr when an object’s shadow equals its length (twice, for the Hanafis); Maghrib from sunset; ‘Isha from the disappearance of twilight."
   },
   {
-   "id": "f15",
+   "id": "f16",
    "cat": "prayer",
    "qAr": "ما عدد ركعات كل صلاة؟",
    "qEn": "How many rak‘ahs is each prayer?",
@@ -152,7 +176,7 @@
    "aEn": "Fajr 2, Dhuhr 4, ‘Asr 4, Maghrib 3, ‘Isha 4, and Jumu‘ah 2."
   },
   {
-   "id": "f16",
+   "id": "f17",
    "cat": "prayer",
    "qAr": "ما حكم قصر الصلاة في السفر؟",
    "qEn": "Can prayers be shortened while travelling?",
@@ -160,7 +184,7 @@
    "aEn": "A traveller shortens four-rak‘ah prayers to two. The qualifying distance is estimated differently by the schools (about 80 km for most)."
   },
   {
-   "id": "f17",
+   "id": "f18",
    "cat": "prayer",
    "qAr": "هل يجوز الجمع بين الصلاتين؟",
    "qEn": "May two prayers be combined?",
@@ -168,7 +192,7 @@
    "aEn": "Most scholars allow combining Dhuhr with ‘Asr and Maghrib with ‘Isha for a valid excuse such as travel or heavy rain, with differences in the details; the Hanafis allow it only at ‘Arafah and Muzdalifah."
   },
   {
-   "id": "f18",
+   "id": "f19",
    "cat": "prayer",
    "qAr": "ما صلاة الوتر؟",
    "qEn": "What is the Witr prayer?",
@@ -176,7 +200,7 @@
    "aEn": "The prayer that concludes the night prayer, one rak‘ah or more. It is a confirmed Sunnah for most scholars and wajib for the Hanafis."
   },
   {
-   "id": "f19",
+   "id": "f20",
    "cat": "prayer",
    "qAr": "ما صلاة التراويح؟",
    "qEn": "What is Taraweeh?",
@@ -184,7 +208,7 @@
    "aEn": "The night prayer of Ramadan prayed in congregation after ‘Isha; its number of rak‘ahs is flexible, with eleven and twenty both practised."
   },
   {
-   "id": "f20",
+   "id": "f21",
    "cat": "prayer",
    "qAr": "ما سجود السهو؟",
    "qEn": "What is the prostration of forgetfulness?",
@@ -192,7 +216,31 @@
    "aEn": "Two prostrations made to make up for an omission, addition or doubt that occurred in the prayer."
   },
   {
-   "id": "f21",
+   "id": "f22",
+   "cat": "prayer",
+   "qAr": "ما حكم قضاء الصلوات الفائتة؟",
+   "qEn": "How are missed prayers made up?",
+   "aAr": "من فاتته صلاة بنوم أو نسيان صلّاها متى ذكرها، لحديث «من نسي صلاة أو نام عنها فكفارتها أن يصليها إذا ذكرها» (مسلم ٦٨٤). ومن تركها عمدًا فجمهور العلماء على وجوب قضائها مع التوبة، وذهب بعضهم إلى أنه يتوب ويكثر من النوافل.",
+   "aEn": "Whoever misses a prayer through sleep or forgetfulness prays it when he remembers, as in the hadith “Whoever forgets a prayer or sleeps through it, its expiation is to pray it when he remembers it” (Muslim 684). For a prayer left deliberately, most scholars require making it up along with repentance; some hold that one repents and increases voluntary prayers."
+  },
+  {
+   "id": "f23",
+   "cat": "prayer",
+   "qAr": "ما أوقات النهي عن الصلاة؟",
+   "qEn": "When is voluntary prayer not allowed?",
+   "aAr": "بعد صلاة الفجر حتى ترتفع الشمس قدر رمح، وعند استوائها في وسط السماء حتى تزول، وبعد صلاة العصر حتى تغرب. واستثنى جمع من العلماء ما له سبب كتحية المسجد وقضاء الفائتة.",
+   "aEn": "After Fajr until the sun has risen a spear’s length, when it is at its zenith until it passes, and after ‘Asr until sunset. Many scholars exempt prayers with a cause, such as greeting the mosque or making up a missed prayer."
+  },
+  {
+   "id": "f24",
+   "cat": "prayer",
+   "qAr": "كيف أصلي في الطائرة؟",
+   "qEn": "How do I pray on a plane?",
+   "aAr": "إن خشيت خروج وقت الفريضة قبل الهبوط صلّيتها في الطائرة، مستقبلًا القبلة قدر استطاعتك، قائمًا إن أمكن وإلا جالسًا. ويجوز جمعها مع ما بعدها أو قبلها لمن يجمع في السفر.",
+   "aEn": "If the time of an obligatory prayer will end before landing, pray it on board, facing the Qibla as best you can, standing if possible and otherwise seated. Travellers may also combine it with the prayer before or after."
+  },
+  {
+   "id": "f25",
    "cat": "fasting",
    "qAr": "متى يبدأ الصيام وينتهي؟",
    "qEn": "When does the fast begin and end?",
@@ -200,7 +248,7 @@
    "aEn": "From true dawn until sunset, abstaining from food, drink and other things that break the fast."
   },
   {
-   "id": "f22",
+   "id": "f26",
    "cat": "fasting",
    "qAr": "ما هي ليلة القدر؟",
    "qEn": "What is Laylat al-Qadr?",
@@ -208,7 +256,7 @@
    "aEn": "The night in which the Quran was revealed, better than a thousand months, sought in the odd nights of the last ten of Ramadan."
   },
   {
-   "id": "f23",
+   "id": "f27",
    "cat": "fasting",
    "qAr": "من يجوز له الفطر في رمضان؟",
    "qEn": "Who may break the fast in Ramadan?",
@@ -216,7 +264,7 @@
    "aEn": "The sick and the traveller break the fast and make it up later; a menstruating or post-natal woman does the same; a frail elder feeds a poor person for each day."
   },
   {
-   "id": "f24",
+   "id": "f28",
    "cat": "fasting",
    "qAr": "ما الفدية؟",
    "qEn": "What is the fidyah?",
@@ -224,7 +272,7 @@
    "aEn": "Feeding a poor person for each day, for someone who cannot fast or make it up because of old age or an illness with no hope of recovery."
   },
   {
-   "id": "f25",
+   "id": "f29",
    "cat": "fasting",
    "qAr": "هل يُستحب صيام التطوع؟",
    "qEn": "Is voluntary fasting encouraged?",
@@ -232,7 +280,7 @@
    "aEn": "Yes — Mondays and Thursdays, three days of each month, six days of Shawwal, the day of ‘Arafah and ‘Ashura."
   },
   {
-   "id": "f26",
+   "id": "f30",
    "cat": "fasting",
    "qAr": "ما الاعتكاف؟",
    "qEn": "What is i‘tikaf?",
@@ -240,7 +288,23 @@
    "aEn": "Staying in the mosque for worship for a set period, best in the last ten nights of Ramadan."
   },
   {
-   "id": "f27",
+   "id": "f31",
+   "cat": "fasting",
+   "qAr": "هل يفطر من أكل أو شرب ناسيًا؟",
+   "qEn": "Does eating by mistake break the fast?",
+   "aAr": "لا، يُتمّ صومه، لحديث «من نسي وهو صائم فأكل أو شرب فليتمّ صومه، فإنما أطعمه الله وسقاه» (البخاري ١٩٣٣، ومسلم ١١٥٥).",
+   "aEn": "No, he completes his fast, as in the hadith “Whoever forgets while fasting and eats or drinks, let him complete his fast, for it was Allah who fed him and gave him drink” (al-Bukhari 1933, Muslim 1155)."
+  },
+  {
+   "id": "f32",
+   "cat": "fasting",
+   "qAr": "ما حكم من أفطر في رمضان بغير عذر؟",
+   "qEn": "What if someone breaks a Ramadan fast without excuse?",
+   "aAr": "يأثم وعليه التوبة والقضاء. فإن كان الفطر بالجماع في نهار رمضان فعليه مع القضاء الكفارة: عتق رقبة، فإن لم يجد فصيام شهرين متتابعين، فإن لم يستطع فإطعام ستين مسكينًا.",
+   "aEn": "It is a sin requiring repentance and making the day up. If it was by intercourse during the day, an expiation is due as well: freeing a slave, or if not possible two consecutive months of fasting, or if not possible feeding sixty poor people."
+  },
+  {
+   "id": "f33",
    "cat": "zakat",
    "qAr": "ما مقدار الزكاة؟",
    "qEn": "How much is zakat?",
@@ -248,7 +312,7 @@
    "aEn": "One-fortieth, i.e. 2.5% of wealth that reaches the nisab and has been held for a lunar year."
   },
   {
-   "id": "f28",
+   "id": "f34",
    "cat": "zakat",
    "qAr": "ما هو النصاب؟",
    "qEn": "What is the nisab?",
@@ -256,7 +320,7 @@
    "aEn": "The equivalent of 85 grams of gold or 595 grams of silver; its value changes with prices."
   },
   {
-   "id": "f29",
+   "id": "f35",
    "cat": "zakat",
    "qAr": "ما زكاة الفطر؟",
    "qEn": "What is Zakat al-Fitr?",
@@ -264,7 +328,7 @@
    "aEn": "A charity given at the end of Ramadan for each person, in staple food, paid before the Eid prayer."
   },
   {
-   "id": "f30",
+   "id": "f36",
    "cat": "zakat",
    "qAr": "على أي الأموال تجب الزكاة؟",
    "qEn": "On which wealth is zakat due?",
@@ -272,7 +336,7 @@
    "aEn": "On gold, silver, cash and trade goods, and on livestock, crops and fruit under their conditions."
   },
   {
-   "id": "f31",
+   "id": "f37",
    "cat": "zakat",
    "qAr": "من هم مستحقو الزكاة؟",
    "qEn": "Who may receive zakat?",
@@ -280,7 +344,7 @@
    "aEn": "Eight categories named in Surat at-Tawbah, verse 60: the poor, the needy, those who administer it, those whose hearts are to be reconciled, freeing captives, those in debt, in Allah’s cause and the wayfarer."
   },
   {
-   "id": "f32",
+   "id": "f38",
    "cat": "zakat",
    "qAr": "ما مقدار زكاة الفطر؟",
    "qEn": "How much is Zakat al-Fitr?",
@@ -288,7 +352,7 @@
    "aEn": "One sa‘ of the local staple food per person, about three kilograms; some schools allow giving its value."
   },
   {
-   "id": "f33",
+   "id": "f39",
    "cat": "hajj",
    "qAr": "على من يجب الحج؟",
    "qEn": "Upon whom is Hajj obligatory?",
@@ -296,7 +360,7 @@
    "aEn": "On every adult sane Muslim who is financially and physically able, once in a lifetime."
   },
   {
-   "id": "f34",
+   "id": "f40",
    "cat": "hajj",
    "qAr": "ما الفرق بين الحج والعمرة؟",
    "qEn": "What is the difference between Hajj and ‘Umrah?",
@@ -304,7 +368,7 @@
    "aEn": "Hajj has a fixed time in Dhul-Hijjah with rites at Mina, ‘Arafah and Muzdalifah; ‘Umrah can be done any time and consists of ihram, tawaf, sa‘i and shaving or trimming."
   },
   {
-   "id": "f35",
+   "id": "f41",
    "cat": "hajj",
    "qAr": "ما أركان الحج؟",
    "qEn": "What are the pillars of Hajj?",
@@ -312,7 +376,7 @@
    "aEn": "Ihram, standing at ‘Arafah, Tawaf al-Ifadah and, for most scholars, sa‘i."
   },
   {
-   "id": "f36",
+   "id": "f42",
    "cat": "hajj",
    "qAr": "ما أنواع الحج؟",
    "qEn": "What are the types of Hajj?",
@@ -320,7 +384,7 @@
    "aEn": "Tamattu‘: ‘Umrah then Hajj in the same season with two ihrams; Qiran: ‘Umrah and Hajj together with one ihram; Ifrad: Hajj alone."
   },
   {
-   "id": "f37",
+   "id": "f43",
    "cat": "hajj",
    "qAr": "ما حكم العمرة؟",
    "qEn": "What is the ruling on ‘Umrah?",
@@ -328,7 +392,7 @@
    "aEn": "Obligatory for the Shafi‘is and Hanbalis, a confirmed Sunnah for the Hanafis and Malikis; it may be done at any time of year."
   },
   {
-   "id": "f38",
+   "id": "f44",
    "cat": "hajj",
    "qAr": "ما محظورات الإحرام؟",
    "qEn": "What is forbidden in ihram?",
@@ -336,7 +400,183 @@
    "aEn": "Removing hair or nails, perfume, covering a man’s head, wearing stitched clothing for men, hunting, marriage contracts, and marital relations."
   },
   {
-   "id": "f39",
+   "id": "f45",
+   "cat": "transactions",
+   "qAr": "ما الربا؟",
+   "qEn": "What is riba (usury)?",
+   "aAr": "الزيادة المشترطة في القرض، والزيادة أو التأجيل في مبادلة الأموال الربوية كالذهب والفضة والنقود. وهو من كبائر الذنوب، وقد حرّمه الله في سورة البقرة (الآيات ٢٧٥–٢٧٩).",
+   "aEn": "Any increase stipulated on a loan, and increase or delay when exchanging usurious goods such as gold, silver and money. It is a major sin, prohibited in Surat al-Baqarah (verses 275–279)."
+  },
+  {
+   "id": "f46",
+   "cat": "transactions",
+   "qAr": "ما حكم البيع بالتقسيط؟",
+   "qEn": "Is buying in instalments allowed?",
+   "aAr": "جائز عند جمهور العلماء ولو كان الثمن المؤجل أكثر من الحالّ، بشرط أن يُحدَّد الثمن عند العقد، وألا تُشترط زيادة أو غرامة عند التأخر في السداد.",
+   "aEn": "Most scholars permit it even when the deferred price exceeds the cash price, provided the price is fixed at the contract and no increase or penalty is stipulated for late payment."
+  },
+  {
+   "id": "f47",
+   "cat": "transactions",
+   "qAr": "ما حكم الغش في البيع؟",
+   "qEn": "What is the ruling on cheating in trade?",
+   "aAr": "محرّم، قال ﷺ: «من غشّنا فليس منا» (مسلم ١٠١). ومنه كتمان العيب، والتطفيف في الكيل والوزن، والكذب في وصف السلعة.",
+   "aEn": "Forbidden; the Prophet ﷺ said: “Whoever cheats us is not one of us” (Muslim 101). It includes hiding defects, short measure and weight, and lying about goods."
+  },
+  {
+   "id": "f48",
+   "cat": "transactions",
+   "qAr": "ما أحكام القرض؟",
+   "qEn": "What are the rules of lending?",
+   "aAr": "الإقراض مستحب لما فيه من التيسير، ويجب على المقترض الوفاء، ولا يجوز اشتراط زيادة على أصل القرض لأنها ربا. وأمر الله بكتابة الدَّين في آية الدَّين (البقرة ٢٨٢).",
+   "aEn": "Lending is recommended as an ease to others; the borrower must repay, and stipulating any increase over the principal is riba. Allah commanded writing debts down in the verse of debt (al-Baqarah 282)."
+  },
+  {
+   "id": "f49",
+   "cat": "transactions",
+   "qAr": "ماذا أفعل إذا وجدت مالًا ضائعًا (لقطة)؟",
+   "qEn": "What should I do with lost property I find?",
+   "aAr": "تُعرِّفه سنة في مظانّ وجود صاحبه، فإن جاء دفعته إليه، وإلا انتفعت به مع ضمانه إن ظهر صاحبه بعد ذلك (البخاري ٢٣٧٢، ومسلم ١٧٢٢). والشيء اليسير الذي لا تلتفت إليه النفوس لا يلزم تعريفه.",
+   "aEn": "Announce it for a year where its owner may be found; if he comes, return it, otherwise you may use it while owing it to him if he appears later (al-Bukhari 2372, Muslim 1722). Trivial items people do not look for need no announcement."
+  },
+  {
+   "id": "f50",
+   "cat": "transactions",
+   "qAr": "هل يجوز أخذ أجرة على الوساطة (السمسرة)؟",
+   "qEn": "Is a brokerage fee allowed?",
+   "aAr": "نعم، يجوز أخذ أجرة معلومة على الدلالة والسمسرة إذا خلت من الغش والكذب، وعلم بها الطرفان.",
+   "aEn": "Yes, a known fee for brokering is allowed when free of deceit and lies and known to both parties."
+  },
+  {
+   "id": "f51",
+   "cat": "family",
+   "qAr": "ما أركان عقد النكاح؟",
+   "qEn": "What makes a marriage contract valid?",
+   "aAr": "الإيجاب والقبول بين الزوجين، مع حضور شاهدين، ويشترط الجمهور الوليّ خلافًا للحنفية، والمهر حق للزوجة.",
+   "aEn": "Offer and acceptance between the spouses with two witnesses; most scholars also require the bride’s guardian (the Hanafis do not), and the dower (mahr) is the wife’s right."
+  },
+  {
+   "id": "f52",
+   "cat": "family",
+   "qAr": "ما حقوق الزوجة على زوجها؟",
+   "qEn": "What are a wife’s rights?",
+   "aAr": "المهر، والنفقة بالمعروف من طعام وكسوة وسكن، والمعاشرة بالمعروف، والعدل بين الزوجات لمن عدّد.",
+   "aEn": "Her dower, maintenance by what is customary (food, clothing, housing), kind companionship, and justice between wives for a man with more than one."
+  },
+  {
+   "id": "f53",
+   "cat": "family",
+   "qAr": "ما حقوق الزوج على زوجته؟",
+   "qEn": "What are a husband’s rights?",
+   "aAr": "طاعته في المعروف، وحفظه في نفسها وماله وبيته، وألا تأذن في بيته لمن يكره.",
+   "aEn": "Obedience in what is right, guarding herself, his property and his home, and not admitting into his home anyone he dislikes."
+  },
+  {
+   "id": "f54",
+   "cat": "family",
+   "qAr": "ما حق الجار؟",
+   "qEn": "What is owed to a neighbour?",
+   "aAr": "الإحسان إليه وكفّ الأذى عنه، قال ﷺ: «ما زال جبريل يوصيني بالجار حتى ظننت أنه سيورّثه» (البخاري ٦٠١٤، ومسلم ٢٦٢٥).",
+   "aEn": "Kindness and not harming him; the Prophet ﷺ said: “Jibril kept advising me about the neighbour until I thought he would make him an heir” (al-Bukhari 6014, Muslim 2625)."
+  },
+  {
+   "id": "f55",
+   "cat": "family",
+   "qAr": "ما صلة الرحم؟",
+   "qEn": "What is keeping family ties?",
+   "aAr": "الإحسان إلى الأقارب بالزيارة والسؤال والهدية والعون، وقطعها من الكبائر، قال ﷺ: «لا يدخل الجنة قاطع» (البخاري ٥٩٨٤، ومسلم ٢٥٥٦).",
+   "aEn": "Doing good to relatives by visiting, asking after them, gifts and help. Cutting them off is a major sin; the Prophet ﷺ said: “One who severs ties will not enter Paradise” (al-Bukhari 5984, Muslim 2556)."
+  },
+  {
+   "id": "f56",
+   "cat": "family",
+   "qAr": "كيف تُقسم التركة باختصار؟",
+   "qEn": "How is an estate divided, in brief?",
+   "aAr": "تُخرج من التركة أولًا تكاليف التجهيز، ثم الديون، ثم الوصية في حدود الثلث لغير وارث، ثم يُقسم الباقي على الورثة بالفروض المبيّنة في سورة النساء (الآيات ١١ و١٢ و١٧٦). ويُستحسن الرجوع إلى مختص لحساب الأنصبة.",
+   "aEn": "First the funeral costs, then debts, then any bequest up to a third to non-heirs; the rest goes to the heirs by the shares set out in Surat an-Nisa’ (verses 11, 12 and 176). It is best to have a specialist calculate the shares."
+  },
+  {
+   "id": "f57",
+   "cat": "women",
+   "qAr": "ما الذي يُمنع على الحائض؟",
+   "qEn": "What may a menstruating woman not do?",
+   "aAr": "الصلاة والصيام والطواف والجماع، وتقضي الصيام دون الصلاة، لقول عائشة: «كنا نؤمر بقضاء الصوم ولا نؤمر بقضاء الصلاة» (مسلم ٣٣٥). وفي قراءتها القرآن ومسّها المصحف خلاف بين العلماء.",
+   "aEn": "Prayer, fasting, tawaf and intercourse. She makes up the fasts but not the prayers, as ‘A’ishah said: “We were ordered to make up fasts and not ordered to make up prayers” (Muslim 335). Scholars differ on her reciting the Quran and touching the mushaf."
+  },
+  {
+   "id": "f58",
+   "cat": "women",
+   "qAr": "ما الاستحاضة؟",
+   "qEn": "What is istihadah (irregular bleeding)?",
+   "aAr": "دم يخرج في غير وقت الحيض والنفاس لعلّة، وحكم صاحبتها حكم الطاهرات: تصلي وتصوم، وتتوضأ لكل صلاة عند الجمهور.",
+   "aEn": "Bleeding outside the times of menstruation and post-natal bleeding, due to a condition. The woman is treated as pure: she prays and fasts, and most scholars have her make wudu for each prayer."
+  },
+  {
+   "id": "f59",
+   "cat": "women",
+   "qAr": "هل تفطر الحامل والمرضع في رمضان؟",
+   "qEn": "May a pregnant or nursing woman break the fast?",
+   "aAr": "إن خافتا على نفسيهما أو على الولد جاز لهما الفطر، وعليهما القضاء، وأوجب بعض العلماء مع القضاء إطعام مسكين عن كل يوم إذا كان الخوف على الولد وحده.",
+   "aEn": "If they fear for themselves or for the child they may break the fast and make it up later; some scholars add feeding a poor person for each day when the fear is for the child alone."
+  },
+  {
+   "id": "f60",
+   "cat": "women",
+   "qAr": "ما شروط الحجاب الشرعي؟",
+   "qEn": "What are the conditions of hijab?",
+   "aAr": "أن يستر البدن عدا ما استُثني، وألا يكون شفافًا ولا ضيّقًا يصف، ولا زينةً في نفسه. وفي ستر الوجه والكفين خلاف معروف بين العلماء.",
+   "aEn": "That it covers the body except what is exempted, is neither see-through nor tight enough to show the shape, and is not an adornment in itself. Scholars differ well-knownly on covering the face and hands."
+  },
+  {
+   "id": "f61",
+   "cat": "women",
+   "qAr": "هل تحج المرأة بلا محرم؟",
+   "qEn": "May a woman perform Hajj without a mahram?",
+   "aAr": "اشترط جمهور العلماء المحرم لسفر المرأة، وأجاز بعضهم حج الفريضة مع رفقة مأمونة.",
+   "aEn": "Most scholars require a mahram for a woman’s travel; some allow the obligatory Hajj in trustworthy company."
+  },
+  {
+   "id": "f62",
+   "cat": "manners",
+   "qAr": "ما آداب الطعام؟",
+   "qEn": "What are the manners of eating?",
+   "aAr": "التسمية في أوله، والأكل باليمين ومما يليك، وحمد الله في آخره، لحديث «يا غلام، سمِّ الله، وكُل بيمينك، وكُل مما يليك» (البخاري ٥٣٧٦، ومسلم ٢٠٢٢).",
+   "aEn": "Saying Bismillah at the start, eating with the right hand from what is in front of you, and praising Allah at the end, as in the hadith “Young man, mention Allah’s name, eat with your right hand and eat from what is in front of you” (al-Bukhari 5376, Muslim 2022)."
+  },
+  {
+   "id": "f63",
+   "cat": "manners",
+   "qAr": "ما آداب السلام؟",
+   "qEn": "What are the manners of greeting?",
+   "aAr": "يسلّم الصغير على الكبير، والمارّ على القاعد، والقليل على الكثير (البخاري ٦٢٣١)، وردّ السلام واجب.",
+   "aEn": "The younger greets the elder, the passer-by the one seated, and the few the many (al-Bukhari 6231); returning the greeting is obligatory."
+  },
+  {
+   "id": "f64",
+   "cat": "manners",
+   "qAr": "ماذا يقال عند العطاس؟",
+   "qEn": "What is said when someone sneezes?",
+   "aAr": "يقول العاطس: الحمد لله، ويقول له من سمعه: يرحمك الله، فيردّ: يهديكم الله ويصلح بالكم (البخاري ٦٢٢٤).",
+   "aEn": "The one who sneezes says al-hamdu lillah; whoever hears says yarhamuk Allah, and he replies yahdikumullah wa yuslih balakum (al-Bukhari 6224)."
+  },
+  {
+   "id": "f65",
+   "cat": "manners",
+   "qAr": "ما آداب الاستئذان؟",
+   "qEn": "How should one ask permission to enter?",
+   "aAr": "يستأذن ثلاثًا مع السلام، فإن أُذن له وإلا رجع (البخاري ٦٢٤٥، ومسلم ٢١٥٣)، ولا يقف مستقبل الباب.",
+   "aEn": "Ask permission up to three times with a greeting; if permitted enter, otherwise leave (al-Bukhari 6245, Muslim 2153), and do not stand facing the doorway."
+  },
+  {
+   "id": "f66",
+   "cat": "manners",
+   "qAr": "ما الغيبة والنميمة؟",
+   "qEn": "What are backbiting and tale-bearing?",
+   "aAr": "الغيبة: «ذكرك أخاك بما يكره» (مسلم ٢٥٨٩)، والنميمة: نقل الكلام بين الناس للإفساد، وكلتاهما من كبائر الذنوب.",
+   "aEn": "Backbiting is “mentioning your brother with what he dislikes” (Muslim 2589); tale-bearing is carrying words between people to sow discord. Both are major sins."
+  },
+  {
+   "id": "f67",
    "cat": "quran",
    "qAr": "كم عدد سور القرآن وآياته؟",
    "qEn": "How many surahs and ayahs are in the Quran?",
@@ -344,7 +584,7 @@
    "aEn": "114 surahs; in the riwayah of Hafs ‘an ‘Asim, 6,236 ayahs — the count used in this app."
   },
   {
-   "id": "f40",
+   "id": "f68",
    "cat": "quran",
    "qAr": "ما أطول سورة وأقصرها؟",
    "qEn": "What are the longest and shortest surahs?",
@@ -352,7 +592,7 @@
    "aEn": "The longest is Al-Baqarah (286 ayahs); the shortest by word count is Al-Kawthar (3 ayahs), a length shared by Al-‘Asr and An-Nasr."
   },
   {
-   "id": "f41",
+   "id": "f69",
    "cat": "quran",
    "qAr": "ما الفرق بين المكي والمدني؟",
    "qEn": "What is the difference between Makki and Madani surahs?",
@@ -360,7 +600,7 @@
    "aEn": "Makki surahs were mostly revealed before the Hijrah and stress tawhid and the Hereafter; Madani surahs came after and stress rulings and legislation."
   },
   {
-   "id": "f42",
+   "id": "f70",
    "cat": "quran",
    "qAr": "كم جزءًا في القرآن؟",
    "qEn": "How many juz’ are there?",
@@ -368,7 +608,7 @@
    "aEn": "Thirty, dividing the mushaf so that it can be completed in a month."
   },
   {
-   "id": "f43",
+   "id": "f71",
    "cat": "quran",
    "qAr": "متى نزل القرآن؟",
    "qEn": "When was the Quran revealed?",

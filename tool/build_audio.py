@@ -22,9 +22,12 @@ def get(path):
 
 
 out = {
-    "_note": "Reciter and radio catalogue from the mp3quran.net API v3 (https://www.mp3quran.net/api). Audio is streamed from their servers.",
+    "_note": "Reciter, radio, audio-tafsir and video catalogue from the mp3quran.net API v3 (https://www.mp3quran.net/api). Media is streamed from their servers.",
     "reciters": {"ar": get("reciters?language=ar")["reciters"], "en": get("reciters?language=eng")["reciters"]},
     "radios": {"ar": get("radios?language=ar")["radios"], "en": get("radios?language=eng")["radios"]},
+    # Audio tafsir (al-Khulasa min Tafsir al-Tabari), one or more parts per surah.
+    "tafsir": get("tafsir?tafsir=1&language=ar")["tafasir"],
+    "videos": {"items": get("videos?language=ar")["videos"], "types": {"ar": get("video_types?language=ar")["video_types"], "en": get("video_types?language=eng")["video_types"]}},
 }
 # The surah list of a complete mushaf is the same 114 numbers every time; keep the file small.
 full = ",".join(str(i) for i in range(1, 115))

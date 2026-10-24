@@ -12,11 +12,13 @@ import '../quran/quran_data.dart';
 import 'audio_catalog.dart';
 import 'audio_widgets.dart';
 import 'quran_player.dart';
+import 'video_screen.dart';
 
-enum AudioTab { reciters, radio, favorites }
+enum AudioTab { reciters, radio, lessons, favorites }
 
 /// Listening hub: every reciter on mp3quran.net (complete surahs in several
-/// riwayat), live Quran and topic radios, and the person's favourites.
+/// riwayat and styles), live Quran radio, lessons (audio tafsir, series,
+/// translations), recitation videos and the person's favourites.
 class AudioHomeScreen extends ConsumerStatefulWidget {
   const AudioHomeScreen({super.key, this.initialTab = AudioTab.reciters});
   final AudioTab initialTab;
@@ -28,6 +30,15 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
   late AudioTab _tab = widget.initialTab;
   String _q = '';
   int? _riwaya; // null = all, -1 = other
+  RecitationStyle? _style; // null = all
+
+  /// A recording that passes both filters.
+  bool _moshafMatches(Moshaf m) {
+    if (_style != null && m.style != _style) return false;
+    if (_riwaya == null) return true;
+    if (_riwaya == -1) return !riwayaFilters.any((f) => f.$1 == m.rewayaId);
+    return m.rewayaId == _riwaya;
+  }
 
   String _norm(String s) => s.toLowerCase().replaceAll(RegExp('[أإآ]'), 'ا').replaceAll('ة', 'ه').replaceAll('ى', 'ي').replaceAll(' ', '');
 
@@ -61,7 +72,7 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
                 const _ContinueCard(),
                 NoorSegmented<AudioTab>(
                   values: AudioTab.values,
-                  labels: [NoorFormat.tr(context, 'القرّاء', 'Reciters'), NoorFormat.tr(context, 'الإذاعات', 'Radio'), NoorFormat.tr(context, 'المفضلة', 'Favourites')],
+                  labels: [NoorFormat.tr(context, 'القرّاء', 'Reciters'), NoorFormat.tr(context, 'الإذاعات', 'Radio'), NoorFormat.tr(context, 'الدروس', 'Lessons'), NoorFormat.tr(context, 'المفضلة', 'Favourites')],
                   selected: _tab,
                   onChanged: (v) => setState(() => _tab = v),
                 ),
@@ -69,7 +80,11 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
                 if (_tab != AudioTab.favorites) ...[
                   NoorSearchField(
                     key: ValueKey(_tab),
-                    hint: _tab == AudioTab.reciters ? NoorFormat.tr(context, 'ابحث عن قارئ', 'Search reciters') : NoorFormat.tr(context, 'ابحث عن إذاعة', 'Search stations'),
+                    hint: switch (_tab) {
+                      AudioTab.reciters => NoorFormat.tr(context, 'ابحث عن قارئ', 'Search reciters'),
+                      AudioTab.lessons => NoorFormat.tr(context, 'ابحث عن سورة أو درس', 'Search a surah or a series'),
+                      _ => NoorFormat.tr(context, 'ابحث عن إذاعة', 'Search stations'),
+                    },
                     onChanged: (v) => setState(() => _q = v.trim()),
                   ),
                   const SizedBox(height: 12),
@@ -79,6 +94,7 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
             ...switch (_tab) {
               AudioTab.reciters => _reciterSlivers(context, c),
               AudioTab.radio => _radioSlivers(context, c),
+              AudioTab.lessons => _lessonSlivers(context, c),
               AudioTab.favorites => _favoriteSlivers(context, c),
             },
             SliverToBoxAdapter(
@@ -96,15 +112,11 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
   List<Widget> _reciterSlivers(BuildContext context, AudioCatalog c) {
     final ar = NoorFormat.isAr(context);
     final featured = [for (final id in featuredReciterIds) ?c.reciter(id)];
-    final list = c.reciters.where((r) {
-      if (!_match(r.nameAr, r.nameEn)) return false;
-      if (_riwaya == null) return true;
-      if (_riwaya == -1) return r.riwayat.any((id) => !riwayaFilters.any((f) => f.$1 == id));
-      return r.riwayat.contains(_riwaya);
-    }).toList()
+    final filtered = _riwaya != null || _style != null;
+    final list = c.reciters.where((r) => _match(r.nameAr, r.nameEn) && (!filtered || r.moshaf.any(_moshafMatches))).toList()
       ..sort((a, b) => a.name(ar).compareTo(b.name(ar)));
     return [
-      if (_q.isEmpty && _riwaya == null)
+      if (_q.isEmpty && !filtered)
         SliverToBoxAdapter(
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             Padding(padding: const EdgeInsets.symmetric(horizontal: 16), child: SectionTitle(NoorFormat.tr(context, 'قرّاء مختارون', 'Featured reciters'))),
@@ -130,6 +142,12 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
               ),
             ),
             const SizedBox(height: 12),
+            if (c.videos.isNotEmpty) ...[
+              Padding(padding: const EdgeInsets.symmetric(horizontal: 16), child: SectionTitle(NoorFormat.tr(context, 'مرئيات التلاوة', 'Recitation videos'))),
+              const SizedBox(height: 10),
+              VideoStrip(videos: c.videos, types: c.videoTypes),
+              const SizedBox(height: 14),
+            ],
           ]),
         ),
       SliverToBoxAdapter(
@@ -137,8 +155,19 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(spacing: 8, children: [
-            for (final (id, nAr, nEn) in <(int?, String, String)>[(null, 'الكل', 'All'), ...riwayaFilters, (-1, 'روايات أخرى', 'Other riwayat')])
+            for (final (id, nAr, nEn) in <(int?, String, String)>[(null, 'كل الروايات', 'All riwayat'), ...riwayaFilters, (-1, 'روايات أخرى', 'Other riwayat')])
               _FilterChip(label: ar ? nAr : nEn, selected: _riwaya == id, onTap: () => setState(() => _riwaya = id)),
+          ]),
+        ),
+      ),
+      const SliverToBoxAdapter(child: SizedBox(height: 8)),
+      SliverToBoxAdapter(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Row(spacing: 8, children: [
+            _FilterChip(label: NoorFormat.tr(context, 'كل الأنواع', 'All styles'), selected: _style == null, onTap: () => setState(() => _style = null)),
+            for (final st in RecitationStyle.values) _FilterChip(label: styleName(st, ar), selected: _style == st, onTap: () => setState(() => _style = st)),
           ]),
         ),
       ),
@@ -151,25 +180,63 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
       if (list.isEmpty) SliverToBoxAdapter(child: _Empty(text: NoorFormat.tr(context, 'لا نتائج', 'No results'))),
       SliverPadding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        sliver: SliverList.builder(itemCount: list.length, itemBuilder: (context, i) => _ReciterTile(reciter: list[i], first: i == 0, last: i == list.length - 1)),
+        sliver: SliverList.builder(
+          itemCount: list.length,
+          // With a filter on, open the reciter at the recording that matched it.
+          itemBuilder: (context, i) => _ReciterTile(reciter: list[i], first: i == 0, last: i == list.length - 1, moshafId: filtered ? list[i].moshaf.firstWhere(_moshafMatches).id : null),
+        ),
       ),
     ];
   }
 
+  Widget _radioGroup(String title, List<QuranRadio> list) => SliverPadding(
+        padding: const EdgeInsets.fromLTRB(16, 4, 16, 14),
+        sliver: SliverMainAxisGroup(slivers: [
+          SliverToBoxAdapter(child: Padding(padding: const EdgeInsets.only(bottom: 10), child: SectionTitle(title))),
+          SliverList.builder(itemCount: list.length, itemBuilder: (context, i) => _RadioTile(radio: list[i], first: i == 0, last: i == list.length - 1)),
+        ]),
+      );
+
   List<Widget> _radioSlivers(BuildContext context, AudioCatalog c) {
-    final thematic = c.radios.where((r) => r.thematic && _match(r.nameAr, r.nameEn)).toList();
-    final reciters = c.radios.where((r) => !r.thematic && _match(r.nameAr, r.nameEn)).toList();
-    Widget group(String title, List<QuranRadio> list) => SliverPadding(
+    final quran = c.radios.where((r) => r.kind == RadioKind.quran && _match(r.nameAr, r.nameEn)).toList();
+    final reciters = c.radios.where((r) => r.kind == RadioKind.reciter && _match(r.nameAr, r.nameEn)).toList();
+    return [
+      if (quran.isEmpty && reciters.isEmpty) SliverToBoxAdapter(child: _Empty(text: NoorFormat.tr(context, 'لا نتائج', 'No results'))),
+      if (quran.isNotEmpty) _radioGroup(NoorFormat.tr(context, 'إذاعات القرآن', 'Quran stations'), quran),
+      if (reciters.isNotEmpty) _radioGroup(NoorFormat.tr(context, 'إذاعات القرّاء', 'Reciter stations'), reciters),
+    ];
+  }
+
+  /// Audio tafsir by surah, lecture series and recited translations.
+  List<Widget> _lessonSlivers(BuildContext context, AudioCatalog c) {
+    final ar = NoorFormat.isAr(context);
+    final surahs = ref.watch(quranIndexProvider).value?.surahs ?? const [];
+    final withTafsir = [for (final s in surahs) if (c.tafsir.any((p) => p.surah == s.number) && _match('سورة ${s.nameAr}', s.nameEn)) s];
+    final lessons = c.radios.where((r) => r.kind == RadioKind.lesson && _match(r.nameAr, r.nameEn)).toList();
+    final translations = c.radios.where((r) => r.kind == RadioKind.translation && _match(r.nameAr, r.nameEn)).toList();
+    return [
+      if (withTafsir.isEmpty && lessons.isEmpty && translations.isEmpty) SliverToBoxAdapter(child: _Empty(text: NoorFormat.tr(context, 'لا نتائج', 'No results'))),
+      if (withTafsir.isNotEmpty)
+        SliverPadding(
           padding: const EdgeInsets.fromLTRB(16, 4, 16, 14),
           sliver: SliverMainAxisGroup(slivers: [
-            SliverToBoxAdapter(child: Padding(padding: const EdgeInsets.only(bottom: 10), child: SectionTitle(title))),
-            SliverList.builder(itemCount: list.length, itemBuilder: (context, i) => _RadioTile(radio: list[i], first: i == 0, last: i == list.length - 1)),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, spacing: 2, children: [
+                  SectionTitle(NoorFormat.tr(context, 'التفسير الصوتي', 'Audio tafsir')),
+                  Text(ar ? c.tafsirName : 'A summary of Tafsir at-Tabari, in Arabic', style: Theme.of(context).textTheme.bodySmall),
+                ]),
+              ),
+            ),
+            SliverList.builder(
+              itemCount: withTafsir.length,
+              itemBuilder: (context, i) => _TafsirSurahTile(surah: withTafsir[i], parts: c.tafsirOf(withTafsir[i].number).length, first: i == 0, last: i == withTafsir.length - 1),
+            ),
           ]),
-        );
-    return [
-      if (thematic.isEmpty && reciters.isEmpty) SliverToBoxAdapter(child: _Empty(text: NoorFormat.tr(context, 'لا نتائج', 'No results'))),
-      if (thematic.isNotEmpty) group(NoorFormat.tr(context, 'إذاعات موضوعية', 'Topic stations'), thematic),
-      if (reciters.isNotEmpty) group(NoorFormat.tr(context, 'إذاعات القرّاء', 'Reciter stations'), reciters),
+        ),
+      if (lessons.isNotEmpty) _radioGroup(NoorFormat.tr(context, 'سلاسل ودروس', 'Series and lessons'), lessons),
+      if (translations.isNotEmpty) _radioGroup(NoorFormat.tr(context, 'ترجمات معاني القرآن', 'Translations of the meanings'), translations),
     ];
   }
 
@@ -205,20 +272,16 @@ class _ContinueCard extends ConsumerWidget {
     final catalog = ref.watch(audioCatalogProvider).value;
     final index = ref.watch(quranIndexProvider).value;
     if (last == null || playing || catalog == null) return const SizedBox.shrink();
-    final ar = NoorFormat.isAr(context);
-    final radio = last.radioId == null ? null : catalog.radio(last.radioId!);
-    final reciter = last.reciterId == null ? null : catalog.reciter(last.reciterId!);
-    final surah = index?.surahs.where((s) => s.number == last.surah).firstOrNull;
-    final title = radio?.name(ar) ?? (surah == null ? '' : (ar ? 'سورة ${surah.nameAr}' : surah.nameEn));
-    final subtitle = radio != null ? NoorFormat.tr(context, 'بث مباشر', 'Live') : reciter?.name(ar) ?? '';
-    if (title.isEmpty) return const SizedBox.shrink();
+    final d = describeLastListen(last, catalog, index?.surahs ?? const [], NoorFormat.isAr(context));
+    if (d == null) return const SizedBox.shrink();
+    final (:title, :subtitle, :avatar) = d;
     return Padding(
       padding: const EdgeInsets.only(bottom: 14),
       child: HeroSurface(
         padding: const EdgeInsets.all(16),
         onTap: () => _resume(context, ref, last),
         child: Row(spacing: 14, children: [
-          ReciterAvatar(name: radio?.nameAr ?? reciter?.nameAr ?? '', size: 52, onHero: true),
+          ReciterAvatar(name: avatar, size: 52, onHero: true),
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, spacing: 2, children: [
               Text(NoorFormat.tr(context, 'تابع الاستماع', 'Continue listening'), style: const TextStyle(fontSize: 12, color: Color(0xBFFFFFFF))),
@@ -295,21 +358,24 @@ class ListRow extends StatelessWidget {
 }
 
 class _ReciterTile extends ConsumerWidget {
-  const _ReciterTile({required this.reciter, required this.first, required this.last});
+  const _ReciterTile({required this.reciter, required this.first, required this.last, this.moshafId});
   final QuranReciter reciter;
   final bool first, last;
+
+  /// Recording to open (the one a filter matched), else the reciter's default.
+  final int? moshafId;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final t = context.noor;
     final ar = NoorFormat.isAr(context);
     final fav = ref.watch(audioFavoritesProvider.select((f) => f.contains('r:${reciter.id}')));
     final playing = ref.watch(quranPlayerProvider.select((s) => s.playing && s.current?.reciterId == reciter.id));
-    final m = reciter.moshaf.first;
+    final m = reciter.moshafById(moshafId)!;
     final extra = reciter.moshaf.length > 1 ? NoorFormat.tr(context, ' · ${NoorFormat.digits(context, reciter.moshaf.length)} تسجيلات', ' · ${reciter.moshaf.length} recordings') : '';
     return ListRow(
       first: first,
       last: last,
-      onTap: () => context.push('/audio/reciter/${reciter.id}'),
+      onTap: () => context.push('/audio/reciter/${reciter.id}${moshafId == null ? '' : '?moshaf=$moshafId'}'),
       child: Padding(
         padding: const EdgeInsetsDirectional.fromSTEB(14, 10, 4, 10),
         child: Row(spacing: 12, children: [
@@ -355,7 +421,16 @@ class _RadioTile extends ConsumerWidget {
       child: Padding(
         padding: const EdgeInsetsDirectional.fromSTEB(14, 10, 4, 10),
         child: Row(spacing: 12, children: [
-          IconBadge(icon: radio.thematic ? Icons.podcasts_rounded : Icons.radio_rounded, gold: radio.thematic, size: 44),
+          IconBadge(
+            icon: switch (radio.kind) {
+              RadioKind.reciter => Icons.radio_rounded,
+              RadioKind.quran => Icons.podcasts_rounded,
+              RadioKind.lesson => Icons.school_outlined,
+              RadioKind.translation => Icons.translate_rounded,
+            },
+            gold: radio.thematic,
+            size: 44,
+          ),
           Expanded(child: Text(radio.name(ar), maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w600, height: 1.35))),
           if (current) PlayingBars(active: playing, color: t.gold),
           IconButton(
@@ -363,6 +438,43 @@ class _RadioTile extends ConsumerWidget {
             onPressed: () => ref.read(audioFavoritesProvider.notifier).toggle(key),
             icon: Icon(fav ? Icons.star_rounded : Icons.star_outline_rounded, color: fav ? t.gold : t.textSecondary),
           ),
+        ]),
+      ),
+    );
+  }
+}
+
+/// One surah of the audio tafsir; playing it continues into the next surahs.
+class _TafsirSurahTile extends ConsumerWidget {
+  const _TafsirSurahTile({required this.surah, required this.parts, required this.first, required this.last});
+  final Surah surah;
+  final int parts;
+  final bool first, last;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final t = context.noor;
+    final ar = NoorFormat.isAr(context);
+    final current = ref.watch(quranPlayerProvider.select((s) => s.current?.tafsirId != null && s.current?.surah == surah.number));
+    final playing = ref.watch(quranPlayerProvider.select((s) => s.playing)) && current;
+    return ListRow(
+      first: first,
+      last: last,
+      onTap: () {
+        HapticFeedback.selectionClick();
+        current ? ref.read(quranPlayerProvider.notifier).toggle() : playTafsir(ref, surah.number);
+      },
+      child: Padding(
+        padding: const EdgeInsetsDirectional.fromSTEB(14, 9, 8, 9),
+        child: Row(spacing: 12, children: [
+          EightPointStar(size: 38, color: t.gold, strokeWidth: .9, child: Text(NoorFormat.digits(context, surah.number), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: t.primary))),
+          Expanded(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(ar ? 'تفسير سورة ${surah.nameAr}' : 'Tafsir: ${surah.nameEn}', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: current ? t.primary : null)),
+              Text(parts > 1 ? NoorFormat.tr(context, '${NoorFormat.digits(context, parts)} مقاطع', '$parts parts') : NoorFormat.tr(context, 'مقطع واحد', 'One part'), style: Theme.of(context).textTheme.bodySmall),
+            ]),
+          ),
+          if (current) PlayingBars(active: playing, color: t.gold) else Icon(Icons.play_circle_outline_rounded, color: t.primary, size: 28),
         ]),
       ),
     );

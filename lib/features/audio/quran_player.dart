@@ -14,13 +14,19 @@ import 'system_audio.dart';
 /// Something the app-wide player can play: a surah by a reciter or a live radio.
 @immutable
 class AudioTrack {
-  const AudioTrack({required this.key, required this.titleAr, required this.titleEn, required this.subtitleAr, required this.subtitleEn, required this.url, this.surah, this.reciterId, this.moshafId, this.radioId});
+  const AudioTrack({required this.key, required this.titleAr, required this.titleEn, required this.subtitleAr, required this.subtitleEn, required this.url, this.surah, this.reciterId, this.moshafId, this.radioId, this.tafsirId, this.artAr});
 
-  /// Stable identity, e.g. `s:123:45:2` (reciter, mushaf, surah) or `radio:109`.
+  /// Stable identity, e.g. `s:123:45:2` (reciter, mushaf, surah), `radio:109` or `tafsir:10`.
   final String key;
   final String titleAr, titleEn, subtitleAr, subtitleEn;
   final Uri url;
   final int? surah, reciterId, moshafId, radioId;
+
+  /// Part id when this is the audio tafsir.
+  final int? tafsirId;
+
+  /// Large Arabic text on the player artwork; the surah name by default.
+  final String? artAr;
 
   bool get live => radioId != null;
   String title(bool ar) => ar ? titleAr : titleEn;
@@ -160,15 +166,15 @@ final audioBackendFactoryProvider = Provider<AudioBackend Function()>((ref) => J
 /// Where listening stopped, so it can resume from the home and audio screens.
 @immutable
 class LastListen {
-  const LastListen({this.reciterId, this.moshafId, this.surah, this.radioId, this.position = Duration.zero});
-  final int? reciterId, moshafId, surah, radioId;
+  const LastListen({this.reciterId, this.moshafId, this.surah, this.radioId, this.tafsirId, this.position = Duration.zero});
+  final int? reciterId, moshafId, surah, radioId, tafsirId;
   final Duration position;
 
-  Map<String, Object?> toJson() => {'r': reciterId, 'm': moshafId, 's': surah, 'radio': radioId, 'ms': position.inMilliseconds};
+  Map<String, Object?> toJson() => {'r': reciterId, 'm': moshafId, 's': surah, 'radio': radioId, 't': tafsirId, 'ms': position.inMilliseconds};
   static LastListen? fromJson(Object? j) {
     if (j is! Map<String, dynamic>) return null;
-    final l = LastListen(reciterId: j['r'] as int?, moshafId: j['m'] as int?, surah: j['s'] as int?, radioId: j['radio'] as int?, position: Duration(milliseconds: (j['ms'] as num?)?.toInt() ?? 0));
-    return l.radioId != null || (l.reciterId != null && l.surah != null) ? l : null;
+    final l = LastListen(reciterId: j['r'] as int?, moshafId: j['m'] as int?, surah: j['s'] as int?, radioId: j['radio'] as int?, tafsirId: j['t'] as int?, position: Duration(milliseconds: (j['ms'] as num?)?.toInt() ?? 0));
+    return l.radioId != null || l.tafsirId != null || (l.reciterId != null && l.surah != null) ? l : null;
   }
 }
 
@@ -260,6 +266,7 @@ class QuranPlayer extends Notifier<PlayerSnapshot> {
           moshafId: t.moshafId,
           surah: t.surah,
           radioId: t.radioId,
+          tafsirId: t.tafsirId,
           position: t.live ? Duration.zero : (position ?? _backend?.currentPosition ?? Duration.zero),
         ));
   }

@@ -10,6 +10,7 @@ import '../../core/utils/noor_format.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../library/favorites.dart';
+import '../library/share_image.dart';
 import 'adhkar_data.dart';
 
 /// Screen title for an adhkar category key (see assets/data/adhkar.json).
@@ -259,6 +260,7 @@ class _DhikrCard extends StatelessWidget {
           const Divider(),
           Row(children: [
             Expanded(child: Text(source, style: TextStyle(fontSize: 11.5, color: t.goldText, height: 1.5))),
+            ShareImageButton(item: SavedItem(key: 'dhikr:${dhikr.id}', kind: 'dua', title: source, body: dhikr.ar, translation: dhikr.en, source: source)),
             SaveButton(item: SavedItem(key: 'dhikr:${dhikr.id}', kind: 'dua', title: source, body: dhikr.ar, translation: dhikr.en, source: source), tooltip: l.save),
             if (done)
               Row(spacing: 6, children: [Icon(Icons.check_rounded, color: t.primary, size: 18), Text(l.done, style: TextStyle(color: t.primary, fontWeight: FontWeight.w600))])

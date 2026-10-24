@@ -9,75 +9,14 @@ reviewed by a qualified scholar before a public release.
   python -I tool/build_khutab.py .
 """
 import json
-import re
+import os
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from quran_quote import H, P, Quran  # noqa: E402
+
 root = sys.argv[1] if len(sys.argv) > 1 else "."
-AR_DIGITS = "٠١٢٣٤٥٦٧٨٩"
-
-
-def ard(n):
-    return "".join(AR_DIGITS[int(c)] if c.isdigit() else c for c in str(n))
-
-
-index = json.load(open(f"{root}/assets/data/quran/index.json", encoding="utf-8"))
-names = {s["number"]: s for s in index["surahs"]}
-_surahs = {}
-
-
-def surah(n):
-    if n not in _surahs:
-        _surahs[n] = json.load(open(f"{root}/assets/data/quran/{n:03d}.json", encoding="utf-8"))
-    return _surahs[n]
-
-
-MARKS = re.compile("[ؐ-ًؚ-ٰٟۖ-ۭـ]")
-
-
-def bare(word):
-    """A word without diacritics or Quranic marks, for matching only."""
-    return MARKS.sub("", word).replace("ٱ", "ا").strip(".,;:!?\"'()[]-")
-
-
-def cut(text, start, end, what):
-    """Exact excerpt of `text`, from the words of `start` through the words of `end`.
-
-    Matching ignores diacritics (their Unicode order varies); the returned text
-    is the original, untouched."""
-    words = text.split()
-    keys = [bare(w) for w in words]
-
-    def find(phrase, after=0):
-        p = [bare(w) for w in phrase.split()]
-        for i in range(after, len(words) - len(p) + 1):
-            if keys[i : i + len(p)] == p:
-                return i, i + len(p)
-        raise AssertionError(f"{what}: {phrase!r} not found")
-
-    lo = find(start)[0] if start else 0
-    hi = find(end, lo)[1] if end else len(words)
-    out = " ".join(words[lo:hi])
-    # A cut can leave half of a quoted sentence; drop the orphaned quote mark.
-    return out.strip('"') if out.count('"') % 2 else out
-
-
-def A(s, a, b=None, ar_from=None, ar_to=None, en_from=None, en_to=None):
-    """Quran block: ayahs s:a..b, optionally an exact excerpt."""
-    b = b or a
-    rows = surah(s)[a - 1 : b]
-    assert len(rows) == b - a + 1, f"{s}:{a}-{b} out of range"
-    ar = cut(" ".join(r["ar"] for r in rows), ar_from, ar_to, f"{s}:{a} ar")
-    en = cut(" ".join(r["en"] for r in rows), en_from, en_to, f"{s}:{a} en")
-    rng_ar, rng_en = (ard(a), f"{a}") if a == b else (f"{ard(a)}–{ard(b)}", f"{a}–{b}")
-    return {"t": "ayah", "ar": ar, "en": en, "refAr": f"سورة {names[s]['nameAr']}: {rng_ar}", "refEn": f"{names[s]['nameEn']} {s}:{rng_en}"}
-
-
-def H(ar, en, ref_ar, ref_en):
-    return {"t": "hadith", "ar": ar, "en": en, "refAr": ard(ref_ar), "refEn": ref_en}
-
-
-def P(ar, en):
-    return {"t": "p", "ar": ar, "en": en}
+A = Quran(root).A
 
 
 # ── Shared openings and endings (khutbat al-hajah, Abu Dawud 2118; Muslim 867) ──

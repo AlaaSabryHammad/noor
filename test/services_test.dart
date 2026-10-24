@@ -265,12 +265,17 @@ void main() {
     '/adhkar/session/quran_duas': 'أدعية من القرآن',
     '/hisn': 'حصن المسلم',
     '/adhkar/session/hisn_27': 'أذكار الصباح والمساء',
-    '/audio?tab=radio': 'إذاعات موضوعية',
+    '/audio?tab=radio': 'إذاعات القرآن',
     '/audio/reciter/123': 'مشاري العفاسي',
     '/audio/player': 'لا شيء قيد التشغيل',
     '/khutab': 'الخطب المنبرية',
     '/khutab/taqwa': 'التقوى خيرُ الزاد',
     '/khutab/farewell': 'خطبةُ حجّةِ الوداع',
+    '/audio?tab=lessons': 'التفسير الصوتي',
+    '/spotlights': 'الإضاءات',
+    '/spotlights/dhulhijjah': 'عشر ذي الحجة ويوم عرفة',
+    '/search?q=%D8%AD%D8%AC%D8%A9%20%D8%A7%D9%84%D9%88%D8%AF%D8%A7%D8%B9': 'خطبةُ حجّةِ الوداع',
+    '/qada': 'متتبّع القضاء',
   };
   for (final e in routes.entries) {
     testWidgets('route ${e.key} renders', (tester) async {

@@ -11,8 +11,10 @@ import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
+import '../audio/audio_widgets.dart' show playTafsir;
 import '../audio/quran_player.dart';
 import '../library/favorites.dart';
+import '../library/share_image.dart';
 import '../settings/settings_controller.dart';
 import 'ayah_audio.dart';
 import 'quran_data.dart';
@@ -388,6 +390,16 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
                 ),
                 Text(a.en, textDirection: TextDirection.ltr, style: TextStyle(fontFamily: NoorFonts.latinUi, fontSize: 13, color: t.textSecondary, height: 1.6)),
                 _TafsirPanel(surah: widget.surah, ayah: a.number),
+                OutlinedButton.icon(
+                  onPressed: () async {
+                    Navigator.of(ctx).pop();
+                    await _audio?.pause();
+                    final ok = await playTafsir(ref, widget.surah, ayah: a.number);
+                    if (!ok && mounted) showNoorSnack(this.context, NoorFormat.tr(this.context, 'التفسير الصوتي غير متاح لهذه السورة.', 'No audio tafsir for this surah.'));
+                  },
+                  icon: const Icon(Icons.headphones_rounded, size: 18),
+                  label: Text(NoorFormat.tr(ctx, 'استمع للتفسير الصوتي', 'Listen to the audio tafsir')),
+                ),
                 FilledButton.tonalIcon(
                   onPressed: () {
                     Navigator.of(ctx).pop();
@@ -398,6 +410,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
                 ),
                 Row(spacing: 8, children: [
                   Expanded(child: OutlinedButton.icon(onPressed: () => _copy(ctx, a), icon: const Icon(Icons.copy_rounded, size: 18), label: Text(l.copy))),
+                  ShareImageButton(item: _savedItem(a), size: 24),
                   SaveButton(item: _savedItem(a), tooltip: l.save, size: 24),
                 ]),
               ]),
@@ -506,6 +519,7 @@ class _AyahCard extends StatelessWidget {
           const Spacer(),
           IconButton(tooltip: l.tafsir, icon: Icon(Icons.menu_book_outlined, size: 19, color: t.textSecondary), onPressed: onTafsir),
           IconButton(tooltip: l.copy, icon: Icon(Icons.copy_rounded, size: 19, color: t.textSecondary), onPressed: onCopy),
+          ShareImageButton(item: saved),
           SaveButton(item: saved, tooltip: l.save),
         ]),
         Text(ayah.ar, textDirection: TextDirection.rtl, textAlign: TextAlign.right, style: NoorText.quran(context, size: fs).copyWith(height: 2.1)),

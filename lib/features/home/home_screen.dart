@@ -14,6 +14,7 @@ import '../audio/audio_catalog.dart';
 import '../audio/audio_widgets.dart';
 import '../audio/quran_player.dart';
 import '../library/favorites.dart';
+import '../library/share_image.dart';
 import '../adhkar/adhkar_screen.dart' show adhkarTitle;
 import '../prayer/domain/prayer_models.dart';
 import '../prayer/location_sheet.dart';
@@ -22,6 +23,7 @@ import '../quran/quran_data.dart';
 import '../settings/crash_consent_card.dart';
 import '../settings/settings_controller.dart';
 import '../settings/settings_sheet.dart';
+import '../spotlights/spotlights.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -86,6 +88,7 @@ class HomeScreen extends ConsumerWidget {
           if (day.isFriday) ...[_FridayCard(), const SizedBox(height: 16)],
           const _ContinueReadingCard(),
           const _ListenCard(),
+          const SpotlightCard(),
           const SizedBox(height: 18),
           SectionTitle(l.quickAccess),
           const SizedBox(height: 10),
@@ -261,22 +264,15 @@ class _ListenCard extends ConsumerWidget {
     final ar = NoorFormat.isAr(context);
     String title = NoorFormat.tr(context, 'استمع إلى القرآن الكريم', 'Listen to the Quran');
     String subtitle = NoorFormat.tr(context, 'أكثر من ٢٤٠ قارئًا وإذاعات مباشرة', '240+ reciters and live radio');
-    if (last != null && catalog != null) {
-      final radio = last.radioId == null ? null : catalog.radio(last.radioId!);
-      final reciter = last.reciterId == null ? null : catalog.reciter(last.reciterId!);
-      final surah = ref.watch(quranIndexProvider).value?.surahs.where((s) => s.number == last.surah).firstOrNull;
-      if (radio != null) {
-        title = radio.name(ar);
-        subtitle = NoorFormat.tr(context, 'تابع الاستماع · بث مباشر', 'Continue listening · Live');
-      } else if (reciter != null && surah != null) {
-        title = ar ? 'سورة ${surah.nameAr}' : surah.nameEn;
-        subtitle = '${NoorFormat.tr(context, 'تابع الاستماع', 'Continue listening')} · ${reciter.name(ar)}';
-      }
+    final described = last == null || catalog == null ? null : describeLastListen(last, catalog, ref.watch(quranIndexProvider).value?.surahs ?? const [], ar);
+    if (described != null) {
+      title = described.title;
+      subtitle = '${NoorFormat.tr(context, 'تابع الاستماع', 'Continue listening')} · ${described.subtitle}';
     }
-    final resumable = last != null && catalog != null;
+    final resumable = described != null;
     Future<void> go() async {
       HapticFeedback.lightImpact();
-      if (!resumable || !await resumeListening(ref, last)) {
+      if (!resumable || !await resumeListening(ref, last!)) {
         if (context.mounted) await context.push('/audio');
       }
     }
@@ -398,6 +394,7 @@ class _DailyLightCardState extends ConsumerState<_DailyLightCard> {
                 showNoorSnack(context, l.copied);
               },
             ),
+            ShareImageButton(item: SavedItem(key: 'daily:$_tab', kind: _tab, title: ref_, body: item.ar, translation: item.en, source: ref_)),
             SaveButton(item: SavedItem(key: 'daily:$_tab', kind: _tab, title: ref_, body: item.ar, translation: item.en, source: ref_), tooltip: l.save),
           ]),
         ],

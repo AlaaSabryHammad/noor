@@ -11,6 +11,7 @@ import '../../l10n/app_localizations.dart';
 import '../books/books_screens.dart';
 import '../services/service_widgets.dart';
 import 'favorites.dart';
+import 'share_image.dart';
 
 class LibraryScreen extends ConsumerStatefulWidget {
   const LibraryScreen({super.key});
@@ -95,6 +96,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                   showNoorSnack(context, l.copied);
                 },
               ),
+              if (s.kind != 'khutba') ShareImageButton(item: s),
               SaveButton(item: s, tooltip: NoorFormat.tr(context, 'إزالة من المحفوظات', 'Remove from saved')),
             ]),
           ]),

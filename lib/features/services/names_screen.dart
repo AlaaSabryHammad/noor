@@ -8,6 +8,7 @@ import '../../core/utils/noor_format.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../library/favorites.dart';
+import '../library/share_image.dart';
 import 'service_widgets.dart';
 
 class NamesScreen extends ConsumerStatefulWidget {
@@ -98,6 +99,7 @@ class _NamesScreenState extends ConsumerState<NamesScreen> {
                     label: Text(l.copy),
                   ),
                 ),
+                ShareImageButton(item: item),
                 SaveButton(item: item, tooltip: l.save),
               ]),
             ]),

@@ -13,11 +13,15 @@ import 'audio_catalog.dart';
 import 'audio_home_screen.dart' show ListRow;
 import 'audio_widgets.dart';
 import 'quran_player.dart';
+import 'video_screen.dart';
 
 /// One reciter: choose a recording (riwaya) and play any surah or all of them.
 class ReciterScreen extends ConsumerStatefulWidget {
-  const ReciterScreen({super.key, required this.reciterId});
+  const ReciterScreen({super.key, required this.reciterId, this.moshafId});
   final int reciterId;
+
+  /// Recording to open with (from a filtered list); else the last one picked.
+  final int? moshafId;
   @override
   ConsumerState<ReciterScreen> createState() => _ReciterScreenState();
 }
@@ -29,7 +33,7 @@ class _ReciterScreenState extends ConsumerState<ReciterScreen> {
   @override
   void initState() {
     super.initState();
-    _moshafId = ref.read(sharedPreferencesProvider).getInt('audio.moshaf.${widget.reciterId}');
+    _moshafId = widget.moshafId ?? ref.read(sharedPreferencesProvider).getInt('audio.moshaf.${widget.reciterId}');
   }
 
   void _pickMoshaf(int id) {
@@ -46,7 +50,7 @@ class _ReciterScreenState extends ConsumerState<ReciterScreen> {
       body: SafeArea(
         bottom: false,
         child: switch ((catalog, index)) {
-          (AsyncData(value: final c), AsyncData(value: final idx)) => _body(context, c.reciter(widget.reciterId), idx.surahs),
+          (AsyncData(value: final c), AsyncData(value: final idx)) => _body(context, c, c.reciter(widget.reciterId), idx.surahs),
           (AsyncError(:final error), _) || (_, AsyncError(:final error)) => Center(child: Text('$error')),
           _ => const Center(child: CircularProgressIndicator()),
         },
@@ -54,7 +58,7 @@ class _ReciterScreenState extends ConsumerState<ReciterScreen> {
     );
   }
 
-  Widget _body(BuildContext context, QuranReciter? r, List<Surah> surahs) {
+  Widget _body(BuildContext context, AudioCatalog catalog, QuranReciter? r, List<Surah> surahs) {
     final t = context.noor;
     final ar = NoorFormat.isAr(context);
     if (r == null) {
@@ -143,6 +147,12 @@ class _ReciterScreenState extends ConsumerState<ReciterScreen> {
                   side: BorderSide(color: x.id == m.id ? t.primary : t.border),
                 ),
             ]),
+          ],
+          if (catalog.videos.where((v) => v.reciterId == r.id).toList() case final videos when videos.isNotEmpty) ...[
+            const SizedBox(height: 16),
+            SectionTitle(NoorFormat.tr(context, 'مرئيات', 'Videos')),
+            const SizedBox(height: 10),
+            VideoStrip(videos: videos, types: catalog.videoTypes, showReciter: false, padding: EdgeInsets.zero),
           ],
           const SizedBox(height: 16),
           NoorSearchField(hint: NoorFormat.tr(context, 'ابحث عن سورة', 'Search for a surah'), onChanged: (v) => setState(() => _q = v)),

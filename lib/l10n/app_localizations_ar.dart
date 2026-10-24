@@ -383,6 +383,18 @@ class AppLocalizationsAr extends AppLocalizations {
   String get svcRadio => 'إذاعة القرآن';
 
   @override
+  String get svcQada => 'متتبّع القضاء';
+
+  @override
+  String get svcSpotlights => 'الإضاءات';
+
+  @override
+  String get svcSearch => 'البحث الشامل';
+
+  @override
+  String get svcLessons => 'الدروس الصوتية';
+
+  @override
   String get svcHadith => 'مكتبة الحديث';
 
   @override

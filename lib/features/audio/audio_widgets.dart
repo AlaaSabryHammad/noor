@@ -30,6 +30,37 @@ List<AudioTrack> surahTracks(QuranReciter r, Moshaf m, List<Surah> surahs) {
   ];
 }
 
+/// The whole audio tafsir as one list in reading order, so it plays on from
+/// one surah into the next.
+List<AudioTrack> tafsirTracks(AudioCatalog c, List<Surah> surahs) {
+  final byNumber = {for (final s in surahs) s.number: s};
+  String ard(int n) => '$n'.replaceAllMapped(RegExp(r'\d'), (m) => '٠١٢٣٤٥٦٧٨٩'[int.parse(m[0]!)]);
+  return [
+    for (final p in c.tafsir)
+      AudioTrack(
+        key: 'tafsir:${p.id}',
+        titleAr: 'تفسير سورة ${byNumber[p.surah]?.nameAr ?? p.surah}${p.wholeSurah ? '' : ' · الآيات ${ard(p.from)}–${ard(p.to)}'}',
+        titleEn: 'Tafsir: ${byNumber[p.surah]?.nameEn ?? 'Surah ${p.surah}'}${p.wholeSurah ? '' : ' ${p.from}–${p.to}'}',
+        subtitleAr: c.tafsirName.isEmpty ? 'التفسير الصوتي' : c.tafsirName,
+        subtitleEn: 'Audio tafsir (summary of at-Tabari, Arabic)',
+        url: Uri.parse(p.url),
+        surah: p.surah,
+        tafsirId: p.id,
+        artAr: byNumber[p.surah]?.nameAr,
+      ),
+  ];
+}
+
+/// Plays the audio tafsir from the part that explains [ayah] of [surah].
+Future<bool> playTafsir(WidgetRef ref, int surah, {int ayah = 1}) async {
+  final catalog = await ref.read(audioCatalogProvider.future);
+  final index = await ref.read(quranIndexProvider.future);
+  final start = catalog.tafsirIndexFor(surah, ayah);
+  if (start < 0) return false;
+  await ref.read(quranPlayerProvider.notifier).playQueue(tafsirTracks(catalog, index.surahs), start: start);
+  return true;
+}
+
 AudioTrack radioTrack(QuranRadio radio) => AudioTrack(
       key: 'radio:${radio.id}',
       titleAr: radio.nameAr,
@@ -40,6 +71,26 @@ AudioTrack radioTrack(QuranRadio radio) => AudioTrack(
       radioId: radio.id,
     );
 
+/// Title, subtitle and avatar name for "continue listening", or null when the
+/// recording is no longer in the catalogue.
+({String title, String subtitle, String avatar})? describeLastListen(LastListen last, AudioCatalog catalog, List<Surah> surahs, bool ar) {
+  Surah? surah(int? n) => surahs.where((s) => s.number == n).firstOrNull;
+  if (last.radioId != null) {
+    final radio = catalog.radio(last.radioId!);
+    return radio == null ? null : (title: radio.name(ar), subtitle: ar ? 'بث مباشر' : 'Live', avatar: radio.nameAr);
+  }
+  if (last.tafsirId != null) {
+    final part = catalog.tafsir.where((p) => p.id == last.tafsirId).firstOrNull;
+    final s = surah(part?.surah);
+    if (part == null || s == null) return null;
+    return (title: ar ? 'تفسير سورة ${s.nameAr}' : 'Tafsir: ${s.nameEn}', subtitle: ar ? catalog.tafsirName : 'Audio tafsir', avatar: 'تفسير');
+  }
+  final reciter = catalog.reciter(last.reciterId ?? -1);
+  final s = surah(last.surah);
+  if (reciter == null || s == null) return null;
+  return (title: ar ? 'سورة ${s.nameAr}' : s.nameEn, subtitle: reciter.name(ar), avatar: reciter.nameAr);
+}
+
 /// Picks up where [last] stopped: the same surah and position, or the same radio.
 Future<bool> resumeListening(WidgetRef ref, LastListen last) async {
   final catalog = await ref.read(audioCatalogProvider.future);
@@ -48,6 +99,13 @@ Future<bool> resumeListening(WidgetRef ref, LastListen last) async {
     final radio = catalog.radio(last.radioId!);
     if (radio == null) return false;
     await player.playQueue([radioTrack(radio)]);
+    return true;
+  }
+  if (last.tafsirId != null) {
+    final start = catalog.tafsir.indexWhere((p) => p.id == last.tafsirId);
+    if (start < 0) return false;
+    final index = await ref.read(quranIndexProvider.future);
+    await player.playQueue(tafsirTracks(catalog, index.surahs), start: start, position: last.position);
     return true;
   }
   final reciter = catalog.reciter(last.reciterId ?? -1);
