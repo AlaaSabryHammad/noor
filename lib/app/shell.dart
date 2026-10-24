@@ -77,12 +77,10 @@ class NoorShell extends ConsumerWidget {
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           if (listening) Padding(padding: const EdgeInsets.only(bottom: 8), child: miniPlayer),
           _Frosted(
-            child: SizedBox(
-              height: 72,
-              child: Row(children: [
-                for (var i = 0; i < items.length; i++) Expanded(child: _NavButton(item: items[i], index: i, shell: shell)),
-              ]),
-            ),
+            height: 72,
+            child: Row(children: [
+              for (var i = 0; i < items.length; i++) Expanded(child: _NavButton(item: items[i], index: i, shell: shell)),
+            ]),
           ),
         ]),
       ),
@@ -98,25 +96,25 @@ class _Rail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => _Frosted(
-        child: SizedBox(
-          width: 84,
-          child: Center(
-            // Phones in landscape are short: scroll rather than overflow.
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Column(mainAxisSize: MainAxisSize.min, spacing: 4, children: [
-                for (var i = 0; i < items.length; i++) SizedBox(height: 64, child: _NavButton(item: items[i], index: i, shell: shell)),
-              ]),
-            ),
+        width: 84,
+        child: Center(
+          // Phones in landscape are short: scroll rather than overflow.
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Column(mainAxisSize: MainAxisSize.min, spacing: 4, children: [
+              for (var i = 0; i < items.length; i++) SizedBox(height: 64, child: _NavButton(item: items[i], index: i, shell: shell)),
+            ]),
           ),
         ),
       );
 }
 
-/// Blurred, bordered surface shared by the bar and the rail.
+/// Blurred, bordered surface shared by the bar and the rail. The size is the
+/// outer size, border included.
 class _Frosted extends StatelessWidget {
-  const _Frosted({required this.child});
+  const _Frosted({required this.child, this.width, this.height});
   final Widget child;
+  final double? width, height;
 
   @override
   Widget build(BuildContext context) {
@@ -126,6 +124,8 @@ class _Frosted extends StatelessWidget {
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
         child: Container(
+          width: width,
+          height: height,
           decoration: BoxDecoration(color: t.navBackground, borderRadius: BorderRadius.circular(26), border: Border.all(color: t.border)),
           // Fixed-size buttons, so labels scale only a little with system text size.
           child: MediaQuery.withClampedTextScaling(maxScaleFactor: 1.15, child: child),
