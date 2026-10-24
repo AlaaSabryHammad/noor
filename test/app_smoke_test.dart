@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:noor/app/app.dart';
 import 'package:noor/core/providers.dart';
+import 'package:noor/features/home/home_screen.dart';
 import 'package:noor/features/prayer/alert_sync.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
@@ -19,10 +20,10 @@ class _NoopScheduler implements NotificationScheduler {
   Future<void> replaceAll(List<PlannedAlert> alerts) async {}
 }
 
-Future<void> pumpApp(WidgetTester tester) async {
+Future<void> pumpApp(WidgetTester tester, {Size size = const Size(390, 844)}) async {
   SharedPreferences.setMockInitialValues({});
   final prefs = await SharedPreferences.getInstance();
-  tester.view.physicalSize = const Size(390 * 3, 844 * 3);
+  tester.view.physicalSize = size * 3;
   tester.view.devicePixelRatio = 3;
   addTearDown(tester.view.reset);
   await tester.pumpWidget(ProviderScope(
@@ -56,6 +57,23 @@ void main() {
 
   testWidgets('bottom nav reaches every tab', (tester) async {
     await pumpApp(tester);
+    expect(tester.getRect(find.bySemanticsLabel('الرئيسية').last).top, greaterThan(844 - 100)); // a bottom bar on phones
+    for (final (tab, title) in [('القرآن', 'القرآن الكريم'), ('الصلاة', 'مواقيت الصلاة'), ('الأذكار', 'الأذكار'), ('استكشف', 'استكشف')]) {
+      await tester.tap(find.bySemanticsLabel(tab).last);
+      await tester.pumpAndSettle();
+      expect(find.text(title), findsWidgets);
+    }
+  });
+
+  testWidgets('tablet: a side rail on the start edge reaches every tab; content is a centred column', (tester) async {
+    await pumpApp(tester, size: const Size(1180, 820));
+    // Arabic reads right to left, so the rail sits on the right.
+    final home = tester.getRect(find.bySemanticsLabel('الرئيسية').last);
+    expect(home.left, greaterThan(1180 - 110));
+    expect(home.bottom, lessThan(820 - 100));
+    final hero = tester.getRect(find.byType(NextPrayerHero));
+    expect(hero.width, lessThanOrEqualTo(760));
+    expect(hero.left, greaterThan(100)); // centred, not stretched from the edge
     for (final (tab, title) in [('القرآن', 'القرآن الكريم'), ('الصلاة', 'مواقيت الصلاة'), ('الأذكار', 'الأذكار'), ('استكشف', 'استكشف')]) {
       await tester.tap(find.bySemanticsLabel(tab).last);
       await tester.pumpAndSettle();

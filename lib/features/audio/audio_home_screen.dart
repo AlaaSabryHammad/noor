@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../quran/quran_data.dart';
@@ -60,7 +61,7 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
           loading: () => const Center(child: CircularProgressIndicator()),
           error: (e, _) => Center(child: Padding(padding: const EdgeInsets.all(24), child: Text('$e'))),
           data: (c) => CustomScrollView(slivers: [
-            SliverPadding(
+            SliverColumn(
               padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
               sliver: SliverList.list(children: [
                 Row(children: [
@@ -118,67 +119,77 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
     return [
       if (_q.isEmpty && !filtered)
         SliverToBoxAdapter(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-            Padding(padding: const EdgeInsets.symmetric(horizontal: 16), child: SectionTitle(NoorFormat.tr(context, 'قرّاء مختارون', 'Featured reciters'))),
-            const SizedBox(height: 10),
-            SizedBox(
-              height: 112 * MediaQuery.textScalerOf(context).scale(1).clamp(1, 1.4),
-              child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                itemCount: featured.length,
-                separatorBuilder: (_, _) => const SizedBox(width: 12),
-                itemBuilder: (context, i) => SizedBox(
-                  width: 78,
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(16),
-                    onTap: () => context.push('/audio/reciter/${featured[i].id}'),
-                    child: Column(spacing: 6, children: [
-                      ReciterAvatar(name: featured[i].nameAr, size: 62),
-                      Text(featured[i].name(ar), textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600, height: 1.25)),
-                    ]),
+          // These rows pad themselves by 16: allow for it so they line up with the lists.
+          child: ContentColumn(
+            maxWidth: NoorLayout.column + 32,
+            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              Padding(padding: const EdgeInsets.symmetric(horizontal: 16), child: SectionTitle(NoorFormat.tr(context, 'قرّاء مختارون', 'Featured reciters'))),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 112 * MediaQuery.textScalerOf(context).scale(1).clamp(1, 1.4),
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  itemCount: featured.length,
+                  separatorBuilder: (_, _) => const SizedBox(width: 12),
+                  itemBuilder: (context, i) => SizedBox(
+                    width: 78,
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(16),
+                      onTap: () => context.push('/audio/reciter/${featured[i].id}'),
+                      child: Column(spacing: 6, children: [
+                        ReciterAvatar(name: featured[i].nameAr, size: 62),
+                        Text(featured[i].name(ar), textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600, height: 1.25)),
+                      ]),
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 12),
-            if (c.videos.isNotEmpty) ...[
-              Padding(padding: const EdgeInsets.symmetric(horizontal: 16), child: SectionTitle(NoorFormat.tr(context, 'مرئيات التلاوة', 'Recitation videos'))),
-              const SizedBox(height: 10),
-              VideoStrip(videos: c.videos, types: c.videoTypes),
-              const SizedBox(height: 14),
-            ],
-          ]),
+              const SizedBox(height: 12),
+              if (c.videos.isNotEmpty) ...[
+                Padding(padding: const EdgeInsets.symmetric(horizontal: 16), child: SectionTitle(NoorFormat.tr(context, 'مرئيات التلاوة', 'Recitation videos'))),
+                const SizedBox(height: 10),
+                VideoStrip(videos: c.videos, types: c.videoTypes),
+                const SizedBox(height: 14),
+              ],
+            ]),
+          ),
         ),
       SliverToBoxAdapter(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Row(spacing: 8, children: [
-            for (final (id, nAr, nEn) in <(int?, String, String)>[(null, 'كل الروايات', 'All riwayat'), ...riwayaFilters, (-1, 'روايات أخرى', 'Other riwayat')])
-              _FilterChip(label: ar ? nAr : nEn, selected: _riwaya == id, onTap: () => setState(() => _riwaya = id)),
-          ]),
+        child: ContentColumn(
+          maxWidth: NoorLayout.column + 32,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(spacing: 8, children: [
+              for (final (id, nAr, nEn) in <(int?, String, String)>[(null, 'كل الروايات', 'All riwayat'), ...riwayaFilters, (-1, 'روايات أخرى', 'Other riwayat')])
+                _FilterChip(label: ar ? nAr : nEn, selected: _riwaya == id, onTap: () => setState(() => _riwaya = id)),
+            ]),
+          ),
         ),
       ),
       const SliverToBoxAdapter(child: SizedBox(height: 8)),
       SliverToBoxAdapter(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Row(spacing: 8, children: [
-            _FilterChip(label: NoorFormat.tr(context, 'كل الأنواع', 'All styles'), selected: _style == null, onTap: () => setState(() => _style = null)),
-            for (final st in RecitationStyle.values) _FilterChip(label: styleName(st, ar), selected: _style == st, onTap: () => setState(() => _style = st)),
-          ]),
+        child: ContentColumn(
+          maxWidth: NoorLayout.column + 32,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(spacing: 8, children: [
+              _FilterChip(label: NoorFormat.tr(context, 'كل الأنواع', 'All styles'), selected: _style == null, onTap: () => setState(() => _style = null)),
+              for (final st in RecitationStyle.values) _FilterChip(label: styleName(st, ar), selected: _style == st, onTap: () => setState(() => _style = st)),
+            ]),
+          ),
         ),
       ),
       const SliverToBoxAdapter(child: SizedBox(height: 12)),
-      SliverPadding(
+      SliverColumn(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         sliver: SliverToBoxAdapter(child: Text(NoorFormat.tr(context, '${NoorFormat.digits(context, list.length)} قارئ', '${list.length} reciters'), style: Theme.of(context).textTheme.bodySmall)),
       ),
       const SliverToBoxAdapter(child: SizedBox(height: 8)),
       if (list.isEmpty) SliverToBoxAdapter(child: _Empty(text: NoorFormat.tr(context, 'لا نتائج', 'No results'))),
-      SliverPadding(
+      SliverColumn(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         sliver: SliverList.builder(
           itemCount: list.length,
@@ -189,7 +200,7 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
     ];
   }
 
-  Widget _radioGroup(String title, List<QuranRadio> list) => SliverPadding(
+  Widget _radioGroup(String title, List<QuranRadio> list) => SliverColumn(
         padding: const EdgeInsets.fromLTRB(16, 4, 16, 14),
         sliver: SliverMainAxisGroup(slivers: [
           SliverToBoxAdapter(child: Padding(padding: const EdgeInsets.only(bottom: 10), child: SectionTitle(title))),
@@ -217,7 +228,7 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
     return [
       if (withTafsir.isEmpty && lessons.isEmpty && translations.isEmpty) SliverToBoxAdapter(child: _Empty(text: NoorFormat.tr(context, 'لا نتائج', 'No results'))),
       if (withTafsir.isNotEmpty)
-        SliverPadding(
+        SliverColumn(
           padding: const EdgeInsets.fromLTRB(16, 4, 16, 14),
           sliver: SliverMainAxisGroup(slivers: [
             SliverToBoxAdapter(
@@ -249,12 +260,12 @@ class _AudioHomeScreenState extends ConsumerState<AudioHomeScreen> {
     }
     return [
       if (reciters.isNotEmpty)
-        SliverPadding(
+        SliverColumn(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
           sliver: SliverList.builder(itemCount: reciters.length, itemBuilder: (context, i) => _ReciterTile(reciter: reciters[i], first: i == 0, last: i == reciters.length - 1)),
         ),
       if (radios.isNotEmpty)
-        SliverPadding(
+        SliverColumn(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
           sliver: SliverList.builder(itemCount: radios.length, itemBuilder: (context, i) => _RadioTile(radio: radios[i], first: i == 0, last: i == radios.length - 1)),
         ),

@@ -7,6 +7,7 @@ import '../../core/providers.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../library/favorites.dart';
 import '../services/service_widgets.dart';
@@ -189,7 +190,7 @@ class _KhutbaScreenState extends ConsumerState<KhutbaScreen> {
     final t = context.noor;
     final cat = ref.watch(khutabProvider).value?.category(k.category);
     final saved = SavedItem(key: 'khutba:${k.id}', kind: 'khutba', title: k.titleAr, body: k.titleAr, translation: k.titleEn, source: NoorFormat.tr(context, 'خطبة · ${cat?.ar ?? ''}', 'Sermon · ${cat?.en ?? ''}'));
-    return ListView(
+    return ColumnListView(
       padding: const EdgeInsets.fromLTRB(18, 6, 18, 40),
       children: [
         Text(cat?.name(ar) ?? '', textAlign: TextAlign.center, style: TextStyle(fontSize: 12.5, color: t.goldText, fontWeight: FontWeight.w600)),

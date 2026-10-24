@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/providers.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 
 /// Parsed `assets/data/<name>.json`. Content stays out of the widget tree so
@@ -24,7 +25,7 @@ class ServiceScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         body: SafeArea(
-          child: ListView(padding: padding, children: [
+          child: ColumnListView(padding: padding, children: [
             Row(children: [
               const NoorBackButton(),
               Expanded(child: Center(child: ScreenTitle(title, size: 22))),

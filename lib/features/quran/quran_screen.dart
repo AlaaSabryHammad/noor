@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import 'quran_data.dart';
@@ -59,7 +60,7 @@ class _QuranScreenState extends ConsumerState<QuranScreen> {
     return SafeArea(
       bottom: false,
       child: CustomScrollView(slivers: [
-        SliverPadding(
+        SliverColumn(
           padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
           sliver: SliverList.list(children: [
             ScreenTitle(l.quranTitle),
@@ -119,8 +120,8 @@ class _QuranScreenState extends ConsumerState<QuranScreen> {
         index.when(
           loading: () => const SliverFillRemaining(hasScrollBody: false, child: Center(child: CircularProgressIndicator())),
           error: (e, _) => SliverToBoxAdapter(child: Center(child: Text('$e'))),
-          data: (data) => SliverPadding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 120),
+          data: (data) => SliverColumn(
+            padding: EdgeInsets.fromLTRB(20, 0, 20, NoorLayout.navClearance(context)),
             sliver: searching ? _searchResults(context, data) : (_seg == _Seg.surahs ? SliverToBoxAdapter(child: _surahCard(context, data.surahs, '')) : _juzGrid(context, data.juz, data.surahs)),
           ),
         ),
@@ -233,7 +234,7 @@ class _QuranScreenState extends ConsumerState<QuranScreen> {
     }
 
     return SliverGrid.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10, mainAxisExtent: 104),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: NoorLayout.isWide(context) ? 3 : 2, mainAxisSpacing: 10, crossAxisSpacing: 10, mainAxisExtent: 104),
       itemCount: juz.length,
       itemBuilder: (context, i) => NoorCard(
         radius: 20,

@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -65,8 +66,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
     return SafeArea(
       bottom: false,
-      child: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 120),
+      child: ColumnListView(
+        padding: EdgeInsets.fromLTRB(20, 16, 20, NoorLayout.navClearance(context)),
         children: [
           ScreenTitle(l.exploreTitle),
           const SizedBox(height: 14),
@@ -98,7 +99,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 padding: EdgeInsets.zero,
                 physics: const NeverScrollableScrollPhysics(),
                 // Cell height follows the system text size so labels never overflow.
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10, mainAxisExtent: 112 + 56 * (MediaQuery.textScalerOf(context).scale(13) / 13 - 1).clamp(0, 1.5)),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: NoorLayout.isWide(context) ? 4 : 3, mainAxisSpacing: 10, crossAxisSpacing: 10, mainAxisExtent: 112 + 56 * (MediaQuery.textScalerOf(context).scale(13) / 13 - 1).clamp(0, 1.5)),
                 children: [
                   for (final s in items.where((s) => s.label.toLowerCase().contains(_q.toLowerCase())))
                     NoorCard(

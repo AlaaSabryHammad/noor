@@ -9,6 +9,7 @@ import '../../core/providers.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../adhkar/adhkar_data.dart' show hisnPrefix;
@@ -170,7 +171,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
     return Scaffold(
       body: SafeArea(
         child: CustomScrollView(slivers: [
-          SliverPadding(
+          SliverColumn(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
             sliver: SliverList.list(children: [
               Row(spacing: 10, children: [
@@ -312,7 +313,7 @@ class _Section extends StatelessWidget {
   final String title;
   final List<Widget> children;
   @override
-  Widget build(BuildContext context) => SliverPadding(
+  Widget build(BuildContext context) => SliverColumn(
         padding: const EdgeInsets.fromLTRB(16, 10, 16, 4),
         sliver: SliverList.list(children: [
           SectionTitle(title, trailing: Text(NoorFormat.digits(context, children.length), style: Theme.of(context).textTheme.bodySmall)),

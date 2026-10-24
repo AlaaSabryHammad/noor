@@ -9,6 +9,7 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../audio/audio_widgets.dart' show playTafsir;
@@ -254,7 +255,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
       backgroundColor: t.reader,
       body: SafeArea(
         child: Column(children: [
-          Padding(
+          ContentColumn(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 10),
             child: Row(children: [
               const NoorBackButton(),
@@ -270,7 +271,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
               NoorIconButton(icon: Icons.text_increase_rounded, tooltip: NoorFormat.tr(context, 'تكبير الخط', 'Larger text'), onPressed: () => ref.read(settingsProvider.notifier).setQuranFontSize(fs + 2)),
             ]),
           ),
-          Padding(
+          ContentColumn(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: NoorSegmented<_Mode>(values: _Mode.values, labels: [l.mushafMode, l.translationMode], selected: _mode, onChanged: (m) => setState(() => _mode = m)),
           ),
@@ -311,12 +312,13 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
     final chunks = (list.length / _chunkSize).ceil();
     final count = _itemCount(list.length);
     // A new key per mode rebuilds the list at the ayah the reader was looking at.
-    return ScrollablePositionedList.builder(
+    // Full-width list (it scrolls from the margins too) with the text in a readable column.
+    return LayoutBuilder(builder: (context, box) => ScrollablePositionedList.builder(
       key: ValueKey(_mode),
       itemScrollController: _scroll,
       itemPositionsListener: _positions,
       initialScrollIndex: _itemOfAyah(_topAyah.clamp(1, list.length)).clamp(0, count - 1),
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 190),
+      padding: NoorLayout.centered(const EdgeInsets.fromLTRB(16, 16, 16, 190), box.maxWidth),
       itemCount: count,
       itemBuilder: (context, i) {
         if (i == 0) {
@@ -354,7 +356,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
           ),
         );
       },
-    );
+    ));
   }
 
   SavedItem _savedItem(Ayah a) {

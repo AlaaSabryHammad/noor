@@ -9,6 +9,7 @@ import '../../core/providers.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import 'alert_sync.dart';
@@ -31,8 +32,8 @@ class PrayerScreen extends ConsumerWidget {
 
     return SafeArea(
       bottom: false,
-      child: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 120),
+      child: ColumnListView(
+        padding: EdgeInsets.fromLTRB(20, 16, 20, NoorLayout.navClearance(context)),
         children: [
           ScreenTitle(l.prayerTitle),
           Align(

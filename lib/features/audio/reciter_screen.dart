@@ -6,6 +6,7 @@ import '../../core/providers.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../quran/quran_data.dart';
@@ -81,7 +82,7 @@ class _ReciterScreenState extends ConsumerState<ReciterScreen> {
     final byNumber = {for (final s in surahs) s.number: s};
 
     return CustomScrollView(slivers: [
-      SliverPadding(
+      SliverColumn(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
         sliver: SliverList.list(children: [
           Row(children: [
@@ -159,7 +160,7 @@ class _ReciterScreenState extends ConsumerState<ReciterScreen> {
           const SizedBox(height: 12),
         ]),
       ),
-      SliverPadding(
+      SliverColumn(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 30),
         sliver: SliverList.builder(
           itemCount: shown.length,

@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../library/favorites.dart';
@@ -39,7 +40,7 @@ class _NamesScreenState extends ConsumerState<NamesScreen> {
             shrinkWrap: true,
             padding: EdgeInsets.zero,
             physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10, mainAxisExtent: 132 + 110 * (MediaQuery.textScalerOf(context).scale(13) / 13 - 1).clamp(0, 1.5)),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: NoorLayout.isWide(context) ? 4 : 3, mainAxisSpacing: 10, crossAxisSpacing: 10, mainAxisExtent: 132 + 110 * (MediaQuery.textScalerOf(context).scale(13) / 13 - 1).clamp(0, 1.5)),
             children: [
               for (final n in list)
                 NoorCard(

@@ -1,5 +1,6 @@
 // Every screen on a small phone (320 dp wide) with enlarged system text, in
-// both languages and themes: any RenderFlex overflow or build error fails.
+// both languages and themes, then on tablets and a phone in landscape (side
+// rail, centred column): any RenderFlex overflow or build error fails.
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -38,12 +39,19 @@ const routes = [
 ];
 
 void main() {
-  for (final (lang, theme, scale) in [('ar', 'light', 1.5), ('en', 'dark', 1.3)]) {
+  const screens = [
+    ('ar', 'light', 1.5, Size(320, 640), '320dp'),
+    ('en', 'dark', 1.3, Size(320, 640), '320dp'),
+    ('ar', 'light', 1.3, Size(1180, 820), 'tablet landscape'),
+    ('en', 'light', 1.0, Size(820, 1180), 'tablet portrait'),
+    ('ar', 'dark', 1.3, Size(844, 390), 'phone landscape'),
+  ];
+  for (final (lang, theme, scale, size, label) in screens) {
     for (final route in routes) {
-      testWidgets('$route · $lang/$theme · text ×$scale · 320dp', (tester) async {
+      testWidgets('$route · $lang/$theme · text ×$scale · $label', (tester) async {
         SharedPreferences.setMockInitialValues({'settings.locale': lang, 'settings.theme': theme});
         final prefs = await SharedPreferences.getInstance();
-        tester.view.physicalSize = const Size(320 * 2, 640 * 2);
+        tester.view.physicalSize = size * 2;
         tester.view.devicePixelRatio = 2;
         tester.platformDispatcher.textScaleFactorTestValue = scale;
         addTearDown(() {

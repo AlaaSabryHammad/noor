@@ -7,6 +7,7 @@ import '../../core/providers.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../prayer/domain/prayer_models.dart';
@@ -88,7 +89,7 @@ class RamadanScreen extends ConsumerWidget {
       NoorCard(
         padding: const EdgeInsets.all(14),
         child: GridView.count(
-          crossAxisCount: 6,
+          crossAxisCount: NoorLayout.isWide(context) ? 10 : 6,
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           mainAxisSpacing: 8,

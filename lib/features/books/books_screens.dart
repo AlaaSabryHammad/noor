@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../library/favorites.dart';
@@ -164,7 +165,7 @@ class _SectionScreenState extends ConsumerState<SectionScreen> {
     return Scaffold(
       body: SafeArea(
         child: Column(children: [
-          Padding(
+          ContentColumn(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
             child: Row(children: [
               const NoorBackButton(),
@@ -195,7 +196,7 @@ class _SectionScreenState extends ConsumerState<SectionScreen> {
                   ]),
                 ),
               ),
-              data: (list) => ListView.builder(
+              data: (list) => ColumnListView.builder(
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 40),
                 itemCount: list.length,
                 itemBuilder: (context, i) {

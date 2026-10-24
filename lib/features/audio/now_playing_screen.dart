@@ -7,6 +7,7 @@ import '../../core/providers.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import 'audio_catalog.dart';
 import 'audio_widgets.dart';
@@ -110,6 +111,8 @@ class _Playing extends ConsumerWidget {
     return LayoutBuilder(builder: (context, c) {
       final art = (c.maxHeight * .48).clamp(150.0, 320.0);
       return SingleChildScrollView(
+        // Controls stay a comfortable width on tablets; the view still scrolls edge to edge.
+        padding: NoorLayout.centered(EdgeInsets.zero, c.maxWidth, max: 600),
         child: ConstrainedBox(
           constraints: BoxConstraints(minHeight: c.maxHeight),
           child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [

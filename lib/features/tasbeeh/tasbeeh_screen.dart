@@ -8,6 +8,7 @@ import '../../core/providers.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -87,7 +88,7 @@ class TasbeehScreen extends ConsumerWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: ListView(
+        child: ColumnListView(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 30),
           children: [
             Row(children: [const NoorBackButton(), Expanded(child: Center(child: ScreenTitle(l.tasbeehTitle, size: 22))), const SizedBox(width: 44)]),

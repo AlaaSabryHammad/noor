@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import 'compass.dart';
@@ -72,7 +73,7 @@ class _QiblaScreenState extends ConsumerState<QiblaScreen> {
 
     return Scaffold(
       body: SafeArea(
-        child: ListView(
+        child: ColumnListView(
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 30),
           children: [
             Row(children: [const NoorBackButton(), Expanded(child: Center(child: ScreenTitle(l.qiblaTitle, size: 22))), const SizedBox(width: 44)]),

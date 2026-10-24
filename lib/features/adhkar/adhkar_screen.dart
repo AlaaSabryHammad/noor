@@ -7,6 +7,7 @@ import '../../core/providers.dart';
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
+import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../library/favorites.dart';
@@ -76,8 +77,8 @@ class _AdhkarScreenState extends ConsumerState<AdhkarScreen> {
 
     return SafeArea(
       bottom: false,
-      child: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 120),
+      child: ColumnListView(
+        padding: EdgeInsets.fromLTRB(20, 16, 20, NoorLayout.navClearance(context)),
         children: [
           ScreenTitle(l.adhkarTitle),
           const SizedBox(height: 14),
@@ -113,7 +114,7 @@ class _AdhkarScreenState extends ConsumerState<AdhkarScreen> {
           SectionTitle(l.categories),
           const SizedBox(height: 10),
           GridView.count(
-            crossAxisCount: 2,
+            crossAxisCount: NoorLayout.isWide(context) ? 3 : 2,
             shrinkWrap: true,
             padding: EdgeInsets.zero,
             physics: const NeverScrollableScrollPhysics(),
@@ -160,7 +161,7 @@ class _DhikrSessionScreenState extends ConsumerState<DhikrSessionScreen> {
     return Scaffold(
       body: SafeArea(
         child: Column(children: [
-          Padding(
+          ContentColumn(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
             child: Column(spacing: 12, children: [
               Row(children: [
@@ -183,7 +184,7 @@ class _DhikrSessionScreenState extends ConsumerState<DhikrSessionScreen> {
           ),
           const Divider(),
           Expanded(
-            child: ListView(
+            child: ColumnListView(
               padding: const EdgeInsets.fromLTRB(16, 14, 16, 40),
               children: [
                 if (list.isNotEmpty && done == list.length) ...[
