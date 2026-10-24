@@ -13,7 +13,7 @@ extension PrayerKindX on PrayerKind {
 
 @immutable
 class PrayerLocation {
-  const PrayerLocation({required this.nameAr, required this.nameEn, required this.latitude, required this.longitude, this.utcOffsetMinutes, this.method});
+  const PrayerLocation({required this.nameAr, required this.nameEn, required this.latitude, required this.longitude, this.utcOffsetMinutes, this.method, this.fromDevice = false, this.countryCode});
 
   /// Regional default method for a listed city; null for a GPS fix.
   final PrayerMethod? method;
@@ -29,10 +29,17 @@ class PrayerLocation {
 
   Duration? get utcOffset => utcOffsetMinutes == null ? null : Duration(minutes: utcOffsetMinutes!);
 
+  /// Taken from the device position: kept up to date when the person moves.
+  final bool fromDevice;
+
+  /// ISO country code ("SA") from the map service, for a GPS fix or a place
+  /// found by name; null for listed cities (they carry [method]) or offline.
+  final String? countryCode;
+
   /// Default until the user grants location or picks a city.
   static const dammam = PrayerLocation(nameAr: 'الدمام، المملكة العربية السعودية', nameEn: 'Dammam, Saudi Arabia', latitude: 26.4207, longitude: 50.0888, utcOffsetMinutes: 180, method: PrayerMethod.ummAlQura);
 
-  Map<String, Object?> toJson() => {'nameAr': nameAr, 'nameEn': nameEn, 'lat': latitude, 'lng': longitude, 'utc': utcOffsetMinutes, 'method': method?.name};
+  Map<String, Object?> toJson() => {'nameAr': nameAr, 'nameEn': nameEn, 'lat': latitude, 'lng': longitude, 'utc': utcOffsetMinutes, 'method': method?.name, 'gps': fromDevice, 'cc': countryCode};
 
   static PrayerLocation? fromJson(Map<String, dynamic> j) {
     final lat = (j['lat'] as num?)?.toDouble(), lng = (j['lng'] as num?)?.toDouble();
@@ -45,14 +52,27 @@ class PrayerLocation {
       longitude: lng,
       utcOffsetMinutes: j['utc'] as int?,
       method: PrayerMethod.values.where((e) => e.name == m).firstOrNull,
+      fromDevice: j['gps'] as bool? ?? false,
+      countryCode: j['cc'] as String?,
     );
   }
 
+  // Every field counts: providers skip updates that compare equal, so naming a
+  // fix or learning its country at the same coordinates must still notify.
   @override
-  bool operator ==(Object other) => other is PrayerLocation && other.latitude == latitude && other.longitude == longitude && other.utcOffsetMinutes == utcOffsetMinutes;
+  bool operator ==(Object other) =>
+      other is PrayerLocation &&
+      other.latitude == latitude &&
+      other.longitude == longitude &&
+      other.utcOffsetMinutes == utcOffsetMinutes &&
+      other.nameAr == nameAr &&
+      other.nameEn == nameEn &&
+      other.method == method &&
+      other.fromDevice == fromDevice &&
+      other.countryCode == countryCode;
 
   @override
-  int get hashCode => Object.hash(latitude, longitude, utcOffsetMinutes);
+  int get hashCode => Object.hash(latitude, longitude, utcOffsetMinutes, nameAr, nameEn, method, fromDevice, countryCode);
 }
 
 @immutable

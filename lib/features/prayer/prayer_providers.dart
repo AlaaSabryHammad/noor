@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/providers.dart';
 import '../../l10n/app_localizations.dart';
 import 'data/location_service.dart';
+import 'data/place_names.dart';
 import 'data/prayer_times_repository.dart';
 import 'domain/prayer_cities.dart';
 import 'domain/prayer_method.dart';
@@ -47,10 +48,15 @@ final prayerRepositoryProvider = Provider<PrayerTimesRepository>((ref) => AdhanP
 
 final locationServiceProvider = Provider<LocationService>((ref) => const GeolocatorLocationService());
 
-/// The active location: a picked city or a GPS fix, persisted. Dammam until
-/// the user chooses.
+final placeNamerProvider = Provider<PlaceNamer>((ref) => PlatformPlaceNamer());
+
+/// The active location: a picked city, a searched place or the device
+/// position, persisted. Dammam until the person allows location or chooses.
 class PrayerLocationController extends Notifier<PrayerLocation> {
-  static const _k = 'prayer.location';
+  static const _k = 'prayer.location', _kAsked = 'prayer.location.asked';
+
+  /// Moving less than this keeps the current fix (and its name) as it is.
+  static const followKm = 3.0;
 
   @override
   PrayerLocation build() {
@@ -63,19 +69,72 @@ class PrayerLocationController extends Notifier<PrayerLocation> {
     }
   }
 
+  /// False until the person allows location or picks a place: times are for the Dammam default.
+  bool get chosen => ref.read(sharedPreferencesProvider).containsKey(_k);
+
   void select(PrayerLocation l) {
     state = l;
     ref.read(sharedPreferencesProvider).setString(_k, jsonEncode(l.toJson()));
   }
 
+  /// The city's real name from the map service; offline, the listed city it
+  /// is in (within 30 km), else a generic label.
+  Future<PlaceName> _nameOf(double lat, double lng) async {
+    final named = await ref.read(placeNamerProvider).nameOf(lat, lng);
+    if (named != null) return named;
+    PrayerLocation? near;
+    var best = 30.0;
+    for (final c in prayerCities) {
+      final km = approxKm(lat, lng, c.latitude, c.longitude);
+      if (km < best) (best, near) = (km, c);
+    }
+    return near != null ? (ar: near.nameAr, en: near.nameEn, country: null) : (ar: 'موقعي الحالي', en: 'My location', country: null);
+  }
+
   /// Uses the device position. Returns the failure, or null on success.
-  Future<LocationFailure?> useDeviceLocation() async {
-    final r = await ref.read(locationServiceProvider).current();
+  Future<LocationFailure?> useDeviceLocation({bool prompt = true}) async {
+    final r = await ref.read(locationServiceProvider).current(prompt: prompt);
     if (!r.ok) return r.failure;
-    select(PrayerLocation(nameAr: 'موقعي الحالي', nameEn: 'My location', latitude: r.latitude, longitude: r.longitude));
+    final name = await _nameOf(r.latitude, r.longitude);
+    select(PrayerLocation(nameAr: name.ar, nameEn: name.en, countryCode: name.country, latitude: r.latitude, longitude: r.longitude, fromDevice: true));
     return null;
   }
+
+  /// A place found by name: exact coordinates, shown in the device time zone.
+  void selectPlace(PlaceHit hit) => select(PrayerLocation(nameAr: hit.name.ar, nameEn: hit.name.en, countryCode: hit.name.country, latitude: hit.latitude, longitude: hit.longitude));
+
+  /// At launch: the first time, ask for the location once; afterwards, when
+  /// the person uses their location, follow the device without asking again.
+  Future<void> bootstrap() async {
+    final prefs = ref.read(sharedPreferencesProvider);
+    if (!chosen) {
+      if (prefs.getBool(_kAsked) ?? false) return;
+      await prefs.setBool(_kAsked, true);
+      await useDeviceLocation();
+      return;
+    }
+    if (!state.fromDevice) return;
+    final r = await ref.read(locationServiceProvider).current(prompt: false);
+    if (!r.ok) return;
+    final moved = approxKm(state.latitude, state.longitude, r.latitude, r.longitude) >= followKm;
+    // Older versions saved the fix without its city's name or its country: fill them in.
+    final unnamed = state.nameEn == 'My location';
+    if (!moved && !unnamed && state.countryCode != null) return;
+    final name = await _nameOf(r.latitude, r.longitude);
+    // Offline in the same place: keep the real name rather than swap it for a guess.
+    if (!moved && !unnamed && name.country == null) return;
+    select(PrayerLocation(nameAr: name.ar, nameEn: name.en, countryCode: name.country, latitude: moved ? r.latitude : state.latitude, longitude: moved ? r.longitude : state.longitude, fromDevice: true));
+  }
 }
+
+/// False while times are for the Dammam default (nothing chosen, location not allowed).
+final locationChosenProvider = Provider<bool>((ref) {
+  ref.watch(prayerLocationProvider);
+  return ref.read(prayerLocationProvider.notifier).chosen;
+});
+
+/// Runs [PrayerLocationController.bootstrap] once per launch.
+final locationBootstrapProvider = FutureProvider<void>((ref) => ref.read(prayerLocationProvider.notifier).bootstrap());
 
 final prayerLocationProvider = NotifierProvider<PrayerLocationController, PrayerLocation>(PrayerLocationController.new);
 

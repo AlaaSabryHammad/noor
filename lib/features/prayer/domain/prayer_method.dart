@@ -12,10 +12,34 @@ class PrayerCalcSettings {
   final AsrMadhab madhab;
 }
 
+/// The method each country's authority uses, by ISO code. Countries not
+/// listed use the Muslim World League.
+const countryMethods = <String, PrayerMethod>{
+  'SA': PrayerMethod.ummAlQura,
+  'AE': PrayerMethod.dubai,
+  'KW': PrayerMethod.kuwait,
+  'QA': PrayerMethod.qatar,
+  'EG': PrayerMethod.egyptian,
+  'TR': PrayerMethod.turkey,
+  'PK': PrayerMethod.karachi,
+  'BD': PrayerMethod.karachi,
+  'AF': PrayerMethod.karachi,
+  'IN': PrayerMethod.karachi,
+  'ID': PrayerMethod.singapore,
+  'MY': PrayerMethod.singapore,
+  'SG': PrayerMethod.singapore,
+  'BN': PrayerMethod.singapore,
+  'US': PrayerMethod.northAmerica,
+  'CA': PrayerMethod.northAmerica,
+};
+
 /// Regional default for a place. Cities carry an explicit method; a GPS fix
+/// or a searched place follows its country. Offline (country unknown) it
 /// borrows the nearest listed city within [maxKm], else the Muslim World League.
 PrayerMethod methodFor(PrayerLocation loc, List<PrayerLocation> cities, {double maxKm = 800}) {
   if (loc.method != null) return loc.method!;
+  // The country, not the nearest city: Hafar Al-Batin is nearer Kuwait City than Riyadh.
+  if (loc.countryCode != null) return countryMethods[loc.countryCode] ?? PrayerMethod.muslimWorldLeague;
   PrayerLocation? best;
   var bestKm = double.infinity;
   for (final c in cities) {

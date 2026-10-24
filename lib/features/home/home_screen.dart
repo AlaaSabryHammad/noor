@@ -84,6 +84,7 @@ class HomeScreen extends ConsumerWidget {
           const SizedBox(height: 18),
           NextPrayerHero(day: day, method: ref.watch(effectiveMethodProvider)),
           const SizedBox(height: 16),
+          if (!ref.watch(locationChosenProvider)) ...[const _LocateCard(), const SizedBox(height: 16)],
           const CrashConsentCard(), // one-time question; takes no space once answered
           if (day.isFriday) ...[_FridayCard(), const SizedBox(height: 16)],
           const _ContinueReadingCard(),
@@ -183,6 +184,31 @@ class _HeroPrayerCell extends StatelessWidget {
       child: Column(spacing: 3, children: [
         Text(prayerName(l, slot.kind, friday: friday), style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600, color: color), maxLines: 1, overflow: TextOverflow.fade),
         Text(NoorFormat.time(context, shown, withPeriod: false), style: TextStyle(fontSize: 11, color: color)),
+      ]),
+    );
+  }
+}
+
+/// Shown while times are for the Dammam default: nothing picked, location not allowed.
+class _LocateCard extends StatelessWidget {
+  const _LocateCard();
+  @override
+  Widget build(BuildContext context) {
+    final t = context.noor;
+    return NoorCard(
+      color: t.goldSoft,
+      borderColor: t.goldLine,
+      padding: const EdgeInsets.all(14),
+      onTap: () => showLocationSheet(context),
+      child: Row(spacing: 12, children: [
+        Icon(Icons.location_searching_rounded, color: t.goldText),
+        Expanded(
+          child: Text(
+            NoorFormat.tr(context, 'المواقيت الآن للدمام افتراضيًا. حدّد موقعك لمواقيت دقيقة لمدينتك.', 'Times are for Dammam by default. Set your location for exact times in your city.'),
+            style: const TextStyle(fontSize: 13.5, height: 1.5),
+          ),
+        ),
+        NoorPrimaryButton(label: NoorFormat.tr(context, 'حدّد موقعي', 'Set location'), soft: true, onPressed: () => showLocationSheet(context)),
       ]),
     );
   }
@@ -339,7 +365,7 @@ class _MorningAdhkarCard extends ConsumerWidget {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, spacing: 8, children: [
             Row(children: [
               Expanded(child: Text(adhkarTitle(context, cat), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600))),
-              Text(l.adhkarProgress(NoorFormat.digits(context, done), NoorFormat.digits(context, list.length)), style: Theme.of(context).textTheme.bodySmall),
+              Flexible(child: Text(l.adhkarProgress(NoorFormat.digits(context, done), NoorFormat.digits(context, list.length)), maxLines: 1, overflow: TextOverflow.fade, softWrap: false, style: Theme.of(context).textTheme.bodySmall)),
             ]),
             NoorProgressBar(value: list.isEmpty ? 0 : done / list.length, color: t.gold),
           ]),

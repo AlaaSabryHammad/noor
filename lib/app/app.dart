@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import '../core/theme/noor_theme.dart';
 import '../features/prayer/alert_sync.dart';
+import '../features/prayer/prayer_providers.dart';
 import '../features/settings/settings_controller.dart';
 import '../l10n/app_localizations.dart';
 import 'router.dart';
@@ -18,6 +19,8 @@ class NoorApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(settingsProvider);
     ref.watch(alertSyncProvider);
+    // Locate the person on first launch; follow them later if they use their location.
+    ref.watch(locationBootstrapProvider);
     return MaterialApp.router(
       onGenerateTitle: (c) => AppLocalizations.of(c).appName,
       debugShowCheckedModeBanner: false,

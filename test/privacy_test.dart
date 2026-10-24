@@ -107,6 +107,8 @@ void main() {
       final reporter = FakeCrashReporter();
       final c = await _open(tester, reporter);
       expect(find.text('ساعدنا على تحسين نور'), findsOneWidget);
+      await tester.ensureVisible(find.text('أوافق'));
+      await tester.pumpAndSettle();
       await tester.tap(find.text('أوافق'));
       await tester.pumpAndSettle();
       expect(find.text('ساعدنا على تحسين نور'), findsNothing);
@@ -117,6 +119,8 @@ void main() {
     testWidgets('declining keeps collection off and removes the card', (tester) async {
       final reporter = FakeCrashReporter();
       final c = await _open(tester, reporter);
+      await tester.ensureVisible(find.text('لا، شكرًا'));
+      await tester.pumpAndSettle();
       await tester.tap(find.text('لا، شكرًا'));
       await tester.pumpAndSettle();
       expect(find.text('ساعدنا على تحسين نور'), findsNothing);

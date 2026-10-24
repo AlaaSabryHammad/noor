@@ -83,6 +83,9 @@ PODS:
     - Flutter
   - flutter_local_notifications (0.0.1):
     - Flutter
+  - geocoding_darwin (0.0.1):
+    - Flutter
+    - FlutterMacOS
   - geolocator_apple (1.2.0):
     - Flutter
     - FlutterMacOS
@@ -171,6 +174,7 @@ DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_compass (from `.symlinks/plugins/flutter_compass/ios`)
   - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
+  - geocoding_darwin (from `.symlinks/plugins/geocoding_darwin/darwin`)
   - geolocator_apple (from `.symlinks/plugins/geolocator_apple/darwin`)
   - google_sign_in_ios (from `.symlinks/plugins/google_sign_in_ios/darwin`)
   - just_audio (from `.symlinks/plugins/just_audio/darwin`)
@@ -224,6 +228,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_compass/ios"
   flutter_local_notifications:
     :path: ".symlinks/plugins/flutter_local_notifications/ios"
+  geocoding_darwin:
+    :path: ".symlinks/plugins/geocoding_darwin/darwin"
   geolocator_apple:
     :path: ".symlinks/plugins/geolocator_apple/darwin"
   google_sign_in_ios:
@@ -267,6 +273,7 @@ SPEC CHECKSUMS:
   Flutter: 71a624a5bc0c04062bf19101d501e466baf2fb47
   flutter_compass: cbbd285cea1584c7ac9c4e0c3e1f17cbea55e855
   flutter_local_notifications: eda81afddbf18f8589f6ec069ce593c4c6378769
+  geocoding_darwin: 6b25f60c5c0855c2061f097ca17c937a827b8a76
   geolocator_apple: 66b711889fd333205763b83c9dcf0a57a28c7afd
   google_sign_in_ios: 50537d3f32cf95a660ec27ab92140dda3c3d7c47
   GoogleDataTransport: a24e58982ab3ba2f64d79613e027fe7f57e88539

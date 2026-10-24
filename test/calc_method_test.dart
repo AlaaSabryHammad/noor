@@ -25,6 +25,30 @@ void main() {
     expect(methodFor(london, prayerCities), PrayerMethod.muslimWorldLeague);
   });
 
+  test('a known country decides the method, across a nearer border', () {
+    const hafar = PrayerLocation(nameAr: '', nameEn: '', latitude: 28.4328, longitude: 45.9708);
+    // Nearest listed city is Kuwait City; the country says Saudi Arabia.
+    expect(methodFor(hafar, prayerCities), PrayerMethod.kuwait);
+    const hafarSa = PrayerLocation(nameAr: '', nameEn: '', latitude: 28.4328, longitude: 45.9708, countryCode: 'SA');
+    expect(methodFor(hafarSa, prayerCities), PrayerMethod.ummAlQura);
+    const jahra = PrayerLocation(nameAr: '', nameEn: '', latitude: 29.34, longitude: 47.66, countryCode: 'KW');
+    expect(methodFor(jahra, prayerCities), PrayerMethod.kuwait);
+    const khobarSide = PrayerLocation(nameAr: '', nameEn: '', latitude: 26.2, longitude: 50.55, countryCode: 'BH');
+    expect(methodFor(khobarSide, prayerCities), PrayerMethod.muslimWorldLeague);
+  });
+
+  test('listed cities and the country table agree', () {
+    const codes = {
+      'Saudi Arabia': 'SA', 'UAE': 'AE', 'Qatar': 'QA', 'Kuwait': 'KW', 'Bahrain': 'BH', 'Oman': 'OM', 'Jordan': 'JO', 'Syria': 'SY', 'Iraq': 'IQ', 'Yemen': 'YE', //
+      'Türkiye': 'TR', 'Sudan': 'SD', 'Libya': 'LY', 'Tunisia': 'TN', 'Algeria': 'DZ', 'Somalia': 'SO', 'Pakistan': 'PK', 'Bangladesh': 'BD', 'Indonesia': 'ID', 'Malaysia': 'MY',
+    };
+    for (final c in prayerCities) {
+      final code = codes[c.nameEn.split(', ').last];
+      expect(code, isNotNull, reason: c.nameEn);
+      expect(countryMethods[code] ?? PrayerMethod.muslimWorldLeague, c.method, reason: c.nameEn);
+    }
+  });
+
   test('different methods give different Fajr; Hanafi Asr is later', () {
     final d = DateTime(2026, 10, 23);
     final loc = PrayerLocation.dammam;

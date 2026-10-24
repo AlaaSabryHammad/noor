@@ -34,5 +34,5 @@ const prayerCities = <PrayerLocation>[
   PrayerLocation(nameAr: 'لاهور، باكستان', nameEn: 'Lahore, Pakistan', latitude: 31.5204, longitude: 74.3587, utcOffsetMinutes: 300, method: PrayerMethod.karachi),
   PrayerLocation(nameAr: 'دكا، بنغلاديش', nameEn: 'Dhaka, Bangladesh', latitude: 23.8103, longitude: 90.4125, utcOffsetMinutes: 360, method: PrayerMethod.karachi),
   PrayerLocation(nameAr: 'جاكرتا، إندونيسيا', nameEn: 'Jakarta, Indonesia', latitude: -6.2088, longitude: 106.8456, utcOffsetMinutes: 420, method: PrayerMethod.singapore),
-  PrayerLocation(nameAr: 'كوالالمبور، ماليزيا', nameEn: 'Kuala Lumpur, Malaysia', latitude: 3.1390, longitude: 101.6869, utcOffsetMinutes: 480, method: PrayerMethod.karachi),
+  PrayerLocation(nameAr: 'كوالالمبور، ماليزيا', nameEn: 'Kuala Lumpur, Malaysia', latitude: 3.1390, longitude: 101.6869, utcOffsetMinutes: 480, method: PrayerMethod.singapore),
 ];
