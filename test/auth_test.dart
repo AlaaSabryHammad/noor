@@ -13,6 +13,7 @@ import 'package:noor/features/prayer/alert_sync.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'test_clock.dart';
 
 class _Noop implements NotificationScheduler {
   @override
@@ -111,7 +112,7 @@ Future<(FakeAuth, ProviderContainer)> _open(WidgetTester tester, {AuthService? s
       sharedPreferencesProvider.overrideWithValue(prefs),
       notificationSchedulerProvider.overrideWithValue(_Noop()),
       authServiceProvider.overrideWithValue(service ?? auth),
-      nowProvider.overrideWithValue(DateTime(2026, 10, 23, 10, 42, 18)),
+      nowProvider.overrideWithValue(fridayMorning),
       contentLoaderProvider.overrideWithValue((p) async => File(p).readAsStringSync()),
     ],
     child: const NoorApp(),

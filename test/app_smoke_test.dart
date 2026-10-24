@@ -10,6 +10,7 @@ import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
 import 'package:noor/features/tasbeeh/tasbeeh_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'test_clock.dart';
 
 class _NoopScheduler implements NotificationScheduler {
   @override
@@ -28,7 +29,7 @@ Future<void> pumpApp(WidgetTester tester) async {
     overrides: [
       sharedPreferencesProvider.overrideWithValue(prefs),
       notificationSchedulerProvider.overrideWithValue(_NoopScheduler()),
-      nowProvider.overrideWithValue(DateTime(2026, 10, 23, 10, 42, 18)),
+      nowProvider.overrideWithValue(fridayMorning),
       contentLoaderProvider.overrideWithValue((p) async => File(p).readAsStringSync()),
     ],
     child: const NoorApp(),

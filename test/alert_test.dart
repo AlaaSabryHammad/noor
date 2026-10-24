@@ -12,6 +12,7 @@ import 'package:noor/features/prayer/prayer_providers.dart';
 import 'package:noor/features/settings/settings_controller.dart';
 import 'package:noor/l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'test_clock.dart';
 
 class _FakeScheduler implements NotificationScheduler {
   final plans = <List<PlannedAlert>>[];
@@ -30,7 +31,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized(); // AppLifecycleListener needs the binding
   const repo = AdhanPrayerTimesRepository();
   final l = lookupAppLocalizations(const Locale('ar'));
-  final now = DateTime(2026, 10, 23, 10, 42); // Friday, after sunrise
+  final now = fridayMorning;
 
   test('plans only enabled prayers, in the future, soonest first', () {
     final plan = planAlerts(repo: repo, location: PrayerLocation.dammam, enabled: {PrayerKind.dhuhr, PrayerKind.maghrib}, now: now, l: l);

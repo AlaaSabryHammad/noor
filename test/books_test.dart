@@ -12,6 +12,7 @@ import 'package:noor/features/prayer/alert_sync.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'test_clock.dart';
 
 class _Noop implements NotificationScheduler {
   @override
@@ -126,7 +127,7 @@ void main() {
       overrides: [
         sharedPreferencesProvider.overrideWithValue(prefs),
         notificationSchedulerProvider.overrideWithValue(_Noop()),
-        nowProvider.overrideWithValue(DateTime(2026, 10, 23, 10, 42, 18)),
+        nowProvider.overrideWithValue(fridayMorning),
         contentLoaderProvider.overrideWithValue(_load),
         bookFetcherProvider.overrideWithValue(fetcher ?? _FakeFetcher()),
         textCacheProvider.overrideWithValue(_MemoryCache()),

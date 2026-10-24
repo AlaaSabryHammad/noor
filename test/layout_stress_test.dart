@@ -14,6 +14,7 @@ import 'package:noor/features/prayer/compass.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'test_clock.dart';
 
 class _Noop implements NotificationScheduler {
   @override
@@ -59,7 +60,7 @@ void main() {
             sharedPreferencesProvider.overrideWithValue(prefs),
             notificationSchedulerProvider.overrideWithValue(_Noop()),
             compassSourceProvider.overrideWithValue(_NoCompass()),
-            nowProvider.overrideWithValue(DateTime(2026, 10, 23, 10, 42, 18)),
+            nowProvider.overrideWithValue(fridayMorning),
             contentLoaderProvider.overrideWithValue((p) async => File(p).readAsStringSync()),
             audioCatalogAutoRefreshProvider.overrideWithValue(false),
           ],

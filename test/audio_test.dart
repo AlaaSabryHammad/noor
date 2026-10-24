@@ -17,6 +17,7 @@ import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
 import 'package:noor/features/quran/quran_data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'test_clock.dart';
 
 /// Records calls and lets the test drive the streams a real player would emit.
 class FakeBackend implements AudioBackend {
@@ -374,7 +375,7 @@ void main() {
         overrides: [
           sharedPreferencesProvider.overrideWithValue(prefs),
           notificationSchedulerProvider.overrideWithValue(_NoopScheduler()),
-          nowProvider.overrideWithValue(DateTime(2026, 10, 23, 10, 42, 18)),
+          nowProvider.overrideWithValue(fridayMorning),
           contentLoaderProvider.overrideWithValue((p) async => File(p).readAsStringSync()),
           audioCatalogAutoRefreshProvider.overrideWithValue(false),
           audioBackendFactoryProvider.overrideWithValue(() => backend),

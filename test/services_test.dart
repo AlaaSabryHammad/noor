@@ -17,6 +17,7 @@ import 'package:noor/features/services/calendar_screen.dart';
 import 'package:noor/features/services/planner_screen.dart';
 import 'package:noor/features/services/zakat_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'test_clock.dart';
 
 class _NoopScheduler implements NotificationScheduler {
   @override
@@ -288,7 +289,7 @@ void main() {
         overrides: [
           sharedPreferencesProvider.overrideWithValue(prefs),
           notificationSchedulerProvider.overrideWithValue(_NoopScheduler()),
-          nowProvider.overrideWithValue(DateTime(2026, 10, 23, 10, 42, 18)),
+          nowProvider.overrideWithValue(fridayMorning),
           contentLoaderProvider.overrideWithValue((p) async => File(p).readAsStringSync()),
           audioCatalogAutoRefreshProvider.overrideWithValue(false),
         ],
