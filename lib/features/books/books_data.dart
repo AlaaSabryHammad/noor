@@ -82,6 +82,8 @@ abstract interface class TextCache {
 /// Files in the app's private support directory; falls back to memory when the
 /// platform has no such directory (tests, web).
 class DiskTextCache implements TextCache {
+  DiskTextCache({this.folder = 'books'});
+  final String folder;
   final _memory = <String, String>{};
   Directory? _dir;
 
@@ -89,7 +91,7 @@ class DiskTextCache implements TextCache {
     if (_dir != null) return _dir;
     try {
       final base = await getApplicationSupportDirectory();
-      return _dir = await Directory('${base.path}/books').create(recursive: true);
+      return _dir = await Directory('${base.path}/$folder').create(recursive: true);
     } catch (_) {
       return null;
     }

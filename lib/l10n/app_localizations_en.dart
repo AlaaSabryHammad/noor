@@ -169,10 +169,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirPlaceholder =>
-      '[The selected tafsir appears here verbatim from its authorised source]';
-
-  @override
   String get listen => 'Listen';
 
   @override
@@ -379,6 +375,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get svcAudio => 'Audio';
+
+  @override
+  String get svcKhutab => 'Sermons';
+
+  @override
+  String get svcRadio => 'Quran radio';
 
   @override
   String get svcHadith => 'Hadith';

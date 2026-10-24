@@ -169,10 +169,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get tafsir => 'التفسير';
 
   @override
-  String get tafsirPlaceholder =>
-      '[يُعرض هنا نص التفسير المختار حرفيًا من مصدره المعتمد]';
-
-  @override
   String get listen => 'استماع';
 
   @override
@@ -379,6 +375,12 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get svcAudio => 'الصوتيات';
+
+  @override
+  String get svcKhutab => 'الخطب المنبرية';
+
+  @override
+  String get svcRadio => 'إذاعة القرآن';
 
   @override
   String get svcHadith => 'مكتبة الحديث';

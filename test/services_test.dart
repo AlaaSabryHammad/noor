@@ -7,6 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:noor/app/app.dart';
 import 'package:noor/core/providers.dart';
+import 'package:noor/features/audio/audio_catalog.dart';
 import 'package:noor/features/library/favorites.dart';
 import 'package:noor/features/prayer/alert_sync.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
@@ -264,6 +265,12 @@ void main() {
     '/adhkar/session/quran_duas': 'أدعية من القرآن',
     '/hisn': 'حصن المسلم',
     '/adhkar/session/hisn_27': 'أذكار الصباح والمساء',
+    '/audio?tab=radio': 'إذاعات موضوعية',
+    '/audio/reciter/123': 'مشاري العفاسي',
+    '/audio/player': 'لا شيء قيد التشغيل',
+    '/khutab': 'الخطب المنبرية',
+    '/khutab/taqwa': 'التقوى خيرُ الزاد',
+    '/khutab/farewell': 'خطبةُ حجّةِ الوداع',
   };
   for (final e in routes.entries) {
     testWidgets('route ${e.key} renders', (tester) async {
@@ -278,6 +285,7 @@ void main() {
           notificationSchedulerProvider.overrideWithValue(_NoopScheduler()),
           nowProvider.overrideWithValue(DateTime(2026, 10, 23, 10, 42, 18)),
           contentLoaderProvider.overrideWithValue((p) async => File(p).readAsStringSync()),
+          audioCatalogAutoRefreshProvider.overrideWithValue(false),
         ],
         child: const NoorApp(),
       ));

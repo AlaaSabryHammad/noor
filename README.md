@@ -9,7 +9,10 @@ Islamic companion app for Android and iOS, built with Flutter. Arabic-first (RTL
 | Area | What it does |
 |---|---|
 | **Quran** | Full Uthmani text (Tanzil) with Saheeh International translation. Lazy mushaf reader, jump to any ayah (`2:255`), resume where you stopped, exact mushaf pages, page-based khatma tracker, offline full-text search that ignores diacritics. |
-| **Recitation** | Ayah-by-ayah streaming (everyayah.com), 8 reciters, previous/next, speed 0.75–1.5×, repeat ayah, highlight follows the reciter. |
+| **Recitation** | In the reader: ayah-by-ayah streaming (everyayah.com), 8 reciters, previous/next, speed 0.75–1.5×, repeat ayah, highlight follows the reciter. |
+| **Audio** | 243 reciters from mp3quran.net (full surahs, Hafs, Warsh, Qalun and other riwayat), featured reciters, search and riwaya filter, favourites, 177 live radio stations (reciters plus tafsir, seerah, hadith, adhkar and translations). One app-wide player: mini player above the tab bar, full-screen player with seek, ±15 s, speed 0.75–2×, repeat surah/all, queue, sleep timer (minutes or end of surah), "read along" in the mushaf, resume where you stopped. Keeps playing with the screen locked on iOS. |
+| **Tafsir** | Tap any ayah: Al-Muyassar, Al-Mukhtasar, As-Sa‘di, Al-Jalalayn, Ibn Kathir, Al-Baghawi, Al-Qurtubi, At-Tabari, Al-Wasit and three English tafsirs, fetched per surah and kept offline afterwards. |
+| **Sermons** | 15 Friday khutbahs (first and second khutbah, opening and closing formulas) across faith, worship, character, family, the heart and the seasons, plus the Farewell Sermon from authentic narrations. "This week’s khutbah" rotates weekly and switches to Ramadan / Dhul-Hijjah in season; adjustable text size, translation toggle, copy and save. |
 | **Prayer times** | On-device calculation with 11 methods (automatic by region, or your choice) and Shafi‘i/Hanafi Asr, Umm al-Qura Ramadan rule, 29 offline cities or GPS, scheduled adhan notifications. |
 | **Qibla** | Real compass with smoothing, calibration warning and an alignment haptic; preview slider only when the device has no sensor. |
 | **Adhkar & duas** | The complete Hisn al-Muslim (132 chapters, 267 adhkar, searchable), 12 curated categories with sources, 59 Quranic supplications taken verbatim from the dataset, per-day counters. |
@@ -57,9 +60,11 @@ State is Riverpod; routing is go_router. Everything that touches the outside wor
 - Translation: Saheeh International via Tanzil.
 - Hadith text: [fawazahmed0/hadith-api](https://github.com/fawazahmed0/hadith-api) — The Unlicense.
 - Hisn al-Muslim: [YousefAsalya/Islamic-Pro-azkar-API](https://github.com/YousefAsalya/Islamic-Pro-azkar-API) — MIT (text by Sa‘id al-Qahtani).
-- Recitation: streamed from everyayah.com.
+- Recitation: streamed from everyayah.com (reader) and mp3quran.net (Audio section, catalogue snapshot in `assets/data/audio.json`, refreshed in the background).
+- Tafsir: [spa5k/tafsir_api](https://github.com/spa5k/tafsir_api) — MIT, pinned to release v1.2.1.
+- Sermons (`assets/data/khutab.json`) were written for this app; Quranic quotations are copied from the bundled Tanzil text by `tool/build_khutab.py`, hadith cite collection and number.
 - Fonts: SIL Open Font License.
-- Adhkar, duas, names, seerah, stories, FAQ and lessons were written for this app with their sources noted; **have them reviewed by qualified scholars before a public release.**
+- Adhkar, duas, names, seerah, stories, FAQ, lessons and sermons were written for this app with their sources noted; **have them reviewed by qualified scholars before a public release.**
 
 Rebuild the data with the scripts in `tool/` (see `tool/README.md`).
 

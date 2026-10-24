@@ -11,10 +11,12 @@ import '../../core/theme/noor_tokens.dart';
 import '../../core/utils/noor_format.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
+import '../audio/quran_player.dart';
 import '../library/favorites.dart';
 import '../settings/settings_controller.dart';
 import 'ayah_audio.dart';
 import 'quran_data.dart';
+import 'tafsir.dart';
 
 enum _Mode { mushaf, translation }
 
@@ -155,6 +157,8 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
   }
 
   Future<void> _startFrom(int from, int total) async {
+    // One voice at a time: the surah player yields to the ayah recitation.
+    unawaited(ref.read(quranPlayerProvider.notifier).pause());
     final a = _player();
     _started = true;
     setState(() => _current = from);
@@ -383,11 +387,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
                   child: Text(a.ar, textAlign: TextAlign.center, textDirection: TextDirection.rtl, style: NoorText.quran(ctx, size: 24).copyWith(height: 2.1)),
                 ),
                 Text(a.en, textDirection: TextDirection.ltr, style: TextStyle(fontFamily: NoorFonts.latinUi, fontSize: 13, color: t.textSecondary, height: 1.6)),
-                Container(
-                  padding: const EdgeInsets.all(14),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(16), border: Border.all(color: t.goldLine)),
-                  child: Text(l.tafsirPlaceholder, style: TextStyle(color: t.textSecondary, height: 1.8)),
-                ),
+                _TafsirPanel(surah: widget.surah, ayah: a.number),
                 FilledButton.tonalIcon(
                   onPressed: () {
                     Navigator.of(ctx).pop();
@@ -593,7 +593,7 @@ class _PlayerBar extends StatelessWidget {
           ]),
           Row(spacing: 2, children: [
             ActionChip(
-              label: Text('${speed == speed.roundToDouble() ? speed.toInt() : speed}×', style: TextStyle(fontFamily: NoorFonts.latinUi, fontWeight: FontWeight.w700, color: t.primary, fontSize: 12.5)),
+              label: Text('${speed == speed.roundToDouble() ? speed.toInt() : speed}×', textDirection: TextDirection.ltr, style: TextStyle(fontFamily: NoorFonts.latinUi, fontWeight: FontWeight.w700, color: t.primary, fontSize: 12.5)),
               tooltip: NoorFormat.tr(context, 'سرعة التلاوة', 'Playback speed'),
               onPressed: onSpeed,
               backgroundColor: t.primarySoft,
@@ -621,6 +621,82 @@ class _PlayerBar extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+/// Commentary for one ayah in the chosen edition, fetched per surah and cached.
+class _TafsirPanel extends ConsumerWidget {
+  const _TafsirPanel({required this.surah, required this.ayah});
+  final int surah, ayah;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final t = context.noor;
+    final ar = NoorFormat.isAr(context);
+    final edition = ref.watch(tafsirEditionProvider);
+    final data = ref.watch(tafsirSurahProvider((edition.slug, surah)));
+    return Container(
+      padding: const EdgeInsets.fromLTRB(14, 8, 14, 14),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(16), border: Border.all(color: t.goldLine)),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, spacing: 8, children: [
+        Align(
+          alignment: AlignmentDirectional.centerStart,
+          child: ActionChip(
+            avatar: Icon(Icons.auto_stories_outlined, size: 16, color: t.goldText),
+            label: Row(mainAxisSize: MainAxisSize.min, spacing: 2, children: [Text(edition.name(ar)), Icon(Icons.expand_more_rounded, size: 18, color: t.textSecondary)]),
+            labelStyle: TextStyle(color: t.goldText, fontWeight: FontWeight.w600, fontSize: 12.5),
+            backgroundColor: t.goldSoft,
+            side: BorderSide.none,
+            tooltip: NoorFormat.tr(context, 'اختر التفسير', 'Choose a tafsir'),
+            onPressed: () => _pick(context, ref),
+          ),
+        ),
+        switch (data) {
+          AsyncData(:final value) => () {
+              final r = tafsirFor(value, ayah);
+              if (r.text.isEmpty) return Text(NoorFormat.tr(context, 'لا يوجد تفسير لهذه الآية في هذه النسخة.', 'This edition has no commentary for this ayah.'), style: TextStyle(color: t.textSecondary));
+              return Column(crossAxisAlignment: CrossAxisAlignment.stretch, spacing: 6, children: [
+                if (r.fromAyah != null)
+                  Text(NoorFormat.tr(context, 'فُسِّرت مع الآية ${NoorFormat.digits(context, r.fromAyah!)}', 'Explained together with ayah ${r.fromAyah}'), style: TextStyle(fontSize: 12, color: t.goldText, fontWeight: FontWeight.w600)),
+                SelectableText(
+                  r.text,
+                  textDirection: edition.english ? TextDirection.ltr : TextDirection.rtl,
+                  style: edition.english ? TextStyle(fontFamily: NoorFonts.latinUi, fontSize: 14, height: 1.7, color: t.text) : TextStyle(fontSize: 16, height: 2, color: t.text),
+                ),
+              ]);
+            }(),
+          AsyncError() => Column(spacing: 8, children: [
+              Text(NoorFormat.tr(context, 'تعذّر تحميل التفسير. تحتاج إلى الإنترنت أول مرة لكل سورة، ثم يُحفظ على جهازك.', 'Couldn’t load the tafsir. Each surah needs the internet once, then it stays on your device.'), textAlign: TextAlign.center, style: TextStyle(color: t.textSecondary, height: 1.7)),
+              TextButton.icon(onPressed: () => ref.invalidate(tafsirSurahProvider((edition.slug, surah))), icon: const Icon(Icons.refresh_rounded), label: Text(NoorFormat.tr(context, 'إعادة المحاولة', 'Try again'))),
+            ]),
+          _ => const Padding(padding: EdgeInsets.all(18), child: Center(child: CircularProgressIndicator())),
+        },
+      ]),
+    );
+  }
+
+  Future<void> _pick(BuildContext context, WidgetRef ref) async {
+    final current = ref.read(tafsirEditionProvider);
+    final picked = await showModalBottomSheet<TafsirEdition>(
+      context: context,
+      isScrollControlled: true,
+      builder: (ctx) => SafeArea(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(ctx).height * .7),
+          child: ListView(shrinkWrap: true, padding: const EdgeInsets.only(bottom: 16), children: [
+            Padding(padding: const EdgeInsets.fromLTRB(20, 0, 20, 8), child: Text(NoorFormat.tr(ctx, 'اختر التفسير', 'Choose a tafsir'), style: Theme.of(ctx).textTheme.titleMedium)),
+            for (final e in tafsirEditions)
+              ListTile(
+                title: Text(e.name(NoorFormat.isAr(ctx))),
+                subtitle: e.english ? Text(NoorFormat.tr(ctx, 'بالإنجليزية', 'English')) : null,
+                trailing: e.slug == current.slug ? Icon(Icons.check_rounded, color: ctx.noor.primary) : null,
+                onTap: () => Navigator.of(ctx).pop(e),
+              ),
+          ]),
+        ),
+      ),
+    );
+    if (picked != null) ref.read(tafsirEditionProvider.notifier).select(picked);
   }
 }
 

@@ -8,6 +8,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:noor/app/app.dart';
 import 'package:noor/core/providers.dart';
+import 'package:noor/features/audio/audio_catalog.dart';
 import 'package:noor/features/prayer/alert_sync.dart';
 import 'package:noor/features/prayer/compass.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
@@ -31,6 +32,7 @@ const routes = [
   '/quran/reader/1', '/quran/reader/2?ayah=255', '/adhkar/session/morning', '/qibla', '/tasbeeh',
   '/duas', '/names', '/planner', '/zakat', '/audio', '/hadith', '/seerah', '/academy', '/academy/prayer', '/academy/tajweed',
   '/stories', '/library', '/ask', '/calendar', '/ramadan', '/hajj', '/kids', '/mosques', '/books', '/books/bukhari', '/books/nawawi/1', '/about', '/account', '/privacy', '/hisn', '/adhkar/session/hisn_27',
+  '/audio?tab=radio', '/audio?tab=favorites', '/audio/reciter/123', '/audio/player', '/khutab', '/khutab/taqwa', '/khutab/farewell',
 ];
 
 void main() {
@@ -58,6 +60,7 @@ void main() {
             compassSourceProvider.overrideWithValue(_NoCompass()),
             nowProvider.overrideWithValue(DateTime(2026, 10, 23, 10, 42, 18)),
             contentLoaderProvider.overrideWithValue((p) async => File(p).readAsStringSync()),
+            audioCatalogAutoRefreshProvider.overrideWithValue(false),
           ],
           child: const NoorApp(),
         ));

@@ -1,18 +1,22 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../features/adhkar/adhkar_screen.dart';
 import '../features/adhkar/hisn_screen.dart';
+import '../features/audio/audio_home_screen.dart';
+import '../features/audio/now_playing_screen.dart';
+import '../features/audio/reciter_screen.dart';
 import '../features/auth/account_screen.dart';
 import '../features/books/books_screens.dart';
 import '../features/explore/explore_screen.dart';
 import '../features/home/home_screen.dart';
+import '../features/khutab/khutab_screens.dart';
 import '../features/library/library_screen.dart';
 import '../features/prayer/prayer_screen.dart';
 import '../features/prayer/qibla_screen.dart';
 import '../features/quran/quran_screen.dart';
 import '../features/quran/reader_screen.dart';
 import '../features/services/academy_screen.dart';
-import '../features/services/audio_screen.dart';
 import '../features/services/calendar_screen.dart';
 import '../features/services/duas_screen.dart';
 import '../features/services/faq_screen.dart';
@@ -60,7 +64,21 @@ GoRouter buildRouter() => GoRouter(
         GoRoute(path: '/names', builder: (_, _) => const NamesScreen()),
         GoRoute(path: '/planner', builder: (_, _) => const PlannerScreen()),
         GoRoute(path: '/zakat', builder: (_, _) => const ZakatScreen()),
-        GoRoute(path: '/audio', builder: (_, _) => const AudioScreen()),
+        GoRoute(
+          path: '/audio',
+          builder: (_, s) => AudioHomeScreen(initialTab: AudioTab.values.where((t) => t.name == s.uri.queryParameters['tab']).firstOrNull ?? AudioTab.reciters),
+        ),
+        GoRoute(path: '/audio/reciter/:id', builder: (_, s) => ReciterScreen(reciterId: int.tryParse(s.pathParameters['id'] ?? '') ?? 0)),
+        GoRoute(
+          path: '/audio/player',
+          pageBuilder: (_, s) => CustomTransitionPage(
+            key: s.pageKey,
+            child: const NowPlayingScreen(),
+            transitionsBuilder: (context, a, _, child) => SlideTransition(position: Tween(begin: const Offset(0, 1), end: Offset.zero).chain(CurveTween(curve: Curves.easeOutCubic)).animate(a), child: child),
+          ),
+        ),
+        GoRoute(path: '/khutab', builder: (_, _) => const KhutabScreen()),
+        GoRoute(path: '/khutab/:id', builder: (_, s) => KhutbaScreen(id: s.pathParameters['id'] ?? '')),
         GoRoute(path: '/hadith', builder: (_, _) => const HadithScreen()),
         GoRoute(path: '/seerah', builder: (_, _) => const SeerahScreen()),
         GoRoute(path: '/academy', builder: (_, _) => const AcademyScreen()),

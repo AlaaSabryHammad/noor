@@ -392,12 +392,6 @@ abstract class AppLocalizations {
   /// **'التفسير'**
   String get tafsir;
 
-  /// No description provided for @tafsirPlaceholder.
-  ///
-  /// In ar, this message translates to:
-  /// **'[يُعرض هنا نص التفسير المختار حرفيًا من مصدره المعتمد]'**
-  String get tafsirPlaceholder;
-
   /// No description provided for @listen.
   ///
   /// In ar, this message translates to:
@@ -781,6 +775,18 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'الصوتيات'**
   String get svcAudio;
+
+  /// No description provided for @svcKhutab.
+  ///
+  /// In ar, this message translates to:
+  /// **'الخطب المنبرية'**
+  String get svcKhutab;
+
+  /// No description provided for @svcRadio.
+  ///
+  /// In ar, this message translates to:
+  /// **'إذاعة القرآن'**
+  String get svcRadio;
 
   /// No description provided for @svcHadith.
   ///

@@ -10,6 +10,9 @@ import '../../core/utils/noor_format.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../adhkar/adhkar_data.dart';
+import '../audio/audio_catalog.dart';
+import '../audio/audio_widgets.dart';
+import '../audio/quran_player.dart';
 import '../library/favorites.dart';
 import '../adhkar/adhkar_screen.dart' show adhkarTitle;
 import '../prayer/domain/prayer_models.dart';
@@ -82,6 +85,7 @@ class HomeScreen extends ConsumerWidget {
           const CrashConsentCard(), // one-time question; takes no space once answered
           if (day.isFriday) ...[_FridayCard(), const SizedBox(height: 16)],
           const _ContinueReadingCard(),
+          const _ListenCard(),
           const SizedBox(height: 18),
           SectionTitle(l.quickAccess),
           const SizedBox(height: 10),
@@ -197,7 +201,10 @@ class _FridayCard extends StatelessWidget {
             Text(l.fridaySunnahTitle, style: TextStyle(fontSize: 12, color: t.goldText, fontWeight: FontWeight.w600)),
             Text(l.fridaySunnahBody, style: const TextStyle(fontSize: 14, height: 1.55)),
             const SizedBox(height: 8),
-            NoorPrimaryButton(label: l.readKahf, onPressed: () => context.push('/quran/reader/18')),
+            Wrap(spacing: 8, runSpacing: 8, children: [
+              NoorPrimaryButton(label: l.readKahf, onPressed: () => context.push('/quran/reader/18')),
+              NoorPrimaryButton(label: NoorFormat.tr(context, 'خطبة الجمعة', 'Friday khutbah'), soft: true, onPressed: () => context.push('/khutab')),
+            ]),
           ]),
         ),
       ]),
@@ -237,6 +244,59 @@ class _ContinueReadingCard extends ConsumerWidget {
         ),
         NoorPrimaryButton(label: l.resume, onPressed: () => context.push('/quran/reader/${progress.surah}')),
       ]),
+    );
+  }
+}
+
+/// Resume the last recitation, or a way into the audio section. Hidden while
+/// the mini player is already on screen.
+class _ListenCard extends ConsumerWidget {
+  const _ListenCard();
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    if (ref.watch(quranPlayerProvider.select((s) => s.current != null))) return const SizedBox.shrink();
+    final last = ref.watch(lastListenProvider);
+    // The catalogue is only needed to name what was playing.
+    final catalog = last == null ? null : ref.watch(audioCatalogProvider).value;
+    final ar = NoorFormat.isAr(context);
+    String title = NoorFormat.tr(context, 'استمع إلى القرآن الكريم', 'Listen to the Quran');
+    String subtitle = NoorFormat.tr(context, 'أكثر من ٢٤٠ قارئًا وإذاعات مباشرة', '240+ reciters and live radio');
+    if (last != null && catalog != null) {
+      final radio = last.radioId == null ? null : catalog.radio(last.radioId!);
+      final reciter = last.reciterId == null ? null : catalog.reciter(last.reciterId!);
+      final surah = ref.watch(quranIndexProvider).value?.surahs.where((s) => s.number == last.surah).firstOrNull;
+      if (radio != null) {
+        title = radio.name(ar);
+        subtitle = NoorFormat.tr(context, 'تابع الاستماع · بث مباشر', 'Continue listening · Live');
+      } else if (reciter != null && surah != null) {
+        title = ar ? 'سورة ${surah.nameAr}' : surah.nameEn;
+        subtitle = '${NoorFormat.tr(context, 'تابع الاستماع', 'Continue listening')} · ${reciter.name(ar)}';
+      }
+    }
+    final resumable = last != null && catalog != null;
+    Future<void> go() async {
+      HapticFeedback.lightImpact();
+      if (!resumable || !await resumeListening(ref, last)) {
+        if (context.mounted) await context.push('/audio');
+      }
+    }
+
+    return Padding(
+      padding: const EdgeInsets.only(top: 12),
+      child: NoorCard(
+        padding: const EdgeInsets.all(16),
+        onTap: resumable ? () => context.push('/audio') : go,
+        child: Row(spacing: 14, children: [
+          const IconBadge(icon: Icons.headphones_rounded, size: 48, solid: true),
+          Expanded(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, spacing: 3, children: [
+              Text(title, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+              Text(subtitle, maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.bodySmall),
+            ]),
+          ),
+          NoorPrimaryButton(label: resumable ? NoorFormat.tr(context, 'تشغيل', 'Play') : NoorFormat.tr(context, 'استمع', 'Listen'), soft: true, onPressed: go),
+        ]),
+      ),
     );
   }
 }

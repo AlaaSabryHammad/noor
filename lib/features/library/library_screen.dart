@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
@@ -32,6 +33,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
       ('hadith', NoorFormat.tr(context, 'أحاديث', 'Hadith')),
       ('dua', NoorFormat.tr(context, 'أدعية', 'Duas')),
       ('name', NoorFormat.tr(context, 'أسماء', 'Names')),
+      ('khutba', NoorFormat.tr(context, 'خطب', 'Sermons')),
     ];
     final items = saved.where((e) => _kind == 'all' || e.kind == _kind).toList();
     final tabs = NoorSegmented<String>(
@@ -78,6 +80,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
         ),
       for (final s in items) ...[
         NoorCard(
+          onTap: s.kind == 'khutba' ? () => context.push('/khutab/${s.key.substring('khutba:'.length)}') : null,
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, spacing: 10, children: [
             Text(s.body, textDirection: TextDirection.rtl, textAlign: TextAlign.right, style: s.kind == 'ayah' ? NoorText.quran(context, size: 22).copyWith(height: 2) : NoorText.display(context, size: 20).copyWith(height: 2, fontWeight: FontWeight.w400)),
             if (s.translation.isNotEmpty) Text(s.translation, textDirection: TextDirection.ltr, style: TextStyle(fontFamily: NoorFonts.latinUi, fontSize: 13, height: 1.6, color: t.textSecondary)),

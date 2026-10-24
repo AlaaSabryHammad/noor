@@ -35,8 +35,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
         _Service(Icons.checklist_rounded, l.svcPlanner, '/planner'),
         _Service(Icons.savings_outlined, l.svcZakat, '/zakat', gold: true),
         _Service(Icons.headphones_outlined, l.svcAudio, '/audio'),
+        _Service(Icons.radio_outlined, l.svcRadio, '/audio?tab=radio', gold: true),
       ]),
       (l.groupKnowledge, [
+        _Service(Icons.record_voice_over_outlined, l.svcKhutab, '/khutab', gold: true),
         _Service(Icons.receipt_long_outlined, l.svcHadith, '/hadith'),
         _Service(Icons.timeline_rounded, l.svcSeerah, '/seerah', gold: true),
         _Service(Icons.school_outlined, l.svcAcademy, '/academy'),

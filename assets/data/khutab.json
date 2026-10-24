@@ -1,0 +1,1998 @@
+{
+ "_note": "Sermons written for NOOR. Quranic text: Tanzil Uthmani (CC BY 3.0) with Saheeh International, copied from assets/data/quran. Hadith cited by collection and number. Review by a qualified scholar is required before publication.",
+ "categories": [
+  {
+   "id": "faith",
+   "ar": "العقيدة والإيمان",
+   "en": "Faith"
+  },
+  {
+   "id": "worship",
+   "ar": "العبادات",
+   "en": "Worship"
+  },
+  {
+   "id": "character",
+   "ar": "الأخلاق والمعاملات",
+   "en": "Character"
+  },
+  {
+   "id": "family",
+   "ar": "الأسرة والمجتمع",
+   "en": "Family & society"
+  },
+  {
+   "id": "heart",
+   "ar": "الرقائق والتزكية",
+   "en": "Heart & soul"
+  },
+  {
+   "id": "seasons",
+   "ar": "المواسم والمناسبات",
+   "en": "Seasons"
+  },
+  {
+   "id": "prophetic",
+   "ar": "خطب نبوية",
+   "en": "Prophetic sermons"
+  }
+ ],
+ "khutab": [
+  {
+   "id": "taqwa",
+   "cat": "faith",
+   "titleAr": "التقوى خيرُ الزاد",
+   "titleEn": "Taqwa: the best provision",
+   "summaryAr": "ما التقوى، وكيف نعيشها في يومنا، وما ثمراتها في الدنيا والآخرة.",
+   "summaryEn": "What taqwa is, how to live it day to day, and its fruits in this life and the next.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: أوصيكم ونفسي بتقوى الله؛ فهي وصيّةُ اللهِ للأوّلين والآخرين، وهي أن تجعلَ بينك وبين ما يُغضِبُ اللهَ وقايةً، بفعلِ ما أمر واجتنابِ ما نهى، رجاءَ رحمتِه وخوفَ عذابِه. وليست التقوى كلماتٍ تُقال، بل هي حياةُ قلبٍ يراقبُ ربَّه في السرِّ والعلن.",
+       "en": "Servants of Allah: I counsel you and myself to have taqwa of Allah, the counsel He gave to the first and the last. Taqwa is to place a shield between yourself and what angers Allah, by doing what He commands and avoiding what He forbids, hoping for His mercy and fearing His punishment. It is not words that are spoken but a living heart that is mindful of its Lord in private and in public."
+      },
+      {
+       "t": "ayah",
+       "ar": "وَتَزَوَّدُوا۟ فَإِنَّ خَيْرَ ٱلزَّادِ ٱلتَّقْوَىٰ وَٱتَّقُونِ يَٰٓأُو۟لِى ٱلْأَلْبَٰبِ",
+       "en": "And take provisions, but indeed, the best provision is fear of Allah. And fear Me, O you of understanding.",
+       "refAr": "سورة البقرة: ١٩٧",
+       "refEn": "Al-Baqara 2:197"
+      },
+      {
+       "t": "p",
+       "ar": "والتقوى مفتاحُ الفرَج وسببُ الرزق؛ فمَن ضاقت عليه أبوابُ الدنيا فليطرقْ بابَ التقوى، فإنَّ اللهَ تكفّل لأهلِها بالمخرجِ من كلِّ ضيق، والرزقِ من حيث لا يحتسبون.",
+       "en": "Taqwa is the key to relief and a cause of provision. Whoever finds the doors of this world closed, let him knock at the door of taqwa, for Allah has promised its people a way out of every hardship and provision from where they do not expect."
+      },
+      {
+       "t": "ayah",
+       "ar": "وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًا وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ إِنَّ ٱللَّهَ بَٰلِغُ أَمْرِهِۦ قَدْ جَعَلَ ٱللَّهُ لِكُلِّ شَىْءٍ قَدْرًا",
+       "en": "And whoever fears Allah - He will make for him a way out And will provide for him from where he does not expect. And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose. Allah has already set for everything a [decreed] extent.",
+       "refAr": "سورة الطلاق: ٢–٣",
+       "refEn": "At-Talaaq 65:2–3"
+      },
+      {
+       "t": "p",
+       "ar": "وقد جمع النبيُّ ﷺ معنى التقوى في وصيّةٍ جامعةٍ لمعاذٍ وأبي ذرٍّ رضي الله عنهما، فقال:",
+       "en": "The Prophet ﷺ summed up taqwa in a comprehensive piece of advice to Mu‘adh and Abu Dharr, may Allah be pleased with them:"
+      },
+      {
+       "t": "hadith",
+       "ar": "«اتقِ اللهَ حيثما كنتَ، وأتبِعِ السيئةَ الحسنةَ تمحُها، وخالِقِ الناسَ بخُلُقٍ حسن»",
+       "en": "“Fear Allah wherever you are, follow a bad deed with a good one and it will wipe it out, and treat people with good character.”",
+       "refAr": "رواه الترمذي (١٩٨٧) وقال: حسن صحيح",
+       "refEn": "at-Tirmidhi 1987 (hasan sahih)"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "اعلموا أنَّ التقوى تظهرُ في التفاصيل: في صلاةٍ تُؤدّى في وقتها، وفي لسانٍ يُمسَكُ عن الغيبة، وفي مالٍ يُكسَبُ من حلال، وفي عينٍ تُغَضُّ عن الحرام، وفي معاملةٍ لا غشَّ فيها. ومَن أراد أن يعرفَ مقامَ التقوى من قلبِه فلينظرْ إلى حالِه إذا خلا بنفسِه.",
+       "en": "Know that taqwa shows in the details: a prayer offered on time, a tongue held back from backbiting, wealth earned lawfully, eyes lowered from what is forbidden, and dealings free of deceit. Whoever wants to know the place of taqwa in his heart, let him look at how he behaves when he is alone."
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌ",
+       "en": "Indeed, the most noble of you in the sight of Allah is the most righteous of you. Indeed, Allah is Knowing and Acquainted.",
+       "refAr": "سورة الحجرات: ١٣",
+       "refEn": "Al-Hujuraat 49:13"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ آتِ نفوسَنا تقواها، وزكِّها أنت خيرُ مَن زكّاها، أنت وليُّها ومولاها. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, grant our souls their taqwa and purify them, for You are the best to purify them; You are their Guardian and Master. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "salah",
+   "cat": "worship",
+   "titleAr": "الصلاةُ عمادُ الدين",
+   "titleEn": "Prayer, the pillar of the religion",
+   "summaryAr": "مكانة الصلاة، وأثرها في الأخلاق، وكيف نحافظ عليها ونخشع فيها.",
+   "summaryEn": "The standing of prayer, its effect on character, and how to guard it and pray with humility.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: إنَّ أعظمَ ما افترضه اللهُ على عبادِه بعد التوحيد الصلاة، فُرِضت من فوقِ سبعِ سماوات ليلةَ المعراج، وهي الصلةُ بين العبدِ وربِّه، يقفُ فيها المؤمنُ بين يدي مولاه خمسَ مراتٍ في اليوم، فيخرجُ منها خفيفًا مطمئنًّا.",
+       "en": "Servants of Allah: after tawhid, the greatest obligation Allah placed upon His servants is prayer. It was prescribed above the seven heavens on the night of the Ascension. It is the bond between the servant and his Lord: five times a day the believer stands before his Master and leaves lighter and at peace."
+      },
+      {
+       "t": "ayah",
+       "ar": "ٱتْلُ مَآ أُوحِىَ إِلَيْكَ مِنَ ٱلْكِتَٰبِ وَأَقِمِ ٱلصَّلَوٰةَ إِنَّ ٱلصَّلَوٰةَ تَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَلَذِكْرُ ٱللَّهِ أَكْبَرُ وَٱللَّهُ يَعْلَمُ مَا تَصْنَعُونَ",
+       "en": "Recite, [O Muhammad], what has been revealed to you of the Book and establish prayer. Indeed, prayer prohibits immorality and wrongdoing, and the remembrance of Allah is greater. And Allah knows that which you do.",
+       "refAr": "سورة العنكبوت: ٤٥",
+       "refEn": "Al-Ankaboot 29:45"
+      },
+      {
+       "t": "p",
+       "ar": "والصلاةُ أوّلُ ما يُنظَرُ فيه من عملِ العبد يومَ القيامة، فإن صلحت صلح سائرُ عمله، وإن فسدت فسد سائرُ عمله، قال رسولُ الله ﷺ:",
+       "en": "Prayer is the first of a servant’s deeds to be examined on the Day of Resurrection: if it is sound, the rest of his deeds are sound, and if it is corrupt, the rest are corrupt. The Messenger of Allah ﷺ said:"
+      },
+      {
+       "t": "hadith",
+       "ar": "«إنَّ أوّلَ ما يُحاسَبُ به العبدُ يومَ القيامةِ من عملِه صلاتُه، فإن صلَحت فقد أفلحَ وأنجح، وإن فسَدت فقد خابَ وخسِر»",
+       "en": "“The first of his deeds for which a servant will be held to account on the Day of Resurrection is his prayer. If it is sound, he has succeeded and prospered; if it is corrupt, he has failed and lost.”",
+       "refAr": "رواه الترمذي (٤١٣) والنسائي (٤٦٥)",
+       "refEn": "at-Tirmidhi 413, an-Nasa’i 465"
+      },
+      {
+       "t": "p",
+       "ar": "وهي طُهرةٌ متجدّدة؛ يغسلُ اللهُ بها الخطايا كما يغسلُ الماءُ الدرن، فقد ضرب النبيُّ ﷺ لذلك مثلًا فقال:",
+       "en": "It is a purification renewed throughout the day; Allah washes away sins by it as water washes away dirt. The Prophet ﷺ gave an example of this:"
+      },
+      {
+       "t": "hadith",
+       "ar": "«أرأيتم لو أنَّ نهرًا ببابِ أحدِكم يغتسلُ منه كلَّ يومٍ خمسَ مرات، هل يبقى من درنِه شيء؟» قالوا: لا يبقى من درنِه شيء، قال: «فذلك مثلُ الصلواتِ الخمس، يمحو اللهُ بهنَّ الخطايا»",
+       "en": "“Tell me, if there were a river at the door of one of you in which he bathed five times a day, would any dirt remain on him?” They said: “No dirt would remain.” He said: “That is the likeness of the five prayers: by them Allah wipes out sins.”",
+       "refAr": "متفق عليه: البخاري (٥٢٨) ومسلم (٦٦٧)",
+       "refEn": "al-Bukhari 528, Muslim 667"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "حافظوا على الصلاةِ في أوقاتِها مع الجماعة، وأقبلوا عليها بقلوبِكم؛ فإنَّ روحَ الصلاةِ الخشوع. تهيّؤوا لها قبل دخولِ وقتها، وأحسنوا الوضوء، وتدبّروا ما تقرؤون، واطمئنّوا في الركوعِ والسجود، وعلّموها أبناءَكم بالقدوةِ قبل الكلمة.",
+       "en": "Guard the prayers in their times and in congregation, and turn to them with your hearts, for the soul of prayer is humility. Prepare for it before its time comes, perfect your wudu, reflect on what you recite, be still in bowing and prostration, and teach it to your children by example before words."
+      },
+      {
+       "t": "ayah",
+       "ar": "قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ ٱلَّذِينَ هُمْ فِى صَلَاتِهِمْ خَٰشِعُونَ",
+       "en": "Certainly will the believers have succeeded: They who are during their prayer humbly submissive",
+       "refAr": "سورة المؤمنون: ١–٢",
+       "refEn": "Al-Muminoon 23:1–2"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ اجعلنا مقيمي الصلاةِ ومن ذرياتِنا، ربَّنا وتقبّلْ دعاء. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, make us and our descendants steadfast in prayer; our Lord, accept our supplication. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "parents",
+   "cat": "family",
+   "titleAr": "بِرُّ الوالدين",
+   "titleEn": "Kindness to parents",
+   "summaryAr": "حقّ الوالدين بعد حقّ الله، وصور البرّ في حياتهما وبعد موتهما.",
+   "summaryEn": "The right of parents after the right of Allah, and ways to honour them in life and after death.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: لقد قرن اللهُ حقَّ الوالدين بحقِّه، وجعل الإحسانَ إليهما بعد عبادتِه، لأنهما سببُ وجودِك بعد الله، حملتك أمُّك وهنًا على وهن، وسهِر أبوك وكدَح لتكبرَ في عافية.",
+       "en": "Servants of Allah: Allah joined the right of parents to His own right and placed kindness to them right after worshipping Him, for after Allah they are the reason you exist. Your mother carried you in weakness upon weakness, and your father stayed up and toiled so you could grow up in health."
+      },
+      {
+       "t": "ayah",
+       "ar": "وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوٓا۟ إِلَّآ إِيَّاهُ وَبِٱلْوَٰلِدَيْنِ إِحْسَٰنًا إِمَّا يَبْلُغَنَّ عِندَكَ ٱلْكِبَرَ أَحَدُهُمَآ أَوْ كِلَاهُمَا فَلَا تَقُل لَّهُمَآ أُفٍّ وَلَا تَنْهَرْهُمَا وَقُل لَّهُمَا قَوْلًا كَرِيمًا وَٱخْفِضْ لَهُمَا جَنَاحَ ٱلذُّلِّ مِنَ ٱلرَّحْمَةِ وَقُل رَّبِّ ٱرْحَمْهُمَا كَمَا رَبَّيَانِى صَغِيرًا",
+       "en": "And your Lord has decreed that you not worship except Him, and to parents, good treatment. Whether one or both of them reach old age [while] with you, say not to them [so much as], \"uff,\" and do not repel them but speak to them a noble word. And lower to them the wing of humility out of mercy and say, \"My Lord, have mercy upon them as they brought me up [when I was] small.\"",
+       "refAr": "سورة الإسراء: ٢٣–٢٤",
+       "refEn": "Al-Israa 17:23–24"
+      },
+      {
+       "t": "p",
+       "ar": "والأمُّ أحقُّ الناسِ بحسنِ الصحبة، ثلاثَ مراتٍ قبل الأب، لعِظَمِ ما لاقت من الحملِ والوضعِ والرضاع:",
+       "en": "The mother is the most deserving of good companionship, three times before the father, because of the great hardship of pregnancy, birth and nursing:"
+      },
+      {
+       "t": "hadith",
+       "ar": "جاء رجلٌ إلى رسولِ الله ﷺ فقال: يا رسولَ الله، مَن أحقُّ الناسِ بحُسنِ صحابتي؟ قال: «أمُّك» قال: ثم مَن؟ قال: «أمُّك» قال: ثم مَن؟ قال: «أمُّك» قال: ثم مَن؟ قال: «أبوك»",
+       "en": "A man came to the Messenger of Allah ﷺ and said: “O Messenger of Allah, who most deserves my good companionship?” He said: “Your mother.” He asked: “Then who?” He said: “Your mother.” He asked: “Then who?” He said: “Your mother.” He asked: “Then who?” He said: “Your father.”",
+       "refAr": "متفق عليه: البخاري (٥٩٧١) ومسلم (٢٥٤٨)",
+       "refEn": "al-Bukhari 5971, Muslim 2548"
+      },
+      {
+       "t": "ayah",
+       "ar": "وَوَصَّيْنَا ٱلْإِنسَٰنَ بِوَٰلِدَيْهِ حَمَلَتْهُ أُمُّهُۥ وَهْنًا عَلَىٰ وَهْنٍ وَفِصَٰلُهُۥ فِى عَامَيْنِ أَنِ ٱشْكُرْ لِى وَلِوَٰلِدَيْكَ إِلَىَّ ٱلْمَصِيرُ",
+       "en": "And We have enjoined upon man [care] for his parents. His mother carried him, [increasing her] in weakness upon weakness, and his weaning is in two years. Be grateful to Me and to your parents; to Me is the [final] destination.",
+       "refAr": "سورة لقمان: ١٤",
+       "refEn": "Luqman 31:14"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "ومن البرِّ: لينُ الكلام، وخفضُ الصوت، وسرعةُ الإجابة، وقضاءُ الحاجة قبل أن تُطلب، والإنفاقُ عليهما، وإدخالُ السرورِ عليهما، وألّا تُشعرَهما بثِقَلِ خدمتِهما. فإذا رحلا فالبرُّ باقٍ: بالدعاءِ لهما، والاستغفارِ لهما، وإنفاذِ عهدِهما، وصلةِ أرحامِهما، وإكرامِ أصدقائِهما.",
+       "en": "Kindness to them includes gentle words, a lowered voice, answering quickly, meeting their needs before they ask, spending on them, bringing them joy, and never letting them feel that serving them is a burden. When they pass away, kindness continues: praying for them, seeking forgiveness for them, fulfilling their promises, keeping ties with their relatives and honouring their friends."
+      },
+      {
+       "t": "hadith",
+       "ar": "«رَغِمَ أنفُه، ثم رَغِمَ أنفُه، ثم رَغِمَ أنفُه» قيل: مَن يا رسولَ الله؟ قال: «مَن أدرك أبويه عند الكِبَر، أحدَهما أو كليهما، فلم يدخلِ الجنة»",
+       "en": "“May his nose be rubbed in dust, then may his nose be rubbed in dust, then may his nose be rubbed in dust.” It was said: “Who, O Messenger of Allah?” He said: “The one whose parents, one or both, reach old age with him, and yet he does not enter Paradise.”",
+       "refAr": "رواه مسلم (٢٥٥١)",
+       "refEn": "Muslim 2551"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ اغفرْ لوالدينا وارحمهما كما ربَّيانا صغارًا، واجزِهما عنّا خيرَ الجزاء. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, forgive our parents and have mercy on them as they raised us when we were small, and reward them for us with the best reward. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "character",
+   "cat": "character",
+   "titleAr": "حُسنُ الخلق",
+   "titleEn": "Good character",
+   "summaryAr": "منزلة الأخلاق في الإسلام، وأثقل ما يوضع في الميزان، وكيف نكتسب الخلق الحسن.",
+   "summaryEn": "The place of character in Islam, the heaviest thing on the scale, and how good character is acquired.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: إنَّ الدينَ ليس عبادةً بين العبدِ وربِّه فحسب، بل هو أيضًا خُلُقٌ يظهرُ في البيتِ والسوقِ والطريق. وقد أثنى اللهُ على نبيِّه ﷺ بأعظمِ ما يُثنى به على بشر:",
+       "en": "Servants of Allah: religion is not only worship between a servant and his Lord; it is also character that shows at home, in the market and on the road. Allah praised His Prophet ﷺ with the greatest praise given to any human being:"
+      },
+      {
+       "t": "ayah",
+       "ar": "وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ",
+       "en": "And indeed, you are of a great moral character.",
+       "refAr": "سورة القلم: ٤",
+       "refEn": "Al-Qalam 68:4"
+      },
+      {
+       "t": "hadith",
+       "ar": "«ما شيءٌ أثقلُ في ميزانِ المؤمنِ يومَ القيامةِ من خُلُقٍ حسن»",
+       "en": "“Nothing is heavier on the believer’s scale on the Day of Resurrection than good character.”",
+       "refAr": "رواه الترمذي (٢٠٠٢) وأبو داود (٤٧٩٩)",
+       "refEn": "at-Tirmidhi 2002, Abu Dawud 4799"
+      },
+      {
+       "t": "p",
+       "ar": "وحسنُ الخلقِ طريقٌ قريبٌ إلى قربِ النبيِّ ﷺ في الجنة، فقد قال:",
+       "en": "Good character is a short path to being near the Prophet ﷺ in Paradise, for he said:"
+      },
+      {
+       "t": "hadith",
+       "ar": "«إنَّ مِن أحبِّكم إليَّ وأقربِكم مني مجلسًا يومَ القيامةِ أحاسنَكم أخلاقًا»",
+       "en": "“Among the most beloved of you to me and the nearest to me in seating on the Day of Resurrection are those of you with the best character.”",
+       "refAr": "رواه الترمذي (٢٠١٨)",
+       "refEn": "at-Tirmidhi 2018"
+      },
+      {
+       "t": "ayah",
+       "ar": "وَسَارِعُوٓا۟ إِلَىٰ مَغْفِرَةٍ مِّن رَّبِّكُمْ وَجَنَّةٍ عَرْضُهَا ٱلسَّمَٰوَٰتُ وَٱلْأَرْضُ أُعِدَّتْ لِلْمُتَّقِينَ ٱلَّذِينَ يُنفِقُونَ فِى ٱلسَّرَّآءِ وَٱلضَّرَّآءِ وَٱلْكَٰظِمِينَ ٱلْغَيْظَ وَٱلْعَافِينَ عَنِ ٱلنَّاسِ وَٱللَّهُ يُحِبُّ ٱلْمُحْسِنِينَ",
+       "en": "And hasten to forgiveness from your Lord and a garden as wide as the heavens and earth, prepared for the righteous Who spend [in the cause of Allah] during ease and hardship and who restrain anger and who pardon the people - and Allah loves the doers of good;",
+       "refAr": "سورة آل عمران: ١٣٣–١٣٤",
+       "refEn": "Aal-i-Imraan 3:133–134"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "والخلقُ الحسنُ يُكتسَبُ بالمجاهدةِ والتعوّد: بكظمِ الغيظ حين يثور، والعفوِ حين تقدر، والكلمةِ الطيبة، والابتسامةِ في وجهِ أخيك، والوفاءِ بالوعد، والصبرِ على أذى الناس. وأولى الناسِ بحسنِ خلقِك أهلُ بيتِك، فلا يكنْ أحدُنا لطيفًا مع الغرباءِ قاسيًا مع أقربِ الناسِ إليه.",
+       "en": "Good character is acquired by striving and habit: swallowing anger when it rises, forgiving when you are able, a kind word, a smile in your brother’s face, keeping promises, and patience with people’s harm. The people most entitled to your good character are those in your home; let none of us be gentle with strangers and harsh with those closest to him."
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ اهدِنا لأحسنِ الأخلاقِ لا يهدي لأحسنِها إلا أنت، واصرفْ عنّا سيّئَها لا يصرفُ عنّا سيّئَها إلا أنت. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, guide us to the best of character, for none guides to the best of it but You, and turn away from us its worst, for none turns it away but You. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "time",
+   "cat": "heart",
+   "titleAr": "العمرُ رأسُ المال",
+   "titleEn": "Life is your capital",
+   "summaryAr": "قيمة الوقت، والسؤال عن العمر يوم القيامة، وكيف نستثمر أيامنا.",
+   "summaryEn": "The value of time, the questioning about one’s life, and how to invest our days.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: أقسم اللهُ بالعصرِ، وهو الزمن، ليُنبّهَنا إلى أنَّ أعمارَنا هي رأسُ مالِنا، وأنَّ كلَّ يومٍ يمضي لا يعود، وأنَّ الخاسرَ مَن ضيّع أيامَه فيما لا ينفعه.",
+       "en": "Servants of Allah: Allah swore by time to remind us that our lives are our capital, that every day that passes never returns, and that the loser is the one who wastes his days on what does not benefit him."
+      },
+      {
+       "t": "ayah",
+       "ar": "وَٱلْعَصْرِ إِنَّ ٱلْإِنسَٰنَ لَفِى خُسْرٍ إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+       "en": "By time, Indeed, mankind is in loss, Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
+       "refAr": "سورة العصر: ١–٣",
+       "refEn": "Al-Asr 103:1–3"
+      },
+      {
+       "t": "hadith",
+       "ar": "«نعمتانِ مغبونٌ فيهما كثيرٌ من الناس: الصحةُ والفراغ»",
+       "en": "“There are two blessings in which many people are cheated: health and free time.”",
+       "refAr": "رواه البخاري (٦٤١٢)",
+       "refEn": "al-Bukhari 6412"
+      },
+      {
+       "t": "p",
+       "ar": "وسيُسألُ كلُّ واحدٍ منّا عن عمرِه: فيمَ قضاه؟ وعن شبابِه: فيمَ أبلاه؟",
+       "en": "Each of us will be asked about his life: how did he spend it? And about his youth: how did he use it?"
+      },
+      {
+       "t": "hadith",
+       "ar": "«لا تزولُ قدما عبدٍ يومَ القيامةِ حتى يُسألَ عن عمرِه فيمَ أفناه، وعن علمِه فيمَ فعل، وعن مالِه من أين اكتسبه وفيمَ أنفقه، وعن جسمِه فيمَ أبلاه»",
+       "en": "“The feet of a servant will not move on the Day of Resurrection until he is asked about his life and how he spent it, his knowledge and what he did with it, his wealth and how he earned it and spent it, and his body and how he used it.”",
+       "refAr": "رواه الترمذي (٢٤١٧) وقال: حسن صحيح",
+       "refEn": "at-Tirmidhi 2417 (hasan sahih)"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "فاجعلوا لأنفسِكم وِردًا من القرآنِ لا تتركونه، وذكرًا في الصباحِ والمساء، ووقتًا لأهلِكم، ووقتًا للعلمِ النافع، واحذروا لصوصَ الوقتِ التي تسرقُ الساعاتِ دون أن نشعر. واعلموا أنَّ النيّةَ الصالحةَ تحوِّلُ العادةَ عبادة: فالعملُ والنومُ والأكلُ إذا نُوي بها التقوّي على طاعةِ اللهِ كُتب لك أجرُها.",
+       "en": "Set yourselves a daily portion of the Quran that you never abandon, remembrance in the morning and evening, time for your family and time for beneficial knowledge, and beware of the thieves of time that steal hours without our noticing. Know that a good intention turns habit into worship: work, sleep and food, when intended as strength for obeying Allah, are recorded for you as reward."
+      },
+      {
+       "t": "ayah",
+       "ar": "أَفَحَسِبْتُمْ أَنَّمَا خَلَقْنَٰكُمْ عَبَثًا وَأَنَّكُمْ إِلَيْنَا لَا تُرْجَعُونَ",
+       "en": "Then did you think that We created you uselessly and that to Us you would not be returned?",
+       "refAr": "سورة المؤمنون: ١١٥",
+       "refEn": "Al-Muminoon 23:115"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ بارِكْ لنا في أعمارِنا وأوقاتِنا، واجعلْ خيرَ أيامِنا يومَ نلقاك. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, bless our lives and our time, and make the best of our days the day we meet You. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "honesty",
+   "cat": "character",
+   "titleAr": "الصدقُ والأمانة",
+   "titleEn": "Truthfulness and trustworthiness",
+   "summaryAr": "الصدق طريق إلى الجنة، والأمانة بمعناها الواسع، وعلامات النفاق التي يجب الحذر منها.",
+   "summaryEn": "Truthfulness as a road to Paradise, trust in its broad sense, and the signs of hypocrisy to guard against.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: الصدقُ خُلُقُ الأنبياء، وزينةُ المؤمنين، به تُبنى الثقة، وتصلحُ المعاملات، ويطمئنُّ القلب. وقد أمر اللهُ المؤمنين أن يكونوا مع الصادقين:",
+       "en": "Servants of Allah: truthfulness is the character of the prophets and the adornment of the believers. By it trust is built, dealings are set right and the heart finds peace. Allah commanded the believers to be with the truthful:"
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَكُونُوا۟ مَعَ ٱلصَّٰدِقِينَ",
+       "en": "O you who have believed, fear Allah and be with those who are true.",
+       "refAr": "سورة التوبة: ١١٩",
+       "refEn": "At-Tawba 9:119"
+      },
+      {
+       "t": "hadith",
+       "ar": "«عليكم بالصدق، فإنَّ الصدقَ يهدي إلى البِرّ، وإنَّ البِرَّ يهدي إلى الجنة، وما يزالُ الرجلُ يصدُقُ ويتحرّى الصدقَ حتى يُكتبَ عند اللهِ صِدِّيقًا، وإياكم والكذب، فإنَّ الكذبَ يهدي إلى الفجور، وإنَّ الفجورَ يهدي إلى النار، وما يزالُ الرجلُ يكذبُ ويتحرّى الكذبَ حتى يُكتبَ عند اللهِ كذّابًا»",
+       "en": "“Hold to truthfulness, for truthfulness leads to righteousness and righteousness leads to Paradise. A man keeps speaking the truth and striving for it until he is recorded with Allah as truthful. Beware of lying, for lying leads to wickedness and wickedness leads to the Fire. A man keeps lying and striving for it until he is recorded with Allah as a liar.”",
+       "refAr": "رواه مسلم (٢٦٠٧)",
+       "refEn": "Muslim 2607"
+      },
+      {
+       "t": "p",
+       "ar": "والأمانةُ أوسعُ ممّا يظنُّ كثيرٌ من الناس: فالوظيفةُ أمانة، والوقتُ أمانة، والكلمةُ أمانة، والأسرارُ أمانة، والأولادُ أمانة، وصوتُك في الشهادةِ والمشورةِ أمانة.",
+       "en": "Trust is broader than many people think: your job is a trust, your time is a trust, your word is a trust, secrets are a trust, children are a trust, and your voice in testimony and counsel is a trust."
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ إِلَىٰٓ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ ٱلنَّاسِ أَن تَحْكُمُوا۟ بِٱلْعَدْلِ إِنَّ ٱللَّهَ نِعِمَّا يَعِظُكُم بِهِۦٓ إِنَّ ٱللَّهَ كَانَ سَمِيعًۢا بَصِيرًا",
+       "en": "Indeed, Allah commands you to render trusts to whom they are due and when you judge between people to judge with justice. Excellent is that which Allah instructs you. Indeed, Allah is ever Hearing and Seeing.",
+       "refAr": "سورة النساء: ٥٨",
+       "refEn": "An-Nisaa 4:58"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "واحذروا خصالَ النفاق، فإنها تتسلّلُ إلى القلبِ من باب التهاون: كذبةٌ صغيرةٌ في البيع، ووعدٌ يُخلَف بلا عذر، وأمانةٌ يُفرَّط فيها. فقد قال النبيُّ ﷺ:",
+       "en": "Beware of the traits of hypocrisy, for they creep into the heart through carelessness: a small lie in a sale, a promise broken without excuse, a trust neglected. The Prophet ﷺ said:"
+      },
+      {
+       "t": "hadith",
+       "ar": "«آيةُ المنافقِ ثلاث: إذا حدّث كذب، وإذا وعد أخلف، وإذا اؤتُمن خان»",
+       "en": "“The signs of a hypocrite are three: when he speaks he lies, when he promises he breaks it, and when he is trusted he betrays.”",
+       "refAr": "متفق عليه: البخاري (٣٣) ومسلم (٥٩)",
+       "refEn": "al-Bukhari 33, Muslim 59"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ طهِّرْ قلوبَنا من النفاق، وألسنتَنا من الكذب، وأعمالَنا من الرياء. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, purify our hearts from hypocrisy, our tongues from lies and our deeds from showing off. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "repentance",
+   "cat": "heart",
+   "titleAr": "بابُ التوبةِ مفتوح",
+   "titleEn": "The door of repentance is open",
+   "summaryAr": "سعة رحمة الله، وشروط التوبة الصادقة، وألّا يقنط أحدٌ من رحمة ربّه.",
+   "summaryEn": "The vastness of Allah’s mercy, the conditions of sincere repentance, and why no one should despair.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: ما من أحدٍ إلا وله ذنوب، والعبرةُ ليست بألّا تذنب، فذلك للملائكة، ولكنْ بأن ترجعَ إلى ربِّك كلما زلّت قدمُك. ولقد فتح اللهُ للمذنبين بابًا لا يُغلَق حتى تطلعَ الشمسُ من مغربِها.",
+       "en": "Servants of Allah: there is no one without sins. What matters is not that you never sin, which is for the angels, but that you return to your Lord every time your foot slips. Allah has opened for sinners a door that does not close until the sun rises from the west."
+      },
+      {
+       "t": "ayah",
+       "ar": "قُلْ يَٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+       "en": "Say, \"O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.\"",
+       "refAr": "سورة الزمر: ٥٣",
+       "refEn": "Az-Zumar 39:53"
+      },
+      {
+       "t": "hadith",
+       "ar": "«إنَّ اللهَ عزَّ وجلَّ يبسُطُ يدَه بالليلِ ليتوبَ مسيءُ النهار، ويبسُطُ يدَه بالنهارِ ليتوبَ مسيءُ الليل، حتى تطلُعَ الشمسُ من مغربِها»",
+       "en": "“Allah, Mighty and Majestic, stretches out His hand at night so that the one who sinned by day may repent, and stretches out His hand by day so that the one who sinned by night may repent, until the sun rises from the west.”",
+       "refAr": "رواه مسلم (٢٧٥٩)",
+       "refEn": "Muslim 2759"
+      },
+      {
+       "t": "hadith",
+       "ar": "«كلُّ ابنِ آدمَ خطّاء، وخيرُ الخطّائين التوّابون»",
+       "en": "“Every son of Adam errs, and the best of those who err are those who repent.”",
+       "refAr": "رواه الترمذي (٢٤٩٩) وابن ماجه (٤٢٥١)",
+       "refEn": "at-Tirmidhi 2499, Ibn Majah 4251"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "والتوبةُ الصادقة: إقلاعٌ عن الذنب، وندمٌ على ما فات، وعزمٌ ألّا يعود، فإن كان الذنبُ في حقِّ آدميٍّ فلا بدَّ من ردِّ الحقِّ إلى صاحبِه أو استحلالِه. ولا تؤخّروا التوبةَ إلى غد، فلا يدري أحدُنا هل يُدرِكُ الغد. وأتبعوا السيئاتِ بالحسنات، وأكثروا من الاستغفار، فإنَّ اللهَ يفرحُ بتوبةِ عبدِه.",
+       "en": "Sincere repentance is to stop the sin, regret what has passed and resolve not to return. If the sin concerns another person’s right, it must be returned to them or their pardon sought. Do not delay repentance until tomorrow, for none of us knows whether he will see tomorrow. Follow bad deeds with good ones and seek forgiveness often, for Allah rejoices at His servant’s repentance."
+      },
+      {
+       "t": "ayah",
+       "ar": "وَٱلَّذِينَ إِذَا فَعَلُوا۟ فَٰحِشَةً أَوْ ظَلَمُوٓا۟ أَنفُسَهُمْ ذَكَرُوا۟ ٱللَّهَ فَٱسْتَغْفَرُوا۟ لِذُنُوبِهِمْ وَمَن يَغْفِرُ ٱلذُّنُوبَ إِلَّا ٱللَّهُ وَلَمْ يُصِرُّوا۟ عَلَىٰ مَا فَعَلُوا۟ وَهُمْ يَعْلَمُونَ",
+       "en": "And those who, when they commit an immorality or wrong themselves [by transgression], remember Allah and seek forgiveness for their sins - and who can forgive sins except Allah? - and [who] do not persist in what they have done while they know.",
+       "refAr": "سورة آل عمران: ١٣٥",
+       "refEn": "Aal-i-Imraan 3:135"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ تُبْ علينا توبةً نصوحًا، واغفرْ لنا ما قدّمنا وما أخّرنا، وما أسررنا وما أعلنّا. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, accept from us sincere repentance, and forgive us what we have done before and after, in secret and in public. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "family",
+   "cat": "family",
+   "titleAr": "الأسرةُ أمانة",
+   "titleEn": "The family is a trust",
+   "summaryAr": "مسؤولية الوالدين، والمودّة والرحمة بين الزوجين، وتربية الأبناء على الإيمان.",
+   "summaryEn": "The responsibility of parents, love and mercy between spouses, and raising children in faith.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: الأسرةُ هي اللبنةُ الأولى في بناءِ المجتمع، إن صلحت صلح، وإن فسدت فسد. وقد جعل اللهُ بين الزوجين مودّةً ورحمة، وجعل البيتَ سكنًا لا ساحةَ نزاع.",
+       "en": "Servants of Allah: the family is the first building block of society; if it is sound, society is sound, and if it is corrupt, society is corrupt. Allah placed love and mercy between spouses and made the home a place of tranquillity, not a battlefield."
+      },
+      {
+       "t": "ayah",
+       "ar": "وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً إِنَّ فِى ذَٰلِكَ لَـَٔايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ",
+       "en": "And of His signs is that He created for you from yourselves mates that you may find tranquillity in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought.",
+       "refAr": "سورة الروم: ٢١",
+       "refEn": "Ar-Room 30:21"
+      },
+      {
+       "t": "hadith",
+       "ar": "«كلُّكم راعٍ وكلُّكم مسؤولٌ عن رعيّتِه: الإمامُ راعٍ ومسؤولٌ عن رعيّتِه، والرجلُ راعٍ في أهلِه وهو مسؤولٌ عن رعيّتِه، والمرأةُ راعيةٌ في بيتِ زوجِها ومسؤولةٌ عن رعيّتِها»",
+       "en": "“Each of you is a shepherd and each of you is responsible for his flock. The ruler is a shepherd and responsible for his flock; a man is a shepherd over his family and responsible for his flock; a woman is a shepherd in her husband’s house and responsible for her flock.”",
+       "refAr": "متفق عليه: البخاري (٨٩٣) ومسلم (١٨٢٩)",
+       "refEn": "al-Bukhari 893, Muslim 1829"
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ قُوٓا۟ أَنفُسَكُمْ وَأَهْلِيكُمْ نَارًا وَقُودُهَا ٱلنَّاسُ وَٱلْحِجَارَةُ عَلَيْهَا مَلَٰٓئِكَةٌ غِلَاظٌ شِدَادٌ لَّا يَعْصُونَ ٱللَّهَ مَآ أَمَرَهُمْ وَيَفْعَلُونَ مَا يُؤْمَرُونَ",
+       "en": "O you who have believed, protect yourselves and your families from a Fire whose fuel is people and stones, over which are [appointed] angels, harsh and severe; they do not disobey Allah in what He commands them but do what they are commanded.",
+       "refAr": "سورة التحريم: ٦",
+       "refEn": "At-Tahrim 66:6"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "ومن حمايةِ الأهلِ: أن نعلّمَهم دينَهم، ونكونَ لهم قدوة، ونصاحبَ أبناءَنا ونسمعَ منهم، ونعرفَ أصدقاءَهم وما يشاهدون، وأن نعدلَ بينهم، وأن نجعلَ للبيتِ نصيبًا من الصلاةِ والقرآنِ والذكر. وخيرُ الناسِ أحسنُهم معاملةً لأهلِه:",
+       "en": "Protecting our families means teaching them their religion, being an example for them, befriending our children and listening to them, knowing their friends and what they watch, being fair among them, and giving the home its share of prayer, Quran and remembrance. The best of people are those who treat their families best:"
+      },
+      {
+       "t": "hadith",
+       "ar": "«خيرُكم خيرُكم لأهلِه، وأنا خيرُكم لأهلي»",
+       "en": "“The best of you are those who are best to their families, and I am the best of you to my family.”",
+       "refAr": "رواه الترمذي (٣٨٩٥)",
+       "refEn": "at-Tirmidhi 3895"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. ربَّنا هبْ لنا من أزواجِنا وذرياتِنا قرّةَ أعين، واجعلنا للمتقين إمامًا. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. Our Lord, grant us from our spouses and children comfort to our eyes, and make us leaders for the righteous. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "brotherhood",
+   "cat": "family",
+   "titleAr": "الأخوّةُ الإيمانية",
+   "titleEn": "Brotherhood in faith",
+   "summaryAr": "حقوق المسلم على أخيه، وآفات تهدم الأخوّة، والجسد الواحد.",
+   "summaryEn": "The rights Muslims owe one another, the ills that destroy brotherhood, and the one body.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: عقد اللهُ بين المؤمنين رابطةً أقوى من رابطةِ النسبِ والوطن، هي أخوّةُ الإيمان، فجعلهم إخوةً تتكافأُ دماؤهم، ويسعى بذمّتِهم أدناهم.",
+       "en": "Servants of Allah: Allah tied the believers together with a bond stronger than lineage or homeland, the brotherhood of faith. He made them brothers whose blood is of equal worth and whose protection even the least of them may grant."
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّمَا ٱلْمُؤْمِنُونَ إِخْوَةٌ فَأَصْلِحُوا۟ بَيْنَ أَخَوَيْكُمْ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُرْحَمُونَ",
+       "en": "The believers are but brothers, so make settlement between your brothers. And fear Allah that you may receive mercy.",
+       "refAr": "سورة الحجرات: ١٠",
+       "refEn": "Al-Hujuraat 49:10"
+      },
+      {
+       "t": "ayah",
+       "ar": "وَٱعْتَصِمُوا۟ بِحَبْلِ ٱللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا۟ وَٱذْكُرُوا۟ نِعْمَتَ ٱللَّهِ عَلَيْكُمْ إِذْ كُنتُمْ أَعْدَآءً فَأَلَّفَ بَيْنَ قُلُوبِكُمْ فَأَصْبَحْتُم بِنِعْمَتِهِۦٓ إِخْوَٰنًا وَكُنتُمْ عَلَىٰ شَفَا حُفْرَةٍ مِّنَ ٱلنَّارِ فَأَنقَذَكُم مِّنْهَا كَذَٰلِكَ يُبَيِّنُ ٱللَّهُ لَكُمْ ءَايَٰتِهِۦ لَعَلَّكُمْ تَهْتَدُونَ",
+       "en": "And hold firmly to the rope of Allah all together and do not become divided. And remember the favor of Allah upon you - when you were enemies and He brought your hearts together and you became, by His favor, brothers. And you were on the edge of a pit of the Fire, and He saved you from it. Thus does Allah make clear to you His verses that you may be guided.",
+       "refAr": "سورة آل عمران: ١٠٣",
+       "refEn": "Aal-i-Imraan 3:103"
+      },
+      {
+       "t": "hadith",
+       "ar": "«مَثَلُ المؤمنين في توادِّهم وتراحمِهم وتعاطفِهم مَثَلُ الجسد، إذا اشتكى منه عضوٌ تداعى له سائرُ الجسدِ بالسهرِ والحُمّى»",
+       "en": "“The likeness of the believers in their love, mercy and compassion for one another is that of a body: when one part of it aches, the rest of the body responds with sleeplessness and fever.”",
+       "refAr": "رواه مسلم (٢٥٨٦)",
+       "refEn": "Muslim 2586"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "وللأخوّةِ آفاتٌ تهدمها: الحسد، والغيبة، والسخرية، وسوءُ الظن، والتدابرُ والهجر. وقد جمعها النبيُّ ﷺ في وصيّةٍ واحدة:",
+       "en": "Brotherhood has ills that destroy it: envy, backbiting, mockery, suspicion, and turning away from one another. The Prophet ﷺ gathered them in a single counsel:"
+      },
+      {
+       "t": "hadith",
+       "ar": "«لا تحاسدوا، ولا تناجشوا، ولا تباغضوا، ولا تدابروا، ولا يبعْ بعضُكم على بيعِ بعض، وكونوا عبادَ اللهِ إخوانًا، المسلمُ أخو المسلم: لا يظلِمُه ولا يخذُلُه ولا يحقِرُه»",
+       "en": "“Do not envy one another, do not inflate prices against one another, do not hate one another, do not turn away from one another, and do not undercut one another’s sales. Be, O servants of Allah, brothers. A Muslim is the brother of a Muslim: he does not wrong him, abandon him or look down on him.”",
+       "refAr": "رواه مسلم (٢٥٦٤)",
+       "refEn": "Muslim 2564"
+      },
+      {
+       "t": "p",
+       "ar": "فأفشوا السلام، وعودوا المريض، وأجيبوا الدعوة، وانصحوا لبعضكم، واسعوا في قضاءِ حوائجِ إخوانِكم، وأصلحوا ذاتَ بينِكم.",
+       "en": "Spread the greeting of peace, visit the sick, accept invitations, give sincere advice to one another, work to meet your brothers’ needs, and reconcile between yourselves."
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ ألِّفْ بين قلوبِنا، وأصلحْ ذاتَ بينِنا، ولا تجعلْ في قلوبِنا غِلًّا للذين آمنوا. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, join our hearts, reconcile between us, and put no rancour in our hearts towards those who believe. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "ramadan",
+   "cat": "seasons",
+   "titleAr": "استقبالُ رمضان",
+   "titleEn": "Welcoming Ramadan",
+   "summaryAr": "فضل شهر رمضان، وكيف نستعدّ له، وما يفوّت على الصائم أجره.",
+   "summaryEn": "The virtue of Ramadan, how to prepare for it, and what robs the fasting person of reward.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: أظلّكم شهرٌ عظيم، شهرُ القرآنِ والصيامِ والقيام، تُفتَحُ فيه أبوابُ الخير، ويتنافسُ فيه المتنافسون. فطوبى لمَن أدركه فاغتنمه، وخسارةٌ لمَن أدركه ثم خرج منه كما دخل.",
+       "en": "Servants of Allah: a great month is upon you, the month of the Quran, fasting and night prayer, in which the doors of good are opened and those who compete, compete. Glad tidings to whoever reaches it and makes the most of it, and loss to whoever reaches it and leaves it as he entered."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُتِبَ عَلَيْكُمُ ٱلصِّيَامُ كَمَا كُتِبَ عَلَى ٱلَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ",
+       "en": "O you who have believed, decreed upon you is fasting as it was decreed upon those before you that you may become righteous -",
+       "refAr": "سورة البقرة: ١٨٣",
+       "refEn": "Al-Baqara 2:183"
+      },
+      {
+       "t": "hadith",
+       "ar": "«إذا جاء رمضانُ فُتِّحت أبوابُ الجنة، وغُلِّقت أبوابُ النار، وصُفِّدت الشياطين»",
+       "en": "“When Ramadan comes, the gates of Paradise are opened, the gates of the Fire are closed, and the devils are chained.”",
+       "refAr": "متفق عليه: البخاري (١٨٩٩) ومسلم (١٠٧٩)",
+       "refEn": "al-Bukhari 1899, Muslim 1079"
+      },
+      {
+       "t": "hadith",
+       "ar": "«مَن صام رمضانَ إيمانًا واحتسابًا غُفِر له ما تقدّم من ذنبِه»",
+       "en": "“Whoever fasts Ramadan out of faith and hoping for reward will have his past sins forgiven.”",
+       "refAr": "متفق عليه: البخاري (٣٨) ومسلم (٧٦٠)",
+       "refEn": "al-Bukhari 38, Muslim 760"
+      },
+      {
+       "t": "ayah",
+       "ar": "شَهْرُ رَمَضَانَ ٱلَّذِىٓ أُنزِلَ فِيهِ ٱلْقُرْءَانُ هُدًى لِّلنَّاسِ وَبَيِّنَٰتٍ مِّنَ ٱلْهُدَىٰ وَٱلْفُرْقَانِ",
+       "en": "The month of Ramadhan [is that] in which was revealed the Qur'an, a guidance for the people and clear proofs of guidance and criterion.",
+       "refAr": "سورة البقرة: ١٨٥",
+       "refEn": "Al-Baqara 2:185"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "استعدّوا لرمضانَ بالتوبة، وتصفيةِ القلوب، وقضاءِ ما فات من الصيام، وتنظيمِ الأوقات: وِردٌ يوميٌّ من القرآن، ومحافظةٌ على التراويح، وصدقةٌ ولو قليلة، وتفطيرُ صائم. واحذروا ما يذهبُ بأجرِ الصيام من قولِ الزورِ والعملِ به، والغضبِ والجدال، وضياعِ الليالي أمام الشاشات.",
+       "en": "Prepare for Ramadan with repentance, cleansing the heart, making up missed fasts and organising your time: a daily portion of Quran, keeping to tarawih, charity even if small, and feeding a fasting person. Beware of what takes away the reward of fasting: false speech and acting on it, anger and argument, and nights lost in front of screens."
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ بلِّغنا رمضان، وأعِنّا فيه على الصيامِ والقيام، وتقبّلْه منّا. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, let us reach Ramadan, help us in it to fast and pray at night, and accept it from us. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 3
+  },
+  {
+   "id": "dhulhijjah",
+   "cat": "seasons",
+   "titleAr": "عشرُ ذي الحجة",
+   "titleEn": "The ten days of Dhul-Hijjah",
+   "summaryAr": "أفضل أيام الدنيا، والأعمال المستحبّة فيها، وصيام عرفة والأضحية.",
+   "summaryEn": "The best days of the year, the deeds recommended in them, fasting Arafah and the sacrifice.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: أقسم اللهُ بليالٍ عشر، وهي عشرُ ذي الحجةِ عند جمهورِ المفسرين، وما أقسم بها إلا لعِظَمِ شأنِها، ففيها يومُ عرفة، ويومُ النحر، وتجتمعُ فيها أمّهاتُ العبادة: الصلاةُ والصيامُ والصدقةُ والحج.",
+       "en": "Servants of Allah: Allah swore by ten nights, which most commentators say are the first ten of Dhul-Hijjah, and He swore by them only because of their greatness. In them are the Day of Arafah and the Day of Sacrifice, and in them the chief acts of worship meet: prayer, fasting, charity and Hajj."
+      },
+      {
+       "t": "ayah",
+       "ar": "وَٱلْفَجْرِ وَلَيَالٍ عَشْرٍ",
+       "en": "By the dawn And [by] ten nights",
+       "refAr": "سورة الفجر: ١–٢",
+       "refEn": "Al-Fajr 89:1–2"
+      },
+      {
+       "t": "hadith",
+       "ar": "«ما مِن أيامٍ العملُ الصالحُ فيها أحبُّ إلى اللهِ من هذه الأيام» يعني أيامَ العشر، قالوا: يا رسولَ الله، ولا الجهادُ في سبيلِ الله؟ قال: «ولا الجهادُ في سبيلِ الله، إلا رجلٌ خرج بنفسِه ومالِه فلم يرجعْ من ذلك بشيء»",
+       "en": "“There are no days in which righteous deeds are more beloved to Allah than these days,” meaning the ten days. They said: “O Messenger of Allah, not even jihad in the path of Allah?” He said: “Not even jihad in the path of Allah, except a man who went out with his life and his wealth and returned with nothing of it.”",
+       "refAr": "رواه أبو داود (٢٤٣٨)، وأصله في البخاري (٩٦٩)",
+       "refEn": "Abu Dawud 2438; its origin is in al-Bukhari 969"
+      },
+      {
+       "t": "ayah",
+       "ar": "لِّيَشْهَدُوا۟ مَنَٰفِعَ لَهُمْ وَيَذْكُرُوا۟ ٱسْمَ ٱللَّهِ فِىٓ أَيَّامٍ مَّعْلُومَٰتٍ عَلَىٰ مَا رَزَقَهُم مِّنۢ بَهِيمَةِ ٱلْأَنْعَٰمِ فَكُلُوا۟ مِنْهَا وَأَطْعِمُوا۟ ٱلْبَآئِسَ ٱلْفَقِيرَ",
+       "en": "That they may witness benefits for themselves and mention the name of Allah on known days over what He has provided for them of [sacrificial] animals. So eat of them and feed the miserable and poor.",
+       "refAr": "سورة الحج: ٢٨",
+       "refEn": "Al-Hajj 22:28"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "فأكثروا فيها من التكبيرِ والتهليلِ والتحميد، وصوموا ما تيسّر منها، وخصّوا يومَ عرفةَ بالصيامِ لغيرِ الحاج، وتصدّقوا، وصِلوا أرحامَكم، ومَن أراد أن يضحّيَ فليُمسكْ عن شعرِه وأظفارِه من دخولِ العشر حتى يذبح.",
+       "en": "Increase in them in saying Allahu akbar, la ilaha illallah and alhamdulillah; fast what you can of them, especially the Day of Arafah for those not on Hajj; give charity and keep family ties. Whoever intends to offer a sacrifice should not cut his hair or nails from the start of the ten until he has slaughtered."
+      },
+      {
+       "t": "hadith",
+       "ar": "«صيامُ يومِ عرفة، أحتسبُ على اللهِ أن يكفِّرَ السنةَ التي قبلَه والسنةَ التي بعدَه»",
+       "en": "“Fasting the Day of Arafah, I hope from Allah that it will expiate the year before it and the year after it.”",
+       "refAr": "رواه مسلم (١١٦٢)",
+       "refEn": "Muslim 1162"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ وفّقنا لاغتنامِ هذه الأيام، وتقبّلْ من الحجاجِ حجَّهم، ومنّا صالحَ أعمالِنا. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, help us to make the most of these days, accept the pilgrims’ Hajj, and accept our good deeds. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "mercy",
+   "cat": "character",
+   "titleAr": "الرحمةُ بالخلق",
+   "titleEn": "Mercy towards creation",
+   "summaryAr": "نبيّ الرحمة، والرحمة بالضعفاء والصغار والحيوان، والإحسان في كل شيء.",
+   "summaryEn": "The Prophet of mercy, mercy to the weak, the young and animals, and excellence in everything.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: الرحمةُ صفةٌ من صفاتِ اللهِ الذي وسعت رحمتُه كلَّ شيء، وقد أرسل نبيَّه ﷺ رحمةً للعالمين، فكان رحيمًا بالكبيرِ والصغير، والقريبِ والبعيد، بل وبالحيوانِ والجماد.",
+       "en": "Servants of Allah: mercy is an attribute of Allah, whose mercy encompasses all things. He sent His Prophet ﷺ as a mercy to the worlds, and he was merciful to old and young, near and far, and even to animals and inanimate things."
+      },
+      {
+       "t": "ayah",
+       "ar": "وَمَآ أَرْسَلْنَٰكَ إِلَّا رَحْمَةً لِّلْعَٰلَمِينَ",
+       "en": "And We have not sent you, [O Muhammad], except as a mercy to the worlds.",
+       "refAr": "سورة الأنبياء: ١٠٧",
+       "refEn": "Al-Anbiyaa 21:107"
+      },
+      {
+       "t": "ayah",
+       "ar": "فَبِمَا رَحْمَةٍ مِّنَ ٱللَّهِ لِنتَ لَهُمْ وَلَوْ كُنتَ فَظًّا غَلِيظَ ٱلْقَلْبِ لَٱنفَضُّوا۟ مِنْ حَوْلِكَ",
+       "en": "So by mercy from Allah, [O Muhammad], you were lenient with them. And if you had been rude [in speech] and harsh in heart, they would have disbanded from about you.",
+       "refAr": "سورة آل عمران: ١٥٩",
+       "refEn": "Aal-i-Imraan 3:159"
+      },
+      {
+       "t": "hadith",
+       "ar": "«الراحمون يرحمُهم الرحمن، ارحموا مَن في الأرضِ يرحمْكم مَن في السماء»",
+       "en": "“The merciful are shown mercy by the Most Merciful. Be merciful to those on earth, and the One above the heavens will be merciful to you.”",
+       "refAr": "رواه أبو داود (٤٩٤١) والترمذي (١٩٢٤)",
+       "refEn": "Abu Dawud 4941, at-Tirmidhi 1924"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "فارحموا آباءَكم إذا كبِروا، وأبناءَكم إذا أخطؤوا، والعاملين تحت أيديكم، والمرضى والفقراءَ والأيتام، وحتى الحيوانَ الذي سخّره اللهُ لكم. واعلموا أنَّ الإحسانَ مطلوبٌ في كلِّ عمل، حتى في أدقِّ الأمور:",
+       "en": "Be merciful to your parents when they grow old, to your children when they err, to those who work under you, to the sick, the poor and orphans, and even to the animals Allah has made subservient to you. Know that excellence is required in every deed, even the smallest matters:"
+      },
+      {
+       "t": "hadith",
+       "ar": "«إنَّ اللهَ كتب الإحسانَ على كلِّ شيء»",
+       "en": "“Allah has prescribed excellence in everything.”",
+       "refAr": "رواه مسلم (١٩٥٥)",
+       "refEn": "Muslim 1955"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ ارزقنا قلوبًا رحيمة، وارحمنا برحمتِك التي وسعت كلَّ شيء. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, grant us merciful hearts, and have mercy on us with Your mercy that encompasses all things. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 3
+  },
+  {
+   "id": "patience",
+   "cat": "heart",
+   "titleAr": "الصبرُ والرضا",
+   "titleEn": "Patience and contentment",
+   "summaryAr": "أنواع الصبر، وكيف يكون أمر المؤمن كله خيرًا، وتكفير الذنوب بالمصائب.",
+   "summaryEn": "The kinds of patience, how all of a believer’s affairs are good, and hardship as expiation.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: الدنيا دارُ ابتلاء، لا تصفو لأحد، يتقلّبُ فيها الإنسانُ بين نعمةٍ تستوجبُ الشكر، ومصيبةٍ تستوجبُ الصبر. والصبرُ ثلاثة: صبرٌ على طاعةِ الله، وصبرٌ عن معصيتِه، وصبرٌ على أقدارِه المؤلمة.",
+       "en": "Servants of Allah: this world is a place of testing that is never pure for anyone. A person moves in it between a blessing that calls for gratitude and a calamity that calls for patience. Patience is of three kinds: patience in obeying Allah, patience in staying away from disobeying Him, and patience with His painful decrees."
+      },
+      {
+       "t": "ayah",
+       "ar": "وَلَنَبْلُوَنَّكُم بِشَىْءٍ مِّنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍ مِّنَ ٱلْأَمْوَٰلِ وَٱلْأَنفُسِ وَٱلثَّمَرَٰتِ وَبَشِّرِ ٱلصَّٰبِرِينَ ٱلَّذِينَ إِذَآ أَصَٰبَتْهُم مُّصِيبَةٌ قَالُوٓا۟ إِنَّا لِلَّهِ وَإِنَّآ إِلَيْهِ رَٰجِعُونَ أُو۟لَٰٓئِكَ عَلَيْهِمْ صَلَوَٰتٌ مِّن رَّبِّهِمْ وَرَحْمَةٌ وَأُو۟لَٰٓئِكَ هُمُ ٱلْمُهْتَدُونَ",
+       "en": "And We will surely test you with something of fear and hunger and a loss of wealth and lives and fruits, but give good tidings to the patient, Who, when disaster strikes them, say, \"Indeed we belong to Allah, and indeed to Him we will return.\" Those are the ones upon whom are blessings from their Lord and mercy. And it is those who are the [rightly] guided.",
+       "refAr": "سورة البقرة: ١٥٥–١٥٧",
+       "refEn": "Al-Baqara 2:155–157"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّمَا يُوَفَّى ٱلصَّٰبِرُونَ أَجْرَهُم بِغَيْرِ حِسَابٍ",
+       "en": "Indeed, the patient will be given their reward without account.",
+       "refAr": "سورة الزمر: ١٠",
+       "refEn": "Az-Zumar 39:10"
+      },
+      {
+       "t": "hadith",
+       "ar": "«عجبًا لأمرِ المؤمن، إنَّ أمرَه كلَّه خير، وليس ذاك لأحدٍ إلا للمؤمن: إن أصابته سرّاءُ شكر فكان خيرًا له، وإن أصابته ضرّاءُ صبر فكان خيرًا له»",
+       "en": "“How wonderful is the affair of the believer! All of his affairs are good, and that is for no one but the believer: if something good happens to him he is grateful and that is good for him, and if something harmful befalls him he is patient and that is good for him.”",
+       "refAr": "رواه مسلم (٢٩٩٩)",
+       "refEn": "Muslim 2999"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "ومن رحمةِ اللهِ أنَّ ما يصيبُ المؤمنَ من ألمٍ لا يضيع، بل يُكفِّرُ اللهُ به خطاياه ويرفعُ درجته. فإذا نزل بك البلاء فقل: إنّا للهِ وإنّا إليه راجعون، واستعنْ بالصلاة، وأحسنِ الظنَّ بربِّك، واعلمْ أنَّ مع العسرِ يسرًا.",
+       "en": "Of Allah’s mercy is that no pain that strikes a believer is wasted; by it Allah expiates his sins and raises his rank. When trial comes, say: “To Allah we belong and to Him we return”, seek help through prayer, think well of your Lord, and know that with hardship comes ease."
+      },
+      {
+       "t": "hadith",
+       "ar": "«ما يصيبُ المسلمَ من نَصَبٍ ولا وَصَبٍ ولا همٍّ ولا حَزَنٍ ولا أذًى ولا غمٍّ، حتى الشوكةِ يُشاكُها، إلا كفّر اللهُ بها من خطاياه»",
+       "en": "“No fatigue, illness, worry, sorrow, harm or distress befalls a Muslim, not even a thorn that pricks him, except that Allah expiates some of his sins by it.”",
+       "refAr": "متفق عليه: البخاري (٥٦٤١) ومسلم (٢٥٧٣)",
+       "refEn": "al-Bukhari 5641, Muslim 2573"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ أفرغْ علينا صبرًا، وارزقنا الرضا بقضائِك، والشكرَ على نعمائِك. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, pour patience upon us, grant us contentment with Your decree and gratitude for Your blessings. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "gratitude",
+   "cat": "faith",
+   "titleAr": "شكرُ النعم",
+   "titleEn": "Gratitude for blessings",
+   "summaryAr": "نعم الله التي لا تُحصى، وكيف يكون الشكر بالقلب واللسان والجوارح، وسبب زيادة النعم.",
+   "summaryEn": "Allah’s countless blessings, gratitude with heart, tongue and limbs, and how blessings increase.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: تأمّلوا في نعمِ اللهِ عليكم: نعمةِ الإسلام، ونعمةِ العافية، ونعمةِ الأمن، ونعمةِ الطعامِ والشرابِ والمسكن، ونعمِ السمعِ والبصرِ والعقل، وهي أكثرُ من أن تُعَدّ.",
+       "en": "Servants of Allah: reflect on Allah’s blessings upon you: Islam, health, safety, food, drink and shelter, hearing, sight and intellect; they are more than can be counted."
+      },
+      {
+       "t": "ayah",
+       "ar": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ إِنَّ ٱللَّهَ لَغَفُورٌ رَّحِيمٌ",
+       "en": "And if you should count the favors of Allah, you could not enumerate them. Indeed, Allah is Forgiving and Merciful.",
+       "refAr": "سورة النحل: ١٨",
+       "refEn": "An-Nahl 16:18"
+      },
+      {
+       "t": "ayah",
+       "ar": "وَإِذْ تَأَذَّنَ رَبُّكُمْ لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ وَلَئِن كَفَرْتُمْ إِنَّ عَذَابِى لَشَدِيدٌ",
+       "en": "And [remember] when your Lord proclaimed, 'If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, My punishment is severe.' ",
+       "refAr": "سورة ابراهيم: ٧",
+       "refEn": "Ibrahim 14:7"
+      },
+      {
+       "t": "hadith",
+       "ar": "«مَن أصبح منكم آمنًا في سِربِه، معافًى في جسدِه، عنده قوتُ يومِه، فكأنما حِيزت له الدنيا»",
+       "en": "“Whoever among you wakes up secure in his home, healthy in his body and with his food for the day, it is as if the whole world has been gathered for him.”",
+       "refAr": "رواه الترمذي (٢٣٤٦) وابن ماجه (٤١٤١)",
+       "refEn": "at-Tirmidhi 2346, Ibn Majah 4141"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "والشكرُ يكونُ بالقلب: اعترافًا بأنَّ النعمةَ من الله، وباللسان: حمدًا وثناءً وتحدّثًا بنعمته، وبالجوارح: باستعمالِ النعمةِ في طاعتِه لا في معصيتِه. ومن أعظمِ ما يُعينُ على الشكرِ أن ينظرَ المرءُ في أمرِ الدنيا إلى مَن هو دونه:",
+       "en": "Gratitude is with the heart, by acknowledging that every blessing is from Allah; with the tongue, by praise and speaking of His favour; and with the limbs, by using blessings in obedience to Him and not in disobedience. One of the greatest aids to gratitude is to look, in worldly matters, at those who have less:"
+      },
+      {
+       "t": "hadith",
+       "ar": "«انظروا إلى مَن هو أسفلَ منكم، ولا تنظروا إلى مَن هو فوقَكم، فهو أجدرُ ألّا تزدروا نعمةَ اللهِ عليكم»",
+       "en": "“Look at those below you and do not look at those above you, for that is more likely to keep you from belittling Allah’s blessing upon you.”",
+       "refAr": "رواه مسلم (٢٩٦٣)",
+       "refEn": "Muslim 2963"
+      },
+      {
+       "t": "ayah",
+       "ar": "فَٱذْكُرُونِىٓ أَذْكُرْكُمْ وَٱشْكُرُوا۟ لِى وَلَا تَكْفُرُونِ",
+       "en": "So remember Me; I will remember you. And be grateful to Me and do not deny Me.",
+       "refAr": "سورة البقرة: ١٥٢",
+       "refEn": "Al-Baqara 2:152"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ أعِنّا على ذكرِك وشكرِك وحسنِ عبادتِك، ولا تجعلنا من الغافلين. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, help us to remember You, thank You and worship You well, and do not make us among the heedless. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 3
+  },
+  {
+   "id": "jumuah",
+   "cat": "worship",
+   "titleAr": "يومُ الجمعة",
+   "titleEn": "The day of Jumu‘ah",
+   "summaryAr": "خير يوم طلعت عليه الشمس، وآداب الجمعة وسننها، وساعة الإجابة.",
+   "summaryEn": "The best day the sun rises on, the etiquette and sunnahs of Friday, and the hour of response.",
+   "parts": [
+    {
+     "titleAr": "الخطبة الأولى",
+     "titleEn": "First khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "إنَّ الحمدَ للهِ، نحمدُه ونستعينُه ونستغفرُه، ونعوذُ باللهِ من شرورِ أنفسِنا ومن سيئاتِ أعمالِنا، مَن يهدِه اللهُ فلا مُضِلَّ له، ومَن يُضلِلْ فلا هاديَ له، وأشهدُ أن لا إلهَ إلا اللهُ وحدَه لا شريكَ له، وأشهدُ أنَّ محمدًا عبدُه ورسولُه، صلّى اللهُ عليه وعلى آلِه وصحبِه وسلَّم تسليمًا كثيرًا.",
+       "en": "All praise is for Allah. We praise Him, seek His help and ask His forgiveness, and we seek refuge in Allah from the evil of our souls and the wrongs of our deeds. Whomever Allah guides, none can lead astray; whomever He leaves astray, none can guide. I bear witness that there is no god but Allah alone, without partner, and that Muhammad is His servant and Messenger; may Allah send abundant blessings and peace upon him, his family and his Companions."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ حَقَّ تُقَاتِهِۦ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ",
+       "en": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+       "refAr": "سورة آل عمران: ١٠٢",
+       "refEn": "Aal-i-Imraan 3:102"
+      },
+      {
+       "t": "p",
+       "ar": "أمّا بعدُ: فإنَّ خيرَ الحديثِ كتابُ الله، وخيرَ الهديِ هديُ محمدٍ ﷺ، وشرَّ الأمورِ محدثاتُها، وكلَّ بدعةٍ ضلالة.",
+       "en": "To proceed: the best speech is the Book of Allah, the best guidance is the guidance of Muhammad ﷺ, the worst of matters are those newly invented, and every innovation is misguidance."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله: هدى اللهُ هذه الأمّةَ ليومِ الجمعة، وجعله عيدًا أسبوعيًّا تجتمعُ فيه القلوبُ قبل الأبدان، وتتجدّدُ فيه الصلةُ بالله، ويتعلّمُ فيه الناسُ دينَهم.",
+       "en": "Servants of Allah: Allah guided this nation to the day of Jumu‘ah and made it a weekly celebration in which hearts gather before bodies, the bond with Allah is renewed and people learn their religion."
+      },
+      {
+       "t": "ayah",
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا نُودِىَ لِلصَّلَوٰةِ مِن يَوْمِ ٱلْجُمُعَةِ فَٱسْعَوْا۟ إِلَىٰ ذِكْرِ ٱللَّهِ وَذَرُوا۟ ٱلْبَيْعَ ذَٰلِكُمْ خَيْرٌ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ فَإِذَا قُضِيَتِ ٱلصَّلَوٰةُ فَٱنتَشِرُوا۟ فِى ٱلْأَرْضِ وَٱبْتَغُوا۟ مِن فَضْلِ ٱللَّهِ وَٱذْكُرُوا۟ ٱللَّهَ كَثِيرًا لَّعَلَّكُمْ تُفْلِحُونَ",
+       "en": "O you who have believed, when [the adhan] is called for the prayer on the day of Jumu'ah [Friday], then proceed to the remembrance of Allah and leave trade. That is better for you, if you only knew. And when the prayer has been concluded, disperse within the land and seek from the bounty of Allah, and remember Allah often that you may succeed.",
+       "refAr": "سورة الجمعة: ٩–١٠",
+       "refEn": "Al-Jumu'a 62:9–10"
+      },
+      {
+       "t": "hadith",
+       "ar": "«خيرُ يومٍ طلعت عليه الشمسُ يومُ الجمعة: فيه خُلِق آدم، وفيه أُدخِل الجنة، وفيه أُخرِج منها، ولا تقومُ الساعةُ إلا في يومِ الجمعة»",
+       "en": "“The best day on which the sun has risen is Friday: on it Adam was created, on it he was admitted to Paradise, on it he was expelled from it, and the Hour will not be established except on Friday.”",
+       "refAr": "رواه مسلم (٨٥٤)",
+       "refEn": "Muslim 854"
+      },
+      {
+       "t": "p",
+       "ar": "أقولُ قولي هذا، وأستغفرُ اللهَ العظيمَ لي ولكم ولسائرِ المسلمين من كلِّ ذنب، فاستغفروه إنه هو الغفورُ الرحيم.",
+       "en": "I say these words and ask Allah the Almighty to forgive me, you and all Muslims every sin; so ask Him for forgiveness, for He is the Most Forgiving, the Most Merciful."
+      }
+     ]
+    },
+    {
+     "titleAr": "الخطبة الثانية",
+     "titleEn": "Second khutbah",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. أمّا بعدُ، فيا عبادَ الله:",
+       "en": "All praise is for Allah, Lord of the worlds, and blessings and peace be upon our Prophet Muhammad, his family and all his Companions. To proceed, O servants of Allah:"
+      },
+      {
+       "t": "p",
+       "ar": "ومن سننِ الجمعة: الاغتسال، والتطيّب، ولبسُ أحسنِ الثياب، والتبكيرُ إلى المسجد، والإنصاتُ للخطبة، وقراءةُ سورةِ الكهف، وتحرّي ساعةِ الإجابةِ آخرَ ساعةٍ بعد العصر، والإكثارُ من الصلاةِ على النبيِّ ﷺ:",
+       "en": "Among the sunnahs of Friday are bathing, wearing perfume and one’s best clothes, going early to the mosque, listening attentively to the khutbah, reading Surat al-Kahf, seeking the hour of response in the last hour after Asr, and sending abundant blessings upon the Prophet ﷺ:"
+      },
+      {
+       "t": "hadith",
+       "ar": "«إنَّ مِن أفضلِ أيامِكم يومَ الجمعة، فيه خُلِق آدم، وفيه قُبِض، وفيه النفخة، وفيه الصعقة، فأكثِروا عليَّ من الصلاةِ فيه، فإنَّ صلاتَكم معروضةٌ عليّ»",
+       "en": "“Among the best of your days is Friday: on it Adam was created, on it he died, on it the Horn will be blown and on it all will swoon. So send abundant blessings upon me on it, for your blessings are presented to me.”",
+       "refAr": "رواه أبو داود (١٠٤٧)",
+       "refEn": "Abu Dawud 1047"
+      },
+      {
+       "t": "p",
+       "ar": "ثمَّ صلّوا وسلّموا على مَن أمركم اللهُ بالصلاةِ والسلامِ عليه، فقال سبحانه:",
+       "en": "Then send blessings and peace upon the one Allah commanded you to bless, for He said:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+       "en": "Indeed, Allah confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.",
+       "refAr": "سورة الأحزاب: ٥٦",
+       "refEn": "Al-Ahzaab 33:56"
+      },
+      {
+       "t": "p",
+       "ar": "اللهمَّ صلِّ وسلِّم وبارِك على نبيِّنا محمدٍ وعلى آلِه وصحبِه أجمعين. اللهمَّ اجعلنا ممّن يستمعون القولَ فيتّبعون أحسنَه، ووفّقنا لساعةِ الإجابة. اللهمَّ أعِزَّ الإسلامَ والمسلمين، واغفرْ للمؤمنين والمؤمنات، الأحياءِ منهم والأموات، ربَّنا آتِنا في الدنيا حسنةً وفي الآخرةِ حسنةً وقِنا عذابَ النار.",
+       "en": "O Allah, send blessings, peace and grace upon our Prophet Muhammad, his family and all his Companions. O Allah, make us among those who listen to speech and follow the best of it, and grant us the hour of response. O Allah, honour Islam and the Muslims, and forgive the believing men and women, the living and the dead. Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire."
+      },
+      {
+       "t": "p",
+       "ar": "عبادَ الله:",
+       "en": "Servants of Allah:"
+      },
+      {
+       "t": "ayah",
+       "ar": "إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+       "en": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+       "refAr": "سورة النحل: ٩٠",
+       "refEn": "An-Nahl 16:90"
+      },
+      {
+       "t": "p",
+       "ar": "فاذكروا اللهَ العظيمَ يذكرْكم، واشكروه على نعمِه يزدْكم، ولَذِكرُ اللهِ أكبر، واللهُ يعلمُ ما تصنعون.",
+       "en": "Remember Allah the Almighty and He will remember you; thank Him for His blessings and He will increase you. The remembrance of Allah is greater, and Allah knows what you do."
+      }
+     ]
+    }
+   ],
+   "minutes": 4
+  },
+  {
+   "id": "farewell",
+   "cat": "prophetic",
+   "titleAr": "خطبةُ حجّةِ الوداع",
+   "titleEn": "The Farewell Sermon",
+   "summaryAr": "مقتطفات صحيحة من خطبة النبي ﷺ في حجة الوداع سنة ١٠هـ، مع المصادر.",
+   "summaryEn": "Authentic excerpts of the Prophet’s ﷺ sermon at the Farewell Pilgrimage in 10 AH, with sources.",
+   "parts": [
+    {
+     "titleAr": "المناسبة",
+     "titleEn": "Context",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "في السنةِ العاشرةِ من الهجرة حجَّ النبيُّ ﷺ حجّتَه الوحيدة، وشهدها جمعٌ عظيمٌ من المسلمين، فخطبهم يومَ عرفةَ ببطنِ الوادي خطبةً جامعةً قرّر فيها أصولَ الإسلامِ وحقوقَ الإنسان، وودّعهم فيها، فسُمّيت حجّةَ الوداع. ونزل في ذلك اليوم قولُه تعالى:",
+       "en": "In the tenth year after the Hijrah the Prophet ﷺ performed his only Hajj, attended by a great multitude of Muslims. On the Day of Arafah, in the valley, he delivered a comprehensive sermon setting out the foundations of Islam and the rights of people, and bade them farewell, so it was called the Farewell Pilgrimage. On that day Allah revealed:"
+      },
+      {
+       "t": "ayah",
+       "ar": "ٱلْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِى وَرَضِيتُ لَكُمُ ٱلْإِسْلَٰمَ دِينًا",
+       "en": "This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion.",
+       "refAr": "سورة المائدة: ٣",
+       "refEn": "Al-Maaida 5:3"
+      }
+     ]
+    },
+    {
+     "titleAr": "من نصّ الخطبة",
+     "titleEn": "From the sermon",
+     "blocks": [
+      {
+       "t": "hadith",
+       "ar": "«إنَّ دماءَكم وأموالَكم حرامٌ عليكم، كحُرمةِ يومِكم هذا، في شهرِكم هذا، في بلدِكم هذا، ألا كلُّ شيءٍ من أمرِ الجاهليةِ تحت قدميَّ موضوع»",
+       "en": "“Your blood and your wealth are sacred to you, as sacred as this day of yours, in this month of yours, in this land of yours. Behold, everything of the affairs of the Days of Ignorance is placed beneath my feet.”",
+       "refAr": "رواه مسلم (١٢١٨) من حديث جابر",
+       "refEn": "Muslim 1218, narrated by Jabir"
+      },
+      {
+       "t": "hadith",
+       "ar": "«فاتقوا اللهَ في النساء، فإنكم أخذتموهنَّ بأمانِ الله، واستحللتم فروجَهنَّ بكلمةِ الله»",
+       "en": "“Fear Allah concerning women, for you have taken them on the security of Allah and made them lawful to you by the word of Allah.”",
+       "refAr": "رواه مسلم (١٢١٨)",
+       "refEn": "Muslim 1218"
+      },
+      {
+       "t": "hadith",
+       "ar": "«وقد تركتُ فيكم ما لن تضلّوا بعدَه إن اعتصمتم به: كتابَ الله، وأنتم تُسألون عنّي، فما أنتم قائلون؟» قالوا: نشهدُ أنك قد بلّغتَ وأدّيتَ ونصحت، فقال بإصبعِه السبّابة يرفعُها إلى السماءِ وينكُتُها إلى الناس: «اللهمَّ اشهد، اللهمَّ اشهد» ثلاثَ مرّات",
+       "en": "“I have left among you that which, if you hold fast to it, you will never go astray: the Book of Allah. And you will be asked about me; what will you say?” They said: “We bear witness that you have conveyed, fulfilled and given sincere counsel.” He raised his index finger to the sky and pointed it at the people, saying: “O Allah, bear witness. O Allah, bear witness,” three times.",
+       "refAr": "رواه مسلم (١٢١٨)",
+       "refEn": "Muslim 1218"
+      },
+      {
+       "t": "hadith",
+       "ar": "«يا أيها الناس، ألا إنَّ ربَّكم واحد، وإنَّ أباكم واحد، ألا لا فضلَ لعربيٍّ على أعجميّ، ولا لعجميٍّ على عربيّ، ولا لأحمرَ على أسود، ولا أسودَ على أحمر، إلا بالتقوى»",
+       "en": "“O people, your Lord is one and your father is one. No Arab has superiority over a non-Arab, nor a non-Arab over an Arab, nor a red-skinned over a black-skinned, nor a black-skinned over a red-skinned, except by taqwa.”",
+       "refAr": "رواه أحمد (٢٣٤٨٩)",
+       "refEn": "Ahmad 23489"
+      },
+      {
+       "t": "hadith",
+       "ar": "«ليبلِّغِ الشاهدُ الغائب»",
+       "en": "“Let the one who is present convey it to the one who is absent.”",
+       "refAr": "متفق عليه: البخاري (٦٧) ومسلم (١٦٧٩)",
+       "refEn": "al-Bukhari 67, Muslim 1679"
+      }
+     ]
+    },
+    {
+     "titleAr": "دروس وعبر",
+     "titleEn": "Lessons",
+     "blocks": [
+      {
+       "t": "p",
+       "ar": "قرّرت الخطبةُ حرمةَ الدماءِ والأموالِ والأعراض، وأبطلت أعرافَ الجاهليةِ من الثأرِ والربا، وأوصت بالنساءِ خيرًا، وجعلت ميزانَ التفاضلِ بين الناسِ التقوى لا اللونَ ولا النسب، وربطت الأمّةَ بكتابِ ربِّها، وحمّلت كلَّ مسلمٍ أمانةَ البلاغ. وهي وصيّةُ مودِّع، فحريٌّ بكلِّ مسلمٍ أن يتدبّرها ويعملَ بها.",
+       "en": "The sermon established the sanctity of life, property and honour, abolished the customs of the Days of Ignorance such as blood feuds and usury, enjoined good treatment of women, made taqwa, not colour or lineage, the measure of people’s worth, tied the nation to the Book of its Lord, and charged every Muslim with conveying the message. It is the counsel of one bidding farewell, and every Muslim should reflect on it and act upon it."
+      }
+     ]
+    }
+   ],
+   "minutes": 3
+  }
+ ]
+}

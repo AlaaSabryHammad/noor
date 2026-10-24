@@ -2,20 +2,28 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../core/theme/noor_tokens.dart';
+import '../features/audio/audio_widgets.dart';
+import '../features/audio/quran_player.dart';
 import '../l10n/app_localizations.dart';
 
-/// Floating, blurred five-item bottom navigation (Home, Quran, Prayer, Adhkar, Explore).
-class NoorShell extends StatelessWidget {
+/// Height the mini player adds above the navigation bar while audio is loaded.
+const _miniPlayerSpace = 72.0;
+
+/// Floating, blurred five-item bottom navigation (Home, Quran, Prayer, Adhkar, Explore),
+/// with the mini player stacked above it while something is playing.
+class NoorShell extends ConsumerWidget {
   const NoorShell({super.key, required this.shell});
   final StatefulNavigationShell shell;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
     final t = context.noor;
+    final listening = ref.watch(quranPlayerProvider.select((s) => s.current != null));
     final items = [
       (Icons.home_outlined, Icons.home_rounded, l.navHome),
       (Icons.menu_book_outlined, Icons.menu_book_rounded, l.navQuran),
@@ -25,10 +33,13 @@ class NoorShell extends StatelessWidget {
     ];
     return Scaffold(
       extendBody: true,
-      body: shell,
+      // Screens pad their lists for the floating bar; lift them by the mini player's height too.
+      body: Padding(padding: EdgeInsets.only(bottom: listening ? _miniPlayerSpace : 0), child: shell),
       bottomNavigationBar: SafeArea(
         minimum: const EdgeInsets.fromLTRB(12, 0, 12, 14),
-        child: ClipRRect(
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          if (listening) Padding(padding: const EdgeInsets.only(bottom: 8), child: DecoratedBox(decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), boxShadow: t.cardShadow), child: const MiniPlayer())),
+          ClipRRect(
           borderRadius: BorderRadius.circular(26),
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
@@ -72,6 +83,7 @@ class NoorShell extends StatelessWidget {
             ),
           ),
         ),
+        ]),
       ),
     );
   }
