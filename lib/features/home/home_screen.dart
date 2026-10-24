@@ -16,6 +16,7 @@ import '../prayer/domain/prayer_models.dart';
 import '../prayer/location_sheet.dart';
 import '../prayer/prayer_providers.dart';
 import '../quran/quran_data.dart';
+import '../settings/crash_consent_card.dart';
 import '../settings/settings_controller.dart';
 import '../settings/settings_sheet.dart';
 
@@ -78,6 +79,7 @@ class HomeScreen extends ConsumerWidget {
           const SizedBox(height: 18),
           NextPrayerHero(day: day, method: ref.watch(effectiveMethodProvider)),
           const SizedBox(height: 16),
+          const CrashConsentCard(), // one-time question; takes no space once answered
           if (day.isFriday) ...[_FridayCard(), const SizedBox(height: 16)],
           const _ContinueReadingCard(),
           const SizedBox(height: 18),

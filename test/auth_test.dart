@@ -57,7 +57,7 @@ class FakeAuth implements AuthService {
   Future<void> signInWithEmail(String email, String password) async {
     _maybeFail();
     if (!accounts.containsKey(email) || accounts[email] != password) throw const AuthFailure(AuthErrorKind.wrongCredentials);
-    _set(AppUser(uid: email, email: email, displayName: 'Alaa'));
+    _set(AppUser(uid: email, email: email, displayName: 'Alaa', providerIds: const ['password']));
   }
 
   @override
@@ -65,11 +65,13 @@ class FakeAuth implements AuthService {
     _maybeFail();
     if (accounts.containsKey(email)) throw const AuthFailure(AuthErrorKind.emailInUse);
     accounts[email] = password;
-    _set(AppUser(uid: email, email: email, displayName: displayName));
+    _set(AppUser(uid: email, email: email, displayName: displayName, providerIds: const ['password']));
   }
 
   @override
-  Future<void> signInWithGoogle() async => _set(const AppUser(uid: 'g', email: 'g@x.com', displayName: 'Google User'));
+  Future<void> signInWithGoogle() async => _set(const AppUser(uid: 'g', email: 'g@x.com', displayName: 'Google User', providerIds: ['google.com']));
+  @override
+  Future<void> signInWithApple() async => _set(const AppUser(uid: 'a', email: 'a@privaterelay.appleid.com', displayName: 'Apple User', providerIds: ['apple.com']));
   @override
   Future<void> signInAnonymously() async => _set(const AppUser(uid: 'anon', isAnonymous: true));
   @override
@@ -83,8 +85,18 @@ class FakeAuth implements AuthService {
     _set(null);
   }
 
+  /// Passwords this fake was asked to delete with (null = none given).
+  final deleteAttempts = <String?>[];
+
   @override
-  Future<void> deleteAccount() async => _set(null);
+  Future<void> deleteAccount({String? password}) async {
+    deleteAttempts.add(password);
+    _maybeFail();
+    final u = _user;
+    // Like Firebase, e-mail accounts must re-authenticate with the right password.
+    if (u != null && u.usesPassword && accounts[u.email] != password) throw const AuthFailure(AuthErrorKind.wrongCredentials);
+    _set(null);
+  }
 }
 
 Future<(FakeAuth, ProviderContainer)> _open(WidgetTester tester, {AuthService? service}) async {
@@ -207,6 +219,87 @@ void main() {
     expect(find.textContaining('Google'), findsNothing);
     expect(find.text('المتابعة كزائر'), findsNothing);
     expect(find.byType(TextField), findsNWidgets(2));
+  });
+
+  testWidgets('Sign in with Apple is hidden when the build cannot offer it', (tester) async {
+    await _open(tester);
+    expect(find.text('المتابعة باستخدام Apple'), findsNothing);
+  });
+
+  testWidgets('Sign in with Apple button signs in', (tester) async {
+    final (auth, _) = await _open(tester, service: FakeAuth(caps: const AuthCapabilities(email: true, google: true, apple: true)));
+    expect(find.text('المتابعة باستخدام Apple'), findsOneWidget);
+    await tester.tap(find.text('المتابعة باستخدام Apple'));
+    await tester.pumpAndSettle();
+    expect(auth.currentUser!.providerIds, ['apple.com']);
+    expect(find.text('Apple User'), findsOneWidget);
+  });
+
+  group('account deletion', () {
+    testWidgets('an e-mail account must confirm with its password; a wrong one keeps the account', (tester) async {
+      final (auth, _) = await _open(tester);
+      auth.accounts['a@b.co'] = 'secret123';
+      await tester.enterText(find.byType(TextField).at(0), 'a@b.co');
+      await tester.enterText(find.byType(TextField).at(1), 'secret123');
+      await tester.tap(find.text('دخول'));
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('حذف الحساب'));
+      await tester.pumpAndSettle();
+      expect(find.text('حذف الحساب نهائيًا؟'), findsOneWidget);
+      final delete = find.widgetWithText(FilledButton, 'حذف');
+      expect(tester.widget<FilledButton>(delete).onPressed, isNull, reason: 'cannot delete before typing the password');
+
+      await tester.enterText(find.byType(TextField), 'wrong');
+      await tester.pump();
+      await tester.tap(delete);
+      await tester.pumpAndSettle();
+      expect(auth.currentUser, isNotNull);
+      expect(find.text('البريد أو كلمة المرور غير صحيحة.'), findsOneWidget);
+
+      await tester.tap(find.text('حذف الحساب'));
+      await tester.pumpAndSettle();
+      await tester.enterText(find.byType(TextField), 'secret123');
+      await tester.pump();
+      await tester.tap(find.widgetWithText(FilledButton, 'حذف'));
+      await tester.pumpAndSettle();
+      expect(auth.currentUser, isNull);
+      expect(auth.deleteAttempts, ['wrong', 'secret123']);
+    });
+
+    testWidgets('Google accounts are deleted without asking for a password', (tester) async {
+      final (auth, _) = await _open(tester);
+      await tester.tap(find.textContaining('Google'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('حذف الحساب'));
+      await tester.pumpAndSettle();
+      expect(find.byType(TextField), findsNothing);
+      await tester.tap(find.widgetWithText(FilledButton, 'حذف'));
+      await tester.pumpAndSettle();
+      expect(auth.currentUser, isNull);
+      expect(auth.deleteAttempts, [null]);
+    });
+
+    testWidgets('cancelling leaves the account alone', (tester) async {
+      final (auth, _) = await _open(tester);
+      await tester.tap(find.textContaining('Google'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('حذف الحساب'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('إلغاء'));
+      await tester.pumpAndSettle();
+      expect(auth.currentUser, isNotNull);
+      expect(auth.deleteAttempts, isEmpty);
+    });
+  });
+
+  testWidgets('the account screen links to the privacy policy', (tester) async {
+    await _open(tester);
+    await tester.ensureVisible(find.text('سياسة الخصوصية'));
+    await tester.tap(find.text('سياسة الخصوصية'));
+    await tester.pumpAndSettle();
+    expect(find.text('الخصوصية'), findsWidgets);
+    expect(find.text('ملخص'), findsOneWidget);
   });
 
   testWidgets('forgot password asks for a valid e-mail first, then confirms', (tester) async {

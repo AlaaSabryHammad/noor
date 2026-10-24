@@ -1,0 +1,3 @@
+tags:
+  golden:
+    # Screenshots compared pixel by pixel; see test/screens/screenshots_test.dart.

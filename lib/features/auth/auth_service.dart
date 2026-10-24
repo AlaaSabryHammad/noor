@@ -4,10 +4,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 /// The signed-in person, independent of the auth backend.
 @immutable
 class AppUser {
-  const AppUser({required this.uid, this.displayName, this.email, this.photoUrl, this.isAnonymous = false});
+  const AppUser({required this.uid, this.displayName, this.email, this.photoUrl, this.isAnonymous = false, this.providerIds = const []});
   final String uid;
   final String? displayName, email, photoUrl;
   final bool isAnonymous;
+
+  /// Firebase provider ids this account signs in with: `password`, `google.com`, `apple.com`.
+  final List<String> providerIds;
+
+  /// True when deleting the account needs the password again (re-authentication).
+  bool get usesPassword => providerIds.contains('password');
 
   /// Name to show: display name, else the part of the e-mail before “@”.
   String get label {
@@ -19,10 +25,11 @@ class AppUser {
   }
 
   @override
-  bool operator ==(Object other) => other is AppUser && other.uid == uid && other.displayName == displayName && other.email == email && other.photoUrl == photoUrl && other.isAnonymous == isAnonymous;
+  bool operator ==(Object other) =>
+      other is AppUser && other.uid == uid && other.displayName == displayName && other.email == email && other.photoUrl == photoUrl && other.isAnonymous == isAnonymous && listEquals(other.providerIds, providerIds);
 
   @override
-  int get hashCode => Object.hash(uid, displayName, email, photoUrl, isAnonymous);
+  int get hashCode => Object.hash(uid, displayName, email, photoUrl, isAnonymous, Object.hashAll(providerIds));
 }
 
 enum AuthErrorKind { invalidEmail, wrongCredentials, userNotFound, emailInUse, weakPassword, network, tooManyRequests, disabled, notEnabled, requiresRecentLogin, cancelled, unavailable, unknown }
@@ -38,9 +45,9 @@ class AuthFailure implements Exception {
 /// Which sign-in methods the running build can offer.
 @immutable
 class AuthCapabilities {
-  const AuthCapabilities({this.email = false, this.google = false, this.anonymous = false});
-  final bool email, google, anonymous;
-  bool get any => email || google || anonymous;
+  const AuthCapabilities({this.email = false, this.google = false, this.apple = false, this.anonymous = false});
+  final bool email, google, apple, anonymous;
+  bool get any => email || google || apple || anonymous;
 }
 
 abstract interface class AuthService {
@@ -53,13 +60,20 @@ abstract interface class AuthService {
   Future<void> signInWithEmail(String email, String password);
   Future<void> createAccount(String email, String password, {String? displayName});
   Future<void> signInWithGoogle();
+
+  /// Native “Sign in with Apple” (iOS / macOS only; see [AuthCapabilities.apple]).
+  Future<void> signInWithApple();
   Future<void> signInAnonymously();
   Future<void> sendPasswordReset(String email);
   Future<void> signOut();
 
   /// Permanently deletes the account (App Store / Play requirement for apps
-  /// that offer account creation).
-  Future<void> deleteAccount();
+  /// that offer account creation). Deleting is a sensitive operation, so the
+  /// backend may ask the person to sign in again first: pass the current
+  /// [password] for e-mail accounts ([AppUser.usesPassword]); Google and Apple
+  /// accounts re-authenticate through their own sheets. Apple's token is
+  /// revoked as part of the deletion.
+  Future<void> deleteAccount({String? password});
 }
 
 /// Used when Firebase has not been configured: the app works fully signed out.
@@ -82,13 +96,15 @@ class DisabledAuthService implements AuthService {
   @override
   Future<void> signInWithGoogle() async => _no();
   @override
+  Future<void> signInWithApple() async => _no();
+  @override
   Future<void> signInAnonymously() async => _no();
   @override
   Future<void> sendPasswordReset(String email) async => _no();
   @override
   Future<void> signOut() async {}
   @override
-  Future<void> deleteAccount() async => _no();
+  Future<void> deleteAccount({String? password}) async => _no();
 }
 
 /// Overridden in `main()` once Firebase has (or has not) initialised.

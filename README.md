@@ -16,7 +16,8 @@ Islamic companion app for Android and iOS, built with Flutter. Arabic-first (RTL
 | **Books** | Forty Hadith of an-Nawawi, Forty Qudsi and Dehlawi (offline); Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasa’i, Ibn Majah and Malik fetched per chapter and cached. |
 | **Learn** | 99 Names, 60+ hadith, a 33-event seerah timeline, 25 stories from the Quran, 15 step-by-step lessons (wudu, ghusl, prayer, adhan, Friday and Eid, janazah, fasting, zakat, tajweed, …), 40+ FAQ, kids’ quiz with rotating rounds. A rotating daily ayah, hadith and dua on the home screen. |
 | **Tools** | Hijri calendar with occasions, Ramadan tracker, Hajj & Umrah guide, zakat calculator, daily worship planner with streak, tasbeeh, saved items library. |
-| **Accounts (optional)** | Firebase Auth: e-mail/password, Google, guest. The app is fully usable without signing in. |
+| **Accounts (optional)** | Firebase Auth: e-mail/password, Google, Sign in with Apple (iOS), guest, with in-app account deletion. The app is fully usable without signing in. |
+| **Privacy** | No ads or trackers. Crash reports (Crashlytics) are opt-in; privacy policy in the app and as a public page. See [docs/RELEASE.md](docs/RELEASE.md). |
 
 ## Run
 
@@ -41,8 +42,11 @@ lib/
 assets/
   data/         quran/ (index + one file per surah), books/, adhkar, names, … (JSON)
   fonts/        Amiri, Amiri Quran, IBM Plex Sans Arabic, Plus Jakarta Sans
-tool/           Python scripts that build assets/data and the app icon
+tool/           Python scripts that build assets/data, the privacy policy and the app icon
+site/           public web pages (privacy policy), served by Firebase Hosting
+docs/           FIREBASE.md (accounts setup), RELEASE.md (store checklist)
 test/           unit + widget + layout stress + golden tests
+.github/        CI: analyze, tests, Android build, golden screenshots
 ```
 
 State is Riverpod; routing is go_router. Everything that touches the outside world (location, compass, notifications, audio, HTTP, accounts) sits behind a small interface so tests substitute fakes.

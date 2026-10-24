@@ -9,7 +9,8 @@ Accounts are **optional**: the app works fully signed out, and falls back to tha
 | Project | `noor-app-alaa-4829` (display name “NOOR”) — [console](https://console.firebase.google.com/project/noor-app-alaa-4829/overview) |
 | Android app | `app.noor.noor` — `1:849515368017:android:f641355b92e8c2cd00f270` |
 | iOS app | `app.noor.noor` — `1:849515368017:ios:a7262499a1d2769900f270` |
-| Sign-in methods | Email/Password, Anonymous (guest), Google — enabled from `firebase.json` with `firebase deploy --only auth` |
+| Sign-in methods | Email/Password, Anonymous (guest), Google — enabled from `firebase.json` with `firebase deploy --only auth`. Apple is implemented in the app but must be enabled by hand in the console (needs your Apple Developer account) |
+| Other services | Crashlytics (opt-in crash reports), Hosting (`site/`: privacy policy page) |
 | Android debug keys | SHA-1 and SHA-256 of the local debug keystore are registered |
 
 `lib/firebase_options.dart` and `android/app/google-services.json` hold the *client* configuration. These identifiers are not secrets, but you should still restrict the API keys (Google Cloud console → APIs & Services → Credentials → restrict to the Android package/SHA-1 and the iOS bundle id) before a public release.
@@ -38,6 +39,6 @@ Then point Google Sign-In at the new project:
 ## Before shipping
 
 - Add the **release** keystore SHA-1/SHA-256 to the Android app (the debug keys only work for debug builds).
-- Apps that offer account creation must let users **delete the account** — implemented in *Settings → My account*.
-- If you ship Google sign-in on iOS, App Store guideline 4.8 also requires **Sign in with Apple** (needs an Apple Developer account; not included yet).
+- Account deletion is implemented in *Settings → My account*; Sign in with Apple (iOS) is implemented in code and needs the console setup described in [RELEASE.md](RELEASE.md).
+- Crashlytics is wired in and **opt-in**; Hosting serves the privacy page (`firebase deploy --only hosting`). Details in [RELEASE.md](RELEASE.md).
 - Consider authorised domains / App Check and a password policy in the console.

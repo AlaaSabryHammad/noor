@@ -30,7 +30,7 @@ const routes = [
   '/home', '/quran', '/prayer', '/adhkar', '/explore',
   '/quran/reader/1', '/quran/reader/2?ayah=255', '/adhkar/session/morning', '/qibla', '/tasbeeh',
   '/duas', '/names', '/planner', '/zakat', '/audio', '/hadith', '/seerah', '/academy', '/academy/prayer', '/academy/tajweed',
-  '/stories', '/library', '/ask', '/calendar', '/ramadan', '/hajj', '/kids', '/mosques', '/books', '/books/bukhari', '/books/nawawi/1', '/about', '/account', '/hisn', '/adhkar/session/hisn_27',
+  '/stories', '/library', '/ask', '/calendar', '/ramadan', '/hajj', '/kids', '/mosques', '/books', '/books/bukhari', '/books/nawawi/1', '/about', '/account', '/privacy', '/hisn', '/adhkar/session/hisn_27',
 ];
 
 void main() {

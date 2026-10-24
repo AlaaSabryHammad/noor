@@ -1,5 +1,11 @@
 // Renders each main screen to PNG for visual review:
 //   flutter test test/screens --update-goldens
+//
+// Tagged `golden`: the PNGs are rendered on Windows, so Linux CI skips this
+// file (`--exclude-tags golden`) and a Windows job runs it separately.
+@Tags(['golden'])
+library;
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';

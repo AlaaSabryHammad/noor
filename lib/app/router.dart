@@ -27,6 +27,7 @@ import '../features/services/seerah_screen.dart';
 import '../features/services/stories_screen.dart';
 import '../features/services/zakat_screen.dart';
 import '../features/settings/about_screen.dart';
+import '../features/settings/privacy_screen.dart';
 import '../features/tasbeeh/tasbeeh_screen.dart';
 import 'shell.dart';
 
@@ -77,6 +78,7 @@ GoRouter buildRouter() => GoRouter(
         GoRoute(path: '/mosques', builder: (_, _) => const MosquesScreen()),
         GoRoute(path: '/account', builder: (_, _) => const AccountScreen()),
         GoRoute(path: '/about', builder: (_, _) => const AboutScreen()),
+        GoRoute(path: '/privacy', builder: (_, _) => const PrivacyScreen()),
         GoRoute(path: '/soon/:service', builder: (_, s) => ComingSoonScreen(service: s.pathParameters['service'] ?? '')),
       ],
     );

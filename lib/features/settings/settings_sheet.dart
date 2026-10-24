@@ -77,6 +77,17 @@ class SettingsSheet extends ConsumerWidget {
             }),
             ListTile(
               contentPadding: EdgeInsets.zero,
+              leading: const IconBadge(icon: Icons.privacy_tip_outlined, size: 40),
+              title: Text(NoorFormat.tr(context, 'الخصوصية', 'Privacy'), style: const TextStyle(fontWeight: FontWeight.w600)),
+              subtitle: Text(NoorFormat.tr(context, 'سياسة الخصوصية وتقارير الأعطال', 'Privacy policy and crash reports'), style: Theme.of(context).textTheme.bodySmall),
+              trailing: Icon(Icons.chevron_right_rounded, color: t.textSecondary),
+              onTap: () {
+                Navigator.of(context).pop();
+                context.push('/privacy');
+              },
+            ),
+            ListTile(
+              contentPadding: EdgeInsets.zero,
               leading: const IconBadge(icon: Icons.info_outline_rounded, size: 40),
               title: Text(NoorFormat.tr(context, 'حول التطبيق والإسناد', 'About and credits'), style: const TextStyle(fontWeight: FontWeight.w600)),
               trailing: Icon(Icons.chevron_right_rounded, color: t.textSecondary),

@@ -1,35 +1,38 @@
 {
-    "flutter":  {
-                    "platforms":  {
-                                      "android":  {
-                                                      "default":  {
-                                                                      "projectId":  "noor-app-alaa-4829",
-                                                                      "appId":  "1:849515368017:android:f641355b92e8c2cd00f270",
-                                                                      "fileOutput":  "android/app/google-services.json"
-                                                                  }
-                                                  },
-                                      "dart":  {
-                                                   "lib/firebase_options.dart":  {
-                                                                                     "projectId":  "noor-app-alaa-4829",
-                                                                                     "configurations":  {
-                                                                                                            "android":  "1:849515368017:android:f641355b92e8c2cd00f270",
-                                                                                                            "ios":  "1:849515368017:ios:a7262499a1d2769900f270"
-                                                                                                        }
-                                                                                 }
-                                               }
-                                  }
-                },
-    "auth":  {
-                 "providers":  {
-                                   "anonymous":  true,
-                                   "emailPassword":  true,
-                                   "googleSignIn":  {
-                                                        "oAuthBrandDisplayName":  "NOOR",
-                                                        "supportEmail":  "alaa.handaza@gmail.com",
-                                                        "authorizedRedirectUris":  [
-
-                                                                                   ]
-                                                    }
-                               }
-             }
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "noor-app-alaa-4829",
+          "appId": "1:849515368017:android:f641355b92e8c2cd00f270",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "noor-app-alaa-4829",
+          "configurations": {
+            "android": "1:849515368017:android:f641355b92e8c2cd00f270",
+            "ios": "1:849515368017:ios:a7262499a1d2769900f270"
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "providers": {
+      "anonymous": true,
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "NOOR",
+        "supportEmail": "alaa.handaza@gmail.com",
+        "authorizedRedirectUris": []
+      }
+    }
+  },
+  "hosting": {
+    "public": "site",
+    "cleanUrls": true,
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
 }

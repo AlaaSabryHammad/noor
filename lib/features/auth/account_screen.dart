@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart' show SignInWithAppleButton, SignInWithAppleButtonStyle;
 
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
@@ -23,6 +25,60 @@ String authErrorMessage(BuildContext c, AuthErrorKind k) => switch (k) {
       AuthErrorKind.unavailable => NoorFormat.tr(c, 'الحسابات غير متاحة في هذا الإصدار.', 'Accounts are not available in this build.'),
       AuthErrorKind.unknown => NoorFormat.tr(c, 'حدث خطأ غير متوقع. حاول مرة أخرى.', 'Something went wrong. Please try again.'),
     };
+
+/// Asks for confirmation before deleting the account. For e-mail accounts it
+/// also asks for the current password, which Firebase needs to re-authenticate
+/// before it will delete anything. Pops the password ('' when none is needed),
+/// or null when cancelled.
+class DeleteAccountDialog extends StatefulWidget {
+  const DeleteAccountDialog({super.key, required this.askPassword});
+  final bool askPassword;
+  @override
+  State<DeleteAccountDialog> createState() => _DeleteAccountDialogState();
+}
+
+class _DeleteAccountDialogState extends State<DeleteAccountDialog> {
+  final _password = TextEditingController();
+
+  @override
+  void dispose() {
+    _password.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final canDelete = !widget.askPassword || _password.text.isNotEmpty;
+    return AlertDialog(
+      title: Text(NoorFormat.tr(context, 'حذف الحساب نهائيًا؟', 'Delete your account permanently?')),
+      content: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, spacing: 12, children: [
+        Text(NoorFormat.tr(context, 'سيُحذف حسابك وبيانات الدخول المرتبطة به ولا يمكن التراجع. تبقى بياناتك المحلية على هذا الجهاز حتى تمسح بيانات التطبيق.', 'Your account and its sign-in data will be deleted and this cannot be undone. Data stored on this device stays until you clear the app’s data.')),
+        if (widget.askPassword)
+          TextField(
+            controller: _password,
+            obscureText: true,
+            autofillHints: const [AutofillHints.password],
+            onChanged: (_) => setState(() {}),
+            decoration: InputDecoration(labelText: NoorFormat.tr(context, 'كلمة المرور الحالية', 'Current password')),
+          ),
+      ]),
+      actions: [
+        TextButton(onPressed: () => Navigator.of(context).pop(), child: Text(NoorFormat.tr(context, 'إلغاء', 'Cancel'))),
+        FilledButton(
+          onPressed: canDelete ? () => Navigator.of(context).pop(widget.askPassword ? _password.text : '') : null,
+          style: FilledButton.styleFrom(backgroundColor: const Color(0xFFB23A1E)),
+          child: Text(NoorFormat.tr(context, 'حذف', 'Delete')),
+        ),
+      ],
+    );
+  }
+}
+
+class _PrivacyLink extends StatelessWidget {
+  const _PrivacyLink();
+  @override
+  Widget build(BuildContext context) => Center(child: TextButton(onPressed: () => context.push('/privacy'), child: Text(NoorFormat.tr(context, 'سياسة الخصوصية', 'Privacy policy'))));
+}
 
 class AccountScreen extends ConsumerStatefulWidget {
   const AccountScreen({super.key});
@@ -66,20 +122,11 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
     _run(() => _creating ? auth.createAccount(email, pw, displayName: _name.text) : auth.signInWithEmail(email, pw));
   }
 
-  Future<void> _confirmDelete(AuthService auth) async {
-    final yes = await showDialog<bool>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: Text(NoorFormat.tr(ctx, 'حذف الحساب نهائيًا؟', 'Delete your account permanently?')),
-        content: Text(NoorFormat.tr(ctx, 'سيُحذف حسابك ولا يمكن التراجع. تبقى بياناتك المحلية على هذا الجهاز.', 'Your account will be deleted and this cannot be undone. Data stored on this device stays.')),
-        actions: [
-          TextButton(onPressed: () => Navigator.of(ctx).pop(false), child: Text(NoorFormat.tr(ctx, 'إلغاء', 'Cancel'))),
-          FilledButton(onPressed: () => Navigator.of(ctx).pop(true), style: FilledButton.styleFrom(backgroundColor: const Color(0xFFB23A1E)), child: Text(NoorFormat.tr(ctx, 'حذف', 'Delete'))),
-        ],
-      ),
-    );
-    if (!mounted) return;
-    if (yes == true) await _run(auth.deleteAccount, success: NoorFormat.tr(context, 'تم حذف الحساب', 'Account deleted'));
+  Future<void> _confirmDelete(AuthService auth, AppUser user) async {
+    // null = cancelled; otherwise the password to re-authenticate with ('' when none is needed).
+    final result = await showDialog<String>(context: context, builder: (_) => DeleteAccountDialog(askPassword: user.usesPassword));
+    if (!mounted || result == null) return;
+    await _run(() => auth.deleteAccount(password: result.isEmpty ? null : result), success: NoorFormat.tr(context, 'تم حذف الحساب', 'Account deleted'));
   }
 
   InputDecoration _decoration(String label, {Widget? suffix}) {
@@ -142,11 +189,12 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
         OutlinedButton.icon(onPressed: _busy ? null : () => _run(auth.signOut), icon: const Icon(Icons.logout_rounded), label: Text(NoorFormat.tr(context, 'تسجيل الخروج', 'Sign out'))),
         const SizedBox(height: 8),
         TextButton.icon(
-          onPressed: _busy ? null : () => _confirmDelete(auth),
+          onPressed: _busy ? null : () => _confirmDelete(auth, user),
           style: TextButton.styleFrom(foregroundColor: const Color(0xFFB23A1E)),
           icon: const Icon(Icons.delete_outline_rounded),
           label: Text(NoorFormat.tr(context, 'حذف الحساب', 'Delete account')),
         ),
+        const _PrivacyLink(),
       ]);
     }
 
@@ -194,10 +242,20 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
             ),
           ),
       ],
-      if (caps.google || caps.anonymous) ...[
+      if (caps.google || caps.apple || caps.anonymous) ...[
         const SizedBox(height: 8),
         Row(spacing: 12, children: [const Expanded(child: Divider()), Text(NoorFormat.tr(context, 'أو', 'or'), style: TextStyle(color: t.textSecondary)), const Expanded(child: Divider())]),
         const SizedBox(height: 14),
+      ],
+      if (caps.apple) ...[
+        SignInWithAppleButton(
+          onPressed: _busy ? null : () => _run(auth.signInWithApple),
+          text: NoorFormat.tr(context, 'المتابعة باستخدام Apple', 'Continue with Apple'),
+          height: 50,
+          style: Theme.of(context).brightness == Brightness.dark ? SignInWithAppleButtonStyle.white : SignInWithAppleButtonStyle.black,
+          borderRadius: BorderRadius.circular(NoorRadius.sm),
+        ),
+        const SizedBox(height: 10),
       ],
       if (caps.google)
         OutlinedButton.icon(
@@ -212,6 +270,7 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
       ],
       const SizedBox(height: 16),
       Text(NoorFormat.tr(context, 'الحساب اختياري: كل ميزات التطبيق تعمل دونه.', 'An account is optional: every feature works without one.'), textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodySmall),
+      const _PrivacyLink(),
     ]);
   }
 }
