@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../core/theme/noor_theme.dart';
 import '../../core/theme/noor_tokens.dart';
@@ -28,6 +29,21 @@ class _HadithScreenState extends ConsumerState<HadithScreen> {
     final data = ref.watch(contentJsonProvider('hadith'));
     return ServiceScaffold(title: l.svcHadith, children: [
       NoorSearchField(hint: NoorFormat.tr(context, 'ابحث في الأحاديث', 'Search hadith'), onChanged: (v) => setState(() => _q = v.trim().toLowerCase())),
+      const SizedBox(height: 12),
+      NoorCard(
+        padding: const EdgeInsets.all(14),
+        onTap: () => context.push('/books'),
+        child: Row(spacing: 14, children: [
+          const IconBadge(icon: Icons.menu_book_outlined, gold: true, size: 44),
+          Expanded(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, spacing: 3, children: [
+              Text(NoorFormat.tr(context, 'مكتبة كتب الحديث', 'Hadith books library'), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+              Text(NoorFormat.tr(context, 'الأربعون النووية والأحاديث القدسية وصحيح البخاري وغيرها', 'The Forty Hadith, Hadith Qudsi, Sahih al-Bukhari and more'), style: Theme.of(context).textTheme.bodySmall),
+            ]),
+          ),
+          Icon(Icons.chevron_right_rounded, color: t.textSecondary),
+        ]),
+      ),
       const SizedBox(height: 12),
       contentBody(data, (d) {
         final topics = (d['topics'] as Map<String, dynamic>).cast<String, Map<String, dynamic>>();

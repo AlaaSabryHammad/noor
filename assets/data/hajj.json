@@ -77,6 +77,48 @@
    "titleEn": "Farewell tawaf",
    "bodyAr": "إذا أردت مغادرة مكة تطوف طواف الوداع ليكون آخر عهدك بالبيت.",
    "bodyEn": "Before leaving Makkah, perform the farewell tawaf so that the House is your last stop."
+  },
+  {
+   "kind": "guide",
+   "titleAr": "أنواع النسك",
+   "titleEn": "The three forms",
+   "bodyAr": "التمتع: عمرة ثم حج في العام نفسه. القِران: العمرة والحج بإحرام واحد. الإفراد: الحج وحده. وأفضلها عند كثير من العلماء التمتع.",
+   "bodyEn": "Tamattu‘: ‘Umrah then Hajj in the same season. Qiran: both with one ihram. Ifrad: Hajj alone. Many scholars hold Tamattu‘ the best."
+  },
+  {
+   "kind": "guide",
+   "titleAr": "المواقيت",
+   "titleEn": "The miqats",
+   "bodyAr": "ذو الحليفة لأهل المدينة، والجحفة لأهل الشام ومصر والمغرب، وقرن المنازل لأهل نجد، ويلملم لأهل اليمن، وذات عرق لأهل العراق.",
+   "bodyEn": "Dhul-Hulayfah for the people of Madinah; Al-Juhfah for Syria, Egypt and the Maghrib; Qarn al-Manazil for Najd; Yalamlam for Yemen; Dhat ‘Irq for Iraq."
+  },
+  {
+   "kind": "guide",
+   "titleAr": "لباس الإحرام",
+   "titleEn": "Ihram dress",
+   "bodyAr": "يلبس الرجل إزارًا ورداءً أبيضين غير مخيطين، وتلبس المرأة ما شاءت من ثياب ساترة دون نقاب ولا قفازين.",
+   "bodyEn": "A man wears two white unstitched sheets; a woman wears ordinary modest clothing without a face-veil or gloves."
+  },
+  {
+   "kind": "guide",
+   "titleAr": "محظورات الإحرام",
+   "titleEn": "Prohibitions of ihram",
+   "bodyAr": "إزالة الشعر والأظفار، والطيب، وتغطية رأس الرجل، ولبس المخيط للرجل، وصيد البر، وعقد النكاح، والجماع ومقدماته.",
+   "bodyEn": "Removing hair or nails, perfume, covering a man’s head, stitched clothing for men, hunting, marriage contracts, and marital relations."
+  },
+  {
+   "kind": "guide",
+   "titleAr": "أركان الحج",
+   "titleEn": "Pillars of Hajj",
+   "bodyAr": "الإحرام، والوقوف بعرفة، وطواف الإفاضة، والسعي عند الجمهور.",
+   "bodyEn": "Ihram, standing at ‘Arafah, Tawaf al-Ifadah and, for most, sa‘i."
+  },
+  {
+   "kind": "guide",
+   "titleAr": "الأدعية والأذكار",
+   "titleEn": "Supplications",
+   "bodyAr": "في «حصن المسلم» أبواب خاصة بالحج: التلبية، والدعاء بين الركن اليماني والحجر الأسود، وعلى الصفا والمروة، ويوم عرفة، والتكبير عند رمي الجمار.",
+   "bodyEn": "Hisn al-Muslim has dedicated chapters for Hajj: the talbiyah, the supplication between the Yemeni corner and the Black Stone, at Safa and Marwah, on ‘Arafah, and the takbir when stoning."
   }
  ]
 }

@@ -5,6 +5,10 @@
    "ar": "الإيمان",
    "en": "Faith"
   },
+  "purity": {
+   "ar": "الطهارة",
+   "en": "Purification"
+  },
   "prayer": {
    "ar": "الصلاة",
    "en": "Prayer"
@@ -20,6 +24,10 @@
   "hajj": {
    "ar": "الحج",
    "en": "Hajj"
+  },
+  "quran": {
+   "ar": "القرآن",
+   "en": "The Quran"
   }
  },
  "items": [
@@ -41,6 +49,70 @@
   },
   {
    "id": "f3",
+   "cat": "faith",
+   "qAr": "من أولو العزم من الرسل؟",
+   "qEn": "Who are the messengers of firm resolve (Ulul-‘Azm)?",
+   "aAr": "نوح وإبراهيم وموسى وعيسى ومحمد عليهم الصلاة والسلام.",
+   "aEn": "Nuh, Ibrahim, Musa, ‘Isa and Muhammad, peace be upon them."
+  },
+  {
+   "id": "f4",
+   "cat": "faith",
+   "qAr": "كم عدد الأنبياء المذكورين في القرآن؟",
+   "qEn": "How many prophets are named in the Quran?",
+   "aAr": "خمسة وعشرون نبيًّا ورسولًا مذكورون بأسمائهم، وأولهم آدم وآخرهم محمد ﷺ.",
+   "aEn": "Twenty-five prophets and messengers are named, the first Adam and the last Muhammad ﷺ."
+  },
+  {
+   "id": "f5",
+   "cat": "faith",
+   "qAr": "ما هو التوحيد؟",
+   "qEn": "What is tawhid?",
+   "aAr": "إفراد الله بالعبادة والربوبية والأسماء والصفات، وهو أصل الدين.",
+   "aEn": "Singling out Allah in worship, lordship, and His names and attributes; it is the foundation of the religion."
+  },
+  {
+   "id": "f6",
+   "cat": "faith",
+   "qAr": "ما الفرق بين الإسلام والإيمان؟",
+   "qEn": "What is the difference between Islam and Iman?",
+   "aAr": "الإسلام هو الأعمال الظاهرة الخمسة، والإيمان هو الأصول الباطنة الستة، كما في حديث جبريل المشهور.",
+   "aEn": "Islam is the five outward pillars and Iman the six inner articles of belief, as in the well-known hadith of Jibril."
+  },
+  {
+   "id": "f7",
+   "cat": "purity",
+   "qAr": "ما فروض الوضوء؟",
+   "qEn": "What are the obligatory parts of wudu?",
+   "aAr": "غسل الوجه، وغسل اليدين إلى المرفقين، ومسح الرأس، وغسل الرجلين إلى الكعبين، كما في سورة المائدة، الآية ٦.",
+   "aEn": "Washing the face, washing the arms to the elbows, wiping the head and washing the feet to the ankles, as in Surat al-Ma’idah, verse 6."
+  },
+  {
+   "id": "f8",
+   "cat": "purity",
+   "qAr": "ما الذي ينقض الوضوء؟",
+   "qEn": "What invalidates wudu?",
+   "aAr": "خروج شيء من السبيلين (بول أو غائط أو ريح)، وزوال العقل بنوم عميق أو إغماء أو جنون. وفي أمور أخرى خلاف بين المذاهب.",
+   "aEn": "Anything leaving the private parts (urine, stool, wind), and loss of awareness through deep sleep, fainting or insanity. Other matters are differed upon by the schools."
+  },
+  {
+   "id": "f9",
+   "cat": "purity",
+   "qAr": "متى يجب الغسل؟",
+   "qEn": "When is ghusl required?",
+   "aAr": "بعد الجنابة، وبعد انقطاع دم الحيض والنفاس.",
+   "aEn": "After janabah, and after menstrual and post-natal bleeding ends."
+  },
+  {
+   "id": "f10",
+   "cat": "purity",
+   "qAr": "ما حكم التيمم؟",
+   "qEn": "What is the ruling on tayammum?",
+   "aAr": "هو بدل عن الوضوء أو الغسل عند عدم وجود الماء أو العجز عن استعماله، بضرب التراب ومسح الوجه واليدين.",
+   "aEn": "A substitute for wudu or ghusl when water is unavailable or cannot be used: strike clean earth and wipe the face and hands."
+  },
+  {
+   "id": "f11",
    "cat": "prayer",
    "qAr": "كم عدد الصلوات المفروضة في اليوم؟",
    "qEn": "How many prayers are obligatory each day?",
@@ -48,7 +120,7 @@
    "aEn": "Five: Fajr, Dhuhr, ‘Asr, Maghrib and ‘Isha."
   },
   {
-   "id": "f4",
+   "id": "f12",
    "cat": "prayer",
    "qAr": "ما هي القبلة؟",
    "qEn": "What is the Qibla?",
@@ -56,7 +128,7 @@
    "aEn": "The direction of the Ka‘bah in Makkah, which Muslims face in prayer."
   },
   {
-   "id": "f5",
+   "id": "f13",
    "cat": "prayer",
    "qAr": "ما صلاة الجمعة؟",
    "qEn": "What is the Friday prayer?",
@@ -64,7 +136,63 @@
    "aEn": "A congregational prayer held on Friday at midday preceded by two sermons; it is obligatory on resident adult men."
   },
   {
-   "id": "f6",
+   "id": "f14",
+   "cat": "prayer",
+   "qAr": "ما أوقات الصلوات الخمس؟",
+   "qEn": "What are the times of the five prayers?",
+   "aAr": "الفجر من الفجر الصادق إلى الشروق، والظهر من زوال الشمس، والعصر إذا صار ظل الشيء مثله (أو مثليه عند الحنفية)، والمغرب من الغروب، والعشاء من غياب الشفق.",
+   "aEn": "Fajr from true dawn to sunrise; Dhuhr from the sun’s decline; ‘Asr when an object’s shadow equals its length (twice, for the Hanafis); Maghrib from sunset; ‘Isha from the disappearance of twilight."
+  },
+  {
+   "id": "f15",
+   "cat": "prayer",
+   "qAr": "ما عدد ركعات كل صلاة؟",
+   "qEn": "How many rak‘ahs is each prayer?",
+   "aAr": "الفجر ٢، والظهر ٤، والعصر ٤، والمغرب ٣، والعشاء ٤، والجمعة ركعتان.",
+   "aEn": "Fajr 2, Dhuhr 4, ‘Asr 4, Maghrib 3, ‘Isha 4, and Jumu‘ah 2."
+  },
+  {
+   "id": "f16",
+   "cat": "prayer",
+   "qAr": "ما حكم قصر الصلاة في السفر؟",
+   "qEn": "Can prayers be shortened while travelling?",
+   "aAr": "يُشرع قصر الصلاة الرباعية إلى ركعتين للمسافر، وللمسافة المعتبرة تقديرات تختلف بين المذاهب (نحو ٨٠ كم عند الجمهور).",
+   "aEn": "A traveller shortens four-rak‘ah prayers to two. The qualifying distance is estimated differently by the schools (about 80 km for most)."
+  },
+  {
+   "id": "f17",
+   "cat": "prayer",
+   "qAr": "هل يجوز الجمع بين الصلاتين؟",
+   "qEn": "May two prayers be combined?",
+   "aAr": "يجوز عند الجمهور الجمع بين الظهر والعصر وبين المغرب والعشاء لعذر كالسفر والمطر الشديد، وتختلف المذاهب في التفاصيل؛ ويمنعه الحنفية إلا في عرفة ومزدلفة.",
+   "aEn": "Most scholars allow combining Dhuhr with ‘Asr and Maghrib with ‘Isha for a valid excuse such as travel or heavy rain, with differences in the details; the Hanafis allow it only at ‘Arafah and Muzdalifah."
+  },
+  {
+   "id": "f18",
+   "cat": "prayer",
+   "qAr": "ما صلاة الوتر؟",
+   "qEn": "What is the Witr prayer?",
+   "aAr": "صلاة تُختم بها صلاة الليل، ركعة فأكثر. هي سنة مؤكدة عند الجمهور وواجبة عند الحنفية.",
+   "aEn": "The prayer that concludes the night prayer, one rak‘ah or more. It is a confirmed Sunnah for most scholars and wajib for the Hanafis."
+  },
+  {
+   "id": "f19",
+   "cat": "prayer",
+   "qAr": "ما صلاة التراويح؟",
+   "qEn": "What is Taraweeh?",
+   "aAr": "قيام الليل في رمضان جماعة بعد العشاء، وعدد ركعاتها فيه سعة؛ فقد عُمل بإحدى عشرة وبعشرين ركعة.",
+   "aEn": "The night prayer of Ramadan prayed in congregation after ‘Isha; its number of rak‘ahs is flexible, with eleven and twenty both practised."
+  },
+  {
+   "id": "f20",
+   "cat": "prayer",
+   "qAr": "ما سجود السهو؟",
+   "qEn": "What is the prostration of forgetfulness?",
+   "aAr": "سجدتان يؤديهما المصلي لجبر نقص أو زيادة أو شك وقع في الصلاة.",
+   "aEn": "Two prostrations made to make up for an omission, addition or doubt that occurred in the prayer."
+  },
+  {
+   "id": "f21",
    "cat": "fasting",
    "qAr": "متى يبدأ الصيام وينتهي؟",
    "qEn": "When does the fast begin and end?",
@@ -72,7 +200,7 @@
    "aEn": "From true dawn until sunset, abstaining from food, drink and other things that break the fast."
   },
   {
-   "id": "f7",
+   "id": "f22",
    "cat": "fasting",
    "qAr": "ما هي ليلة القدر؟",
    "qEn": "What is Laylat al-Qadr?",
@@ -80,7 +208,39 @@
    "aEn": "The night in which the Quran was revealed, better than a thousand months, sought in the odd nights of the last ten of Ramadan."
   },
   {
-   "id": "f8",
+   "id": "f23",
+   "cat": "fasting",
+   "qAr": "من يجوز له الفطر في رمضان؟",
+   "qEn": "Who may break the fast in Ramadan?",
+   "aAr": "المريض والمسافر يفطران ويقضيان بعد رمضان، والحائض والنفساء تفطران وتقضيان، والكبير العاجز يطعم عن كل يوم مسكينًا.",
+   "aEn": "The sick and the traveller break the fast and make it up later; a menstruating or post-natal woman does the same; a frail elder feeds a poor person for each day."
+  },
+  {
+   "id": "f24",
+   "cat": "fasting",
+   "qAr": "ما الفدية؟",
+   "qEn": "What is the fidyah?",
+   "aAr": "إطعام مسكين عن كل يوم لمن لا يستطيع الصيام ولا القضاء لكبر سن أو مرض لا يُرجى برؤه.",
+   "aEn": "Feeding a poor person for each day, for someone who cannot fast or make it up because of old age or an illness with no hope of recovery."
+  },
+  {
+   "id": "f25",
+   "cat": "fasting",
+   "qAr": "هل يُستحب صيام التطوع؟",
+   "qEn": "Is voluntary fasting encouraged?",
+   "aAr": "نعم، منه الاثنين والخميس، وثلاثة أيام من كل شهر، وست من شوال، ويوم عرفة، وعاشوراء.",
+   "aEn": "Yes — Mondays and Thursdays, three days of each month, six days of Shawwal, the day of ‘Arafah and ‘Ashura."
+  },
+  {
+   "id": "f26",
+   "cat": "fasting",
+   "qAr": "ما الاعتكاف؟",
+   "qEn": "What is i‘tikaf?",
+   "aAr": "لزوم المسجد للعبادة مدة معينة، وأفضله في العشر الأواخر من رمضان.",
+   "aEn": "Staying in the mosque for worship for a set period, best in the last ten nights of Ramadan."
+  },
+  {
+   "id": "f27",
    "cat": "zakat",
    "qAr": "ما مقدار الزكاة؟",
    "qEn": "How much is zakat?",
@@ -88,7 +248,7 @@
    "aEn": "One-fortieth, i.e. 2.5% of wealth that reaches the nisab and has been held for a lunar year."
   },
   {
-   "id": "f9",
+   "id": "f28",
    "cat": "zakat",
    "qAr": "ما هو النصاب؟",
    "qEn": "What is the nisab?",
@@ -96,7 +256,7 @@
    "aEn": "The equivalent of 85 grams of gold or 595 grams of silver; its value changes with prices."
   },
   {
-   "id": "f10",
+   "id": "f29",
    "cat": "zakat",
    "qAr": "ما زكاة الفطر؟",
    "qEn": "What is Zakat al-Fitr?",
@@ -104,7 +264,31 @@
    "aEn": "A charity given at the end of Ramadan for each person, in staple food, paid before the Eid prayer."
   },
   {
-   "id": "f11",
+   "id": "f30",
+   "cat": "zakat",
+   "qAr": "على أي الأموال تجب الزكاة؟",
+   "qEn": "On which wealth is zakat due?",
+   "aAr": "على الذهب والفضة والنقود وعروض التجارة، وبهيمة الأنعام والزروع والثمار بشروطها.",
+   "aEn": "On gold, silver, cash and trade goods, and on livestock, crops and fruit under their conditions."
+  },
+  {
+   "id": "f31",
+   "cat": "zakat",
+   "qAr": "من هم مستحقو الزكاة؟",
+   "qEn": "Who may receive zakat?",
+   "aAr": "ثمانية أصناف ذكرتهم الآية ٦٠ من سورة التوبة: الفقراء والمساكين والعاملون عليها والمؤلفة قلوبهم وفي الرقاب والغارمون وفي سبيل الله وابن السبيل.",
+   "aEn": "Eight categories named in Surat at-Tawbah, verse 60: the poor, the needy, those who administer it, those whose hearts are to be reconciled, freeing captives, those in debt, in Allah’s cause and the wayfarer."
+  },
+  {
+   "id": "f32",
+   "cat": "zakat",
+   "qAr": "ما مقدار زكاة الفطر؟",
+   "qEn": "How much is Zakat al-Fitr?",
+   "aAr": "صاع من طعام أهل البلد عن كل فرد، ويقارب ثلاثة كيلوغرامات، وتجوز قيمته عند بعض المذاهب.",
+   "aEn": "One sa‘ of the local staple food per person, about three kilograms; some schools allow giving its value."
+  },
+  {
+   "id": "f33",
    "cat": "hajj",
    "qAr": "على من يجب الحج؟",
    "qEn": "Upon whom is Hajj obligatory?",
@@ -112,12 +296,84 @@
    "aEn": "On every adult sane Muslim who is financially and physically able, once in a lifetime."
   },
   {
-   "id": "f12",
+   "id": "f34",
    "cat": "hajj",
    "qAr": "ما الفرق بين الحج والعمرة؟",
    "qEn": "What is the difference between Hajj and ‘Umrah?",
    "aAr": "الحج له وقت محدد في ذي الحجة ومناسك في منى وعرفة ومزدلفة، أما العمرة فتجوز في أي وقت وهي الإحرام والطواف والسعي والحلق أو التقصير.",
    "aEn": "Hajj has a fixed time in Dhul-Hijjah with rites at Mina, ‘Arafah and Muzdalifah; ‘Umrah can be done any time and consists of ihram, tawaf, sa‘i and shaving or trimming."
+  },
+  {
+   "id": "f35",
+   "cat": "hajj",
+   "qAr": "ما أركان الحج؟",
+   "qEn": "What are the pillars of Hajj?",
+   "aAr": "الإحرام، والوقوف بعرفة، وطواف الإفاضة، والسعي عند الجمهور.",
+   "aEn": "Ihram, standing at ‘Arafah, Tawaf al-Ifadah and, for most scholars, sa‘i."
+  },
+  {
+   "id": "f36",
+   "cat": "hajj",
+   "qAr": "ما أنواع الحج؟",
+   "qEn": "What are the types of Hajj?",
+   "aAr": "التمتع: عمرة ثم حج في العام نفسه بإحرامين، والقِران: العمرة والحج بإحرام واحد، والإفراد: الحج وحده.",
+   "aEn": "Tamattu‘: ‘Umrah then Hajj in the same season with two ihrams; Qiran: ‘Umrah and Hajj together with one ihram; Ifrad: Hajj alone."
+  },
+  {
+   "id": "f37",
+   "cat": "hajj",
+   "qAr": "ما حكم العمرة؟",
+   "qEn": "What is the ruling on ‘Umrah?",
+   "aAr": "واجبة عند الشافعية والحنابلة، وسنة مؤكدة عند الحنفية والمالكية، وتجوز في أي وقت من السنة.",
+   "aEn": "Obligatory for the Shafi‘is and Hanbalis, a confirmed Sunnah for the Hanafis and Malikis; it may be done at any time of year."
+  },
+  {
+   "id": "f38",
+   "cat": "hajj",
+   "qAr": "ما محظورات الإحرام؟",
+   "qEn": "What is forbidden in ihram?",
+   "aAr": "إزالة الشعر والأظفار، والطيب، وتغطية رأس الرجل، ولبس المخيط للرجل، وصيد البر، وعقد النكاح، والجماع ومقدماته.",
+   "aEn": "Removing hair or nails, perfume, covering a man’s head, wearing stitched clothing for men, hunting, marriage contracts, and marital relations."
+  },
+  {
+   "id": "f39",
+   "cat": "quran",
+   "qAr": "كم عدد سور القرآن وآياته؟",
+   "qEn": "How many surahs and ayahs are in the Quran?",
+   "aAr": "١١٤ سورة، وفي رواية حفص عن عاصم ٦٢٣٦ آية، وهو العدد المعتمد في هذا التطبيق.",
+   "aEn": "114 surahs; in the riwayah of Hafs ‘an ‘Asim, 6,236 ayahs — the count used in this app."
+  },
+  {
+   "id": "f40",
+   "cat": "quran",
+   "qAr": "ما أطول سورة وأقصرها؟",
+   "qEn": "What are the longest and shortest surahs?",
+   "aAr": "أطولها البقرة (٢٨٦ آية)، وأقصرها في عدد الكلمات الكوثر (٣ آيات)، وتشاركها في عدد الآيات العصر والنصر.",
+   "aEn": "The longest is Al-Baqarah (286 ayahs); the shortest by word count is Al-Kawthar (3 ayahs), a length shared by Al-‘Asr and An-Nasr."
+  },
+  {
+   "id": "f41",
+   "cat": "quran",
+   "qAr": "ما الفرق بين المكي والمدني؟",
+   "qEn": "What is the difference between Makki and Madani surahs?",
+   "aAr": "المكي ما نزل قبل الهجرة غالبًا، وفيه التوحيد والبعث، والمدني ما نزل بعدها، وفيه الأحكام والتشريع.",
+   "aEn": "Makki surahs were mostly revealed before the Hijrah and stress tawhid and the Hereafter; Madani surahs came after and stress rulings and legislation."
+  },
+  {
+   "id": "f42",
+   "cat": "quran",
+   "qAr": "كم جزءًا في القرآن؟",
+   "qEn": "How many juz’ are there?",
+   "aAr": "ثلاثون جزءًا، يُقسَّم المصحف بها لتيسير الختمة في شهر.",
+   "aEn": "Thirty, dividing the mushaf so that it can be completed in a month."
+  },
+  {
+   "id": "f43",
+   "cat": "quran",
+   "qAr": "متى نزل القرآن؟",
+   "qEn": "When was the Quran revealed?",
+   "aAr": "بدأ نزوله في ليلة القدر من رمضان، ونزل منجَّمًا على النبي ﷺ في نحو ثلاث وعشرين سنة.",
+   "aEn": "It began descending on the Night of Qadr in Ramadan and was revealed gradually to the Prophet ﷺ over about twenty-three years."
   }
  ]
 }

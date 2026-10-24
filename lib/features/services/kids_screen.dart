@@ -12,6 +12,9 @@ import 'service_widgets.dart';
 
 const _kBest = 'kids.bestScore';
 
+/// Questions per round; each restart moves on to the next slice of the question pool.
+const _kRoundSize = 10;
+
 class KidsScreen extends ConsumerStatefulWidget {
   const KidsScreen({super.key});
   @override
@@ -19,11 +22,12 @@ class KidsScreen extends ConsumerStatefulWidget {
 }
 
 class _KidsScreenState extends ConsumerState<KidsScreen> {
-  int _i = 0, _score = 0;
+  int _i = 0, _score = 0, _round = 0;
   int? _picked;
   bool _finished = false;
 
   void _restart() => setState(() {
+        _round++;
         _i = 0;
         _score = 0;
         _picked = null;
@@ -63,7 +67,9 @@ class _KidsScreenState extends ConsumerState<KidsScreen> {
 
     return ServiceScaffold(title: l.svcKids, children: [
       contentBody(data, (d) {
-        final quiz = (d['quiz'] as List).cast<Map<String, dynamic>>();
+        final pool = (d['quiz'] as List).cast<Map<String, dynamic>>();
+        final size = pool.length < _kRoundSize ? pool.length : _kRoundSize;
+        final quiz = [for (var k = 0; k < size; k++) pool[(_round * size + k) % pool.length]];
         final manners = (d['manners'] as List).cast<Map<String, dynamic>>();
         final total = quiz.length;
         return Column(crossAxisAlignment: CrossAxisAlignment.stretch, spacing: 12, children: [

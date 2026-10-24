@@ -174,6 +174,342 @@
    "en": "Two phrases are light on the tongue, heavy on the scale, and beloved to the Most Merciful: Glory and praise to Allah; Glory to Allah the Magnificent.",
    "sourceAr": "متفق عليه · البخاري (٦٤٠٦) ومسلم (٢٦٩٤)",
    "sourceEn": "Agreed upon · Al-Bukhari 6406, Muslim 2694"
+  },
+  {
+   "id": "h20",
+   "topic": "faith",
+   "ar": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+   "en": "Deeds are only by intentions, and each person will have only what they intended.",
+   "sourceAr": "متفق عليه · الأربعون النووية (١)",
+   "sourceEn": "Agreed upon · Forty Hadith an-Nawawi 1"
+  },
+  {
+   "id": "h21",
+   "topic": "faith",
+   "ar": "مَنْ أَحْدَثَ فِي أَمْرِنَا هَذَا مَا لَيْسَ مِنْهُ فَهُوَ رَدٌّ",
+   "en": "Whoever introduces into this matter of ours something that is not part of it, it is rejected.",
+   "sourceAr": "متفق عليه · الأربعون النووية (٥)",
+   "sourceEn": "Agreed upon · Forty Hadith an-Nawawi 5"
+  },
+  {
+   "id": "h22",
+   "topic": "faith",
+   "ar": "قُلْ آمَنْتُ بِاللَّهِ ثُمَّ اسْتَقِمْ",
+   "en": "Say: I believe in Allah, and then be steadfast.",
+   "sourceAr": "رواه مسلم · الأربعون النووية (٢١)",
+   "sourceEn": "Muslim · Forty Hadith an-Nawawi 21"
+  },
+  {
+   "id": "h23",
+   "topic": "faith",
+   "ar": "الْحَيَاءُ مِنَ الْإِيمَانِ",
+   "en": "Modesty is part of faith.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h24",
+   "topic": "faith",
+   "ar": "الْمُؤْمِنُ الْقَوِيُّ خَيْرٌ وَأَحَبُّ إِلَى اللَّهِ مِنَ الْمُؤْمِنِ الضَّعِيفِ وَفِي كُلٍّ خَيْرٌ",
+   "en": "The strong believer is better and more beloved to Allah than the weak believer, though there is good in both.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h25",
+   "topic": "faith",
+   "ar": "عَجَبًا لِأَمْرِ الْمُؤْمِنِ إِنَّ أَمْرَهُ كُلَّهُ خَيْرٌ، وَلَيْسَ ذَاكَ لِأَحَدٍ إِلَّا لِلْمُؤْمِنِ: إِنْ أَصَابَتْهُ سَرَّاءُ شَكَرَ فَكَانَ خَيْرًا لَهُ، وَإِنْ أَصَابَتْهُ ضَرَّاءُ صَبَرَ فَكَانَ خَيْرًا لَهُ",
+   "en": "How wondrous is the affair of the believer: all of it is good, and this is for no one but the believer. If something pleasant befalls him he is thankful and it is good for him; if something harmful befalls him he is patient and it is good for him.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h26",
+   "topic": "faith",
+   "ar": "الدُّنْيَا سِجْنُ الْمُؤْمِنِ وَجَنَّةُ الْكَافِرِ",
+   "en": "The world is the prison of the believer and the paradise of the disbeliever.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h27",
+   "topic": "character",
+   "ar": "دَعْ مَا يَرِيبُكَ إِلَى مَا لَا يَرِيبُكَ",
+   "en": "Leave what makes you doubt for what does not make you doubt.",
+   "sourceAr": "رواه الترمذي والنسائي · الأربعون النووية (١١)",
+   "sourceEn": "At-Tirmidhi and an-Nasa’i · Forty Hadith an-Nawawi 11"
+  },
+  {
+   "id": "h28",
+   "topic": "character",
+   "ar": "لَا ضَرَرَ وَلَا ضِرَارَ",
+   "en": "There is to be no harm and no reciprocating harm.",
+   "sourceAr": "رواه ابن ماجه · الأربعون النووية (٣٢)",
+   "sourceEn": "Ibn Majah · Forty Hadith an-Nawawi 32"
+  },
+  {
+   "id": "h29",
+   "topic": "character",
+   "ar": "إِذَا لَمْ تَسْتَحِ فَاصْنَعْ مَا شِئْتَ",
+   "en": "If you have no modesty, then do as you wish.",
+   "sourceAr": "رواه البخاري",
+   "sourceEn": "Al-Bukhari"
+  },
+  {
+   "id": "h30",
+   "topic": "character",
+   "ar": "الْمُؤْمِنُ لِلْمُؤْمِنِ كَالْبُنْيَانِ يَشُدُّ بَعْضُهُ بَعْضًا",
+   "en": "The believer to the believer is like a building whose parts support one another.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h31",
+   "topic": "character",
+   "ar": "مَثَلُ الْمُؤْمِنِينَ فِي تَوَادِّهِمْ وَتَرَاحُمِهِمْ وَتَعَاطُفِهِمْ مَثَلُ الْجَسَدِ إِذَا اشْتَكَى مِنْهُ عُضْوٌ تَدَاعَى لَهُ سَائِرُ الْجَسَدِ بِالسَّهَرِ وَالْحُمَّى",
+   "en": "The believers in their mutual love, mercy and compassion are like one body: when one part suffers, the whole body responds with sleeplessness and fever.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h32",
+   "topic": "character",
+   "ar": "الْمُسْلِمُ أَخُو الْمُسْلِمِ، لَا يَظْلِمُهُ وَلَا يُسْلِمُهُ",
+   "en": "A Muslim is the brother of a Muslim: he does not wrong him nor abandon him.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h33",
+   "topic": "character",
+   "ar": "إِيَّاكُمْ وَالظَّنَّ فَإِنَّ الظَّنَّ أَكْذَبُ الْحَدِيثِ",
+   "en": "Beware of suspicion, for suspicion is the most false of speech.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h34",
+   "topic": "character",
+   "ar": "الظُّلْمُ ظُلُمَاتٌ يَوْمَ الْقِيَامَةِ",
+   "en": "Wrongdoing will be layers of darkness on the Day of Resurrection.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h35",
+   "topic": "character",
+   "ar": "لَا يَشْكُرُ اللَّهَ مَنْ لَا يَشْكُرُ النَّاسَ",
+   "en": "Whoever does not thank people has not thanked Allah.",
+   "sourceAr": "رواه أبو داود والترمذي",
+   "sourceEn": "Abu Dawud and at-Tirmidhi"
+  },
+  {
+   "id": "h36",
+   "topic": "character",
+   "ar": "أَكْمَلُ الْمُؤْمِنِينَ إِيمَانًا أَحْسَنُهُمْ خُلُقًا",
+   "en": "The most complete of the believers in faith are those with the best character.",
+   "sourceAr": "رواه أبو داود والترمذي",
+   "sourceEn": "Abu Dawud and at-Tirmidhi"
+  },
+  {
+   "id": "h37",
+   "topic": "character",
+   "ar": "لَيْسَ الْغِنَى عَنْ كَثْرَةِ الْعَرَضِ، وَلَكِنَّ الْغِنَى غِنَى النَّفْسِ",
+   "en": "Wealth is not abundance of possessions; true wealth is the richness of the soul.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h38",
+   "topic": "character",
+   "ar": "نِعْمَتَانِ مَغْبُونٌ فِيهِمَا كَثِيرٌ مِنَ النَّاسِ: الصِّحَّةُ وَالْفَرَاغُ",
+   "en": "There are two blessings in which many people lose out: health and free time.",
+   "sourceAr": "رواه البخاري",
+   "sourceEn": "Al-Bukhari"
+  },
+  {
+   "id": "h39",
+   "topic": "character",
+   "ar": "إِنَّ اللَّهَ يُحِبُّ الرِّفْقَ فِي الْأَمْرِ كُلِّهِ",
+   "en": "Allah loves gentleness in all matters.",
+   "sourceAr": "رواه البخاري",
+   "sourceEn": "Al-Bukhari"
+  },
+  {
+   "id": "h40",
+   "topic": "character",
+   "ar": "يَسِّرُوا وَلَا تُعَسِّرُوا، وَبَشِّرُوا وَلَا تُنَفِّرُوا",
+   "en": "Make things easy and do not make them hard; give glad tidings and do not drive people away.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h41",
+   "topic": "character",
+   "ar": "لَا تَدْخُلُونَ الْجَنَّةَ حَتَّى تُؤْمِنُوا، وَلَا تُؤْمِنُوا حَتَّى تَحَابُّوا، أَوَلَا أَدُلُّكُمْ عَلَى شَيْءٍ إِذَا فَعَلْتُمُوهُ تَحَابَبْتُمْ؟ أَفْشُوا السَّلَامَ بَيْنَكُمْ",
+   "en": "You will not enter Paradise until you believe, and you will not believe until you love one another. Shall I tell you of something that, if you do it, will make you love one another? Spread the greeting of peace among yourselves.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h42",
+   "topic": "character",
+   "ar": "جَاءَ رَجُلٌ إِلَى رَسُولِ اللَّهِ ﷺ فَقَالَ: مَنْ أَحَقُّ النَّاسِ بِحُسْنِ صَحَابَتِي؟ قَالَ: أُمُّكَ. قَالَ: ثُمَّ مَنْ؟ قَالَ: أُمُّكَ. قَالَ: ثُمَّ مَنْ؟ قَالَ: أُمُّكَ. قَالَ: ثُمَّ مَنْ؟ قَالَ: أَبُوكَ",
+   "en": "A man came to the Messenger of Allah ﷺ and said: Who is most deserving of my good companionship? He said: Your mother. He said: Then who? He said: Your mother. He said: Then who? He said: Your mother. He said: Then who? He said: Your father.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h43",
+   "topic": "character",
+   "ar": "الْبِرُّ حُسْنُ الْخُلُقِ",
+   "en": "Righteousness is good character.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h44",
+   "topic": "knowledge",
+   "ar": "مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ",
+   "en": "For whomever Allah intends good, He gives understanding of the religion.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h45",
+   "topic": "knowledge",
+   "ar": "بَلِّغُوا عَنِّي وَلَوْ آيَةً",
+   "en": "Convey from me, even if it is one verse.",
+   "sourceAr": "رواه البخاري",
+   "sourceEn": "Al-Bukhari"
+  },
+  {
+   "id": "h46",
+   "topic": "knowledge",
+   "ar": "إِذَا مَاتَ الْإِنْسَانُ انْقَطَعَ عَنْهُ عَمَلُهُ إِلَّا مِنْ ثَلَاثَةٍ: صَدَقَةٍ جَارِيَةٍ، أَوْ عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ يَدْعُو لَهُ",
+   "en": "When a person dies, his deeds come to an end except for three: ongoing charity, knowledge that is benefited from, or a righteous child who prays for him.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h47",
+   "topic": "knowledge",
+   "ar": "مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ",
+   "en": "Whoever guides to something good has a reward like the one who does it.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h48",
+   "topic": "knowledge",
+   "ar": "اقْرَءُوا الْقُرْآنَ فَإِنَّهُ يَأْتِي يَوْمَ الْقِيَامَةِ شَفِيعًا لِأَصْحَابِهِ",
+   "en": "Recite the Quran, for it will come on the Day of Resurrection as an intercessor for its companions.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h49",
+   "topic": "knowledge",
+   "ar": "مَنْ قَرَأَ حَرْفًا مِنْ كِتَابِ اللَّهِ فَلَهُ بِهِ حَسَنَةٌ، وَالْحَسَنَةُ بِعَشْرِ أَمْثَالِهَا",
+   "en": "Whoever recites a letter of the Book of Allah earns a good deed, and each good deed is multiplied tenfold.",
+   "sourceAr": "رواه الترمذي",
+   "sourceEn": "At-Tirmidhi"
+  },
+  {
+   "id": "h50",
+   "topic": "worship",
+   "ar": "الصَّلَوَاتُ الْخَمْسُ، وَالْجُمُعَةُ إِلَى الْجُمُعَةِ، وَرَمَضَانُ إِلَى رَمَضَانَ، مُكَفِّرَاتٌ لِمَا بَيْنَهُنَّ إِذَا اجْتَنَبَ الْكَبَائِرَ",
+   "en": "The five prayers, Friday to Friday, and Ramadan to Ramadan are expiation for what lies between them, so long as major sins are avoided.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h51",
+   "topic": "worship",
+   "ar": "صَلَاةُ الْجَمَاعَةِ تَفْضُلُ صَلَاةَ الْفَذِّ بِسَبْعٍ وَعِشْرِينَ دَرَجَةً",
+   "en": "Prayer in congregation is twenty-seven degrees better than prayer on one’s own.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h52",
+   "topic": "worship",
+   "ar": "رَكْعَتَا الْفَجْرِ خَيْرٌ مِنَ الدُّنْيَا وَمَا فِيهَا",
+   "en": "The two rak‘ahs of Fajr are better than the world and all that is in it.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h53",
+   "topic": "worship",
+   "ar": "مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ",
+   "en": "Whoever fasts Ramadan out of faith and seeking reward, his previous sins are forgiven.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h54",
+   "topic": "worship",
+   "ar": "مَنْ قَامَ لَيْلَةَ الْقَدْرِ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ",
+   "en": "Whoever stands in prayer on the Night of Qadr out of faith and seeking reward, his previous sins are forgiven.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h55",
+   "topic": "worship",
+   "ar": "اتَّقُوا النَّارَ وَلَوْ بِشِقِّ تَمْرَةٍ",
+   "en": "Shield yourselves from the Fire, even with half a date.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h56",
+   "topic": "worship",
+   "ar": "مَنْ بَنَى لِلَّهِ مَسْجِدًا بَنَى اللَّهُ لَهُ مِثْلَهُ فِي الْجَنَّةِ",
+   "en": "Whoever builds a mosque for Allah, Allah builds for him the like of it in Paradise.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h57",
+   "topic": "worship",
+   "ar": "الدُّعَاءُ هُوَ الْعِبَادَةُ",
+   "en": "Supplication is worship.",
+   "sourceAr": "رواه أبو داود والترمذي",
+   "sourceEn": "Abu Dawud and at-Tirmidhi"
+  },
+  {
+   "id": "h58",
+   "topic": "dhikr",
+   "ar": "مَنْ صَلَّى عَلَيَّ صَلَاةً صَلَّى اللَّهُ عَلَيْهِ بِهَا عَشْرًا",
+   "en": "Whoever sends one blessing upon me, Allah sends ten blessings upon him.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h59",
+   "topic": "dhikr",
+   "ar": "مَنْ قَالَ سُبْحَانَ اللَّهِ وَبِحَمْدِهِ فِي يَوْمٍ مِائَةَ مَرَّةٍ حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ",
+   "en": "Whoever says “Glory and praise to Allah” a hundred times in a day, his sins are wiped away even if they were like the foam of the sea.",
+   "sourceAr": "متفق عليه",
+   "sourceEn": "Agreed upon"
+  },
+  {
+   "id": "h60",
+   "topic": "dhikr",
+   "ar": "لَأَنْ أَقُولَ سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ أَحَبُّ إِلَيَّ مِمَّا طَلَعَتْ عَلَيْهِ الشَّمْسُ",
+   "en": "To say “Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is the Greatest” is more beloved to me than all that the sun rises upon.",
+   "sourceAr": "رواه مسلم",
+   "sourceEn": "Muslim"
+  },
+  {
+   "id": "h61",
+   "topic": "dhikr",
+   "ar": "أَفْضَلُ الذِّكْرِ لَا إِلَهَ إِلَّا اللَّهُ، وَأَفْضَلُ الدُّعَاءِ الْحَمْدُ لِلَّهِ",
+   "en": "The best remembrance is “There is no god but Allah”, and the best supplication is “Praise be to Allah”.",
+   "sourceAr": "رواه الترمذي",
+   "sourceEn": "At-Tirmidhi"
   }
  ]
 }

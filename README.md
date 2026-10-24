@@ -12,9 +12,9 @@ Islamic companion app for Android and iOS, built with Flutter. Arabic-first (RTL
 | **Recitation** | Ayah-by-ayah streaming (everyayah.com), 8 reciters, previous/next, speed 0.75–1.5×, repeat ayah, highlight follows the reciter. |
 | **Prayer times** | On-device calculation with 11 methods (automatic by region, or your choice) and Shafi‘i/Hanafi Asr, Umm al-Qura Ramadan rule, 29 offline cities or GPS, scheduled adhan notifications. |
 | **Qibla** | Real compass with smoothing, calibration warning and an alignment haptic; preview slider only when the device has no sensor. |
-| **Adhkar & duas** | 12 categories with sources (morning, evening, sleep, after prayer, travel, …), Quranic duas taken verbatim from the dataset, per-day counters. |
+| **Adhkar & duas** | The complete Hisn al-Muslim (132 chapters, 267 adhkar, searchable), 12 curated categories with sources, 59 Quranic supplications taken verbatim from the dataset, per-day counters. |
 | **Books** | Forty Hadith of an-Nawawi, Forty Qudsi and Dehlawi (offline); Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasa’i, Ibn Majah and Malik fetched per chapter and cached. |
-| **Learn** | 99 Names, hadith selection, seerah timeline, stories of the prophets, step-by-step lessons (wudu, prayer, pillars), FAQ, kids’ quiz. |
+| **Learn** | 99 Names, 60+ hadith, a 33-event seerah timeline, 25 stories from the Quran, 15 step-by-step lessons (wudu, ghusl, prayer, adhan, Friday and Eid, janazah, fasting, zakat, tajweed, …), 40+ FAQ, kids’ quiz with rotating rounds. A rotating daily ayah, hadith and dua on the home screen. |
 | **Tools** | Hijri calendar with occasions, Ramadan tracker, Hajj & Umrah guide, zakat calculator, daily worship planner with streak, tasbeeh, saved items library. |
 | **Accounts (optional)** | Firebase Auth: e-mail/password, Google, guest. The app is fully usable without signing in. |
 
@@ -52,6 +52,7 @@ State is Riverpod; routing is go_router. Everything that touches the outside wor
 - Quran text: [Tanzil Project](https://tanzil.net) Uthmani v1.1 — **CC BY 3.0**; keep the attribution (shown in *Settings → About*). Shown unmodified except that the basmala is displayed above ayah 1 instead of inside it.
 - Translation: Saheeh International via Tanzil.
 - Hadith text: [fawazahmed0/hadith-api](https://github.com/fawazahmed0/hadith-api) — The Unlicense.
+- Hisn al-Muslim: [YousefAsalya/Islamic-Pro-azkar-API](https://github.com/YousefAsalya/Islamic-Pro-azkar-API) — MIT (text by Sa‘id al-Qahtani).
 - Recitation: streamed from everyayah.com.
 - Fonts: SIL Open Font License.
 - Adhkar, duas, names, seerah, stories, FAQ and lessons were written for this app with their sources noted; **have them reviewed by qualified scholars before a public release.**

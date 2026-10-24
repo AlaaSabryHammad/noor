@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:noor/app/app.dart';
 import 'package:noor/core/providers.dart';
+import 'package:noor/core/widgets/noor_widgets.dart';
 import 'package:noor/features/library/favorites.dart';
 import 'package:noor/features/prayer/alert_sync.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
@@ -48,7 +49,10 @@ Future<ProviderContainer> _open(WidgetTester tester, String route, {bool keepPre
 void main() {
   testWidgets('saving a hadith puts it in the library', (tester) async {
     final c = await _open(tester, '/hadith');
-    await tester.tap(find.byIcon(Icons.favorite_border_rounded).first);
+    final save = find.byIcon(Icons.favorite_border_rounded).first;
+    await tester.ensureVisible(save); // the books banner above the list may push the first card below the fold
+    await tester.pump();
+    await tester.tap(save);
     await tester.pump();
     expect(c.read(favoritesProvider), hasLength(1));
     expect(c.read(favoritesProvider).single.kind, 'hadith');
@@ -87,6 +91,37 @@ void main() {
     await tester.pump();
     expect(find.byIcon(Icons.check_circle_rounded), findsOneWidget);
     await tester.pump(const Duration(seconds: 2)); // let the auto-advance timer finish
+  });
+
+  testWidgets('kids quiz offers a fresh set of questions after a finished round', (tester) async {
+    await _open(tester, '/kids');
+    expect(find.text('كم عدد أركان الإسلام؟'), findsOneWidget);
+    for (var i = 0; i < 10; i++) {
+      await tester.tap(find.byType(NoorCard).first); // the first answer card
+      await tester.pump();
+      await tester.pump(const Duration(seconds: 1)); // auto-advance timer
+    }
+    expect(find.text('أحسنت!'), findsOneWidget);
+    await tester.tap(find.text('البدء من جديد'));
+    await tester.pump();
+    expect(find.text('كم عدد أركان الإسلام؟'), findsNothing, reason: 'the next round must not start with the same question');
+    expect(find.text('ما اسم أول سورة نزلت من القرآن؟'), findsOneWidget);
+  });
+
+  testWidgets('hajj screen has a basics tab with the miqats', (tester) async {
+    await _open(tester, '/hajj');
+    expect(find.text('المواقيت'), findsNothing);
+    await tester.tap(find.text('أساسيات'));
+    await tester.pump();
+    expect(find.text('المواقيت'), findsOneWidget);
+    expect(find.text('أنواع النسك'), findsOneWidget);
+  });
+
+  testWidgets('hadith screen links to the books library', (tester) async {
+    await _open(tester, '/hadith');
+    await tester.tap(find.text('مكتبة كتب الحديث'));
+    await tester.pumpAndSettle();
+    expect(find.text('الأربعون النووية'), findsWidgets);
   });
 
   testWidgets('reader opens at the requested ayah deep inside a long surah', (tester) async {

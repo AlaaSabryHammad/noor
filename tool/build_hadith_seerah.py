@@ -1,4 +1,7 @@
-import json, sys
+import json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import more_content as MC  # additional entries merged into the lists below
+
 def load_quran(root):
     d = json.load(open(f"{root}/assets/data/quran/index.json", encoding="utf-8"))
     d["text"] = {str(n): json.load(open(f"{root}/assets/data/quran/{n:03d}.json", encoding="utf-8")) for n in range(1, 115)}
@@ -76,6 +79,22 @@ H = [
   "Two phrases are light on the tongue, heavy on the scale, and beloved to the Most Merciful: Glory and praise to Allah; Glory to Allah the Magnificent.",
   "متفق عليه · البخاري (٦٤٠٦) ومسلم (٢٦٩٤)", "Agreed upon · Al-Bukhari 6406, Muslim 2694"),
 ]
+def norm(s):
+    s = re.sub("[ً-ٰٟۖ-ۭـ]", "", s)
+    s = re.sub("[أإآٱ]", "ا", s).replace("ى", "ي")
+    s = s.replace("اا", "ا")  # the Nawawi source spells "billah" with a doubled alif
+    return " ".join(re.sub("[^ء-ي ]", " ", s).split())  # letters only: punctuation differs between editions
+
+# Hadith that cite the Forty Hadith must appear in the bundled text (assets/data/books/nawawi.json).
+nawawi = {h["n"]: norm(h["ar"]) for h in json.load(open(f"{root}/assets/data/books/nawawi.json", encoding="utf-8"))}
+AR_DIGITS = "٠١٢٣٤٥٦٧٨٩"
+for t, a, e, sa, se in MC.HADITH_EXTRA:
+    m = re.search(r"الأربعون النووية \(([٠-٩]+)\)", sa)
+    if m:
+        n = int("".join(str(AR_DIGITS.index(c)) for c in m.group(1)))
+        assert norm(a) in nawawi[n], f"hadith text not found in Nawawi {n}: {a[:40]}"
+H += MC.HADITH_EXTRA
+
 TOPICS = {"faith": ("الإيمان", "Faith"), "character": ("الأخلاق", "Character"), "knowledge": ("العلم", "Knowledge"), "worship": ("العبادة", "Worship"), "dhikr": ("الذكر", "Remembrance")}
 dump("hadith", {"_note": NOTE, "topics": {k: {"ar": v[0], "en": v[1]} for k, v in TOPICS.items()},
                 "items": [dict(id=f"h{i+1}", topic=t, ar=a, en=e, sourceAr=sa, sourceEn=se) for i, (t, a, e, sa, se) in enumerate(H)]})
@@ -119,6 +138,14 @@ S = [
  ("٦٣٢م", "11 AH · 632 CE", "وفاته ﷺ", "His Passing", "تُوفي النبي ﷺ في المدينة في الثاني عشر من ربيع الأول، ودُفن في حجرة عائشة رضي الله عنها.",
   "The Prophet ﷺ passed away in Madinah on the 12th of Rabi‘ al-Awwal and was buried in the room of ‘A’ishah, may Allah be pleased with her."),
 ]
+# Extra events go right after the named event, keeping their written order among themselves.
+anchor = {}
+for after, *ev in MC.SEERAH_EXTRA:
+    ev = tuple(ev)
+    base = S.index(anchor[after]) if after in anchor else next(i for i, e in enumerate(S) if e[2] == after)
+    S.insert(base + 1, ev)
+    anchor[after] = ev
+assert norm("لا تحزن إن الله معنا") in norm(" ".join(a["ar"] for a in Q["text"]["9"])), "ayah quoted in the seerah not found in the Quran text"
 dump("seerah", {"_note": "Dates are traditional approximations; scholars differ on some. " + NOTE,
                 "events": [dict(yearAr=y, yearEn=ye, titleAr=ta, titleEn=te, bodyAr=ba, bodyEn=be) for y, ye, ta, te, ba, be in S]})
 print(len(H), len(S))

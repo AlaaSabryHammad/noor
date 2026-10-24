@@ -10,12 +10,36 @@
    "bodyEn": "Muhammad ﷺ was born in Makkah in the Year of the Elephant, on a Monday in Rabi‘ al-Awwal, among Banu Hashim of Quraysh. His father ‘Abdullah died before his birth, and his grandfather ‘Abd al-Muttalib took care of him."
   },
   {
+   "yearAr": "نحو ٥٧٣م",
+   "yearEn": "c. 573 CE",
+   "titleAr": "الرضاعة في بني سعد",
+   "titleEn": "Nursing among Banu Sa‘d",
+   "bodyAr": "أُرضع النبي ﷺ عند حليمة السعدية في بادية بني سعد، وعاد إلى أمه بعد سنوات قليلة.",
+   "bodyEn": "The Prophet ﷺ was nursed by Halimah as-Sa‘diyyah in the desert of Banu Sa‘d and returned to his mother after a few years."
+  },
+  {
    "yearAr": "نحو ٥٧٦م",
    "yearEn": "c. 576 CE",
    "titleAr": "وفاة أمه وكفالة جده وعمه",
    "titleEn": "Loss of His Mother",
    "bodyAr": "تُوفيت أمه آمنة وهو في السادسة من عمره، وبعد عامين تُوفي جده عبد المطلب، فكفله عمه أبو طالب.",
    "bodyEn": "His mother Aminah died when he was six. Two years later his grandfather died, and his uncle Abu Talib became his guardian."
+  },
+  {
+   "yearAr": "نحو ٥٨٣م",
+   "yearEn": "c. 583 CE",
+   "titleAr": "رحلته إلى الشام",
+   "titleEn": "The journey to Syria",
+   "bodyAr": "سافر مع عمه أبي طالب إلى الشام في تجارة قريش وهو صغير، وتروي كتب السيرة لقاءه براهب هناك.",
+   "bodyEn": "As a boy he travelled with his uncle Abu Talib to Syria with a Qurayshi caravan; the books of seerah relate that he met a monk there."
+  },
+  {
+   "yearAr": "نحو ٥٩٠م",
+   "yearEn": "c. 590 CE",
+   "titleAr": "حلف الفضول",
+   "titleEn": "The Pact of al-Fudul",
+   "bodyAr": "شهد النبي ﷺ قبل البعثة حلفًا بين قبائل مكة على نصرة المظلوم، وقال بعد الإسلام إنه لو دُعي إليه لأجاب.",
+   "bodyEn": "Before prophethood he witnessed a pact among the tribes of Makkah to support the wronged; after Islam he said that if invited to it he would respond."
   },
   {
    "yearAr": "نحو ٥٩٥م",
@@ -26,12 +50,28 @@
    "bodyEn": "At twenty-five he married Khadijah bint Khuwaylid, may Allah be pleased with her, who was the first to believe in him."
   },
   {
+   "yearAr": "نحو ٦٠٥م",
+   "yearEn": "c. 605 CE",
+   "titleAr": "بناء الكعبة وحكمه في الحجر الأسود",
+   "titleEn": "Rebuilding the Ka‘bah",
+   "bodyAr": "حين أعادت قريش بناء الكعبة اختلفت فيمن يضع الحجر الأسود، فاحتكموا إلى أول داخل، فكان محمدًا ﷺ، فوضعه في ثوب ورفعته القبائل جميعًا.",
+   "bodyEn": "When Quraysh rebuilt the Ka‘bah they disputed who should set the Black Stone; they agreed to accept the first person to enter, who was Muhammad ﷺ. He placed it on a cloth and the tribes lifted it together."
+  },
+  {
    "yearAr": "٦١٠م",
    "yearEn": "610 CE",
    "titleAr": "نزول الوحي",
    "titleEn": "The First Revelation",
    "bodyAr": "نزل عليه جبريل عليه السلام في غار حراء في شهر رمضان وهو في الأربعين، فأنزل الله عليه أولى آيات سورة العلق: ﴿ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ﴾.",
    "bodyEn": "In the cave of Hira, in Ramadan and at the age of forty, Jibril (peace be upon him) came to him and the first verses of Surat al-‘Alaq were revealed: “Read in the name of your Lord who created.”"
+  },
+  {
+   "yearAr": "٦١٠م",
+   "yearEn": "610 CE",
+   "titleAr": "أوائل المسلمين",
+   "titleEn": "The first Muslims",
+   "bodyAr": "كانت خديجة رضي الله عنها أول من آمن، ثم علي بن أبي طالب وزيد بن حارثة وأبو بكر الصديق رضي الله عنهم، وبدأت الدعوة سرًا.",
+   "bodyEn": "Khadijah was the first to believe, then ‘Ali ibn Abi Talib, Zayd ibn Harithah and Abu Bakr as-Siddiq, may Allah be pleased with them; the call began in secret."
   },
   {
    "yearAr": "٦١٣م",
@@ -48,6 +88,14 @@
    "titleEn": "Migration to Abyssinia",
    "bodyAr": "اشتدّ أذى قريش للمسلمين، فأمر النبي ﷺ أصحابه بالهجرة إلى الحبشة حيث ملك عادل لا يُظلم عنده أحد.",
    "bodyEn": "As Quraysh intensified their persecution, the Prophet ﷺ advised his companions to migrate to Abyssinia, ruled by a just king."
+  },
+  {
+   "yearAr": "نحو ٦١٦م",
+   "yearEn": "c. 616 CE",
+   "titleAr": "إسلام حمزة وعمر",
+   "titleEn": "Hamzah and ‘Umar embrace Islam",
+   "bodyAr": "أسلم حمزة بن عبد المطلب ثم عمر بن الخطاب رضي الله عنهما، فعزّ المسلمون وجهروا بالصلاة عند الكعبة.",
+   "bodyEn": "Hamzah ibn ‘Abd al-Muttalib and then ‘Umar ibn al-Khattab accepted Islam, which strengthened the Muslims, who began to pray openly at the Ka‘bah."
   },
   {
    "yearAr": "٦١٦–٦١٩م",
@@ -74,12 +122,44 @@
    "bodyEn": "He was taken by night from the Sacred Mosque to al-Aqsa, then ascended through the heavens, and the five daily prayers were prescribed."
   },
   {
+   "yearAr": "٦٢١–٦٢٢م",
+   "yearEn": "621–622 CE",
+   "titleAr": "بيعتا العقبة",
+   "titleEn": "The pledges of al-‘Aqabah",
+   "bodyAr": "بايع ستة من أهل يثرب النبي ﷺ عند العقبة، ثم جاء في العام التالي ثلاثة وسبعون رجلًا وامرأتان فبايعوه على نصرته، ومهّد ذلك للهجرة.",
+   "bodyEn": "Six men of Yathrib pledged to the Prophet ﷺ at al-‘Aqabah; the next year seventy-three men and two women pledged to support him, preparing the way for the Hijrah."
+  },
+  {
    "yearAr": "٦٢٢م",
    "yearEn": "1 AH · 622 CE",
    "titleAr": "الهجرة إلى المدينة",
    "titleEn": "The Hijrah",
    "bodyAr": "هاجر النبي ﷺ مع أبي بكر الصديق من مكة إلى المدينة المنورة، وبنى مسجده، وآخى بين المهاجرين والأنصار. ومن هذا الحدث بدأ التقويم الهجري.",
    "bodyEn": "The Prophet ﷺ migrated with Abu Bakr from Makkah to Madinah, built his mosque and joined the Muhajirun and Ansar in brotherhood. The Hijri calendar begins with this event."
+  },
+  {
+   "yearAr": "٦٢٢م",
+   "yearEn": "1 AH · 622 CE",
+   "titleAr": "في غار ثور",
+   "titleEn": "In the cave of Thawr",
+   "bodyAr": "اختبأ النبي ﷺ وأبو بكر ثلاث ليال في غار ثور بينما تبحث عنهما قريش، وقال لصاحبه: «لا تحزن إن الله معنا».",
+   "bodyEn": "The Prophet ﷺ and Abu Bakr hid for three nights in the cave of Thawr while Quraysh searched for them; he said to his companion: “Do not grieve; indeed Allah is with us.”"
+  },
+  {
+   "yearAr": "١ هـ · ٦٢٢م",
+   "yearEn": "1 AH · 622 CE",
+   "titleAr": "بناء المسجد النبوي والمؤاخاة",
+   "titleEn": "The Prophet’s Mosque and the brotherhood",
+   "bodyAr": "نزل النبي ﷺ في قباء وبنى مسجدها، ثم بنى المسجد النبوي في المدينة، وآخى بين المهاجرين والأنصار.",
+   "bodyEn": "The Prophet ﷺ stayed at Quba and built its mosque, then built his mosque in Madinah and joined the Muhajirun and Ansar in brotherhood."
+  },
+  {
+   "yearAr": "٢ هـ · ٦٢٣–٦٢٤م",
+   "yearEn": "2 AH · 623–624 CE",
+   "titleAr": "تحويل القبلة وفرض صيام رمضان",
+   "titleEn": "Change of the Qibla and fasting Ramadan",
+   "bodyAr": "في السنة الثانية للهجرة تحوّلت القبلة من بيت المقدس إلى الكعبة، وفُرض صيام شهر رمضان.",
+   "bodyEn": "In the second year after the Hijrah the Qibla was changed from Bayt al-Maqdis to the Ka‘bah, and fasting in Ramadan was prescribed."
   },
   {
    "yearAr": "٦٢٤م",
@@ -114,12 +194,52 @@
    "bodyEn": "The Prophet ﷺ agreed a ten-year truce with Quraysh. The Quran called it a clear victory, and it opened wide the door for the message."
   },
   {
+   "yearAr": "٦–٧ هـ · ٦٢٨م",
+   "yearEn": "6–7 AH · 628 CE",
+   "titleAr": "مكاتبة الملوك",
+   "titleEn": "Letters to the rulers",
+   "bodyAr": "بعث النبي ﷺ رسائل إلى ملوك عصره يدعوهم إلى الإسلام، منهم هرقل وكسرى والمقوقس والنجاشي.",
+   "bodyEn": "The Prophet ﷺ sent letters inviting the rulers of his time to Islam, among them Heraclius, Khosrow, the Muqawqis and the Negus."
+  },
+  {
+   "yearAr": "٧ هـ · ٦٢٨م",
+   "yearEn": "7 AH · 628 CE",
+   "titleAr": "غزوة خيبر وعمرة القضاء",
+   "titleEn": "Khaybar and the fulfilled ‘Umrah",
+   "bodyAr": "فتح المسلمون خيبر في أوائل السنة السابعة، وأدّى النبي ﷺ وأصحابه عمرة القضاء في مكة بعد عام من الحديبية.",
+   "bodyEn": "The Muslims took Khaybar early in the seventh year, and the Prophet ﷺ and his companions performed the fulfilled ‘Umrah in Makkah a year after Hudaybiyyah."
+  },
+  {
+   "yearAr": "٨ هـ · ٦٢٩م",
+   "yearEn": "8 AH · 629 CE",
+   "titleAr": "غزوة مؤتة",
+   "titleEn": "The Battle of Mu’tah",
+   "bodyAr": "أرسل النبي ﷺ جيشًا إلى مؤتة في بلاد الشام، واستُشهد فيه قادته زيد بن حارثة وجعفر بن أبي طالب وعبد الله بن رواحة رضي الله عنهم.",
+   "bodyEn": "The Prophet ﷺ sent an army to Mu’tah in Syria, where its commanders Zayd ibn Harithah, Ja‘far ibn Abi Talib and ‘Abdullah ibn Rawahah were martyred."
+  },
+  {
    "yearAr": "٦٣٠م",
    "yearEn": "8 AH · 630 CE",
    "titleAr": "فتح مكة",
    "titleEn": "The Conquest of Makkah",
    "bodyAr": "دخل النبي ﷺ مكة في رمضان في جيش كبير دون قتال يُذكر، وعفا عن أهلها، وطهّر الكعبة من الأصنام.",
    "bodyEn": "The Prophet ﷺ entered Makkah in Ramadan with a large army and almost no fighting, forgave its people and cleansed the Ka‘bah of idols."
+  },
+  {
+   "yearAr": "٨ هـ · ٦٣٠م",
+   "yearEn": "8 AH · 630 CE",
+   "titleAr": "غزوة حنين والطائف",
+   "titleEn": "Hunayn and Ta’if",
+   "bodyAr": "بعد فتح مكة اجتمعت هوازن وثقيف لقتال المسلمين، فكانت غزوة حنين ثم حصار الطائف.",
+   "bodyEn": "After the conquest of Makkah, Hawazin and Thaqif gathered against the Muslims, leading to the Battle of Hunayn and then the siege of Ta’if."
+  },
+  {
+   "yearAr": "٩ هـ · ٦٣٠م",
+   "yearEn": "9 AH · 630 CE",
+   "titleAr": "غزوة تبوك",
+   "titleEn": "The expedition of Tabuk",
+   "bodyAr": "خرج النبي ﷺ في جيش كبير إلى تبوك في شدة الحر، وهي آخر غزواته، وسُمّي جيشها «جيش العسرة».",
+   "bodyEn": "The Prophet ﷺ marched with a large army to Tabuk in intense heat; it was his last expedition, and its army was called the Army of Hardship."
   },
   {
    "yearAr": "٦٣١م",

@@ -109,6 +109,29 @@ void main() {
       }
     });
 
+    test('Hisn al-Muslim: 132 chapters / 267 adhkar, Arabic + English, sane counts, every chapter in a group', () {
+      final h = _json('hisn');
+      final cats = (h['categories'] as List).cast<Map<String, dynamic>>();
+      final groups = (h['groups'] as List).map((g) => g['id']).toSet();
+      expect(cats.length, 132);
+      expect(cats.fold<int>(0, (n, c) => n + (c['items'] as List).length), 267);
+      expect(cats.map((c) => c['id']).toSet().length, 132);
+      for (final c in cats) {
+        expect(groups, contains(c['group']), reason: 'chapter ${c['id']}');
+        expect((c['titleAr'] as String).trim(), isNotEmpty);
+        for (final i in (c['items'] as List).cast<Map<String, dynamic>>()) {
+          expect((i['ar'] as String).trim(), isNotEmpty);
+          expect((i['en'] as String).trim(), isNotEmpty);
+          expect(i['repeat'] as int, inInclusiveRange(1, 100));
+          // presentation-form glyphs were folded to plain letters (the ornate Quran brackets U+FD3E/F are legitimate)
+          expect(RegExp('[\u{FB50}-\u{FD3D}\u{FD40}-\u{FDFF}\u{FE70}-\u{FEFF}]').hasMatch(i['ar'] as String), isFalse);
+        }
+      }
+      final morning = cats.firstWhere((c) => c['id'] == 27);
+      final nine = (morning['items'] as List).firstWhere((i) => i['id'] == 9);
+      expect(nine['repeat'], 7, reason: 'the text says seven times');
+    });
+
     test('Quranic adhkar match the dataset verbatim', () {
       final baqarah = jsonDecode(File('assets/data/quran/002.json').readAsStringSync()) as List;
       final kursi = (baqarah[254] as Map)['ar'];
@@ -129,18 +152,65 @@ void main() {
         expect(topics, contains(h['topic']));
         expect((h['sourceAr'] as String), isNotEmpty);
       }
-      expect((_json('seerah')['events'] as List).length, greaterThanOrEqualTo(15));
-      expect((_json('stories')['items'] as List).length, greaterThanOrEqualTo(10));
+      final hadithItems = (hadith['items'] as List).cast<Map<String, dynamic>>();
+      expect(hadithItems.length, greaterThanOrEqualTo(60));
+      expect(hadithItems.map((h) => h['id']).toSet().length, hadithItems.length);
+      expect(hadithItems.map((h) => h['topic']).toSet(), topics, reason: 'every topic has hadith');
+      for (final h in hadithItems) {
+        expect((h['en'] as String).trim(), isNotEmpty, reason: h['id'] as String);
+      }
+
+      final events = (_json('seerah')['events'] as List).cast<Map<String, dynamic>>();
+      expect(events.length, greaterThanOrEqualTo(30));
+      expect(events.map((e) => e['titleAr']).toSet().length, events.length, reason: 'no duplicated seerah events');
+      final titles = events.map((e) => e['titleAr']).toList();
+      expect(titles.indexOf('الهجرة إلى المدينة'), lessThan(titles.indexOf('غزوة بدر')));
+      expect(titles.indexOf('غزوة مؤتة'), lessThan(titles.indexOf('فتح مكة')));
+      expect(titles.indexOf('غزوة تبوك'), lessThan(titles.indexOf('عام الوفود')));
+
+      final stories = (_json('stories')['items'] as List).cast<Map<String, dynamic>>();
+      expect(stories.length, greaterThanOrEqualTo(25));
+      expect(stories.map((s) => s['nameAr']).toSet().length, stories.length);
+      for (final s in stories) {
+        expect((s['refAr'] as String).trim(), isNotEmpty, reason: s['nameAr'] as String);
+      }
+
       final courses = (_json('academy')['courses'] as List).cast<Map<String, dynamic>>();
-      expect(courses.map((c) => c['id']), containsAll(['wudu', 'prayer', 'pillars', 'iman']));
+      expect(courses.length, greaterThanOrEqualTo(15));
+      expect(courses.map((c) => c['id']), containsAll(['wudu', 'ghusl', 'prayer', 'pillars', 'iman', 'fasting', 'zakat', 'tajweed']));
+      expect(courses.map((c) => c['id']).toSet().length, courses.length);
+      for (final c in courses) {
+        expect((c['lessons'] as List).length, greaterThanOrEqualTo(4), reason: c['id'] as String);
+      }
+
       final faq = _json('faq');
       final cats = (faq['categories'] as Map).keys.toSet();
-      expect((faq['items'] as List).every((f) => cats.contains(f['cat'])), isTrue);
-      final kinds = (_json('hajj')['steps'] as List).map((s) => s['kind']).toSet();
-      expect(kinds, {'hajj', 'umrah'});
-      for (final q in (_json('kids')['quiz'] as List).cast<Map<String, dynamic>>()) {
-        expect(q['answer'] as int, inInclusiveRange(0, (q['options'] as List).length - 1));
+      final faqItems = (faq['items'] as List).cast<Map<String, dynamic>>();
+      expect(faqItems.length, greaterThanOrEqualTo(40));
+      expect(faqItems.every((f) => cats.contains(f['cat'])), isTrue);
+      expect(cats, containsAll(['purity', 'quran']));
+      expect(faqItems.map((f) => f['cat']).toSet(), cats, reason: 'every category has questions');
+
+      final steps = (_json('hajj')['steps'] as List).cast<Map<String, dynamic>>();
+      expect(steps.map((s) => s['kind']).toSet(), {'hajj', 'umrah', 'guide'});
+
+      final quiz = (_json('kids')['quiz'] as List).cast<Map<String, dynamic>>();
+      expect(quiz.length, greaterThanOrEqualTo(40));
+      expect(quiz.map((q) => q['qAr']).toSet().length, quiz.length, reason: 'no repeated question');
+      for (final q in quiz) {
+        final options = (q['options'] as List).cast<Map<String, dynamic>>();
+        expect(options.length, inInclusiveRange(2, 3));
+        expect(options.map((o) => o['ar']).toSet().length, options.length, reason: q['qAr'] as String);
+        expect(q['answer'] as int, inInclusiveRange(0, options.length - 1));
       }
+      expect((_json('kids')['manners'] as List).length, greaterThanOrEqualTo(12));
+    });
+
+    test('daily light pools are rich enough to rotate for weeks without repeating', () {
+      final d = _json('daily');
+      expect((d['ayah'] as List).length, greaterThanOrEqualTo(40));
+      expect((d['hadith'] as List).length, greaterThanOrEqualTo(60));
+      expect((d['dua'] as List).length, greaterThanOrEqualTo(50));
     });
 
     test('reciter audio URLs follow the SSSAAA.mp3 pattern', () {
@@ -192,6 +262,8 @@ void main() {
     '/mosques': 'المساجد القريبة',
     '/adhkar/session/evening': 'أذكار المساء',
     '/adhkar/session/quran_duas': 'أدعية من القرآن',
+    '/hisn': 'حصن المسلم',
+    '/adhkar/session/hisn_27': 'أذكار الصباح والمساء',
   };
   for (final e in routes.entries) {
     testWidgets('route ${e.key} renders', (tester) async {

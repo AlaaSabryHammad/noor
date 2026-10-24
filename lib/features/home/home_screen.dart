@@ -305,7 +305,7 @@ class _DailyLightCardState extends ConsumerState<_DailyLightCard> {
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     final t = context.noor;
-    final item = ref.watch(dailyContentProvider).value?[_tab];
+    final item = dailyItemFor(ref.watch(dailyContentProvider).value, _tab, ref.watch(todayProvider));
     final ref_ = item == null ? '' : (NoorFormat.isAr(context) ? item.refAr : item.refEn);
     return NoorCard(
       child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, spacing: 14, children: [

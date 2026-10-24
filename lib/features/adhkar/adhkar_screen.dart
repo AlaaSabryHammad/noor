@@ -32,6 +32,14 @@ String adhkarTitle(BuildContext context, String category) {
   };
 }
 
+/// Title for any session key, including Hisn al-Muslim chapters (`hisn_27`).
+String sessionTitle(BuildContext context, WidgetRef ref, String category) {
+  if (!category.startsWith(hisnPrefix)) return adhkarTitle(context, category);
+  final id = int.tryParse(category.substring(hisnPrefix.length));
+  final chapter = ref.watch(hisnProvider).value?.chapters.where((c) => c.id == id).firstOrNull;
+  return chapter == null ? '' : (NoorFormat.isAr(context) ? chapter.titleAr : chapter.titleEn);
+}
+
 class AdhkarScreen extends ConsumerStatefulWidget {
   const AdhkarScreen({super.key});
   @override
@@ -84,6 +92,20 @@ class _AdhkarScreenState extends ConsumerState<AdhkarScreen> {
                 Expanded(child: NoorProgressBar(value: list.isEmpty ? 0 : done / list.length, height: 5, color: NoorTokens.onHeroAccent, track: const Color(0x29FFFFFF))),
                 Text(l.adhkarProgress(NoorFormat.digits(context, done), NoorFormat.digits(context, list.length)), style: const TextStyle(fontSize: 12, color: Color(0xD9FFFFFF))),
               ]),
+            ]),
+          ),
+          const SizedBox(height: 12),
+          NoorCard(
+            onTap: () => context.push('/hisn'),
+            child: Row(spacing: 14, children: [
+              const IconBadge(icon: Icons.auto_stories_rounded, gold: true, size: 48),
+              Expanded(
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, spacing: 3, children: [
+                  Text(NoorFormat.tr(context, 'حصن المسلم كاملًا', 'Hisn al-Muslim, complete'), style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w700)),
+                  Text(NoorFormat.tr(context, '١٣٢ بابًا و٢٦٧ ذكرًا ودعاءً بالعربية والإنجليزية', '132 chapters and 267 adhkar and duas, Arabic and English'), style: Theme.of(context).textTheme.bodySmall),
+                ]),
+              ),
+              Icon(Icons.chevron_right_rounded, color: context.noor.textSecondary),
             ]),
           ),
           const SizedBox(height: 18),
@@ -144,7 +166,7 @@ class _DhikrSessionScreenState extends ConsumerState<DhikrSessionScreen> {
                 const NoorBackButton(),
                 Expanded(
                   child: Column(children: [
-                    Text(adhkarTitle(context, widget.category), style: NoorText.display(context, size: 21)),
+                    Text(sessionTitle(context, ref, widget.category), maxLines: 2, textAlign: TextAlign.center, overflow: TextOverflow.ellipsis, style: NoorText.display(context, size: 21)),
                     Text(l.adhkarProgress(NoorFormat.digits(context, done), NoorFormat.digits(context, list.length)), style: Theme.of(context).textTheme.bodySmall),
                   ]),
                 ),

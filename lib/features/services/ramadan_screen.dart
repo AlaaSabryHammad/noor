@@ -141,6 +141,11 @@ class RamadanScreen extends ConsumerWidget {
         (Icons.mosque_outlined, NoorFormat.tr(context, 'صلاة التراويح والقيام مع الجماعة', 'Taraweeh and night prayer in congregation')),
         (Icons.savings_outlined, NoorFormat.tr(context, 'زكاة الفطر قبل صلاة العيد', 'Zakat al-Fitr before the Eid prayer')),
         (Icons.volunteer_activism_outlined, NoorFormat.tr(context, 'الإكثار من الدعاء والصدقة وتفطير الصائمين', 'Supplicate often, give charity and feed the fasting')),
+        (Icons.wb_twilight_outlined, NoorFormat.tr(context, 'السحور بركة: تأخيره وتعجيل الفطر على رطب أو تمر أو ماء', 'Suhoor is a blessing: delay it, and hasten iftar with dates or water')),
+        (Icons.spa_outlined, NoorFormat.tr(context, 'حفظ اللسان والجوارح عن اللغو والغيبة والخصومة', 'Guard the tongue and limbs from idle talk, backbiting and quarrels')),
+        (Icons.home_outlined, NoorFormat.tr(context, 'الاعتكاف في العشر الأواخر لمن تيسّر له', 'I‘tikaf in the last ten days for those able to')),
+        (Icons.event_repeat_outlined, NoorFormat.tr(context, 'قضاء ما فاتك من أيام رمضان الماضي قبل قدوم الجديد', 'Make up any missed days of the previous Ramadan before the next one')),
+        (Icons.calendar_today_outlined, NoorFormat.tr(context, 'صيام ست من شوال بعد عيد الفطر', 'Fast six days of Shawwal after Eid al-Fitr')),
       ])
         Padding(
           padding: const EdgeInsets.only(bottom: 8),

@@ -30,6 +30,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
       (l.groupWorship, [
         _Service(Icons.blur_circular_rounded, l.svcTasbeeh, '/tasbeeh', gold: true),
         _Service(Icons.volunteer_activism_outlined, l.svcDuas, '/duas'),
+        _Service(Icons.auto_stories_rounded, Localizations.localeOf(context).languageCode == 'ar' ? 'حصن المسلم' : 'Hisn al-Muslim', '/hisn', gold: true),
         _Service(Icons.auto_awesome_outlined, l.svcNames, '/names', gold: true),
         _Service(Icons.checklist_rounded, l.svcPlanner, '/planner'),
         _Service(Icons.savings_outlined, l.svcZakat, '/zakat', gold: true),

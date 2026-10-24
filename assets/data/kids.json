@@ -190,6 +190,747 @@
     }
    ],
    "answer": 0
+  },
+  {
+   "qAr": "ما اسم أول سورة نزلت من القرآن؟",
+   "qEn": "Which surah was revealed first?",
+   "options": [
+    {
+     "ar": "العلق",
+     "en": "Al-‘Alaq"
+    },
+    {
+     "ar": "الفاتحة",
+     "en": "Al-Fatihah"
+    },
+    {
+     "ar": "البقرة",
+     "en": "Al-Baqarah"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "من هو أول الأنبياء؟",
+   "qEn": "Who was the first prophet?",
+   "options": [
+    {
+     "ar": "نوح عليه السلام",
+     "en": "Nuh"
+    },
+    {
+     "ar": "آدم عليه السلام",
+     "en": "Adam"
+    },
+    {
+     "ar": "إبراهيم عليه السلام",
+     "en": "Ibrahim"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "من بنى الكعبة مع ابنه إسماعيل؟",
+   "qEn": "Who built the Ka‘bah with his son Isma‘il?",
+   "options": [
+    {
+     "ar": "نوح عليه السلام",
+     "en": "Nuh"
+    },
+    {
+     "ar": "موسى عليه السلام",
+     "en": "Musa"
+    },
+    {
+     "ar": "إبراهيم عليه السلام",
+     "en": "Ibrahim"
+    }
+   ],
+   "answer": 2
+  },
+  {
+   "qAr": "ما اسم أم النبي محمد ﷺ؟",
+   "qEn": "What was the name of the Prophet’s mother ﷺ?",
+   "options": [
+    {
+     "ar": "آمنة",
+     "en": "Aminah"
+    },
+    {
+     "ar": "خديجة",
+     "en": "Khadijah"
+    },
+    {
+     "ar": "عائشة",
+     "en": "‘A’ishah"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "من أول من آمن بالنبي ﷺ من النساء؟",
+   "qEn": "Who was the first woman to believe in the Prophet ﷺ?",
+   "options": [
+    {
+     "ar": "عائشة",
+     "en": "‘A’ishah"
+    },
+    {
+     "ar": "فاطمة",
+     "en": "Fatimah"
+    },
+    {
+     "ar": "خديجة",
+     "en": "Khadijah"
+    }
+   ],
+   "answer": 2
+  },
+  {
+   "qAr": "من رافق النبي ﷺ في الهجرة؟",
+   "qEn": "Who accompanied the Prophet ﷺ on the Hijrah?",
+   "options": [
+    {
+     "ar": "أبو بكر الصديق",
+     "en": "Abu Bakr as-Siddiq"
+    },
+    {
+     "ar": "عمر بن الخطاب",
+     "en": "‘Umar ibn al-Khattab"
+    },
+    {
+     "ar": "عثمان بن عفان",
+     "en": "‘Uthman ibn ‘Affan"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "في أي مدينة وُلد النبي ﷺ؟",
+   "qEn": "In which city was the Prophet ﷺ born?",
+   "options": [
+    {
+     "ar": "المدينة المنورة",
+     "en": "Madinah"
+    },
+    {
+     "ar": "مكة المكرمة",
+     "en": "Makkah"
+    },
+    {
+     "ar": "القدس",
+     "en": "Jerusalem"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "إلى أي مدينة هاجر النبي ﷺ؟",
+   "qEn": "To which city did the Prophet ﷺ migrate?",
+   "options": [
+    {
+     "ar": "الطائف",
+     "en": "Ta’if"
+    },
+    {
+     "ar": "القدس",
+     "en": "Jerusalem"
+    },
+    {
+     "ar": "المدينة المنورة",
+     "en": "Madinah"
+    }
+   ],
+   "answer": 2
+  },
+  {
+   "qAr": "ما اسم الملك الذي نزل بالوحي على الأنبياء؟",
+   "qEn": "Which angel brought revelation to the prophets?",
+   "options": [
+    {
+     "ar": "جبريل عليه السلام",
+     "en": "Jibril"
+    },
+    {
+     "ar": "ميكائيل عليه السلام",
+     "en": "Mika’il"
+    },
+    {
+     "ar": "إسرافيل عليه السلام",
+     "en": "Israfil"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "كم يومًا يستمر شهر رمضان؟",
+   "qEn": "How many days does Ramadan last?",
+   "options": [
+    {
+     "ar": "٧ أيام",
+     "en": "7 days"
+    },
+    {
+     "ar": "٢٩ أو ٣٠ يومًا",
+     "en": "29 or 30 days"
+    },
+    {
+     "ar": "٦٠ يومًا",
+     "en": "60 days"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "ماذا نقول بعد الانتهاء من الطعام؟",
+   "qEn": "What do we say after finishing a meal?",
+   "options": [
+    {
+     "ar": "بسم الله",
+     "en": "Bismillah"
+    },
+    {
+     "ar": "أستغفر الله",
+     "en": "Astaghfirullah"
+    },
+    {
+     "ar": "الحمد لله",
+     "en": "Alhamdulillah"
+    }
+   ],
+   "answer": 2
+  },
+  {
+   "qAr": "ما أطول سورة في القرآن؟",
+   "qEn": "What is the longest surah in the Quran?",
+   "options": [
+    {
+     "ar": "البقرة",
+     "en": "Al-Baqarah"
+    },
+    {
+     "ar": "آل عمران",
+     "en": "Al ‘Imran"
+    },
+    {
+     "ar": "النساء",
+     "en": "An-Nisa"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "كم عدد آيات سورة الفاتحة؟",
+   "qEn": "How many ayahs does Al-Fatihah have?",
+   "options": [
+    {
+     "ar": "٥",
+     "en": "5"
+    },
+    {
+     "ar": "٧",
+     "en": "7"
+    },
+    {
+     "ar": "١٠",
+     "en": "10"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "على أي نبي أُنزلت التوراة؟",
+   "qEn": "On which prophet was the Tawrah revealed?",
+   "options": [
+    {
+     "ar": "عيسى عليه السلام",
+     "en": "‘Isa"
+    },
+    {
+     "ar": "داود عليه السلام",
+     "en": "Dawud"
+    },
+    {
+     "ar": "موسى عليه السلام",
+     "en": "Musa"
+    }
+   ],
+   "answer": 2
+  },
+  {
+   "qAr": "على أي نبي أُنزل الإنجيل؟",
+   "qEn": "On which prophet was the Injil revealed?",
+   "options": [
+    {
+     "ar": "عيسى عليه السلام",
+     "en": "‘Isa"
+    },
+    {
+     "ar": "موسى عليه السلام",
+     "en": "Musa"
+    },
+    {
+     "ar": "يوسف عليه السلام",
+     "en": "Yusuf"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "على أي نبي أُنزل الزبور؟",
+   "qEn": "On which prophet was the Zabur revealed?",
+   "options": [
+    {
+     "ar": "سليمان عليه السلام",
+     "en": "Sulayman"
+    },
+    {
+     "ar": "داود عليه السلام",
+     "en": "Dawud"
+    },
+    {
+     "ar": "يحيى عليه السلام",
+     "en": "Yahya"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "من النبي الذي ابتلعه الحوت؟",
+   "qEn": "Which prophet was swallowed by the whale?",
+   "options": [
+    {
+     "ar": "يونس عليه السلام",
+     "en": "Yunus"
+    },
+    {
+     "ar": "نوح عليه السلام",
+     "en": "Nuh"
+    },
+    {
+     "ar": "لوط عليه السلام",
+     "en": "Lut"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "من النبي الذي صبر على المرض طويلًا؟",
+   "qEn": "Which prophet was patient through a long illness?",
+   "options": [
+    {
+     "ar": "يوسف عليه السلام",
+     "en": "Yusuf"
+    },
+    {
+     "ar": "هود عليه السلام",
+     "en": "Hud"
+    },
+    {
+     "ar": "أيوب عليه السلام",
+     "en": "Ayyub"
+    }
+   ],
+   "answer": 2
+  },
+  {
+   "qAr": "من النبي الذي صنع السفينة بأمر الله؟",
+   "qEn": "Which prophet built the ark by Allah’s command?",
+   "options": [
+    {
+     "ar": "نوح عليه السلام",
+     "en": "Nuh"
+    },
+    {
+     "ar": "صالح عليه السلام",
+     "en": "Salih"
+    },
+    {
+     "ar": "إبراهيم عليه السلام",
+     "en": "Ibrahim"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "من النبي الذي كلّمه الله تعالى؟",
+   "qEn": "Which prophet did Allah speak to directly?",
+   "options": [
+    {
+     "ar": "عيسى عليه السلام",
+     "en": "‘Isa"
+    },
+    {
+     "ar": "موسى عليه السلام",
+     "en": "Musa"
+    },
+    {
+     "ar": "يعقوب عليه السلام",
+     "en": "Ya‘qub"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "ما اسم المسجد الذي بناه النبي ﷺ في المدينة؟",
+   "qEn": "What is the name of the mosque the Prophet ﷺ built in Madinah?",
+   "options": [
+    {
+     "ar": "المسجد الحرام",
+     "en": "Al-Masjid al-Haram"
+    },
+    {
+     "ar": "المسجد الأقصى",
+     "en": "Al-Aqsa Mosque"
+    },
+    {
+     "ar": "المسجد النبوي",
+     "en": "The Prophet’s Mosque"
+    }
+   ],
+   "answer": 2
+  },
+  {
+   "qAr": "ما اسم عيد المسلمين الذي يأتي بعد رمضان؟",
+   "qEn": "Which Eid comes after Ramadan?",
+   "options": [
+    {
+     "ar": "عيد الفطر",
+     "en": "Eid al-Fitr"
+    },
+    {
+     "ar": "عيد الأضحى",
+     "en": "Eid al-Adha"
+    },
+    {
+     "ar": "يوم عرفة",
+     "en": "The Day of ‘Arafah"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "في أي شهر يكون الحج؟",
+   "qEn": "In which month is Hajj?",
+   "options": [
+    {
+     "ar": "رجب",
+     "en": "Rajab"
+    },
+    {
+     "ar": "شعبان",
+     "en": "Sha‘ban"
+    },
+    {
+     "ar": "ذو الحجة",
+     "en": "Dhul-Hijjah"
+    }
+   ],
+   "answer": 2
+  },
+  {
+   "qAr": "ما أول شهر في السنة الهجرية؟",
+   "qEn": "What is the first month of the Hijri year?",
+   "options": [
+    {
+     "ar": "محرم",
+     "en": "Muharram"
+    },
+    {
+     "ar": "رمضان",
+     "en": "Ramadan"
+    },
+    {
+     "ar": "شوال",
+     "en": "Shawwal"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "كم ركعة في صلاة الفجر؟",
+   "qEn": "How many rak‘ahs are in Fajr?",
+   "options": [
+    {
+     "ar": "٣",
+     "en": "3"
+    },
+    {
+     "ar": "٢",
+     "en": "2"
+    },
+    {
+     "ar": "٤",
+     "en": "4"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "كم ركعة في صلاة المغرب؟",
+   "qEn": "How many rak‘ahs are in Maghrib?",
+   "options": [
+    {
+     "ar": "٣",
+     "en": "3"
+    },
+    {
+     "ar": "٢",
+     "en": "2"
+    },
+    {
+     "ar": "٤",
+     "en": "4"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "إذا قال لك صديقك: السلام عليكم، فماذا تردّ؟",
+   "qEn": "If a friend says “As-salamu ‘alaykum”, how do you reply?",
+   "options": [
+    {
+     "ar": "صباح الخير",
+     "en": "Good morning"
+    },
+    {
+     "ar": "وعليكم السلام ورحمة الله",
+     "en": "Wa ‘alaykumus-salam wa rahmatullah"
+    },
+    {
+     "ar": "لا أردّ",
+     "en": "I do not reply"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "ما اللغة التي نزل بها القرآن الكريم؟",
+   "qEn": "In which language was the Quran revealed?",
+   "options": [
+    {
+     "ar": "العربية",
+     "en": "Arabic"
+    },
+    {
+     "ar": "العبرية",
+     "en": "Hebrew"
+    },
+    {
+     "ar": "اللاتينية",
+     "en": "Latin"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "من النبي الملقّب بخليل الله؟",
+   "qEn": "Which prophet is known as the Friend of Allah?",
+   "options": [
+    {
+     "ar": "موسى عليه السلام",
+     "en": "Musa"
+    },
+    {
+     "ar": "إبراهيم عليه السلام",
+     "en": "Ibrahim"
+    },
+    {
+     "ar": "نوح عليه السلام",
+     "en": "Nuh"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "ماذا يقول من سمع العاطس يحمد الله؟",
+   "qEn": "What do we say to someone who sneezes and praises Allah?",
+   "options": [
+    {
+     "ar": "يرحمك الله",
+     "en": "Yarhamukallah"
+    },
+    {
+     "ar": "سبحان الله",
+     "en": "SubhanAllah"
+    },
+    {
+     "ar": "بسم الله",
+     "en": "Bismillah"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "من هي أم المؤمنين بنت أبي بكر الصديق؟",
+   "qEn": "Which Mother of the Believers was the daughter of Abu Bakr?",
+   "options": [
+    {
+     "ar": "خديجة",
+     "en": "Khadijah"
+    },
+    {
+     "ar": "حفصة",
+     "en": "Hafsah"
+    },
+    {
+     "ar": "عائشة",
+     "en": "‘A’ishah"
+    }
+   ],
+   "answer": 2
+  },
+  {
+   "qAr": "ما الذي نفعله إذا رأينا إنسانًا يحتاج إلى مساعدة؟",
+   "qEn": "What do we do when we see someone who needs help?",
+   "options": [
+    {
+     "ar": "نساعده",
+     "en": "We help him"
+    },
+    {
+     "ar": "نتجاهله",
+     "en": "We ignore him"
+    },
+    {
+     "ar": "نضحك عليه",
+     "en": "We laugh at him"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "أي هذه الصفات من أخلاق المسلم؟",
+   "qEn": "Which of these is a Muslim’s character?",
+   "options": [
+    {
+     "ar": "الكذب",
+     "en": "Lying"
+    },
+    {
+     "ar": "الصدق",
+     "en": "Honesty"
+    },
+    {
+     "ar": "الغش",
+     "en": "Cheating"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "كم عدد أجزاء القرآن الكريم؟",
+   "qEn": "How many juz’ does the Quran have?",
+   "options": [
+    {
+     "ar": "٣٠",
+     "en": "30"
+    },
+    {
+     "ar": "٢٠",
+     "en": "20"
+    },
+    {
+     "ar": "٤٠",
+     "en": "40"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "ما الصلاة التي نصليها يوم الجمعة في المسجد وقت الظهر؟",
+   "qEn": "Which prayer do we pray at the mosque on Friday at midday?",
+   "options": [
+    {
+     "ar": "صلاة العيد",
+     "en": "The Eid prayer"
+    },
+    {
+     "ar": "صلاة الجمعة",
+     "en": "The Friday prayer"
+    },
+    {
+     "ar": "صلاة الوتر",
+     "en": "The Witr prayer"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "ما اسم الكتاب الذي فيه كلام الله الذي نقرؤه؟",
+   "qEn": "What is the book of Allah’s words that we recite?",
+   "options": [
+    {
+     "ar": "القرآن الكريم",
+     "en": "The Holy Quran"
+    },
+    {
+     "ar": "التوراة",
+     "en": "The Tawrah"
+    },
+    {
+     "ar": "الزبور",
+     "en": "The Zabur"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "كم مرة نسجد في الركعة الواحدة؟",
+   "qEn": "How many prostrations are there in one rak‘ah?",
+   "options": [
+    {
+     "ar": "مرة",
+     "en": "One"
+    },
+    {
+     "ar": "مرتان",
+     "en": "Two"
+    },
+    {
+     "ar": "ثلاث",
+     "en": "Three"
+    }
+   ],
+   "answer": 1
+  },
+  {
+   "qAr": "ماذا نقول عند الركوع؟",
+   "qEn": "What do we say in ruku‘?",
+   "options": [
+    {
+     "ar": "سبحان ربي العظيم",
+     "en": "Subhana Rabbiyal-‘Azim"
+    },
+    {
+     "ar": "سبحان ربي الأعلى",
+     "en": "Subhana Rabbiyal-A‘la"
+    },
+    {
+     "ar": "ربنا لك الحمد",
+     "en": "Rabbana lakal-hamd"
+    }
+   ],
+   "answer": 0
+  },
+  {
+   "qAr": "ماذا نقول عند السجود؟",
+   "qEn": "What do we say in sujud?",
+   "options": [
+    {
+     "ar": "سبحان ربي العظيم",
+     "en": "Subhana Rabbiyal-‘Azim"
+    },
+    {
+     "ar": "رب اغفر لي",
+     "en": "Rabbighfir li"
+    },
+    {
+     "ar": "سبحان ربي الأعلى",
+     "en": "Subhana Rabbiyal-A‘la"
+    }
+   ],
+   "answer": 2
   }
  ],
  "manners": [
@@ -222,6 +963,66 @@
    "titleEn": "Helping others",
    "bodyAr": "نبتسم ونساعد من يحتاج مساعدتنا",
    "bodyEn": "We smile and help those in need"
+  },
+  {
+   "titleAr": "الاستئذان",
+   "titleEn": "Asking permission",
+   "bodyAr": "نطرق الباب ونستأذن قبل أن ندخل",
+   "bodyEn": "We knock and ask permission before entering"
+  },
+  {
+   "titleAr": "الأكل باليمين",
+   "titleEn": "Eating with the right hand",
+   "bodyAr": "نسمّي الله ونأكل بيميننا ومما يلينا",
+   "bodyEn": "We say Bismillah and eat with the right hand from what is near us"
+  },
+  {
+   "titleAr": "احترام الكبار",
+   "titleEn": "Respecting elders",
+   "bodyAr": "نحترم الكبار ونرحم الصغار",
+   "bodyEn": "We respect our elders and are kind to the young"
+  },
+  {
+   "titleAr": "الأمانة",
+   "titleEn": "Trustworthiness",
+   "bodyAr": "نحفظ ما ائتُمنّا عليه ونردّ الأشياء إلى أصحابها",
+   "bodyEn": "We guard what we are trusted with and return things to their owners"
+  },
+  {
+   "titleAr": "الشكر",
+   "titleEn": "Gratitude",
+   "bodyAr": "نقول: الحمد لله، ونشكر من أحسن إلينا",
+   "bodyEn": "We say Alhamdulillah and thank those who are kind to us"
+  },
+  {
+   "titleAr": "الاعتذار",
+   "titleEn": "Apologising",
+   "bodyAr": "إذا أخطأنا اعتذرنا وأصلحنا خطأنا",
+   "bodyEn": "When we make a mistake we apologise and put it right"
+  },
+  {
+   "titleAr": "حسن الاستماع",
+   "titleEn": "Listening well",
+   "bodyAr": "نستمع إلى من يتحدث ولا نقاطعه",
+   "bodyEn": "We listen to the one speaking and do not interrupt"
+  },
+  {
+   "titleAr": "إماطة الأذى",
+   "titleEn": "Clearing harm from the path",
+   "bodyAr": "نزيل الأذى من الطريق فهو صدقة",
+   "bodyEn": "We remove harm from the road; it is a charity"
+  },
+  {
+   "titleAr": "الرفق بالحيوان",
+   "titleEn": "Kindness to animals",
+   "bodyAr": "نرفق بالحيوان ولا نؤذيه ونطعمه إن احتاج",
+   "bodyEn": "We are gentle with animals, never hurt them, and feed them when they are hungry"
+  },
+  {
+   "titleAr": "قول الخير",
+   "titleEn": "Speaking well",
+   "bodyAr": "نقول كلامًا طيبًا أو نسكت",
+   "bodyEn": "We speak good words or stay silent"
   }
  ]
 }

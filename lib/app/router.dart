@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 
 import '../features/adhkar/adhkar_screen.dart';
+import '../features/adhkar/hisn_screen.dart';
 import '../features/auth/account_screen.dart';
 import '../features/books/books_screens.dart';
 import '../features/explore/explore_screen.dart';
@@ -53,6 +54,7 @@ GoRouter buildRouter() => GoRouter(
         GoRoute(path: '/adhkar/session/:category', builder: (_, s) => DhikrSessionScreen(category: s.pathParameters['category'] ?? 'morning')),
         GoRoute(path: '/qibla', builder: (_, _) => const QiblaScreen()),
         GoRoute(path: '/tasbeeh', builder: (_, _) => const TasbeehScreen()),
+        GoRoute(path: '/hisn', builder: (_, _) => const HisnScreen()),
         GoRoute(path: '/duas', builder: (_, _) => const DuasScreen()),
         GoRoute(path: '/names', builder: (_, _) => const NamesScreen()),
         GoRoute(path: '/planner', builder: (_, _) => const PlannerScreen()),

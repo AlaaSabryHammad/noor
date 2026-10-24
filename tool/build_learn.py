@@ -1,4 +1,7 @@
-import json, sys
+import json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import more_content as MC  # additional entries merged into the lists below
+
 root = sys.argv[1] if len(sys.argv) > 1 else "."
 NOTE = "Summaries of Quranic narratives and basic rulings. Verify against a scholar-reviewed source before release; for rulings consult qualified scholars."
 
@@ -42,6 +45,9 @@ ST = [
   "‘Isa was born to the virgin Maryam by Allah’s command without a father and spoke in the cradle. Allah supported him with miracles by His permission; he called Bani Isra’il to worship Allah alone, and Allah raised him to Himself.",
   "مريم ١٦–٣٦ · آل عمران ٤٥–٥٩", "Maryam 16–36 · Al ‘Imran 45–59", "عبد الله ورسوله وكلمته ألقاها إلى مريم.", "The servant and messenger of Allah, His word cast to Maryam."),
 ]
+ST += MC.STORIES_EXTRA
+assert sorted(MC.STORIES_ORDER) == sorted(s[0] for s in ST), "STORIES_ORDER is out of sync with the stories"
+ST.sort(key=lambda s: MC.STORIES_ORDER.index(s[0]))
 dump("stories", {"_note": NOTE, "items": [dict(id=f"p{i+1}", nameAr=a, nameEn=e, bodyAr=ba, bodyEn=be, refAr=ra, refEn=re, lessonAr=la, lessonEn=le)
                                            for i, (a, e, ba, be, ra, re, la, le) in enumerate(ST)]})
 
@@ -82,6 +88,10 @@ AC = [
    ("الإيمان باليوم الآخر", "Belief in the Last Day", "البعث والحساب والجنة والنار.", "Resurrection, reckoning, Paradise and the Fire."),
    ("الإيمان بالقدر", "Belief in the Decree", "أن كل شيء بعلم الله وتقديره، خيره وشره.", "That everything occurs by Allah’s knowledge and decree, its good and its bad.")]),
 ]
+AC += MC.ACADEMY_EXTRA
+ACADEMY_ORDER = ["wudu", "ghusl", "tayammum", "prayer", "adhan", "sunnah", "jumuah", "eid", "janazah", "fasting", "zakat", "pillars", "iman", "quranadab", "tajweed"]
+assert sorted(ACADEMY_ORDER) == sorted(c[0] for c in AC), "ACADEMY_ORDER is out of sync with the courses"
+AC.sort(key=lambda c: ACADEMY_ORDER.index(c[0]))
 dump("academy", {"_note": NOTE, "courses": [dict(id=i, titleAr=ta, titleEn=te, icon=ic,
                   lessons=[dict(titleAr=a, titleEn=b, bodyAr=c, bodyEn=d) for a, b, c, d in steps]) for i, ta, te, ic, steps in AC]})
 
@@ -101,6 +111,10 @@ FQ = [
  ("hajj", "ما الفرق بين الحج والعمرة؟", "What is the difference between Hajj and ‘Umrah?", "الحج له وقت محدد في ذي الحجة ومناسك في منى وعرفة ومزدلفة، أما العمرة فتجوز في أي وقت وهي الإحرام والطواف والسعي والحلق أو التقصير.", "Hajj has a fixed time in Dhul-Hijjah with rites at Mina, ‘Arafah and Muzdalifah; ‘Umrah can be done any time and consists of ihram, tawaf, sa‘i and shaving or trimming."),
 ]
 FC = {"faith": ("الإيمان", "Faith"), "prayer": ("الصلاة", "Prayer"), "fasting": ("الصيام", "Fasting"), "zakat": ("الزكاة", "Zakat"), "hajj": ("الحج", "Hajj")}
+FC.update(MC.FAQ_CATEGORIES_EXTRA)
+FQ += MC.FAQ_EXTRA
+FC = {k: FC[k] for k in MC.FAQ_ORDER}
+FQ.sort(key=lambda f: MC.FAQ_ORDER.index(f[0]))  # stable: keeps the written order inside each category
 dump("faq", {"_note": NOTE, "categories": {k: {"ar": v[0], "en": v[1]} for k, v in FC.items()},
              "items": [dict(id=f"f{i+1}", cat=c, qAr=qa, qEn=qe, aAr=aa, aEn=ae) for i, (c, qa, qe, aa, ae) in enumerate(FQ)]})
 
@@ -118,6 +132,7 @@ HJ = [
  ("hajj", "١١–١٣ ذو الحجة · أيام التشريق", "11–13 Dhul-Hijjah · Tashriq", "تبيت بمنى وترمي الجمرات الثلاث كل يوم بعد الزوال، كل واحدة بسبع حصيات.", "Stay at Mina and stone the three jamarat each day after midday, seven pebbles each."),
  ("hajj", "طواف الوداع", "Farewell tawaf", "إذا أردت مغادرة مكة تطوف طواف الوداع ليكون آخر عهدك بالبيت.", "Before leaving Makkah, perform the farewell tawaf so that the House is your last stop."),
 ]
+HJ += MC.HAJJ_GUIDE
 dump("hajj", {"_note": NOTE, "steps": [dict(kind=k, titleAr=a, titleEn=b, bodyAr=c, bodyEn=d) for k, a, b, c, d in HJ]})
 
 # ------------------------------------------------------------------ Kids quiz
@@ -140,6 +155,8 @@ KM = [
  ("النظافة", "Cleanliness", "النظافة من الإيمان", "Cleanliness is part of faith"),
  ("مساعدة الآخرين", "Helping others", "نبتسم ونساعد من يحتاج مساعدتنا", "We smile and help those in need"),
 ]
+KQ += MC.KIDS_QUIZ_EXTRA
+KM += MC.KIDS_MANNERS_EXTRA
 dump("kids", {"_note": NOTE, "quiz": [dict(qAr=a, qEn=b, options=[dict(ar=x, en=y) for x, y in o], answer=ans) for a, b, o, ans in KQ],
               "manners": [dict(titleAr=a, titleEn=b, bodyAr=c, bodyEn=d) for a, b, c, d in KM]})
 print(len(ST), len(AC), len(FQ), len(HJ), len(KQ))

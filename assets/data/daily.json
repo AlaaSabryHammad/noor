@@ -1,23 +1,1220 @@
 {
- "ayah": {
-  "ar": "أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
-  "en": "Unquestionably, by the remembrance of Allah hearts are assured.",
-  "refAr": "سورة الرعد · الآية ٢٨",
-  "refEn": "Ar-Ra‘d 13:28",
-  "quranic": true
- },
- "hadith": {
-  "ar": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
-  "en": "Actions are only by intentions, and every person will have only what they intended.",
-  "refAr": "متفق عليه · البخاري (١) ومسلم (١٩٠٧)",
-  "refEn": "Agreed upon · Al-Bukhari 1, Muslim 1907",
-  "quranic": false
- },
- "dua": {
-  "ar": "رَبَّنَآ ءَاتِنَا فِى ٱلدُّنْيَا حَسَنَةً وَفِى ٱلْءَاخِرَةِ حَسَنَةً وَقِنَا عَذَابَ ٱلنَّارِ",
-  "en": "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
-  "refAr": "سورة البقرة · الآية ٢٠١",
-  "refEn": "Al-Baqarah 2:201",
-  "quranic": true
- }
+ "_note": "Quranic items copied verbatim from assets/data/quran; hadith from the bundled Forty an-Nawawi.",
+ "ayah": [
+  {
+   "ar": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+   "en": "Those who have believed and whose hearts are assured by the remembrance of Allah. Unquestionably, by the remembrance of Allah hearts are assured.\"",
+   "refAr": "سورة الرعد · الآية ٢٨",
+   "refEn": "Ar-Ra'd 13:28",
+   "quranic": true
+  },
+  {
+   "ar": "فَٱذْكُرُونِىٓ أَذْكُرْكُمْ وَٱشْكُرُوا۟ لِى وَلَا تَكْفُرُونِ",
+   "en": "So remember Me; I will remember you. And be grateful to Me and do not deny Me.",
+   "refAr": "سورة البقرة · الآية ١٥٢",
+   "refEn": "Al-Baqara 2:152",
+   "quranic": true
+  },
+  {
+   "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ إِنَّ ٱللَّهَ مَعَ ٱلصَّٰبِرِينَ",
+   "en": "O you who have believed, seek help through patience and prayer. Indeed, Allah is with the patient.",
+   "refAr": "سورة البقرة · الآية ١٥٣",
+   "refEn": "Al-Baqara 2:153",
+   "quranic": true
+  },
+  {
+   "ar": "وَإِذَا سَأَلَكَ عِبَادِى عَنِّى فَإِنِّى قَرِيبٌ أُجِيبُ دَعْوَةَ ٱلدَّاعِ إِذَا دَعَانِ فَلْيَسْتَجِيبُوا۟ لِى وَلْيُؤْمِنُوا۟ بِى لَعَلَّهُمْ يَرْشُدُونَ",
+   "en": "And when My servants ask you, [O Muhammad], concerning Me - indeed I am near. I respond to the invocation of the supplicant when he calls upon Me. So let them respond to Me [by obedience] and believe in Me that they may be [rightly] guided.",
+   "refAr": "سورة البقرة · الآية ١٨٦",
+   "refEn": "Al-Baqara 2:186",
+   "quranic": true
+  },
+  {
+   "ar": "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ",
+   "en": "Allah - there is no deity except Him, the Ever-Living, the Sustainer of [all] existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
+   "refAr": "سورة البقرة · الآية ٢٥٥",
+   "refEn": "Al-Baqara 2:255",
+   "quranic": true
+  },
+  {
+   "ar": "لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا ٱكْتَسَبَتْ رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًا كَمَا حَمَلْتَهُۥ عَلَى ٱلَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَٰفِرِينَ",
+   "en": "Allah does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. \"Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people.\"",
+   "refAr": "سورة البقرة · الآية ٢٨٦",
+   "refEn": "Al-Baqara 2:286",
+   "quranic": true
+  },
+  {
+   "ar": "وَلَا تَهِنُوا۟ وَلَا تَحْزَنُوا۟ وَأَنتُمُ ٱلْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ",
+   "en": "So do not weaken and do not grieve, and you will be superior if you are [true] believers.",
+   "refAr": "سورة آل عمران · الآية ١٣٩",
+   "refEn": "Aal-i-Imraan 3:139",
+   "quranic": true
+  },
+  {
+   "ar": "فَبِمَا رَحْمَةٍ مِّنَ ٱللَّهِ لِنتَ لَهُمْ وَلَوْ كُنتَ فَظًّا غَلِيظَ ٱلْقَلْبِ لَٱنفَضُّوا۟ مِنْ حَوْلِكَ فَٱعْفُ عَنْهُمْ وَٱسْتَغْفِرْ لَهُمْ وَشَاوِرْهُمْ فِى ٱلْأَمْرِ فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى ٱللَّهِ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُتَوَكِّلِينَ",
+   "en": "So by mercy from Allah, [O Muhammad], you were lenient with them. And if you had been rude [in speech] and harsh in heart, they would have disbanded from about you. So pardon them and ask forgiveness for them and consult them in the matter. And when you have decided, then rely upon Allah. Indeed, Allah loves those who rely [upon Him].",
+   "refAr": "سورة آل عمران · الآية ١٥٩",
+   "refEn": "Aal-i-Imraan 3:159",
+   "quranic": true
+  },
+  {
+   "ar": "ٱلَّذِينَ قَالَ لَهُمُ ٱلنَّاسُ إِنَّ ٱلنَّاسَ قَدْ جَمَعُوا۟ لَكُمْ فَٱخْشَوْهُمْ فَزَادَهُمْ إِيمَٰنًا وَقَالُوا۟ حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ",
+   "en": "Those to whom hypocrites said, \"Indeed, the people have gathered against you, so fear them.\" But it [merely] increased them in faith, and they said, \"Sufficient for us is Allah, and [He is] the best Disposer of affairs.\"",
+   "refAr": "سورة آل عمران · الآية ١٧٣",
+   "refEn": "Aal-i-Imraan 3:173",
+   "quranic": true
+  },
+  {
+   "ar": "فَإِذَا قَضَيْتُمُ ٱلصَّلَوٰةَ فَٱذْكُرُوا۟ ٱللَّهَ قِيَٰمًا وَقُعُودًا وَعَلَىٰ جُنُوبِكُمْ فَإِذَا ٱطْمَأْنَنتُمْ فَأَقِيمُوا۟ ٱلصَّلَوٰةَ إِنَّ ٱلصَّلَوٰةَ كَانَتْ عَلَى ٱلْمُؤْمِنِينَ كِتَٰبًا مَّوْقُوتًا",
+   "en": "And when you have completed the prayer, remember Allah standing, sitting, or [lying] on your sides. But when you become secure, re-establish [regular] prayer. Indeed, prayer has been decreed upon the believers a decree of specified times.",
+   "refAr": "سورة النساء · الآية ١٠٣",
+   "refEn": "An-Nisaa 4:103",
+   "quranic": true
+  },
+  {
+   "ar": "قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ لَا شَرِيكَ لَهُۥ وَبِذَٰلِكَ أُمِرْتُ وَأَنَا۠ أَوَّلُ ٱلْمُسْلِمِينَ",
+   "en": "Say, \"Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allah, Lord of the worlds. No partner has He. And this I have been commanded, and I am the first [among you] of the Muslims.\"",
+   "refAr": "سورة الأنعام · الآية ١٦٢-١٦٣",
+   "refEn": "Al-An'aam 6:162-163",
+   "quranic": true
+  },
+  {
+   "ar": "قُل لَّن يُصِيبَنَآ إِلَّا مَا كَتَبَ ٱللَّهُ لَنَا هُوَ مَوْلَىٰنَا وَعَلَى ٱللَّهِ فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ",
+   "en": "Say, \"Never will we be struck except by what Allah has decreed for us; He is our protector.\" And upon Allah let the believers rely.",
+   "refAr": "سورة التوبة · الآية ٥١",
+   "refEn": "At-Tawba 9:51",
+   "quranic": true
+  },
+  {
+   "ar": "وَإِذْ تَأَذَّنَ رَبُّكُمْ لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ وَلَئِن كَفَرْتُمْ إِنَّ عَذَابِى لَشَدِيدٌ",
+   "en": "And [remember] when your Lord proclaimed, 'If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, My punishment is severe.' \"",
+   "refAr": "سورة ابراهيم · الآية ٧",
+   "refEn": "Ibrahim 14:7",
+   "quranic": true
+  },
+  {
+   "ar": "مَنْ عَمِلَ صَٰلِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَلَنُحْيِيَنَّهُۥ حَيَوٰةً طَيِّبَةً وَلَنَجْزِيَنَّهُمْ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ",
+   "en": "Whoever does righteousness, whether male or female, while he is a believer - We will surely cause him to live a good life, and We will surely give them their reward [in the Hereafter] according to the best of what they used to do.",
+   "refAr": "سورة النحل · الآية ٩٧",
+   "refEn": "An-Nahl 16:97",
+   "quranic": true
+  },
+  {
+   "ar": "إِنَّ هَٰذَا ٱلْقُرْءَانَ يَهْدِى لِلَّتِى هِىَ أَقْوَمُ وَيُبَشِّرُ ٱلْمُؤْمِنِينَ ٱلَّذِينَ يَعْمَلُونَ ٱلصَّٰلِحَٰتِ أَنَّ لَهُمْ أَجْرًا كَبِيرًا",
+   "en": "Indeed, this Qur'an guides to that which is most suitable and gives good tidings to the believers who do righteous deeds that they will have a great reward.",
+   "refAr": "سورة الإسراء · الآية ٩",
+   "refEn": "Al-Israa 17:9",
+   "quranic": true
+  },
+  {
+   "ar": "إِنَّنِىٓ أَنَا ٱللَّهُ لَآ إِلَٰهَ إِلَّآ أَنَا۠ فَٱعْبُدْنِى وَأَقِمِ ٱلصَّلَوٰةَ لِذِكْرِىٓ",
+   "en": "Indeed, I am Allah. There is no deity except Me, so worship Me and establish prayer for My remembrance.",
+   "refAr": "سورة طه · الآية ١٤",
+   "refEn": "Taa-Haa 20:14",
+   "quranic": true
+  },
+  {
+   "ar": "ٱللَّهُ نُورُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ مَثَلُ نُورِهِۦ كَمِشْكَوٰةٍ فِيهَا مِصْبَاحٌ ٱلْمِصْبَاحُ فِى زُجَاجَةٍ ٱلزُّجَاجَةُ كَأَنَّهَا كَوْكَبٌ دُرِّىٌّ يُوقَدُ مِن شَجَرَةٍ مُّبَٰرَكَةٍ زَيْتُونَةٍ لَّا شَرْقِيَّةٍ وَلَا غَرْبِيَّةٍ يَكَادُ زَيْتُهَا يُضِىٓءُ وَلَوْ لَمْ تَمْسَسْهُ نَارٌ نُّورٌ عَلَىٰ نُورٍ يَهْدِى ٱللَّهُ لِنُورِهِۦ مَن يَشَآءُ وَيَضْرِبُ ٱللَّهُ ٱلْأَمْثَٰلَ لِلنَّاسِ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ",
+   "en": "Allah is the Light of the heavens and the earth. The example of His light is like a niche within which is a lamp, the lamp is within glass, the glass as if it were a pearly [white] star lit from [the oil of] a blessed olive tree, neither of the east nor of the west, whose oil would almost glow even if untouched by fire. Light upon light. Allah guides to His light whom He wills. And Allah presents examples for the people, and Allah is Knowing of all things.",
+   "refAr": "سورة النور · الآية ٣٥",
+   "refEn": "An-Noor 24:35",
+   "quranic": true
+  },
+  {
+   "ar": "وَٱلَّذِينَ جَٰهَدُوا۟ فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ ٱللَّهَ لَمَعَ ٱلْمُحْسِنِينَ",
+   "en": "And those who strive for Us - We will surely guide them to Our ways. And indeed, Allah is with the doers of good.",
+   "refAr": "سورة العنكبوت · الآية ٦٩",
+   "refEn": "Al-Ankaboot 29:69",
+   "quranic": true
+  },
+  {
+   "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱذْكُرُوا۟ ٱللَّهَ ذِكْرًا كَثِيرًا وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا",
+   "en": "O you who have believed, remember Allah with much remembrance And exalt Him morning and afternoon.",
+   "refAr": "سورة الأحزاب · الآية ٤١-٤٢",
+   "refEn": "Al-Ahzaab 33:41-42",
+   "quranic": true
+  },
+  {
+   "ar": "قُلْ يَٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+   "en": "Say, \"O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.\"",
+   "refAr": "سورة الزمر · الآية ٥٣",
+   "refEn": "Az-Zumar 39:53",
+   "quranic": true
+  },
+  {
+   "ar": "قُلْ يَٰعِبَادِ ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ رَبَّكُمْ لِلَّذِينَ أَحْسَنُوا۟ فِى هَٰذِهِ ٱلدُّنْيَا حَسَنَةٌ وَأَرْضُ ٱللَّهِ وَٰسِعَةٌ إِنَّمَا يُوَفَّى ٱلصَّٰبِرُونَ أَجْرَهُم بِغَيْرِ حِسَابٍ",
+   "en": "Say, \"O My servants who have believed, fear your Lord. For those who do good in this world is good, and the earth of Allah is spacious. Indeed, the patient will be given their reward without account.\"",
+   "refAr": "سورة الزمر · الآية ١٠",
+   "refEn": "Az-Zumar 39:10",
+   "quranic": true
+  },
+  {
+   "ar": "وَقَالَ رَبُّكُمُ ٱدْعُونِىٓ أَسْتَجِبْ لَكُمْ إِنَّ ٱلَّذِينَ يَسْتَكْبِرُونَ عَنْ عِبَادَتِى سَيَدْخُلُونَ جَهَنَّمَ دَاخِرِينَ",
+   "en": "And your Lord says, \"Call upon Me; I will respond to you.\" Indeed, those who disdain My worship will enter Hell [rendered] contemptible.",
+   "refAr": "سورة غافر · الآية ٦٠",
+   "refEn": "Al-Ghaafir 40:60",
+   "quranic": true
+  },
+  {
+   "ar": "يَٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقْنَٰكُم مِّن ذَكَرٍ وَأُنثَىٰ وَجَعَلْنَٰكُمْ شُعُوبًا وَقَبَآئِلَ لِتَعَارَفُوٓا۟ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌ",
+   "en": "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you. Indeed, Allah is Knowing and Acquainted.",
+   "refAr": "سورة الحجرات · الآية ١٣",
+   "refEn": "Al-Hujuraat 49:13",
+   "quranic": true
+  },
+  {
+   "ar": "وَمَا خَلَقْتُ ٱلْجِنَّ وَٱلْإِنسَ إِلَّا لِيَعْبُدُونِ",
+   "en": "And I did not create the jinn and mankind except to worship Me.",
+   "refAr": "سورة الذاريات · الآية ٥٦",
+   "refEn": "Adh-Dhaariyat 51:56",
+   "quranic": true
+  },
+  {
+   "ar": "هُوَ ٱلَّذِى خَلَقَ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ فِى سِتَّةِ أَيَّامٍ ثُمَّ ٱسْتَوَىٰ عَلَى ٱلْعَرْشِ يَعْلَمُ مَا يَلِجُ فِى ٱلْأَرْضِ وَمَا يَخْرُجُ مِنْهَا وَمَا يَنزِلُ مِنَ ٱلسَّمَآءِ وَمَا يَعْرُجُ فِيهَا وَهُوَ مَعَكُمْ أَيْنَ مَا كُنتُمْ وَٱللَّهُ بِمَا تَعْمَلُونَ بَصِيرٌ",
+   "en": "It is He who created the heavens and earth in six days and then established Himself above the Throne. He knows what penetrates into the earth and what emerges from it and what descends from the heaven and what ascends therein; and He is with you wherever you are. And Allah, of what you do, is Seeing.",
+   "refAr": "سورة الحديد · الآية ٤",
+   "refEn": "Al-Hadid 57:4",
+   "quranic": true
+  },
+  {
+   "ar": "هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَٰهَ إِلَّا هُوَ عَٰلِمُ ٱلْغَيْبِ وَٱلشَّهَٰدَةِ هُوَ ٱلرَّحْمَٰنُ ٱلرَّحِيمُ هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَٰهَ إِلَّا هُوَ ٱلْمَلِكُ ٱلْقُدُّوسُ ٱلسَّلَٰمُ ٱلْمُؤْمِنُ ٱلْمُهَيْمِنُ ٱلْعَزِيزُ ٱلْجَبَّارُ ٱلْمُتَكَبِّرُ سُبْحَٰنَ ٱللَّهِ عَمَّا يُشْرِكُونَ هُوَ ٱللَّهُ ٱلْخَٰلِقُ ٱلْبَارِئُ ٱلْمُصَوِّرُ لَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ يُسَبِّحُ لَهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+   "en": "He is Allah, other than whom there is no deity, Knower of the unseen and the witnessed. He is the Entirely Merciful, the Especially Merciful. He is Allah, other than whom there is no deity, the Sovereign, the Pure, the Perfection, the Bestower of Faith, the Overseer, the Exalted in Might, the Compeller, the Superior. Exalted is Allah above whatever they associate with Him. He is Allah, the Creator, the Inventor, the Fashioner; to Him belong the best names. Whatever is in the heavens and earth is exalting Him. And He is the Exalted in Might, the Wise.",
+   "refAr": "سورة الحشر · الآية ٢٢-٢٤",
+   "refEn": "Al-Hashr 59:22-24",
+   "quranic": true
+  },
+  {
+   "ar": "فَإِذَا بَلَغْنَ أَجَلَهُنَّ فَأَمْسِكُوهُنَّ بِمَعْرُوفٍ أَوْ فَارِقُوهُنَّ بِمَعْرُوفٍ وَأَشْهِدُوا۟ ذَوَىْ عَدْلٍ مِّنكُمْ وَأَقِيمُوا۟ ٱلشَّهَٰدَةَ لِلَّهِ ذَٰلِكُمْ يُوعَظُ بِهِۦ مَن كَانَ يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ ٱلْـَٔاخِرِ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًا وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ إِنَّ ٱللَّهَ بَٰلِغُ أَمْرِهِۦ قَدْ جَعَلَ ٱللَّهُ لِكُلِّ شَىْءٍ قَدْرًا",
+   "en": "And when they have [nearly] fulfilled their term, either retain them according to acceptable terms or part with them according to acceptable terms. And bring to witness two just men from among you and establish the testimony for [the acceptance of] Allah. That is instructed to whoever should believe in Allah and the Last day. And whoever fears Allah - He will make for him a way out And will provide for him from where he does not expect. And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose. Allah has already set for everything a [decreed] extent.",
+   "refAr": "سورة الطلاق · الآية ٢-٣",
+   "refEn": "At-Talaaq 65:2-3",
+   "quranic": true
+  },
+  {
+   "ar": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ وَلَلْـَٔاخِرَةُ خَيْرٌ لَّكَ مِنَ ٱلْأُولَىٰ وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ",
+   "en": "Your Lord has not taken leave of you, [O Muhammad], nor has He detested [you]. And the Hereafter is better for you than the first [life]. And your Lord is going to give you, and you will be satisfied.",
+   "refAr": "سورة الضحى · الآية ٣-٥",
+   "refEn": "Ad-Dhuhaa 93:3-5",
+   "quranic": true
+  },
+  {
+   "ar": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+   "en": "For indeed, with hardship [will be] ease. Indeed, with hardship [will be] ease.",
+   "refAr": "سورة الشرح · الآية ٥-٦",
+   "refEn": "Ash-Sharh 94:5-6",
+   "quranic": true
+  },
+  {
+   "ar": "قُلْ هُوَ ٱللَّهُ أَحَدٌ ٱللَّهُ ٱلصَّمَدُ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+   "en": "Say, \"He is Allah, [who is] One, Allah, the Eternal Refuge. He neither begets nor is born, Nor is there to Him any equivalent.\"",
+   "refAr": "سورة الإخلاص · الآية ١-٤",
+   "refEn": "Al-Ikhlaas 112:1-4",
+   "quranic": true
+  },
+  {
+   "ar": "وَٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ وَإِنَّهَا لَكَبِيرَةٌ إِلَّا عَلَى ٱلْخَٰشِعِينَ",
+   "en": "And seek help through patience and prayer, and indeed, it is difficult except for the humbly submissive [to Allah]",
+   "refAr": "سورة البقرة · الآية ٤٥",
+   "refEn": "Al-Baqara 2:45",
+   "quranic": true
+  },
+  {
+   "ar": "إِنَّمَا ٱلْمُؤْمِنُونَ ٱلَّذِينَ إِذَا ذُكِرَ ٱللَّهُ وَجِلَتْ قُلُوبُهُمْ وَإِذَا تُلِيَتْ عَلَيْهِمْ ءَايَٰتُهُۥ زَادَتْهُمْ إِيمَٰنًا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
+   "en": "The believers are only those who, when Allah is mentioned, their hearts become fearful, and when His verses are recited to them, it increases them in faith; and upon their Lord they rely -",
+   "refAr": "سورة الأنفال · الآية ٢",
+   "refEn": "Al-Anfaal 8:2",
+   "quranic": true
+  },
+  {
+   "ar": "لَهُۥ مُعَقِّبَٰتٌ مِّنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ يَحْفَظُونَهُۥ مِنْ أَمْرِ ٱللَّهِ إِنَّ ٱللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ وَإِذَآ أَرَادَ ٱللَّهُ بِقَوْمٍ سُوٓءًا فَلَا مَرَدَّ لَهُۥ وَمَا لَهُم مِّن دُونِهِۦ مِن وَالٍ",
+   "en": "For each one are successive [angels] before and behind him who protect him by the decree of Allah. Indeed, Allah will not change the condition of a people until they change what is in themselves. And when Allah intends for a people ill, there is no repelling it. And there is not for them besides Him any patron.",
+   "refAr": "سورة الرعد · الآية ١١",
+   "refEn": "Ar-Ra'd 13:11",
+   "quranic": true
+  },
+  {
+   "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱصْبِرُوا۟ وَصَابِرُوا۟ وَرَابِطُوا۟ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُفْلِحُونَ",
+   "en": "O you who have believed, persevere and endure and remain stationed and fear Allah that you may be successful.",
+   "refAr": "سورة آل عمران · الآية ٢٠٠",
+   "refEn": "Aal-i-Imraan 3:200",
+   "quranic": true
+  },
+  {
+   "ar": "يَٰبُنَىَّ أَقِمِ ٱلصَّلَوٰةَ وَأْمُرْ بِٱلْمَعْرُوفِ وَٱنْهَ عَنِ ٱلْمُنكَرِ وَٱصْبِرْ عَلَىٰ مَآ أَصَابَكَ إِنَّ ذَٰلِكَ مِنْ عَزْمِ ٱلْأُمُورِ",
+   "en": "O my son, establish prayer, enjoin what is right, forbid what is wrong, and be patient over what befalls you. Indeed, [all] that is of the matters [requiring] determination.",
+   "refAr": "سورة لقمان · الآية ١٧",
+   "refEn": "Luqman 31:17",
+   "quranic": true
+  },
+  {
+   "ar": "وَعِبَادُ ٱلرَّحْمَٰنِ ٱلَّذِينَ يَمْشُونَ عَلَى ٱلْأَرْضِ هَوْنًا وَإِذَا خَاطَبَهُمُ ٱلْجَٰهِلُونَ قَالُوا۟ سَلَٰمًا",
+   "en": "And the servants of the Most Merciful are those who walk upon the earth easily, and when the ignorant address them [harshly], they say [words of] peace,",
+   "refAr": "سورة الفرقان · الآية ٦٣",
+   "refEn": "Al-Furqaan 25:63",
+   "quranic": true
+  },
+  {
+   "ar": "ٱلْمَالُ وَٱلْبَنُونَ زِينَةُ ٱلْحَيَوٰةِ ٱلدُّنْيَا وَٱلْبَٰقِيَٰتُ ٱلصَّٰلِحَٰتُ خَيْرٌ عِندَ رَبِّكَ ثَوَابًا وَخَيْرٌ أَمَلًا",
+   "en": "Wealth and children are [but] adornment of the worldly life. But the enduring good deeds are better to your Lord for reward and better for [one's] hope.",
+   "refAr": "سورة الكهف · الآية ٤٦",
+   "refEn": "Al-Kahf 18:46",
+   "quranic": true
+  },
+  {
+   "ar": "وَجَزَٰٓؤُا۟ سَيِّئَةٍ سَيِّئَةٌ مِّثْلُهَا فَمَنْ عَفَا وَأَصْلَحَ فَأَجْرُهُۥ عَلَى ٱللَّهِ إِنَّهُۥ لَا يُحِبُّ ٱلظَّٰلِمِينَ",
+   "en": "And the retribution for an evil act is an evil one like it, but whoever pardons and makes reconciliation - his reward is [due] from Allah. Indeed, He does not like wrongdoers.",
+   "refAr": "سورة الشورى · الآية ٤٠",
+   "refEn": "Ash-Shura 42:40",
+   "quranic": true
+  },
+  {
+   "ar": "ٱلَّذِى خَلَقَ ٱلْمَوْتَ وَٱلْحَيَوٰةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا وَهُوَ ٱلْعَزِيزُ ٱلْغَفُورُ",
+   "en": "[He] who created death and life to test you [as to] which of you is best in deed - and He is the Exalted in Might, the Forgiving -",
+   "refAr": "سورة الملك · الآية ٢",
+   "refEn": "Al-Mulk 67:2",
+   "quranic": true
+  },
+  {
+   "ar": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "en": "So which of the favors of your Lord would you deny?",
+   "refAr": "سورة الرحمن · الآية ١٣",
+   "refEn": "Ar-Rahmaan 55:13",
+   "quranic": true
+  }
+ ],
+ "hadith": [
+  {
+   "ar": "عَنْ أُمِّ الْمُؤْمِنِينَ أُمِّ عَبْدِ اللَّهِ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا، قَالَتْ: قَالَ: رَسُولُ اللَّهِ صلى الله عليه و سلم مَنْ أَحْدَثَ فِي أَمْرِنَا هَذَا مَا لَيْسَ مِنْهُ فَهُوَ رَدٌّ [رَوَاهُ الْبُخَارِيُّ] ،[وَمُسْلِمٌ] وَفِي رِوَايَةٍ لِمُسْلِمٍ: مَنْ عَمِلَ عَمَلًا لَيْسَ عَلَيْهِ أَمْرُنَا فَهُوَ رَدٌّ",
+   "en": "On the authority of the mother of the faithful, Aisha (ra), who said: The Messenger of Allah (ﷺ) said, “He who innovates something in this matter of ours (i.e., Islam) that is not of it will have it rejected (by Allah).” [Bukhari & Muslim] In another version in Muslim it reads: “He who does an act which we have not commanded, will have it rejected (by Allah).”",
+   "refAr": "الأربعون النووية · الحديث ٥",
+   "refEn": "Forty Hadith an-Nawawi · 5",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي رُقَيَّةَ تَمِيمِ بْنِ أَوْسٍ الدَّارِيِّ رَضِيَ اللهُ عَنْهُ أَنَّ النَّبِيَّ صلى الله عليه وسلم قَالَ: \"الدِّينُ النَّصِيحَةُ.\" قُلْنَا: لِمَنْ؟ قَالَ: \"لِلَّهِ، وَلِكِتَابِهِ، وَلِرَسُولِهِ، وَلِأَئِمَّةِ الْمُسْلِمِينَ وَعَامَّتِهِمْ.\" [رَوَاهُ مُسْلِمٌ]",
+   "en": "On the authority of Tameem ibn Aus ad-Daree (ra): The Prophet (ﷺ) said, “The deen (religion) is naseehah (advice, sincerity).” We said, “To whom?” He (ﷺ) said, “To Allah, His Book, His Messenger, and to the leaders of the Muslims and their common folk.” [Muslim]",
+   "refAr": "الأربعون النووية · الحديث ٧",
+   "refEn": "Forty Hadith an-Nawawi · 7",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي مُحَمَّدٍ الْحَسَنِ بْنِ عَلِيِّ بْنِ أَبِي طَالِبٍ سِبْطِ رَسُولِ اللَّهِ صلى الله عليه و سلم وَرَيْحَانَتِهِ رَضِيَ اللَّهُ عَنْهُمَا، قَالَ: حَفِظْت مِنْ رَسُولِ اللَّهِ صلى الله عليه و سلم دَعْ مَا يُرِيبُك إلَى مَا لَا يُرِيبُك . رَوَاهُ التِّرْمِذِيُّ [رقم:2520]، [وَالنَّسَائِيّ] وَقَالَ التِّرْمِذِيُّ: حَدِيثٌ حَسَنٌ صَحِيحٌ",
+   "en": "On the authority of Abu Muhammad al-Hasan ibn Ali ibn Abee Talib (may Allah be pleased with him), the grandson of the Messenger of Allah (peace and blessings of Allah be upon him), and the one much loved by him, who said: I memorised from the Messenger of Allah (peace and blessings of Allah be upon him): “Leave that which makes you doubt for that which does not make you doubt.” [At-Tirmidhi] [An-Nasai] At-Tirmidhi said that it was a good and sound (hasan saheeh) hadeeth",
+   "refAr": "الأربعون النووية · الحديث ١١",
+   "refEn": "Forty Hadith an-Nawawi · 11",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه و سلم مِنْ حُسْنِ إسْلَامِ الْمَرْءِ تَرْكُهُ مَا لَا يَعْنِيهِ . حَدِيثٌ حَسَنٌ، رَوَاهُ التِّرْمِذِيُّ [رقم: 2318] ، ابن ماجه [رقم:]",
+   "en": "On the authority of Abu Hurayrah (may Allah be pleased with him) who said: The Messenger of Allah (peace and blessings of Allah be upon him) said, “Part of the perfection of one’s Islam is his leaving that which does not concern him.” A hasan (good) hadeeth which was related by at-Tirmidhi and others in this fashion",
+   "refAr": "الأربعون النووية · الحديث ١٢",
+   "refEn": "Forty Hadith an-Nawawi · 12",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي حَمْزَةَ أَنَسِ بْنِ مَالِكٍ رَضِيَ اللهُ عَنْهُ خَادِمِ رَسُولِ اللَّهِ صلى الله عليه و سلم عَنْ النَّبِيِّ صلى الله عليه و سلم قَالَ: لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ . رَوَاهُ الْبُخَارِيُّ [رقم:13]، وَمُسْلِمٌ [رقم:45].<br>[رَوَاهُ الْبُخَارِيُّ] ، [وَمُسْلِمٌ]",
+   "en": "On the authority of Abu Hamzah Anas bin Malik (may Allah be pleased with him) — the servant of the Messenger of Allah (peace and blessings of Allah be upon him) — that the Prophet (peace and blessings of Allah be upon him) said: None of you [truly] believes until he loves for his brother that which he loves for himself. [Al-Bukhari] [Muslim]",
+   "refAr": "الأربعون النووية · الحديث ١٣",
+   "refEn": "Forty Hadith an-Nawawi · 13",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ ابْنِ مَسْعُودٍ رَضِيَ اللهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه و سلم لَا يَحِلُّ دَمُ امْرِئٍ مُسْلِمٍ [ يشهد أن لا إله إلا الله، وأني رسول الله] إلَّا بِإِحْدَى ثَلَاثٍ: الثَّيِّبُ الزَّانِي، وَالنَّفْسُ بِالنَّفْسِ، وَالتَّارِكُ لِدِينِهِ الْمُفَارِقُ لِلْجَمَاعَةِ .<br>[رَوَاهُ الْبُخَارِيُّ] ، [وَمُسْلِمٌ]",
+   "en": "On the authority of Ibn Masood (may Allah be pleased with him) who said: The Messenger of Allah (peace and blessings of Allah be upon him) said, “It is not permissible to spill the blood of a Muslim except in three [instances]: the married person who commits adultery, a life for a life, and the one who forsakes his religion and separates from the community.” [Al-Bukhari] [Muslim]",
+   "refAr": "الأربعون النووية · الحديث ١٤",
+   "refEn": "Forty Hadith an-Nawawi · 14",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صلى الله عليه و سلم قَالَ: مَنْ كَانَ يُؤْمِنُ بِاَللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ، وَمَنْ كَانَ يُؤْمِنُ بِاَللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيُكْرِمْ جَارَهُ، وَمَنْ كَانَ يُؤْمِنُ بِاَللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيُكْرِمْ ضَيْفَهُ .<br>[رَوَاهُ الْبُخَارِيُّ] ، [وَمُسْلِمٌ]",
+   "en": "On the authority of Abu Hurayrah (may Allah be pleased with him), that the Messenger of Allah (peace and blessings of Allah be upon him) said: Let him who believes in Allah and the Last Day speak good, or keep silent; and let him who believes in Allah and the Last Day be generous to his neighbour; and let him who believes in Allah and the Last Day be generous to his guest. [Al-Bukhari] [Muslim]",
+   "refAr": "الأربعون النووية · الحديث ١٥",
+   "refEn": "Forty Hadith an-Nawawi · 15",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللهُ عَنْهُ أَنَّ رَجُلًا قَالَ لِلنَّبِيِّ صلى الله عليه و سلم أَوْصِنِي. قَالَ: لَا تَغْضَبْ، فَرَدَّدَ مِرَارًا، قَالَ: لَا تَغْضَبْ\" .<br>[رَوَاهُ الْبُخَارِيُّ]",
+   "en": "On the authority of Abu Hurayrah (may Allah be pleased with him): A man said to the Prophet (peace and blessings of Allah be upon him), “Counsel me,” so he (peace and blessings of Allah be upon him) said, “Do not become angry.” The man repeated [his request for counsel] several times, and [each time] he (peace and blessings of Allah be upon him) said, “Do not become angry.” [Al-Bukhari]",
+   "refAr": "الأربعون النووية · الحديث ١٦",
+   "refEn": "Forty Hadith an-Nawawi · 16",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي يَعْلَى شَدَّادِ بْنِ أَوْسٍ رَضِيَ اللهُ عَنْهُ عَنْ رَسُولِ اللَّهِ صلى الله عليه و سلم قَالَ: إنَّ اللَّهَ كَتَبَ الْإِحْسَانَ عَلَى كُلِّ شَيْءٍ، فَإِذَا قَتَلْتُمْ فَأَحْسِنُوا الْقِتْلَةَ، وَإِذَا ذَبَحْتُمْ فَأَحْسِنُوا الذِّبْحَةَ، وَلْيُحِدَّ أَحَدُكُمْ شَفْرَتَهُ، وَلْيُرِحْ ذَبِيحَتَهُ . [رَوَاهُ مُسْلِمٌ]",
+   "en": "On the authority of Abu Ya’la Shaddad bin Aws (may Allah be pleased with him), that the Messenger of Allah (peace and blessings of Allah be upon him) said: Verily Allah has prescribed ihsan (proficiency, perfection) in all things. So if you kill then kill well; and if you slaughter, then slaughter well. Let each one of you sharpen his blade and let him spare suffering to the animal he slaughters.” [Muslim]",
+   "refAr": "الأربعون النووية · الحديث ١٧",
+   "refEn": "Forty Hadith an-Nawawi · 17",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي ذَرٍّ جُنْدَبِ بْنِ جُنَادَةَ، وَأَبِي عَبْدِ الرَّحْمَنِ مُعَاذِ بْنِ جَبَلٍ رَضِيَ اللَّهُ عَنْهُمَا، عَنْ رَسُولِ اللَّهِ صلى الله عليه و سلم قَالَ: اتَّقِ اللَّهَ حَيْثُمَا كُنْت، وَأَتْبِعْ السَّيِّئَةَ الْحَسَنَةَ تَمْحُهَا، وَخَالِقْ النَّاسَ بِخُلُقٍ حَسَنٍ . رَوَاهُ التِّرْمِذِيُّ [رقم:1987] وَقَالَ: حَدِيثٌ حَسَنٌ، وَفِي بَعْضِ النُّسَخِ: حَسَنٌ صَحِيحٌ",
+   "en": "On the authority of Abu Dharr Jundub ibn Junadah, and Abu Abdur-Rahman Muadh bin Jabal (may Allah be pleased with him), that the Messenger of Allah (peace and blessings of Allah be upon him) said: Have taqwa (fear) of Allah wherever you may be, and follow up a bad deed with a good deed which will wipe it out, and behave well towards the people. It was related by at-Tirmidhi, who said it was a hasan (good) hadeeth, and in some copies it is stated to be a hasan saheeh hadeeth",
+   "refAr": "الأربعون النووية · الحديث ١٨",
+   "refEn": "Forty Hadith an-Nawawi · 18",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي مَسْعُودٍ عُقْبَةَ بْنِ عَمْرٍو الْأَنْصَارِيِّ الْبَدْرِيِّ رَضِيَ اللهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه و سلم إنَّ مِمَّا أَدْرَكَ النَّاسُ مِنْ كَلَامِ النُّبُوَّةِ الْأُولَى: إذَا لَمْ تَسْتَحِ فَاصْنَعْ مَا شِئْت .<br>[رَوَاهُ الْبُخَارِيُّ]",
+   "en": "On the authority of Abu Masood Uqbah bin ’Amr al-Ansaree al-Badree (may Allah be pleased with him) who said: The Messenger of Allah (peace and blessings of Allah be upon him) said, “Verily, from what was learnt by the people from the speech of the earliest prophecy is: If you feel no shame, then do as you wish.” [Al-Bukhari]",
+   "refAr": "الأربعون النووية · الحديث ٢٠",
+   "refEn": "Forty Hadith an-Nawawi · 20",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي عَمْرٍو وَقِيلَ: أَبِي عَمْرَةَ سُفْيَانَ بْنِ عَبْدِ اللَّهِ رَضِيَ اللهُ عَنْهُ قَالَ: قُلْت: يَا رَسُولَ اللَّهِ! قُلْ لِي فِي الْإِسْلَامِ قَوْلًا لَا أَسْأَلُ عَنْهُ أَحَدًا غَيْرَك؛ قَالَ: قُلْ: آمَنْت بِاَللَّهِ ثُمَّ اسْتَقِمْ . [رَوَاهُ مُسْلِمٌ]",
+   "en": "On the authority of Abu `Amr — and he is also called Abu `Amrah — Sufyan bin Abdullah ath- Thaqafee (may Allah be pleased with him) who said: I said, \"O Messenger of Allah, tell me something about al-Islam which I can ask of no one but you.\" He (peace and blessings of Allah be upon him) said, \"Say I believe in Allah — and then be steadfast.\" [Muslim]",
+   "refAr": "الأربعون النووية · الحديث ٢١",
+   "refEn": "Forty Hadith an-Nawawi · 21",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي عَبْدِ اللَّهِ جَابِرِ بْنِ عَبْدِ اللَّهِ الْأَنْصَارِيِّ رَضِيَ اللَّهُ عَنْهُمَا: أَنَّ رَجُلًا سَأَلَ رَسُولَ اللَّهِ صلى الله عليه و سلم فَقَالَ: أَرَأَيْت إذَا صَلَّيْت الْمَكْتُوبَاتِ، وَصُمْت رَمَضَانَ، وَأَحْلَلْت الْحَلَالَ، وَحَرَّمْت الْحَرَامَ، وَلَمْ أَزِدْ عَلَى ذَلِكَ شَيْئًا؛ أَأَدْخُلُ الْجَنَّةَ؟ قَالَ: نَعَمْ . [رَوَاهُ مُسْلِمٌ]",
+   "en": "On the authority of Abu Abdullah Jabir bin Abdullah al-Ansaree (may Allah be pleased with him) that: A man questioned the Messenger of Allah (peace and blessings of Allah be upon him) and said, “Do you think that if I perform the obligatory prayers, fast in Ramadhan, treat as lawful that which is halal, and treat as forbidden that which is haram, and do not increase upon that [in voluntary good deeds], then I shall enter Paradise?” He (peace and blessings of Allah be upon him) replied, “Yes.” [Muslim]",
+   "refAr": "الأربعون النووية · الحديث ٢٢",
+   "refEn": "Forty Hadith an-Nawawi · 22",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ ابْنِ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ صلى الله عليه و سلم قَالَ: \"لَوْ يُعْطَى النَّاسُ بِدَعْوَاهُمْ لَادَّعَى رِجَالٌ أَمْوَالَ قَوْمٍ وَدِمَاءَهُمْ، لَكِنَّ الْبَيِّنَةَ عَلَى الْمُدَّعِي، وَالْيَمِينَ عَلَى مَنْ أَنْكَرَ\" . حَدِيثٌ حَسَنٌ، رَوَاهُ الْبَيْهَقِيّ [في\"السنن\" 10/252]، وَغَيْرُهُ هَكَذَا، وَبَعْضُهُ فِي \"الصَّحِيحَيْنِ",
+   "en": "On the authority of Ibn Abbas (may Allah be pleased with him), that the Messenger of Allah (peace and blessings of Allah be upon him) said: Were people to be given everything that they claimed, men would [unjustly] claim the wealth and lives of [other] people. But, the onus of proof is upon the claimant, and the taking of an oath is upon him who denies. A hasan hadeeth narrated by al-Baihaqee and others in this form, and part of it is in the two Saheehs",
+   "refAr": "الأربعون النووية · الحديث ٣٣",
+   "refEn": "Forty Hadith an-Nawawi · 33",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي سَعِيدٍ الْخُدْرِيّ رَضِيَ اللهُ عَنْهُ قَالَ سَمِعْت رَسُولَ اللَّهِ صلى الله عليه و سلم يَقُولُ: مَنْ رَأَى مِنْكُمْ مُنْكَرًا فَلْيُغَيِّرْهُ بِيَدِهِ، فَإِنْ لَمْ يَسْتَطِعْ فَبِلِسَانِهِ، فَإِنْ لَمْ يَسْتَطِعْ فَبِقَلْبِهِ، وَذَلِكَ أَضْعَفُ الْإِيمَانِ . [رَوَاهُ مُسْلِمٌ]",
+   "en": "On the authority of Abu Sa`eed al-Khudree (may Allah be pleased with him) who said: I heard the Messenger of Allah (ﷺ) say, “Whosoever of you sees an evil, let him change it with his hand; and if he is not able to do so, then [let him change it] with his tongue; and if he is not able to do so, then with his heart — and that is the weakest of faith.” [Muslim]",
+   "refAr": "الأربعون النووية · الحديث ٣٤",
+   "refEn": "Forty Hadith an-Nawawi · 34",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ ابْنِ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ صلى الله عليه و سلم قَالَ: \"إنَّ اللَّهَ تَجَاوَزَ لِي عَنْ أُمَّتِي الْخَطَأَ وَالنِّسْيَانَ وَمَا اسْتُكْرِهُوا عَلَيْهِ\" . حَدِيثٌ حَسَنٌ، رَوَاهُ ابْنُ مَاجَهْ [رقم:2045]، وَالْبَيْهَقِيّ [\"السنن]",
+   "en": "On the authority of Ibn Abbas (may Allah be pleased with him), that the Messenger of Allah (peace and blessings of Allah be upon him) said: Verily Allah has pardoned [or been lenient with] for me my ummah: their mistakes, their forgetfulness, and that which they have been forced to do under duress. A hasan hadeeth related by Ibn Majah, and al-Bayhaqee and others",
+   "refAr": "الأربعون النووية · الحديث ٣٩",
+   "refEn": "Forty Hadith an-Nawawi · 39",
+   "quranic": false
+  },
+  {
+   "ar": "عَنْ أَبِي مُحَمَّدٍ عَبْدِ اللَّهِ بْنِ عَمْرِو بْنِ الْعَاصِ رَضِيَ اللَّهُ عَنْهُمَا، قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه و سلم \"لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يَكُونَ هَوَاهُ تَبَعًا لِمَا جِئْتُ بِهِ\". حَدِيثٌ حَسَنٌ صَحِيحٌ، رَوَيْنَاهُ فِي كِتَابِ \"الْحُجَّةِ\" بِإِسْنَادٍ صَحِيحٍ",
+   "en": "On the authority of Abu Muhammad Abdullah bin ’Amr bin al-’Aas (may Allah be pleased with him) who said: The Messenger of Allah (peace and blessings of Allah be upon him) said, “None of you [truly] believes until his desires are subservient to that which I have brought.” [Imam an-Nawawi says:] We have related it in Kitab al-Hujjah with a saheeh chain of narrators",
+   "refAr": "الأربعون النووية · الحديث ٤١",
+   "refEn": "Forty Hadith an-Nawawi · 41",
+   "quranic": false
+  },
+  {
+   "ar": "بُنِيَ الْإِسْلَامُ عَلَىٰ خَمْسٍ: شَهَادَةِ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامِ الصَّلَاةِ، وَإِيتَاءِ الزَّكَاةِ، وَحَجِّ الْبَيْتِ، وَصَوْمِ رَمَضَانَ",
+   "en": "Islam is built upon five: the testimony that there is no god but Allah and that Muhammad is the Messenger of Allah, establishing the prayer, giving zakat, pilgrimage to the House, and fasting Ramadan.",
+   "refAr": "متفق عليه · البخاري (٨) ومسلم (١٦) · الأربعون النووية (٣)",
+   "refEn": "Agreed upon · Al-Bukhari 8, Muslim 16 · Forty Hadith an-Nawawi 3",
+   "quranic": false
+  },
+  {
+   "ar": "الدِّينُ النَّصِيحَةُ. قُلْنَا: لِمَنْ؟ قَالَ: لِلَّهِ، وَلِكِتَابِهِ، وَلِرَسُولِهِ، وَلِأَئِمَّةِ الْمُسْلِمِينَ وَعَامَّتِهِمْ",
+   "en": "Religion is sincere advice. We said: For whom? He said: For Allah, His Book, His Messenger, and the leaders of the Muslims and their common folk.",
+   "refAr": "رواه مسلم (٥٥) · الأربعون النووية (٧)",
+   "refEn": "Muslim 55 · Forty Hadith an-Nawawi 7",
+   "quranic": false
+  },
+  {
+   "ar": "مِنْ حُسْنِ إِسْلَامِ الْمَرْءِ تَرْكُهُ مَا لَا يَعْنِيهِ",
+   "en": "Part of the excellence of a person's Islam is leaving what does not concern them.",
+   "refAr": "رواه الترمذي (٢٣١٧) · الأربعون النووية (١٢)",
+   "refEn": "At-Tirmidhi 2317 · Forty Hadith an-Nawawi 12",
+   "quranic": false
+  },
+  {
+   "ar": "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّىٰ يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ",
+   "en": "None of you truly believes until he loves for his brother what he loves for himself.",
+   "refAr": "متفق عليه · البخاري (١٣) ومسلم (٤٥) · الأربعون النووية (١٣)",
+   "refEn": "Agreed upon · Al-Bukhari 13, Muslim 45 · Forty Hadith an-Nawawi 13",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ",
+   "en": "Whoever believes in Allah and the Last Day, let him speak good or remain silent.",
+   "refAr": "متفق عليه · البخاري (٦٠١٨) ومسلم (٤٧) · الأربعون النووية (١٥)",
+   "refEn": "Agreed upon · Al-Bukhari 6018, Muslim 47 · Forty Hadith an-Nawawi 15",
+   "quranic": false
+  },
+  {
+   "ar": "قَالَ رَجُلٌ لِلنَّبِيِّ ﷺ: أَوْصِنِي. قَالَ: لَا تَغْضَبْ. فَرَدَّدَ مِرَارًا، قَالَ: لَا تَغْضَبْ",
+   "en": "A man said to the Prophet ﷺ: Advise me. He said: Do not become angry. The man repeated it several times, and he said: Do not become angry.",
+   "refAr": "رواه البخاري (٦١١٦) · الأربعون النووية (١٦)",
+   "refEn": "Al-Bukhari 6116 · Forty Hadith an-Nawawi 16",
+   "quranic": false
+  },
+  {
+   "ar": "لَيْسَ الشَّدِيدُ بِالصُّرَعَةِ، إِنَّمَا الشَّدِيدُ الَّذِي يَمْلِكُ نَفْسَهُ عِنْدَ الْغَضَبِ",
+   "en": "The strong person is not the one who overpowers others; the strong person is the one who controls himself in anger.",
+   "refAr": "متفق عليه · البخاري (٦١١٤) ومسلم (٢٦٠٩)",
+   "refEn": "Agreed upon · Al-Bukhari 6114, Muslim 2609",
+   "quranic": false
+  },
+  {
+   "ar": "اتَّقِ اللَّهَ حَيْثُمَا كُنْتَ، وَأَتْبِعِ السَّيِّئَةَ الْحَسَنَةَ تَمْحُهَا، وَخَالِقِ النَّاسَ بِخُلُقٍ حَسَنٍ",
+   "en": "Fear Allah wherever you are, follow a bad deed with a good one and it will erase it, and treat people with good character.",
+   "refAr": "رواه الترمذي (١٩٨٧) · الأربعون النووية (١٨)",
+   "refEn": "At-Tirmidhi 1987 · Forty Hadith an-Nawawi 18",
+   "quranic": false
+  },
+  {
+   "ar": "الْمُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ",
+   "en": "A Muslim is one from whose tongue and hand the Muslims are safe.",
+   "refAr": "متفق عليه · البخاري (١٠) ومسلم (٤١)",
+   "refEn": "Agreed upon · Al-Bukhari 10, Muslim 41",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ لَا يَرْحَمْ لَا يُرْحَمْ",
+   "en": "Whoever does not show mercy will not be shown mercy.",
+   "refAr": "متفق عليه · البخاري (٥٩٩٧) ومسلم (٢٣١٨)",
+   "refEn": "Agreed upon · Al-Bukhari 5997, Muslim 2318",
+   "quranic": false
+  },
+  {
+   "ar": "الرَّاحِمُونَ يَرْحَمُهُمُ الرَّحْمَٰنُ، ارْحَمُوا مَنْ فِي الْأَرْضِ يَرْحَمْكُمْ مَنْ فِي السَّمَاءِ",
+   "en": "The merciful are shown mercy by the Most Merciful. Be merciful to those on earth and the One above the heavens will be merciful to you.",
+   "refAr": "رواه أبو داود (٤٩٤١) والترمذي (١٩٢٤)",
+   "refEn": "Abu Dawud 4941 · At-Tirmidhi 1924",
+   "quranic": false
+  },
+  {
+   "ar": "تَبَسُّمُكَ فِي وَجْهِ أَخِيكَ لَكَ صَدَقَةٌ",
+   "en": "Your smiling in the face of your brother is charity.",
+   "refAr": "رواه الترمذي (١٩٥٦)",
+   "refEn": "At-Tirmidhi 1956",
+   "quranic": false
+  },
+  {
+   "ar": "الْكَلِمَةُ الطَّيِّبَةُ صَدَقَةٌ",
+   "en": "A good word is charity.",
+   "refAr": "متفق عليه · البخاري (٢٩٨٩) ومسلم (١٠٠٩)",
+   "refEn": "Agreed upon · Al-Bukhari 2989, Muslim 1009",
+   "quranic": false
+  },
+  {
+   "ar": "إِنَّ اللَّهَ لَا يَنْظُرُ إِلَىٰ صُوَرِكُمْ وَأَمْوَالِكُمْ، وَلَٰكِنْ يَنْظُرُ إِلَىٰ قُلُوبِكُمْ وَأَعْمَالِكُمْ",
+   "en": "Allah does not look at your appearances or your wealth, but He looks at your hearts and your deeds.",
+   "refAr": "رواه مسلم (٢٥٦٤)",
+   "refEn": "Muslim 2564",
+   "quranic": false
+  },
+  {
+   "ar": "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
+   "en": "The best of you are those who learn the Quran and teach it.",
+   "refAr": "رواه البخاري (٥٠٢٧)",
+   "refEn": "Al-Bukhari 5027",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ",
+   "en": "Whoever travels a path seeking knowledge, Allah makes easy for him a path to Paradise.",
+   "refAr": "رواه مسلم (٢٦٩٩)",
+   "refEn": "Muslim 2699",
+   "quranic": false
+  },
+  {
+   "ar": "الطُّهُورُ شَطْرُ الْإِيمَانِ",
+   "en": "Purification is half of faith.",
+   "refAr": "رواه مسلم (٢٢٣)",
+   "refEn": "Muslim 223",
+   "quranic": false
+  },
+  {
+   "ar": "أَحَبُّ الْأَعْمَالِ إِلَى اللَّهِ أَدْوَمُهَا وَإِنْ قَلَّ",
+   "en": "The most beloved deeds to Allah are the most consistent, even if small.",
+   "refAr": "متفق عليه · البخاري (٦٤٦٤) ومسلم (٧٨٣)",
+   "refEn": "Agreed upon · Al-Bukhari 6464, Muslim 783",
+   "quranic": false
+  },
+  {
+   "ar": "كَلِمَتَانِ خَفِيفَتَانِ عَلَى اللِّسَانِ، ثَقِيلَتَانِ فِي الْمِيزَانِ، حَبِيبَتَانِ إِلَى الرَّحْمَٰنِ: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ",
+   "en": "Two phrases are light on the tongue, heavy on the scale, and beloved to the Most Merciful: Glory and praise to Allah; Glory to Allah the Magnificent.",
+   "refAr": "متفق عليه · البخاري (٦٤٠٦) ومسلم (٢٦٩٤)",
+   "refEn": "Agreed upon · Al-Bukhari 6406, Muslim 2694",
+   "quranic": false
+  },
+  {
+   "ar": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+   "en": "Deeds are only by intentions, and each person will have only what they intended.",
+   "refAr": "متفق عليه · الأربعون النووية (١)",
+   "refEn": "Agreed upon · Forty Hadith an-Nawawi 1",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ أَحْدَثَ فِي أَمْرِنَا هَذَا مَا لَيْسَ مِنْهُ فَهُوَ رَدٌّ",
+   "en": "Whoever introduces into this matter of ours something that is not part of it, it is rejected.",
+   "refAr": "متفق عليه · الأربعون النووية (٥)",
+   "refEn": "Agreed upon · Forty Hadith an-Nawawi 5",
+   "quranic": false
+  },
+  {
+   "ar": "قُلْ آمَنْتُ بِاللَّهِ ثُمَّ اسْتَقِمْ",
+   "en": "Say: I believe in Allah, and then be steadfast.",
+   "refAr": "رواه مسلم · الأربعون النووية (٢١)",
+   "refEn": "Muslim · Forty Hadith an-Nawawi 21",
+   "quranic": false
+  },
+  {
+   "ar": "الْحَيَاءُ مِنَ الْإِيمَانِ",
+   "en": "Modesty is part of faith.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "الْمُؤْمِنُ الْقَوِيُّ خَيْرٌ وَأَحَبُّ إِلَى اللَّهِ مِنَ الْمُؤْمِنِ الضَّعِيفِ وَفِي كُلٍّ خَيْرٌ",
+   "en": "The strong believer is better and more beloved to Allah than the weak believer, though there is good in both.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "عَجَبًا لِأَمْرِ الْمُؤْمِنِ إِنَّ أَمْرَهُ كُلَّهُ خَيْرٌ، وَلَيْسَ ذَاكَ لِأَحَدٍ إِلَّا لِلْمُؤْمِنِ: إِنْ أَصَابَتْهُ سَرَّاءُ شَكَرَ فَكَانَ خَيْرًا لَهُ، وَإِنْ أَصَابَتْهُ ضَرَّاءُ صَبَرَ فَكَانَ خَيْرًا لَهُ",
+   "en": "How wondrous is the affair of the believer: all of it is good, and this is for no one but the believer. If something pleasant befalls him he is thankful and it is good for him; if something harmful befalls him he is patient and it is good for him.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "الدُّنْيَا سِجْنُ الْمُؤْمِنِ وَجَنَّةُ الْكَافِرِ",
+   "en": "The world is the prison of the believer and the paradise of the disbeliever.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "دَعْ مَا يَرِيبُكَ إِلَى مَا لَا يَرِيبُكَ",
+   "en": "Leave what makes you doubt for what does not make you doubt.",
+   "refAr": "رواه الترمذي والنسائي · الأربعون النووية (١١)",
+   "refEn": "At-Tirmidhi and an-Nasa’i · Forty Hadith an-Nawawi 11",
+   "quranic": false
+  },
+  {
+   "ar": "لَا ضَرَرَ وَلَا ضِرَارَ",
+   "en": "There is to be no harm and no reciprocating harm.",
+   "refAr": "رواه ابن ماجه · الأربعون النووية (٣٢)",
+   "refEn": "Ibn Majah · Forty Hadith an-Nawawi 32",
+   "quranic": false
+  },
+  {
+   "ar": "إِذَا لَمْ تَسْتَحِ فَاصْنَعْ مَا شِئْتَ",
+   "en": "If you have no modesty, then do as you wish.",
+   "refAr": "رواه البخاري",
+   "refEn": "Al-Bukhari",
+   "quranic": false
+  },
+  {
+   "ar": "الْمُؤْمِنُ لِلْمُؤْمِنِ كَالْبُنْيَانِ يَشُدُّ بَعْضُهُ بَعْضًا",
+   "en": "The believer to the believer is like a building whose parts support one another.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "مَثَلُ الْمُؤْمِنِينَ فِي تَوَادِّهِمْ وَتَرَاحُمِهِمْ وَتَعَاطُفِهِمْ مَثَلُ الْجَسَدِ إِذَا اشْتَكَى مِنْهُ عُضْوٌ تَدَاعَى لَهُ سَائِرُ الْجَسَدِ بِالسَّهَرِ وَالْحُمَّى",
+   "en": "The believers in their mutual love, mercy and compassion are like one body: when one part suffers, the whole body responds with sleeplessness and fever.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "الْمُسْلِمُ أَخُو الْمُسْلِمِ، لَا يَظْلِمُهُ وَلَا يُسْلِمُهُ",
+   "en": "A Muslim is the brother of a Muslim: he does not wrong him nor abandon him.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "إِيَّاكُمْ وَالظَّنَّ فَإِنَّ الظَّنَّ أَكْذَبُ الْحَدِيثِ",
+   "en": "Beware of suspicion, for suspicion is the most false of speech.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "الظُّلْمُ ظُلُمَاتٌ يَوْمَ الْقِيَامَةِ",
+   "en": "Wrongdoing will be layers of darkness on the Day of Resurrection.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "لَا يَشْكُرُ اللَّهَ مَنْ لَا يَشْكُرُ النَّاسَ",
+   "en": "Whoever does not thank people has not thanked Allah.",
+   "refAr": "رواه أبو داود والترمذي",
+   "refEn": "Abu Dawud and at-Tirmidhi",
+   "quranic": false
+  },
+  {
+   "ar": "أَكْمَلُ الْمُؤْمِنِينَ إِيمَانًا أَحْسَنُهُمْ خُلُقًا",
+   "en": "The most complete of the believers in faith are those with the best character.",
+   "refAr": "رواه أبو داود والترمذي",
+   "refEn": "Abu Dawud and at-Tirmidhi",
+   "quranic": false
+  },
+  {
+   "ar": "لَيْسَ الْغِنَى عَنْ كَثْرَةِ الْعَرَضِ، وَلَكِنَّ الْغِنَى غِنَى النَّفْسِ",
+   "en": "Wealth is not abundance of possessions; true wealth is the richness of the soul.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "نِعْمَتَانِ مَغْبُونٌ فِيهِمَا كَثِيرٌ مِنَ النَّاسِ: الصِّحَّةُ وَالْفَرَاغُ",
+   "en": "There are two blessings in which many people lose out: health and free time.",
+   "refAr": "رواه البخاري",
+   "refEn": "Al-Bukhari",
+   "quranic": false
+  },
+  {
+   "ar": "إِنَّ اللَّهَ يُحِبُّ الرِّفْقَ فِي الْأَمْرِ كُلِّهِ",
+   "en": "Allah loves gentleness in all matters.",
+   "refAr": "رواه البخاري",
+   "refEn": "Al-Bukhari",
+   "quranic": false
+  },
+  {
+   "ar": "يَسِّرُوا وَلَا تُعَسِّرُوا، وَبَشِّرُوا وَلَا تُنَفِّرُوا",
+   "en": "Make things easy and do not make them hard; give glad tidings and do not drive people away.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "لَا تَدْخُلُونَ الْجَنَّةَ حَتَّى تُؤْمِنُوا، وَلَا تُؤْمِنُوا حَتَّى تَحَابُّوا، أَوَلَا أَدُلُّكُمْ عَلَى شَيْءٍ إِذَا فَعَلْتُمُوهُ تَحَابَبْتُمْ؟ أَفْشُوا السَّلَامَ بَيْنَكُمْ",
+   "en": "You will not enter Paradise until you believe, and you will not believe until you love one another. Shall I tell you of something that, if you do it, will make you love one another? Spread the greeting of peace among yourselves.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "جَاءَ رَجُلٌ إِلَى رَسُولِ اللَّهِ ﷺ فَقَالَ: مَنْ أَحَقُّ النَّاسِ بِحُسْنِ صَحَابَتِي؟ قَالَ: أُمُّكَ. قَالَ: ثُمَّ مَنْ؟ قَالَ: أُمُّكَ. قَالَ: ثُمَّ مَنْ؟ قَالَ: أُمُّكَ. قَالَ: ثُمَّ مَنْ؟ قَالَ: أَبُوكَ",
+   "en": "A man came to the Messenger of Allah ﷺ and said: Who is most deserving of my good companionship? He said: Your mother. He said: Then who? He said: Your mother. He said: Then who? He said: Your mother. He said: Then who? He said: Your father.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "الْبِرُّ حُسْنُ الْخُلُقِ",
+   "en": "Righteousness is good character.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ",
+   "en": "For whomever Allah intends good, He gives understanding of the religion.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "بَلِّغُوا عَنِّي وَلَوْ آيَةً",
+   "en": "Convey from me, even if it is one verse.",
+   "refAr": "رواه البخاري",
+   "refEn": "Al-Bukhari",
+   "quranic": false
+  },
+  {
+   "ar": "إِذَا مَاتَ الْإِنْسَانُ انْقَطَعَ عَنْهُ عَمَلُهُ إِلَّا مِنْ ثَلَاثَةٍ: صَدَقَةٍ جَارِيَةٍ، أَوْ عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ يَدْعُو لَهُ",
+   "en": "When a person dies, his deeds come to an end except for three: ongoing charity, knowledge that is benefited from, or a righteous child who prays for him.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ",
+   "en": "Whoever guides to something good has a reward like the one who does it.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "اقْرَءُوا الْقُرْآنَ فَإِنَّهُ يَأْتِي يَوْمَ الْقِيَامَةِ شَفِيعًا لِأَصْحَابِهِ",
+   "en": "Recite the Quran, for it will come on the Day of Resurrection as an intercessor for its companions.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ قَرَأَ حَرْفًا مِنْ كِتَابِ اللَّهِ فَلَهُ بِهِ حَسَنَةٌ، وَالْحَسَنَةُ بِعَشْرِ أَمْثَالِهَا",
+   "en": "Whoever recites a letter of the Book of Allah earns a good deed, and each good deed is multiplied tenfold.",
+   "refAr": "رواه الترمذي",
+   "refEn": "At-Tirmidhi",
+   "quranic": false
+  },
+  {
+   "ar": "الصَّلَوَاتُ الْخَمْسُ، وَالْجُمُعَةُ إِلَى الْجُمُعَةِ، وَرَمَضَانُ إِلَى رَمَضَانَ، مُكَفِّرَاتٌ لِمَا بَيْنَهُنَّ إِذَا اجْتَنَبَ الْكَبَائِرَ",
+   "en": "The five prayers, Friday to Friday, and Ramadan to Ramadan are expiation for what lies between them, so long as major sins are avoided.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "صَلَاةُ الْجَمَاعَةِ تَفْضُلُ صَلَاةَ الْفَذِّ بِسَبْعٍ وَعِشْرِينَ دَرَجَةً",
+   "en": "Prayer in congregation is twenty-seven degrees better than prayer on one’s own.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "رَكْعَتَا الْفَجْرِ خَيْرٌ مِنَ الدُّنْيَا وَمَا فِيهَا",
+   "en": "The two rak‘ahs of Fajr are better than the world and all that is in it.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ",
+   "en": "Whoever fasts Ramadan out of faith and seeking reward, his previous sins are forgiven.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ قَامَ لَيْلَةَ الْقَدْرِ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ",
+   "en": "Whoever stands in prayer on the Night of Qadr out of faith and seeking reward, his previous sins are forgiven.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "اتَّقُوا النَّارَ وَلَوْ بِشِقِّ تَمْرَةٍ",
+   "en": "Shield yourselves from the Fire, even with half a date.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ بَنَى لِلَّهِ مَسْجِدًا بَنَى اللَّهُ لَهُ مِثْلَهُ فِي الْجَنَّةِ",
+   "en": "Whoever builds a mosque for Allah, Allah builds for him the like of it in Paradise.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "الدُّعَاءُ هُوَ الْعِبَادَةُ",
+   "en": "Supplication is worship.",
+   "refAr": "رواه أبو داود والترمذي",
+   "refEn": "Abu Dawud and at-Tirmidhi",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ صَلَّى عَلَيَّ صَلَاةً صَلَّى اللَّهُ عَلَيْهِ بِهَا عَشْرًا",
+   "en": "Whoever sends one blessing upon me, Allah sends ten blessings upon him.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "مَنْ قَالَ سُبْحَانَ اللَّهِ وَبِحَمْدِهِ فِي يَوْمٍ مِائَةَ مَرَّةٍ حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ",
+   "en": "Whoever says “Glory and praise to Allah” a hundred times in a day, his sins are wiped away even if they were like the foam of the sea.",
+   "refAr": "متفق عليه",
+   "refEn": "Agreed upon",
+   "quranic": false
+  },
+  {
+   "ar": "لَأَنْ أَقُولَ سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ أَحَبُّ إِلَيَّ مِمَّا طَلَعَتْ عَلَيْهِ الشَّمْسُ",
+   "en": "To say “Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is the Greatest” is more beloved to me than all that the sun rises upon.",
+   "refAr": "رواه مسلم",
+   "refEn": "Muslim",
+   "quranic": false
+  },
+  {
+   "ar": "أَفْضَلُ الذِّكْرِ لَا إِلَهَ إِلَّا اللَّهُ، وَأَفْضَلُ الدُّعَاءِ الْحَمْدُ لِلَّهِ",
+   "en": "The best remembrance is “There is no god but Allah”, and the best supplication is “Praise be to Allah”.",
+   "refAr": "رواه الترمذي",
+   "refEn": "At-Tirmidhi",
+   "quranic": false
+  }
+ ],
+ "dua": [
+  {
+   "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ",
+   "en": "It is You we worship and You we ask for help. Guide us to the straight path - The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray.",
+   "refAr": "دعاء الهداية · سورة الفاتحة · الآية ٥-٧",
+   "refEn": "The prayer for guidance · Al-Faatiha 1:5-7",
+   "quranic": true
+  },
+  {
+   "ar": "وَإِذْ يَرْفَعُ إِبْرَٰهِـۧمُ ٱلْقَوَاعِدَ مِنَ ٱلْبَيْتِ وَإِسْمَٰعِيلُ رَبَّنَا تَقَبَّلْ مِنَّآ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ رَبَّنَا وَٱجْعَلْنَا مُسْلِمَيْنِ لَكَ وَمِن ذُرِّيَّتِنَآ أُمَّةً مُّسْلِمَةً لَّكَ وَأَرِنَا مَنَاسِكَنَا وَتُبْ عَلَيْنَآ إِنَّكَ أَنتَ ٱلتَّوَّابُ ٱلرَّحِيمُ",
+   "en": "And [mention] when Abraham was raising the foundations of the House and [with him] Ishmael, [saying], \"Our Lord, accept [this] from us. Indeed You are the Hearing, the Knowing. Our Lord, and make us Muslims [in submission] to You and from our descendants a Muslim nation [in submission] to You. And show us our rites and accept our repentance. Indeed, You are the Accepting of repentance, the Merciful.",
+   "refAr": "دعاء إبراهيم وإسماعيل عليهما السلام · سورة البقرة · الآية ١٢٧-١٢٨",
+   "refEn": "Ibrahim and Isma‘il · Al-Baqara 2:127-128",
+   "quranic": true
+  },
+  {
+   "ar": "رَبَّنَا وَٱبْعَثْ فِيهِمْ رَسُولًا مِّنْهُمْ يَتْلُوا۟ عَلَيْهِمْ ءَايَٰتِكَ وَيُعَلِّمُهُمُ ٱلْكِتَٰبَ وَٱلْحِكْمَةَ وَيُزَكِّيهِمْ إِنَّكَ أَنتَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+   "en": "Our Lord, and send among them a messenger from themselves who will recite to them Your verses and teach them the Book and wisdom and purify them. Indeed, You are the Exalted in Might, the Wise.\"",
+   "refAr": "دعاء إبراهيم عليه السلام · سورة البقرة · الآية ١٢٩",
+   "refEn": "Ibrahim · Al-Baqara 2:129",
+   "quranic": true
+  },
+  {
+   "ar": "وَمِنْهُم مَّن يَقُولُ رَبَّنَآ ءَاتِنَا فِى ٱلدُّنْيَا حَسَنَةً وَفِى ٱلْـَٔاخِرَةِ حَسَنَةً وَقِنَا عَذَابَ ٱلنَّارِ",
+   "en": "But among them is he who says, \"Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.\"",
+   "refAr": "دعاء الدنيا والآخرة · سورة البقرة · الآية ٢٠١",
+   "refEn": "For this world and the next · Al-Baqara 2:201",
+   "quranic": true
+  },
+  {
+   "ar": "وَلَمَّا بَرَزُوا۟ لِجَالُوتَ وَجُنُودِهِۦ قَالُوا۟ رَبَّنَآ أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا وَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَٰفِرِينَ",
+   "en": "And when they went forth to [face] Goliath and his soldiers, they said, \"Our Lord, pour upon us patience and plant firmly our feet and give us victory over the disbelieving people.\"",
+   "refAr": "دعاء جند طالوت · سورة البقرة · الآية ٢٥٠",
+   "refEn": "The soldiers of Talut · Al-Baqara 2:250",
+   "quranic": true
+  },
+  {
+   "ar": "لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا ٱكْتَسَبَتْ رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًا كَمَا حَمَلْتَهُۥ عَلَى ٱلَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَٰفِرِينَ",
+   "en": "Allah does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. \"Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people.\"",
+   "refAr": "خاتمة سورة البقرة · سورة البقرة · الآية ٢٨٦",
+   "refEn": "The end of Al-Baqarah · Al-Baqara 2:286",
+   "quranic": true
+  },
+  {
+   "ar": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً إِنَّكَ أَنتَ ٱلْوَهَّابُ",
+   "en": "[Who say], \"Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower.",
+   "refAr": "دعاء الراسخين في العلم · سورة آل عمران · الآية ٨",
+   "refEn": "Those firm in knowledge · Aal-i-Imraan 3:8",
+   "quranic": true
+  },
+  {
+   "ar": "ٱلَّذِينَ يَقُولُونَ رَبَّنَآ إِنَّنَآ ءَامَنَّا فَٱغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ ٱلنَّارِ",
+   "en": "Those who say, \"Our Lord, indeed we have believed, so forgive us our sins and protect us from the punishment of the Fire,\"",
+   "refAr": "دعاء المتقين · سورة آل عمران · الآية ١٦",
+   "refEn": "The God-fearing · Aal-i-Imraan 3:16",
+   "quranic": true
+  },
+  {
+   "ar": "قُلِ ٱللَّهُمَّ مَٰلِكَ ٱلْمُلْكِ تُؤْتِى ٱلْمُلْكَ مَن تَشَآءُ وَتَنزِعُ ٱلْمُلْكَ مِمَّن تَشَآءُ وَتُعِزُّ مَن تَشَآءُ وَتُذِلُّ مَن تَشَآءُ بِيَدِكَ ٱلْخَيْرُ إِنَّكَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ تُولِجُ ٱلَّيْلَ فِى ٱلنَّهَارِ وَتُولِجُ ٱلنَّهَارَ فِى ٱلَّيْلِ وَتُخْرِجُ ٱلْحَىَّ مِنَ ٱلْمَيِّتِ وَتُخْرِجُ ٱلْمَيِّتَ مِنَ ٱلْحَىِّ وَتَرْزُقُ مَن تَشَآءُ بِغَيْرِ حِسَابٍ",
+   "en": "Say, \"O Allah, Owner of Sovereignty, You give sovereignty to whom You will and You take sovereignty away from whom You will. You honor whom You will and You humble whom You will. In Your hand is [all] good. Indeed, You are over all things competent. You cause the night to enter the day, and You cause the day to enter the night; and You bring the living out of the dead, and You bring the dead out of the living. And You give provision to whom You will without account.\"",
+   "refAr": "دعاء مالك الملك · سورة آل عمران · الآية ٢٦-٢٧",
+   "refEn": "Owner of Sovereignty · Aal-i-Imraan 3:26-27",
+   "quranic": true
+  },
+  {
+   "ar": "هُنَالِكَ دَعَا زَكَرِيَّا رَبَّهُۥ قَالَ رَبِّ هَبْ لِى مِن لَّدُنكَ ذُرِّيَّةً طَيِّبَةً إِنَّكَ سَمِيعُ ٱلدُّعَآءِ",
+   "en": "At that, Zechariah called upon his Lord, saying, \"My Lord, grant me from Yourself a good offspring. Indeed, You are the Hearer of supplication.\"",
+   "refAr": "دعاء زكريا عليه السلام · سورة آل عمران · الآية ٣٨",
+   "refEn": "Zakariyya · Aal-i-Imraan 3:38",
+   "quranic": true
+  },
+  {
+   "ar": "رَبَّنَآ ءَامَنَّا بِمَآ أَنزَلْتَ وَٱتَّبَعْنَا ٱلرَّسُولَ فَٱكْتُبْنَا مَعَ ٱلشَّٰهِدِينَ",
+   "en": "Our Lord, we have believed in what You revealed and have followed the messenger Jesus, so register us among the witnesses [to truth].\"",
+   "refAr": "دعاء الحواريين · سورة آل عمران · الآية ٥٣",
+   "refEn": "The disciples of ‘Isa · Aal-i-Imraan 3:53",
+   "quranic": true
+  },
+  {
+   "ar": "وَمَا كَانَ قَوْلَهُمْ إِلَّآ أَن قَالُوا۟ رَبَّنَا ٱغْفِرْ لَنَا ذُنُوبَنَا وَإِسْرَافَنَا فِىٓ أَمْرِنَا وَثَبِّتْ أَقْدَامَنَا وَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَٰفِرِينَ",
+   "en": "And their words were not but that they said, \"Our Lord, forgive us our sins and the excess [committed] in our affairs and plant firmly our feet and give us victory over the disbelieving people.\"",
+   "refAr": "دعاء أتباع الأنبياء · سورة آل عمران · الآية ١٤٧",
+   "refEn": "Followers of the prophets · Aal-i-Imraan 3:147",
+   "quranic": true
+  },
+  {
+   "ar": "وَمَا لَكُمْ لَا تُقَٰتِلُونَ فِى سَبِيلِ ٱللَّهِ وَٱلْمُسْتَضْعَفِينَ مِنَ ٱلرِّجَالِ وَٱلنِّسَآءِ وَٱلْوِلْدَٰنِ ٱلَّذِينَ يَقُولُونَ رَبَّنَآ أَخْرِجْنَا مِنْ هَٰذِهِ ٱلْقَرْيَةِ ٱلظَّالِمِ أَهْلُهَا وَٱجْعَل لَّنَا مِن لَّدُنكَ وَلِيًّا وَٱجْعَل لَّنَا مِن لَّدُنكَ نَصِيرًا",
+   "en": "And what is [the matter] with you that you fight not in the cause of Allah and [for] the oppressed among men, women, and children who say, \"Our Lord, take us out of this city of oppressive people and appoint for us from Yourself a protector and appoint for us from Yourself a helper?\"",
+   "refAr": "دعاء المستضعفين · سورة النساء · الآية ٧٥",
+   "refEn": "The oppressed · An-Nisaa 4:75",
+   "quranic": true
+  },
+  {
+   "ar": "قَالَ عِيسَى ٱبْنُ مَرْيَمَ ٱللَّهُمَّ رَبَّنَآ أَنزِلْ عَلَيْنَا مَآئِدَةً مِّنَ ٱلسَّمَآءِ تَكُونُ لَنَا عِيدًا لِّأَوَّلِنَا وَءَاخِرِنَا وَءَايَةً مِّنكَ وَٱرْزُقْنَا وَأَنتَ خَيْرُ ٱلرَّٰزِقِينَ",
+   "en": "Said Jesus, the son of Mary, \"O Allah, our Lord, send down to us a table [spread with food] from the heaven to be for us a festival for the first of us and the last of us and a sign from You. And provide for us, and You are the best of providers.\"",
+   "refAr": "دعاء عيسى عليه السلام · سورة المائدة · الآية ١١٤",
+   "refEn": "‘Isa · Al-Maaida 5:114",
+   "quranic": true
+  },
+  {
+   "ar": "قَالَا رَبَّنَا ظَلَمْنَآ أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ ٱلْخَٰسِرِينَ",
+   "en": "They said, \"Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.\"",
+   "refAr": "دعاء آدم وحواء عليهما السلام · سورة الأعراف · الآية ٢٣",
+   "refEn": "Adam and Hawwa · Al-A'raaf 7:23",
+   "quranic": true
+  },
+  {
+   "ar": "وَإِذَا صُرِفَتْ أَبْصَٰرُهُمْ تِلْقَآءَ أَصْحَٰبِ ٱلنَّارِ قَالُوا۟ رَبَّنَا لَا تَجْعَلْنَا مَعَ ٱلْقَوْمِ ٱلظَّٰلِمِينَ",
+   "en": "And when their eyes are turned toward the companions of the Fire, they say, \"Our Lord, do not place us with the wrongdoing people.\"",
+   "refAr": "دعاء أهل الأعراف · سورة الأعراف · الآية ٤٧",
+   "refEn": "The people of al-A‘raf · Al-A'raaf 7:47",
+   "quranic": true
+  },
+  {
+   "ar": "قَدِ ٱفْتَرَيْنَا عَلَى ٱللَّهِ كَذِبًا إِنْ عُدْنَا فِى مِلَّتِكُم بَعْدَ إِذْ نَجَّىٰنَا ٱللَّهُ مِنْهَا وَمَا يَكُونُ لَنَآ أَن نَّعُودَ فِيهَآ إِلَّآ أَن يَشَآءَ ٱللَّهُ رَبُّنَا وَسِعَ رَبُّنَا كُلَّ شَىْءٍ عِلْمًا عَلَى ٱللَّهِ تَوَكَّلْنَا رَبَّنَا ٱفْتَحْ بَيْنَنَا وَبَيْنَ قَوْمِنَا بِٱلْحَقِّ وَأَنتَ خَيْرُ ٱلْفَٰتِحِينَ",
+   "en": "We would have invented against Allah a lie if we returned to your religion after Allah had saved us from it. And it is not for us to return to it except that Allah, our Lord, should will. Our Lord has encompassed all things in knowledge. Upon Allah we have relied. Our Lord, decide between us and our people in truth, and You are the best of those who give decision.\"",
+   "refAr": "دعاء شعيب عليه السلام · سورة الأعراف · الآية ٨٩",
+   "refEn": "Shu‘ayb · Al-A'raaf 7:89",
+   "quranic": true
+  },
+  {
+   "ar": "وَمَا تَنقِمُ مِنَّآ إِلَّآ أَنْ ءَامَنَّا بِـَٔايَٰتِ رَبِّنَا لَمَّا جَآءَتْنَا رَبَّنَآ أَفْرِغْ عَلَيْنَا صَبْرًا وَتَوَفَّنَا مُسْلِمِينَ",
+   "en": "And you do not resent us except because we believed in the signs of our Lord when they came to us. Our Lord, pour upon us patience and let us die as Muslims [in submission to You].\"",
+   "refAr": "دعاء سحرة فرعون · سورة الأعراف · الآية ١٢٦",
+   "refEn": "Pharaoh’s magicians · Al-A'raaf 7:126",
+   "quranic": true
+  },
+  {
+   "ar": "قَالَ رَبِّ ٱغْفِرْ لِى وَلِأَخِى وَأَدْخِلْنَا فِى رَحْمَتِكَ وَأَنتَ أَرْحَمُ ٱلرَّٰحِمِينَ",
+   "en": "[Moses] said, \"My Lord, forgive me and my brother and admit us into Your mercy, for You are the most merciful of the merciful.\"",
+   "refAr": "دعاء موسى عليه السلام · سورة الأعراف · الآية ١٥١",
+   "refEn": "Musa · Al-A'raaf 7:151",
+   "quranic": true
+  },
+  {
+   "ar": "فَإِن تَوَلَّوْا۟ فَقُلْ حَسْبِىَ ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ ٱلْعَرْشِ ٱلْعَظِيمِ",
+   "en": "But if they turn away, [O Muhammad], say, \"Sufficient for me is Allah; there is no deity except Him. On Him I have relied, and He is the Lord of the Great Throne.\"",
+   "refAr": "حسبي الله · سورة التوبة · الآية ١٢٩",
+   "refEn": "Allah is sufficient for me · At-Tawba 9:129",
+   "quranic": true
+  },
+  {
+   "ar": "فَقَالُوا۟ عَلَى ٱللَّهِ تَوَكَّلْنَا رَبَّنَا لَا تَجْعَلْنَا فِتْنَةً لِّلْقَوْمِ ٱلظَّٰلِمِينَ وَنَجِّنَا بِرَحْمَتِكَ مِنَ ٱلْقَوْمِ ٱلْكَٰفِرِينَ",
+   "en": "So they said, \"Upon Allah do we rely. Our Lord, make us not [objects of] trial for the wrongdoing people And save us by Your mercy from the disbelieving people.\"",
+   "refAr": "دعاء أصحاب موسى · سورة يونس · الآية ٨٥-٨٦",
+   "refEn": "Those with Musa · Yunus 10:85-86",
+   "quranic": true
+  },
+  {
+   "ar": "قَالَ رَبِّ إِنِّىٓ أَعُوذُ بِكَ أَنْ أَسْـَٔلَكَ مَا لَيْسَ لِى بِهِۦ عِلْمٌ وَإِلَّا تَغْفِرْ لِى وَتَرْحَمْنِىٓ أَكُن مِّنَ ٱلْخَٰسِرِينَ",
+   "en": "[Noah] said, \"My Lord, I seek refuge in You from asking that of which I have no knowledge. And unless You forgive me and have mercy upon me, I will be among the losers.\"",
+   "refAr": "دعاء نوح عليه السلام · سورة هود · الآية ٤٧",
+   "refEn": "Nuh · Hud 11:47",
+   "quranic": true
+  },
+  {
+   "ar": "رَبِّ قَدْ ءَاتَيْتَنِى مِنَ ٱلْمُلْكِ وَعَلَّمْتَنِى مِن تَأْوِيلِ ٱلْأَحَادِيثِ فَاطِرَ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ أَنتَ وَلِىِّۦ فِى ٱلدُّنْيَا وَٱلْـَٔاخِرَةِ تَوَفَّنِى مُسْلِمًا وَأَلْحِقْنِى بِٱلصَّٰلِحِينَ",
+   "en": "My Lord, You have given me [something] of sovereignty and taught me of the interpretation of dreams. Creator of the heavens and earth, You are my protector in this world and in the Hereafter. Cause me to die a Muslim and join me with the righteous.\"",
+   "refAr": "دعاء يوسف عليه السلام · سورة يوسف · الآية ١٠١",
+   "refEn": "Yusuf · Yusuf 12:101",
+   "quranic": true
+  },
+  {
+   "ar": "وَإِذْ قَالَ إِبْرَٰهِيمُ رَبِّ ٱجْعَلْ هَٰذَا ٱلْبَلَدَ ءَامِنًا وَٱجْنُبْنِى وَبَنِىَّ أَن نَّعْبُدَ ٱلْأَصْنَامَ رَبِّ إِنَّهُنَّ أَضْلَلْنَ كَثِيرًا مِّنَ ٱلنَّاسِ فَمَن تَبِعَنِى فَإِنَّهُۥ مِنِّى وَمَنْ عَصَانِى فَإِنَّكَ غَفُورٌ رَّحِيمٌ",
+   "en": "And [mention, O Muhammad], when Abraham said, \"My Lord, make this city [Makkah] secure and keep me and my sons away from worshipping idols. My Lord, indeed they have led astray many among the people. So whoever follows me - then he is of me; and whoever disobeys me - indeed, You are [yet] Forgiving and Merciful.",
+   "refAr": "دعاء إبراهيم عليه السلام · سورة ابراهيم · الآية ٣٥-٣٦",
+   "refEn": "Ibrahim · Ibrahim 14:35-36",
+   "quranic": true
+  },
+  {
+   "ar": "رَّبَّنَآ إِنِّىٓ أَسْكَنتُ مِن ذُرِّيَّتِى بِوَادٍ غَيْرِ ذِى زَرْعٍ عِندَ بَيْتِكَ ٱلْمُحَرَّمِ رَبَّنَا لِيُقِيمُوا۟ ٱلصَّلَوٰةَ فَٱجْعَلْ أَفْـِٔدَةً مِّنَ ٱلنَّاسِ تَهْوِىٓ إِلَيْهِمْ وَٱرْزُقْهُم مِّنَ ٱلثَّمَرَٰتِ لَعَلَّهُمْ يَشْكُرُونَ",
+   "en": "Our Lord, I have settled some of my descendants in an uncultivated valley near Your sacred House, our Lord, that they may establish prayer. So make hearts among the people incline toward them and provide for them from the fruits that they might be grateful.",
+   "refAr": "دعاء إبراهيم عليه السلام · سورة ابراهيم · الآية ٣٧",
+   "refEn": "Ibrahim · Ibrahim 14:37",
+   "quranic": true
+  },
+  {
+   "ar": "رَبَّنَآ إِنَّكَ تَعْلَمُ مَا نُخْفِى وَمَا نُعْلِنُ وَمَا يَخْفَىٰ عَلَى ٱللَّهِ مِن شَىْءٍ فِى ٱلْأَرْضِ وَلَا فِى ٱلسَّمَآءِ",
+   "en": "Our Lord, indeed You know what we conceal and what we declare, and nothing is hidden from Allah on the earth or in the heaven.",
+   "refAr": "دعاء إبراهيم عليه السلام · سورة ابراهيم · الآية ٣٨",
+   "refEn": "Ibrahim · Ibrahim 14:38",
+   "quranic": true
+  },
+  {
+   "ar": "رَبِّ ٱجْعَلْنِى مُقِيمَ ٱلصَّلَوٰةِ وَمِن ذُرِّيَّتِى رَبَّنَا وَتَقَبَّلْ دُعَآءِ رَبَّنَا ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ ٱلْحِسَابُ",
+   "en": "My Lord, make me an establisher of prayer, and [many] from my descendants. Our Lord, and accept my supplication. Our Lord, forgive me and my parents and the believers the Day the account is established.\"",
+   "refAr": "دعاء إبراهيم عليه السلام · سورة ابراهيم · الآية ٤٠-٤١",
+   "refEn": "Ibrahim · Ibrahim 14:40-41",
+   "quranic": true
+  },
+  {
+   "ar": "وَٱخْفِضْ لَهُمَا جَنَاحَ ٱلذُّلِّ مِنَ ٱلرَّحْمَةِ وَقُل رَّبِّ ٱرْحَمْهُمَا كَمَا رَبَّيَانِى صَغِيرًا",
+   "en": "And lower to them the wing of humility out of mercy and say, \"My Lord, have mercy upon them as they brought me up [when I was] small.\"",
+   "refAr": "الدعاء للوالدين · سورة الإسراء · الآية ٢٤",
+   "refEn": "For one’s parents · Al-Israa 17:24",
+   "quranic": true
+  },
+  {
+   "ar": "وَقُل رَّبِّ أَدْخِلْنِى مُدْخَلَ صِدْقٍ وَأَخْرِجْنِى مُخْرَجَ صِدْقٍ وَٱجْعَل لِّى مِن لَّدُنكَ سُلْطَٰنًا نَّصِيرًا",
+   "en": "And say, \"My Lord, cause me to enter a sound entrance and to exit a sound exit and grant me from Yourself a supporting authority.\"",
+   "refAr": "سورة الإسراء · الآية ٨٠",
+   "refEn": "Al-Israa 17:80",
+   "quranic": true
+  },
+  {
+   "ar": "إِذْ أَوَى ٱلْفِتْيَةُ إِلَى ٱلْكَهْفِ فَقَالُوا۟ رَبَّنَآ ءَاتِنَا مِن لَّدُنكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا",
+   "en": "[Mention] when the youths retreated to the cave and said, \"Our Lord, grant us from Yourself mercy and prepare for us from our affair right guidance.\"",
+   "refAr": "دعاء فتية الكهف · سورة الكهف · الآية ١٠",
+   "refEn": "The youths of the cave · Al-Kahf 18:10",
+   "quranic": true
+  },
+  {
+   "ar": "قَالَ رَبِّ ٱشْرَحْ لِى صَدْرِى وَيَسِّرْ لِىٓ أَمْرِى وَٱحْلُلْ عُقْدَةً مِّن لِّسَانِى يَفْقَهُوا۟ قَوْلِى",
+   "en": "[Moses] said, \"My Lord, expand for me my breast [with assurance] And ease for me my task And untie the knot from my tongue That they may understand my speech.",
+   "refAr": "دعاء موسى عليه السلام · سورة طه · الآية ٢٥-٢٨",
+   "refEn": "Musa · Taa-Haa 20:25-28",
+   "quranic": true
+  },
+  {
+   "ar": "فَتَعَٰلَى ٱللَّهُ ٱلْمَلِكُ ٱلْحَقُّ وَلَا تَعْجَلْ بِٱلْقُرْءَانِ مِن قَبْلِ أَن يُقْضَىٰٓ إِلَيْكَ وَحْيُهُۥ وَقُل رَّبِّ زِدْنِى عِلْمًا",
+   "en": "So high [above all] is Allah, the Sovereign, the Truth. And, [O Muhammad], do not hasten with [recitation of] the Qur'an before its revelation is completed to you, and say, \"My Lord, increase me in knowledge.\"",
+   "refAr": "دعاء طلب العلم · سورة طه · الآية ١١٤",
+   "refEn": "For more knowledge · Taa-Haa 20:114",
+   "quranic": true
+  },
+  {
+   "ar": "وَأَيُّوبَ إِذْ نَادَىٰ رَبَّهُۥٓ أَنِّى مَسَّنِىَ ٱلضُّرُّ وَأَنتَ أَرْحَمُ ٱلرَّٰحِمِينَ",
+   "en": "And [mention] Job, when he called to his Lord, \"Indeed, adversity has touched me, and you are the Most Merciful of the merciful.\"",
+   "refAr": "دعاء أيوب عليه السلام · سورة الأنبياء · الآية ٨٣",
+   "refEn": "Ayyub · Al-Anbiyaa 21:83",
+   "quranic": true
+  },
+  {
+   "ar": "وَذَا ٱلنُّونِ إِذ ذَّهَبَ مُغَٰضِبًا فَظَنَّ أَن لَّن نَّقْدِرَ عَلَيْهِ فَنَادَىٰ فِى ٱلظُّلُمَٰتِ أَن لَّآ إِلَٰهَ إِلَّآ أَنتَ سُبْحَٰنَكَ إِنِّى كُنتُ مِنَ ٱلظَّٰلِمِينَ",
+   "en": "And [mention] the man of the fish, when he went off in anger and thought that We would not decree [anything] upon him. And he called out within the darknesses, \"There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.\"",
+   "refAr": "دعاء يونس عليه السلام · سورة الأنبياء · الآية ٨٧",
+   "refEn": "Yunus · Al-Anbiyaa 21:87",
+   "quranic": true
+  },
+  {
+   "ar": "وَزَكَرِيَّآ إِذْ نَادَىٰ رَبَّهُۥ رَبِّ لَا تَذَرْنِى فَرْدًا وَأَنتَ خَيْرُ ٱلْوَٰرِثِينَ",
+   "en": "And [mention] Zechariah, when he called to his Lord, \"My Lord, do not leave me alone [with no heir], while you are the best of inheritors.\"",
+   "refAr": "دعاء زكريا عليه السلام · سورة الأنبياء · الآية ٨٩",
+   "refEn": "Zakariyya · Al-Anbiyaa 21:89",
+   "quranic": true
+  },
+  {
+   "ar": "وَقُل رَّبِّ أَنزِلْنِى مُنزَلًا مُّبَارَكًا وَأَنتَ خَيْرُ ٱلْمُنزِلِينَ",
+   "en": "And say, 'My Lord, let me land at a blessed landing place, and You are the best to accommodate [us].' \"",
+   "refAr": "دعاء نوح عليه السلام · سورة المؤمنون · الآية ٢٩",
+   "refEn": "Nuh · Al-Muminoon 23:29",
+   "quranic": true
+  },
+  {
+   "ar": "وَقُل رَّبِّ أَعُوذُ بِكَ مِنْ هَمَزَٰتِ ٱلشَّيَٰطِينِ وَأَعُوذُ بِكَ رَبِّ أَن يَحْضُرُونِ",
+   "en": "And say, \"My Lord, I seek refuge in You from the incitements of the devils, And I seek refuge in You, my Lord, lest they be present with me.\"",
+   "refAr": "الاستعاذة من الشياطين · سورة المؤمنون · الآية ٩٧-٩٨",
+   "refEn": "Refuge from the devils · Al-Muminoon 23:97-98",
+   "quranic": true
+  },
+  {
+   "ar": "إِنَّهُۥ كَانَ فَرِيقٌ مِّنْ عِبَادِى يَقُولُونَ رَبَّنَآ ءَامَنَّا فَٱغْفِرْ لَنَا وَٱرْحَمْنَا وَأَنتَ خَيْرُ ٱلرَّٰحِمِينَ",
+   "en": "Indeed, there was a party of My servants who said, 'Our Lord, we have believed, so forgive us and have mercy upon us, and You are the best of the merciful.'",
+   "refAr": "دعاء عباد الله المؤمنين · سورة المؤمنون · الآية ١٠٩",
+   "refEn": "The believing servants · Al-Muminoon 23:109",
+   "quranic": true
+  },
+  {
+   "ar": "وَقُل رَّبِّ ٱغْفِرْ وَٱرْحَمْ وَأَنتَ خَيْرُ ٱلرَّٰحِمِينَ",
+   "en": "And, [O Muhammad], say, \"My Lord, forgive and have mercy, and You are the best of the merciful.\"",
+   "refAr": "الاستغفار والرحمة · سورة المؤمنون · الآية ١١٨",
+   "refEn": "Forgiveness and mercy · Al-Muminoon 23:118",
+   "quranic": true
+  },
+  {
+   "ar": "وَٱلَّذِينَ يَقُولُونَ رَبَّنَا ٱصْرِفْ عَنَّا عَذَابَ جَهَنَّمَ إِنَّ عَذَابَهَا كَانَ غَرَامًا إِنَّهَا سَآءَتْ مُسْتَقَرًّا وَمُقَامًا",
+   "en": "And those who say, \"Our Lord, avert from us the punishment of Hell. Indeed, its punishment is ever adhering; Indeed, it is evil as a settlement and residence.\"",
+   "refAr": "دعاء عباد الرحمن · سورة الفرقان · الآية ٦٥-٦٦",
+   "refEn": "Servants of the Most Merciful · Al-Furqaan 25:65-66",
+   "quranic": true
+  },
+  {
+   "ar": "وَٱلَّذِينَ يَقُولُونَ رَبَّنَا هَبْ لَنَا مِنْ أَزْوَٰجِنَا وَذُرِّيَّٰتِنَا قُرَّةَ أَعْيُنٍ وَٱجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
+   "en": "And those who say, \"Our Lord, grant us from among our wives and offspring comfort to our eyes and make us an example for the righteous.\"",
+   "refAr": "دعاء عباد الرحمن · سورة الفرقان · الآية ٧٤",
+   "refEn": "Servants of the Most Merciful · Al-Furqaan 25:74",
+   "quranic": true
+  },
+  {
+   "ar": "رَبِّ هَبْ لِى حُكْمًا وَأَلْحِقْنِى بِٱلصَّٰلِحِينَ وَٱجْعَل لِّى لِسَانَ صِدْقٍ فِى ٱلْـَٔاخِرِينَ وَٱجْعَلْنِى مِن وَرَثَةِ جَنَّةِ ٱلنَّعِيمِ وَٱغْفِرْ لِأَبِىٓ إِنَّهُۥ كَانَ مِنَ ٱلضَّآلِّينَ وَلَا تُخْزِنِى يَوْمَ يُبْعَثُونَ يَوْمَ لَا يَنفَعُ مَالٌ وَلَا بَنُونَ إِلَّا مَنْ أَتَى ٱللَّهَ بِقَلْبٍ سَلِيمٍ",
+   "en": "[And he said], \"My Lord, grant me authority and join me with the righteous. And grant me a reputation of honor among later generations. And place me among the inheritors of the Garden of Pleasure. And forgive my father. Indeed, he has been of those astray. And do not disgrace me on the Day they are [all] resurrected - The Day when there will not benefit [anyone] wealth or children But only one who comes to Allah with a sound heart.\"",
+   "refAr": "دعاء إبراهيم عليه السلام · سورة الشعراء · الآية ٨٣-٨٩",
+   "refEn": "Ibrahim · Ash-Shu'araa 26:83-89",
+   "quranic": true
+  },
+  {
+   "ar": "رَبِّ نَجِّنِى وَأَهْلِى مِمَّا يَعْمَلُونَ",
+   "en": "My Lord, save me and my family from [the consequence of] what they do.\"",
+   "refAr": "دعاء لوط عليه السلام · سورة الشعراء · الآية ١٦٩",
+   "refEn": "Lut · Ash-Shu'araa 26:169",
+   "quranic": true
+  },
+  {
+   "ar": "فَتَبَسَّمَ ضَاحِكًا مِّن قَوْلِهَا وَقَالَ رَبِّ أَوْزِعْنِىٓ أَنْ أَشْكُرَ نِعْمَتَكَ ٱلَّتِىٓ أَنْعَمْتَ عَلَىَّ وَعَلَىٰ وَٰلِدَىَّ وَأَنْ أَعْمَلَ صَٰلِحًا تَرْضَىٰهُ وَأَدْخِلْنِى بِرَحْمَتِكَ فِى عِبَادِكَ ٱلصَّٰلِحِينَ",
+   "en": "So [Solomon] smiled, amused at her speech, and said, \"My Lord, enable me to be grateful for Your favor which You have bestowed upon me and upon my parents and to do righteousness of which You approve. And admit me by Your mercy into [the ranks of] Your righteous servants.\"",
+   "refAr": "دعاء سليمان عليه السلام · سورة النمل · الآية ١٩",
+   "refEn": "Sulayman · An-Naml 27:19",
+   "quranic": true
+  },
+  {
+   "ar": "قَالَ رَبِّ إِنِّى ظَلَمْتُ نَفْسِى فَٱغْفِرْ لِى فَغَفَرَ لَهُۥٓ إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+   "en": "He said, \"My Lord, indeed I have wronged myself, so forgive me,\" and He forgave him. Indeed, He is the Forgiving, the Merciful.",
+   "refAr": "دعاء موسى عليه السلام · سورة القصص · الآية ١٦",
+   "refEn": "Musa · Al-Qasas 28:16",
+   "quranic": true
+  },
+  {
+   "ar": "فَخَرَجَ مِنْهَا خَآئِفًا يَتَرَقَّبُ قَالَ رَبِّ نَجِّنِى مِنَ ٱلْقَوْمِ ٱلظَّٰلِمِينَ",
+   "en": "So he left it, fearful and anticipating [apprehension]. He said, \"My Lord, save me from the wrongdoing people.\"",
+   "refAr": "دعاء موسى عليه السلام · سورة القصص · الآية ٢١",
+   "refEn": "Musa · Al-Qasas 28:21",
+   "quranic": true
+  },
+  {
+   "ar": "فَسَقَىٰ لَهُمَا ثُمَّ تَوَلَّىٰٓ إِلَى ٱلظِّلِّ فَقَالَ رَبِّ إِنِّى لِمَآ أَنزَلْتَ إِلَىَّ مِنْ خَيْرٍ فَقِيرٌ",
+   "en": "So he watered [their flocks] for them; then he went back to the shade and said, \"My Lord, indeed I am, for whatever good You would send down to me, in need.\"",
+   "refAr": "دعاء موسى عليه السلام · سورة القصص · الآية ٢٤",
+   "refEn": "Musa · Al-Qasas 28:24",
+   "quranic": true
+  },
+  {
+   "ar": "قَالَ رَبِّ ٱنصُرْنِى عَلَى ٱلْقَوْمِ ٱلْمُفْسِدِينَ",
+   "en": "He said, \"My Lord, support me against the corrupting people.\"",
+   "refAr": "دعاء لوط عليه السلام · سورة العنكبوت · الآية ٣٠",
+   "refEn": "Lut · Al-Ankaboot 29:30",
+   "quranic": true
+  },
+  {
+   "ar": "رَبِّ هَبْ لِى مِنَ ٱلصَّٰلِحِينَ",
+   "en": "My Lord, grant me [a child] from among the righteous.\"",
+   "refAr": "دعاء إبراهيم عليه السلام · سورة الصافات · الآية ١٠٠",
+   "refEn": "Ibrahim · As-Saaffaat 37:100",
+   "quranic": true
+  },
+  {
+   "ar": "قَالَ رَبِّ ٱغْفِرْ لِى وَهَبْ لِى مُلْكًا لَّا يَنۢبَغِى لِأَحَدٍ مِّنۢ بَعْدِىٓ إِنَّكَ أَنتَ ٱلْوَهَّابُ",
+   "en": "He said, \"My Lord, forgive me and grant me a kingdom such as will not belong to anyone after me. Indeed, You are the Bestower.\"",
+   "refAr": "دعاء سليمان عليه السلام · سورة ص · الآية ٣٥",
+   "refEn": "Sulayman · Saad 38:35",
+   "quranic": true
+  },
+  {
+   "ar": "فَدَعَا رَبَّهُۥٓ أَنِّى مَغْلُوبٌ فَٱنتَصِرْ",
+   "en": "So he invoked his Lord, \"Indeed, I am overpowered, so help.\"",
+   "refAr": "دعاء نوح عليه السلام · سورة القمر · الآية ١٠",
+   "refEn": "Nuh · Al-Qamar 54:10",
+   "quranic": true
+  },
+  {
+   "ar": "وَٱلَّذِينَ جَآءُو مِنۢ بَعْدِهِمْ يَقُولُونَ رَبَّنَا ٱغْفِرْ لَنَا وَلِإِخْوَٰنِنَا ٱلَّذِينَ سَبَقُونَا بِٱلْإِيمَٰنِ وَلَا تَجْعَلْ فِى قُلُوبِنَا غِلًّا لِّلَّذِينَ ءَامَنُوا۟ رَبَّنَآ إِنَّكَ رَءُوفٌ رَّحِيمٌ",
+   "en": "And [there is a share for] those who came after them, saying, \"Our Lord, forgive us and our brothers who preceded us in faith and put not in our hearts [any] resentment toward those who have believed. Our Lord, indeed You are Kind and Merciful.\"",
+   "refAr": "دعاء من جاؤوا بعد الصحابة · سورة الحشر · الآية ١٠",
+   "refEn": "Those who came after the Companions · Al-Hashr 59:10",
+   "quranic": true
+  },
+  {
+   "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ تُوبُوٓا۟ إِلَى ٱللَّهِ تَوْبَةً نَّصُوحًا عَسَىٰ رَبُّكُمْ أَن يُكَفِّرَ عَنكُمْ سَيِّـَٔاتِكُمْ وَيُدْخِلَكُمْ جَنَّٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَٰرُ يَوْمَ لَا يُخْزِى ٱللَّهُ ٱلنَّبِىَّ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ نُورُهُمْ يَسْعَىٰ بَيْنَ أَيْدِيهِمْ وَبِأَيْمَٰنِهِمْ يَقُولُونَ رَبَّنَآ أَتْمِمْ لَنَا نُورَنَا وَٱغْفِرْ لَنَآ إِنَّكَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ",
+   "en": "O you who have believed, repent to Allah with sincere repentance. Perhaps your Lord will remove from you your misdeeds and admit you into gardens beneath which rivers flow [on] the Day when Allah will not disgrace the Prophet and those who believed with him. Their light will proceed before them and on their right; they will say, \"Our Lord, perfect for us our light and forgive us. Indeed, You are over all things competent.\"",
+   "refAr": "دعاء التوبة النصوح · سورة التحريم · الآية ٨",
+   "refEn": "Sincere repentance · At-Tahrim 66:8",
+   "quranic": true
+  },
+  {
+   "ar": "وَضَرَبَ ٱللَّهُ مَثَلًا لِّلَّذِينَ ءَامَنُوا۟ ٱمْرَأَتَ فِرْعَوْنَ إِذْ قَالَتْ رَبِّ ٱبْنِ لِى عِندَكَ بَيْتًا فِى ٱلْجَنَّةِ وَنَجِّنِى مِن فِرْعَوْنَ وَعَمَلِهِۦ وَنَجِّنِى مِنَ ٱلْقَوْمِ ٱلظَّٰلِمِينَ",
+   "en": "And Allah presents an example of those who believed: the wife of Pharaoh, when she said, \"My Lord, build for me near You a house in Paradise and save me from Pharaoh and his deeds and save me from the wrongdoing people.\"",
+   "refAr": "دعاء امرأة فرعون · سورة التحريم · الآية ١١",
+   "refEn": "Pharaoh’s wife · At-Tahrim 66:11",
+   "quranic": true
+  },
+  {
+   "ar": "رَّبِّ ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِمَن دَخَلَ بَيْتِىَ مُؤْمِنًا وَلِلْمُؤْمِنِينَ وَٱلْمُؤْمِنَٰتِ وَلَا تَزِدِ ٱلظَّٰلِمِينَ إِلَّا تَبَارًۢا",
+   "en": "My Lord, forgive me and my parents and whoever enters my house a believer and the believing men and believing women. And do not increase the wrongdoers except in destruction.\"",
+   "refAr": "دعاء نوح عليه السلام · سورة نوح · الآية ٢٨",
+   "refEn": "Nuh · Nooh 71:28",
+   "quranic": true
+  }
+ ]
 }

@@ -18,7 +18,8 @@ const credits = <_Credit>[
   _Credit('نص القرآن الكريم', 'Quran text', 'النص العثماني من مشروع Tanzil (الإصدار 1.1) — tanzil.net. نص محقق ومراقب باستمرار، ويُعرض دون تعديل سوى فصل البسملة عن الآية الأولى.', 'Uthmani text from the Tanzil Project (v1.1) — tanzil.net. Carefully verified and monitored; shown unmodified except that the basmala is displayed separately from ayah 1.', 'CC BY 3.0'),
   _Credit('ترجمة معاني القرآن', 'Quran translation', 'Saheeh International عبر مشروع Tanzil.', 'Saheeh International, via the Tanzil Project.', 'Tanzil terms'),
   _Credit('التلاوة', 'Recitation', 'تُبثّ ملفات التلاوة آية بآية من everyayah.com.', 'Recitation files are streamed ayah by ayah from everyayah.com.', 'everyayah.com'),
-  _Credit('نصوص الحديث', 'Hadith text', 'مشروع hadith-api المفتوح (github.com/fawazahmed0/hadith-api).', 'The open hadith-api project (github.com/fawazahmed0/hadith-api).', 'The Unlicense'),
+  _Credit('حصن المسلم', 'Hisn al-Muslim', 'أذكار «حصن المسلم» لسعيد بن علي بن وهف القحطاني، من مجموعة بيانات Islamic-Pro-azkar-API (github.com/YousefAsalya/Islamic-Pro-azkar-API).', 'The adhkar of Hisn al-Muslim by Sa‘id ibn ‘Ali ibn Wahf al-Qahtani, from the Islamic-Pro-azkar-API dataset (github.com/YousefAsalya/Islamic-Pro-azkar-API).', 'MIT'),
+  _Credit('نصوص الحديث', 'Hadith text','مشروع hadith-api المفتوح (github.com/fawazahmed0/hadith-api).', 'The open hadith-api project (github.com/fawazahmed0/hadith-api).', 'The Unlicense'),
   _Credit('مواقيت الصلاة', 'Prayer times', 'تُحسب على جهازك بمكتبة adhan.', 'Calculated on your device with the adhan library.', 'MIT'),
   _Credit('الخطوط', 'Fonts', 'Amiri و Amiri Quran (خالد حسني)، IBM Plex Sans Arabic، Plus Jakarta Sans.', 'Amiri and Amiri Quran (Khaled Hosny), IBM Plex Sans Arabic, Plus Jakarta Sans.', 'SIL OFL 1.1'),
 ];

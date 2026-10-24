@@ -55,7 +55,12 @@ class _HajjScreenState extends ConsumerState<HajjScreen> {
         ]),
       ),
       const SizedBox(height: 14),
-      NoorSegmented<String>(values: const ['hajj', 'umrah'], labels: [NoorFormat.tr(context, 'مناسك الحج', 'Hajj rites'), NoorFormat.tr(context, 'مناسك العمرة', 'Umrah rites')], selected: _kind, onChanged: (v) => setState(() => _kind = v)),
+      NoorSegmented<String>(
+        values: const ['hajj', 'umrah', 'guide'],
+        labels: [NoorFormat.tr(context, 'الحج', 'Hajj'), NoorFormat.tr(context, 'العمرة', 'Umrah'), NoorFormat.tr(context, 'أساسيات', 'Basics')],
+        selected: _kind,
+        onChanged: (v) => setState(() => _kind = v),
+      ),
       const SizedBox(height: 14),
       contentBody(data, (d) {
         final steps = (d['steps'] as List).cast<Map<String, dynamic>>().where((s) => s['kind'] == _kind).toList();

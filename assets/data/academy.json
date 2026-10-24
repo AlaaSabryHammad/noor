@@ -64,6 +64,88 @@
    ]
   },
   {
+   "id": "ghusl",
+   "titleAr": "الغسل",
+   "titleEn": "Ghusl (full bath)",
+   "icon": "water_drop",
+   "lessons": [
+    {
+     "titleAr": "النية والتسمية",
+     "titleEn": "Intention and Bismillah",
+     "bodyAr": "تنوي رفع الحدث الأكبر بقلبك وتقول: بسم الله.",
+     "bodyEn": "Intend in your heart to remove the major impurity and say Bismillah."
+    },
+    {
+     "titleAr": "غسل اليدين والفرج",
+     "titleEn": "Wash hands and private parts",
+     "bodyAr": "تغسل كفيك ثلاثًا، ثم تغسل فرجك وما أصابه من أذى.",
+     "bodyEn": "Wash both hands three times, then the private parts and anything soiled."
+    },
+    {
+     "titleAr": "الوضوء",
+     "titleEn": "Perform wudu",
+     "bodyAr": "تتوضأ وضوءك للصلاة، وتؤخر غسل القدمين إلى آخر الغسل إن شئت.",
+     "bodyEn": "Make wudu as for prayer; you may delay washing the feet until the end."
+    },
+    {
+     "titleAr": "إفاضة الماء على الرأس",
+     "titleEn": "Pour water over the head",
+     "bodyAr": "تصبّ الماء على رأسك ثلاث مرات وتروي أصول الشعر.",
+     "bodyEn": "Pour water over the head three times, wetting the roots of the hair."
+    },
+    {
+     "titleAr": "تعميم الجسد",
+     "titleEn": "Wash the whole body",
+     "bodyAr": "تفيض الماء على سائر جسدك مبتدئًا بالشق الأيمن ثم الأيسر، فلا تترك موضعًا.",
+     "bodyEn": "Pour water over the rest of the body, starting with the right side then the left, leaving no spot dry."
+    },
+    {
+     "titleAr": "متى يجب؟",
+     "titleEn": "When is it required?",
+     "bodyAr": "يجب الغسل بعد الجنابة وبعد انقطاع الحيض والنفاس، ويُستحب يوم الجمعة وللعيدين.",
+     "bodyEn": "Ghusl is required after janabah and after menstruation or post-natal bleeding ends; it is recommended on Friday and for the two Eids."
+    }
+   ]
+  },
+  {
+   "id": "tayammum",
+   "titleAr": "التيمم",
+   "titleEn": "Tayammum (dry ablution)",
+   "icon": "water_drop",
+   "lessons": [
+    {
+     "titleAr": "متى يُشرع؟",
+     "titleEn": "When is it allowed?",
+     "bodyAr": "عند فقد الماء أو العجز عن استعماله لمرض أو خوف ضرر، بدلًا من الوضوء أو الغسل.",
+     "bodyEn": "When water is unavailable or cannot be used because of illness or fear of harm; it replaces wudu or ghusl."
+    },
+    {
+     "titleAr": "النية والتسمية",
+     "titleEn": "Intention and Bismillah",
+     "bodyAr": "تنوي استباحة الصلاة وتقول: بسم الله.",
+     "bodyEn": "Intend to make prayer permissible and say Bismillah."
+    },
+    {
+     "titleAr": "ضرب الأرض",
+     "titleEn": "Strike the earth",
+     "bodyAr": "تضرب بكفيك على تراب أو ما يشبه الأرض الطاهرة (ضربة أو ضربتان بحسب المذهب).",
+     "bodyEn": "Strike both palms on clean earth or dust (once or twice, depending on the school)."
+    },
+    {
+     "titleAr": "المسح",
+     "titleEn": "Wipe",
+     "bodyAr": "تمسح وجهك ثم كفيك.",
+     "bodyEn": "Wipe your face, then your hands."
+    },
+    {
+     "titleAr": "ما ينقضه",
+     "titleEn": "What invalidates it",
+     "bodyAr": "ينقضه ما ينقض الوضوء، ويبطل بوجود الماء إن أمكن استعماله.",
+     "bodyEn": "It is invalidated by whatever invalidates wudu, and by finding usable water."
+    }
+   ]
+  },
+  {
    "id": "prayer",
    "titleAr": "كيف أصلي",
    "titleEn": "How to pray",
@@ -128,6 +210,284 @@
      "titleEn": "Number of rak‘ahs",
      "bodyAr": "الفجر ٢، الظهر ٤، العصر ٤، المغرب ٣، العشاء ٤.",
      "bodyEn": "Fajr 2, Dhuhr 4, ‘Asr 4, Maghrib 3, ‘Isha 4."
+    }
+   ]
+  },
+  {
+   "id": "adhan",
+   "titleAr": "الأذان والإقامة",
+   "titleEn": "Adhan and Iqamah",
+   "icon": "mosque",
+   "lessons": [
+    {
+     "titleAr": "كلمات الأذان",
+     "titleEn": "The words of the adhan",
+     "bodyAr": "الله أكبر (٤)، أشهد أن لا إله إلا الله (٢)، أشهد أن محمدًا رسول الله (٢)، حي على الصلاة (٢)، حي على الفلاح (٢)، الله أكبر (٢)، لا إله إلا الله (١).",
+     "bodyEn": "Allahu Akbar ×4, Ash-hadu an la ilaha illallah ×2, Ash-hadu anna Muhammadan rasulullah ×2, Hayya ‘alas-salah ×2, Hayya ‘alal-falah ×2, Allahu Akbar ×2, La ilaha illallah ×1."
+    },
+    {
+     "titleAr": "أذان الفجر",
+     "titleEn": "The Fajr adhan",
+     "bodyAr": "يُزاد في الفجر بعد «حي على الفلاح»: الصلاة خير من النوم، مرتين.",
+     "bodyEn": "In Fajr, after “Hayya ‘alal-falah”, add: As-salatu khayrun minan-nawm, twice."
+    },
+    {
+     "titleAr": "الإقامة",
+     "titleEn": "The iqamah",
+     "bodyAr": "تُقال عند القيام للصلاة بنحو ألفاظ الأذان مع زيادة «قد قامت الصلاة»، وتختلف المذاهب في تكرار بعض ألفاظها.",
+     "bodyEn": "Said when the prayer is about to begin, close to the adhan with the addition “Qad qamatis-salah”; the schools differ on repeating some phrases."
+    },
+    {
+     "titleAr": "إجابة المؤذن",
+     "titleEn": "Answering the muezzin",
+     "bodyAr": "تقول مثل ما يقول، إلا في الحيعلتين فتقول: لا حول ولا قوة إلا بالله.",
+     "bodyEn": "Repeat what he says, except at the two “Hayya” calls, where you say: La hawla wa la quwwata illa billah."
+    },
+    {
+     "titleAr": "الدعاء بعد الأذان",
+     "titleEn": "Dua after the adhan",
+     "bodyAr": "تصلي على النبي ﷺ ثم تقول: اللهم رب هذه الدعوة التامة... (انظر باب «أذكار الآذان» في حصن المسلم).",
+     "bodyEn": "Send blessings upon the Prophet ﷺ then say: Allahumma rabba hadhihid-da‘watit-tammah… (see the adhan chapter in Hisn al-Muslim)."
+    }
+   ]
+  },
+  {
+   "id": "sunnah",
+   "titleAr": "السنن الرواتب",
+   "titleEn": "The regular Sunnah prayers",
+   "icon": "mosque",
+   "lessons": [
+    {
+     "titleAr": "فضلها",
+     "titleEn": "Their virtue",
+     "bodyAr": "قال النبي ﷺ: «ما من عبد مسلم يصلي لله كل يوم ثنتي عشرة ركعة تطوعًا غير فريضة إلا بنى الله له بيتًا في الجنة» رواه مسلم.",
+     "bodyEn": "The Prophet ﷺ said: “Whoever prays twelve rak‘ahs a day voluntarily, other than the obligatory, Allah builds for him a house in Paradise.” (Muslim)"
+    },
+    {
+     "titleAr": "قبل الفجر",
+     "titleEn": "Before Fajr",
+     "bodyAr": "ركعتان، وهما آكد الرواتب.",
+     "bodyEn": "Two rak‘ahs; the most emphasised of them all."
+    },
+    {
+     "titleAr": "الظهر",
+     "titleEn": "Dhuhr",
+     "bodyAr": "أربع ركعات قبلها وركعتان بعدها.",
+     "bodyEn": "Four rak‘ahs before and two after."
+    },
+    {
+     "titleAr": "المغرب والعشاء",
+     "titleEn": "Maghrib and ‘Isha",
+     "bodyAr": "ركعتان بعد المغرب، وركعتان بعد العشاء.",
+     "bodyEn": "Two after Maghrib and two after ‘Isha."
+    },
+    {
+     "titleAr": "الوتر",
+     "titleEn": "Witr",
+     "bodyAr": "ختام صلاة الليل، ركعة فأكثر، ووقته بعد العشاء إلى الفجر.",
+     "bodyEn": "The closing prayer of the night, one rak‘ah or more, between ‘Isha and Fajr."
+    }
+   ]
+  },
+  {
+   "id": "jumuah",
+   "titleAr": "يوم الجمعة وصلاته",
+   "titleEn": "Friday and its prayer",
+   "icon": "mosque",
+   "lessons": [
+    {
+     "titleAr": "الاغتسال والتطيب",
+     "titleEn": "Bathe and use perfume",
+     "bodyAr": "يُستحب الاغتسال يوم الجمعة ولبس أحسن الثياب والتطيب.",
+     "bodyEn": "It is recommended to bathe on Friday, wear one’s best clothes and use perfume."
+    },
+    {
+     "titleAr": "التبكير",
+     "titleEn": "Go early",
+     "bodyAr": "في التبكير إلى المسجد فضل عظيم، وقد ورد أن الملائكة تكتب الأوائل.",
+     "bodyEn": "There is great reward in going early; the angels record those who come first."
+    },
+    {
+     "titleAr": "الخطبتان",
+     "titleEn": "The two sermons",
+     "bodyAr": "ينصت المصلي للخطبتين ولا يتكلم، فهما من الجمعة.",
+     "bodyEn": "Listen attentively to both sermons without speaking; they are part of the Friday prayer."
+    },
+    {
+     "titleAr": "الصلاة",
+     "titleEn": "The prayer",
+     "bodyAr": "ركعتان جهرًا بدل الظهر، يشترط لها الجماعة عند الجمهور.",
+     "bodyEn": "Two rak‘ahs recited aloud in place of Dhuhr, prayed in congregation."
+    },
+    {
+     "titleAr": "سنن اليوم",
+     "titleEn": "Sunnahs of the day",
+     "bodyAr": "قراءة سورة الكهف، والإكثار من الصلاة على النبي ﷺ، والدعاء في ساعة الإجابة.",
+     "bodyEn": "Reading Surat al-Kahf, sending abundant blessings upon the Prophet ﷺ, and supplicating in the hour of response."
+    }
+   ]
+  },
+  {
+   "id": "eid",
+   "titleAr": "صلاة العيد",
+   "titleEn": "The Eid prayer",
+   "icon": "mosque",
+   "lessons": [
+    {
+     "titleAr": "قبل الصلاة",
+     "titleEn": "Before the prayer",
+     "bodyAr": "يُسن الاغتسال والتطيب ولبس أحسن الثياب، وتناول تمرات قبل الخروج في عيد الفطر.",
+     "bodyEn": "Bathe, use perfume, wear your best clothes, and eat some dates before leaving on Eid al-Fitr."
+    },
+    {
+     "titleAr": "التكبير",
+     "titleEn": "Takbir",
+     "bodyAr": "يُكبَّر في ليلة العيد وصباحه حتى الصلاة، وفي الأضحى أيام التشريق أيضًا.",
+     "bodyEn": "Say the takbir from the night of Eid until the prayer; in Eid al-Adha also through the days of Tashriq."
+    },
+    {
+     "titleAr": "الصلاة",
+     "titleEn": "The prayer",
+     "bodyAr": "ركعتان بلا أذان ولا إقامة، بتكبيرات زائدة يختلف عددها بحسب المذهب، ثم خطبة.",
+     "bodyEn": "Two rak‘ahs without adhan or iqamah, with additional takbirs (the number differs by school), followed by a sermon."
+    },
+    {
+     "titleAr": "زكاة الفطر",
+     "titleEn": "Zakat al-Fitr",
+     "bodyAr": "تُخرج قبل صلاة عيد الفطر طعامًا يقتاته الناس.",
+     "bodyEn": "Give staple food before the Eid al-Fitr prayer."
+    },
+    {
+     "titleAr": "مخالفة الطريق",
+     "titleEn": "Change your route",
+     "bodyAr": "يُستحب الذهاب من طريق والرجوع من آخر.",
+     "bodyEn": "It is recommended to go by one road and return by another."
+    }
+   ]
+  },
+  {
+   "id": "janazah",
+   "titleAr": "صلاة الجنازة",
+   "titleEn": "The funeral prayer",
+   "icon": "mosque",
+   "lessons": [
+    {
+     "titleAr": "فرض كفاية",
+     "titleEn": "A communal duty",
+     "bodyAr": "الصلاة على الميت المسلم فرض كفاية، إن قام بها بعض المسلمين سقط الإثم عن الباقين.",
+     "bodyEn": "Praying over a deceased Muslim is a communal obligation; if some perform it, the rest are relieved."
+    },
+    {
+     "titleAr": "التكبيرة الأولى",
+     "titleEn": "First takbir",
+     "bodyAr": "تكبّر وتقرأ الفاتحة (وعند بعض المذاهب الثناء).",
+     "bodyEn": "Say the takbir and recite Al-Fatihah (some schools recite the opening supplication)."
+    },
+    {
+     "titleAr": "التكبيرة الثانية",
+     "titleEn": "Second takbir",
+     "bodyAr": "تصلي على النبي ﷺ بالصلاة الإبراهيمية.",
+     "bodyEn": "Send blessings upon the Prophet ﷺ with the Ibrahimi salawat."
+    },
+    {
+     "titleAr": "التكبيرة الثالثة",
+     "titleEn": "Third takbir",
+     "bodyAr": "تدعو للميت بالمغفرة والرحمة.",
+     "bodyEn": "Supplicate for the deceased: forgiveness and mercy."
+    },
+    {
+     "titleAr": "التكبيرة الرابعة والسلام",
+     "titleEn": "Fourth takbir and salam",
+     "bodyAr": "تدعو للمسلمين ثم تسلّم تسليمة واحدة أو اثنتين. وليس فيها ركوع ولا سجود.",
+     "bodyEn": "Supplicate for the Muslims, then give one or two salams. There is no bowing or prostration."
+    }
+   ]
+  },
+  {
+   "id": "fasting",
+   "titleAr": "الصيام وآدابه",
+   "titleEn": "Fasting and its etiquette",
+   "icon": "auto_awesome",
+   "lessons": [
+    {
+     "titleAr": "النية",
+     "titleEn": "Intention",
+     "bodyAr": "تنوي صيام رمضان من الليل في قلبك.",
+     "bodyEn": "Make the intention in your heart for the fast of Ramadan during the night."
+    },
+    {
+     "titleAr": "السحور",
+     "titleEn": "Suhoor",
+     "bodyAr": "«تسحروا فإن في السحور بركة» متفق عليه، ويُستحب تأخيره.",
+     "bodyEn": "“Eat suhoor, for in suhoor there is blessing.” (Agreed upon) It is recommended to delay it."
+    },
+    {
+     "titleAr": "الإمساك",
+     "titleEn": "Abstaining",
+     "bodyAr": "من طلوع الفجر الصادق إلى غروب الشمس عن الأكل والشرب وما يفطر.",
+     "bodyEn": "From true dawn to sunset, abstain from eating, drinking and whatever breaks the fast."
+    },
+    {
+     "titleAr": "حفظ الجوارح",
+     "titleEn": "Guarding the tongue and limbs",
+     "bodyAr": "ينبغي للصائم أن يصون لسانه عن الكذب والغيبة والسباب.",
+     "bodyEn": "The fasting person should guard the tongue from lying, backbiting and abuse."
+    },
+    {
+     "titleAr": "الإفطار",
+     "titleEn": "Breaking the fast",
+     "bodyAr": "يُسن تعجيل الفطر على رطب أو تمر أو ماء، ثم الدعاء.",
+     "bodyEn": "It is Sunnah to hasten the iftar with fresh dates, dates or water, then to supplicate."
+    },
+    {
+     "titleAr": "أصحاب الأعذار",
+     "titleEn": "Those with excuses",
+     "bodyAr": "يرخَّص في الفطر للمريض والمسافر، ويقضيان ما فاتهما، وللكبير العاجز فدية.",
+     "bodyEn": "The sick and the traveller may break the fast and make it up; a frail elder gives a fidyah."
+    }
+   ]
+  },
+  {
+   "id": "zakat",
+   "titleAr": "مصارف الزكاة",
+   "titleEn": "Who receives zakat",
+   "icon": "account_balance",
+   "lessons": [
+    {
+     "titleAr": "الأصل",
+     "titleEn": "The source",
+     "bodyAr": "حدّد القرآن مصارف الزكاة في سورة التوبة، الآية ٦٠.",
+     "bodyEn": "The Quran specifies the recipients of zakat in Surat at-Tawbah, verse 60."
+    },
+    {
+     "titleAr": "الفقراء والمساكين",
+     "titleEn": "The poor and the needy",
+     "bodyAr": "من لا يجد كفايته أو يجد بعضها.",
+     "bodyEn": "Those who lack what they need, or have only part of it."
+    },
+    {
+     "titleAr": "العاملون عليها",
+     "titleEn": "Those who administer it",
+     "bodyAr": "من يجمعها ويوزعها بتكليف من ولي الأمر.",
+     "bodyEn": "Those appointed to collect and distribute it."
+    },
+    {
+     "titleAr": "المؤلفة قلوبهم",
+     "titleEn": "Those whose hearts are to be reconciled",
+     "bodyAr": "من يُرجى تقوية إيمانه أو كفّ شره أو إسلام نظيره.",
+     "bodyEn": "Those whose faith is to be strengthened or whose harm is to be averted."
+    },
+    {
+     "titleAr": "في الرقاب والغارمين",
+     "titleEn": "Freeing slaves and those in debt",
+     "bodyAr": "تحرير الأرقاء، وسداد دَين من أثقلته الديون في مباح.",
+     "bodyEn": "Freeing captives and paying the debts of those burdened in lawful matters."
+    },
+    {
+     "titleAr": "في سبيل الله وابن السبيل",
+     "titleEn": "In Allah’s cause and the wayfarer",
+     "bodyAr": "الجهاد المشروع وما يتصل به، والمسافر المنقطع عن ماله.",
+     "bodyEn": "Legitimate striving in Allah’s cause, and the traveller cut off from his funds."
     }
    ]
   },
@@ -210,6 +570,106 @@
      "titleEn": "Belief in the Decree",
      "bodyAr": "أن كل شيء بعلم الله وتقديره، خيره وشره.",
      "bodyEn": "That everything occurs by Allah’s knowledge and decree, its good and its bad."
+    }
+   ]
+  },
+  {
+   "id": "quranadab",
+   "titleAr": "آداب تلاوة القرآن",
+   "titleEn": "Etiquette of Quran recitation",
+   "icon": "menu_book",
+   "lessons": [
+    {
+     "titleAr": "الإخلاص والطهارة",
+     "titleEn": "Sincerity and purity",
+     "bodyAr": "تُخلص النية لله وتتطهر وتستقبل القبلة ما استطعت.",
+     "bodyEn": "Be sincere for Allah, be in a state of purity and face the Qibla if possible."
+    },
+    {
+     "titleAr": "الاستعاذة",
+     "titleEn": "Seek refuge",
+     "bodyAr": "قال تعالى في سورة النحل ٩٨ أن يُستعاذ بالله من الشيطان عند القراءة.",
+     "bodyEn": "Allah instructs, in An-Nahl 98, to seek refuge in Him from Satan when reciting."
+    },
+    {
+     "titleAr": "الترتيل",
+     "titleEn": "Recite slowly",
+     "bodyAr": "«ورتل القرآن ترتيلًا» المزمل ٤: تقرأ بتؤدة وتحسين صوت دون تكلف.",
+     "bodyEn": "“And recite the Quran with measured recitation” (Al-Muzzammil 4): slowly, with a good voice and without affectation."
+    },
+    {
+     "titleAr": "التدبر",
+     "titleEn": "Reflect",
+     "bodyAr": "تتوقف عند الآيات وتتأمل معانيها وتعمل بها.",
+     "bodyEn": "Pause at the verses, reflect on their meanings and act upon them."
+    },
+    {
+     "titleAr": "الاستمرار",
+     "titleEn": "Be consistent",
+     "bodyAr": "«أحب الأعمال إلى الله أدومها وإن قل»: ورد يومي ثابت خير من كثرة منقطعة.",
+     "bodyEn": "“The most beloved deeds are the most consistent, even if small”: a steady daily portion beats occasional bursts."
+    }
+   ]
+  },
+  {
+   "id": "tajweed",
+   "titleAr": "أحكام التجويد الأساسية",
+   "titleEn": "Basic rules of tajweed",
+   "icon": "menu_book",
+   "lessons": [
+    {
+     "titleAr": "الاستعاذة والبسملة",
+     "titleEn": "Isti‘adhah and basmalah",
+     "bodyAr": "تبدأ القراءة بـ«أعوذ بالله من الشيطان الرجيم» ثم «بسم الله الرحمن الرحيم» (إلا في أول التوبة).",
+     "bodyEn": "Begin with “A‘udhu billahi minash-shaytanir-rajim” then “Bismillahir-Rahmanir-Rahim” (except at the start of at-Tawbah)."
+    },
+    {
+     "titleAr": "الإظهار",
+     "titleEn": "Idh-har (clear pronunciation)",
+     "bodyAr": "إذا جاء بعد النون الساكنة أو التنوين أحد حروف الحلق (ء هـ ع ح غ خ) نطقتهما واضحتين دون غنة.",
+     "bodyEn": "When a throat letter (ء هـ ع ح غ خ) follows a noon sakinah or tanween, pronounce it clearly without ghunnah."
+    },
+    {
+     "titleAr": "الإدغام",
+     "titleEn": "Idgham (merging)",
+     "bodyAr": "إذا جاء بعدهما أحد حروف «يرملون» أدغمت: بغنة في (ي ن م و) وبغير غنة في (ل ر).",
+     "bodyEn": "If a letter of “yarmalun” follows, merge: with ghunnah for (ي ن م و), without for (ل ر)."
+    },
+    {
+     "titleAr": "الإقلاب",
+     "titleEn": "Iqlab (conversion)",
+     "bodyAr": "إذا جاءت الباء بعد النون الساكنة أو التنوين قُلبت ميمًا مخفاة مع غنة.",
+     "bodyEn": "When ب follows a noon sakinah or tanween, it is converted to a hidden meem with ghunnah."
+    },
+    {
+     "titleAr": "الإخفاء",
+     "titleEn": "Ikhfa (concealment)",
+     "bodyAr": "عند بقية الحروف الخمسة عشر تُخفى النون الساكنة والتنوين مع غنة.",
+     "bodyEn": "Before the remaining fifteen letters the noon sakinah or tanween is concealed with ghunnah."
+    },
+    {
+     "titleAr": "أحكام الميم الساكنة",
+     "titleEn": "Rules of meem sakinah",
+     "bodyAr": "إخفاء شفوي عند الباء، وإدغام مثلين عند الميم، وإظهار شفوي عند باقي الحروف.",
+     "bodyEn": "Labial ikhfa before ب, merging before م, and clear pronunciation before the other letters."
+    },
+    {
+     "titleAr": "المدود",
+     "titleEn": "The madd (prolongations)",
+     "bodyAr": "المد الطبيعي حركتان، والمتصل والمنفصل أربع أو خمس، واللازم ست حركات.",
+     "bodyEn": "Natural madd is two counts; connected and separated madd four or five; obligatory madd six."
+    },
+    {
+     "titleAr": "القلقلة",
+     "titleEn": "Qalqalah",
+     "bodyAr": "اهتزاز خفيف عند سكون حروف «قطب جد» (ق ط ب ج د).",
+     "bodyEn": "A slight echoing when the letters of “qutbu jad” (ق ط ب ج د) are sakin."
+    },
+    {
+     "titleAr": "لام لفظ الجلالة",
+     "titleEn": "The lam of “Allah”",
+     "bodyAr": "تُفخَّم اللام في لفظ الجلالة بعد فتح أو ضم، وتُرقَّق بعد كسر.",
+     "bodyEn": "The lam in “Allah” is heavy after a fatha or damma and light after a kasra."
     }
    ]
   }

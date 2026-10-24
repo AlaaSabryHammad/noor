@@ -39,6 +39,7 @@ IconData _icon(String name) => switch (name) {
       'water_drop' => Icons.water_drop_outlined,
       'mosque' => Icons.mosque_outlined,
       'account_balance' => Icons.account_balance_outlined,
+      'menu_book' => Icons.menu_book_outlined,
       _ => Icons.auto_awesome_outlined,
     };
 

@@ -14,6 +14,17 @@
   },
   {
    "id": "p2",
+   "nameAr": "إدريس",
+   "nameEn": "Idris (Enoch)",
+   "bodyAr": "ذكره الله بالصدق والنبوة ورفعة المكانة، فقال سبحانه إنه رفعه مكانًا عليًّا.",
+   "bodyEn": "Allah describes him as truthful and a prophet and says He raised him to a high station.",
+   "refAr": "مريم ٥٦–٥٧ · الأنبياء ٨٥",
+   "refEn": "Maryam 56–57 · Al-Anbiya 85",
+   "lessonAr": "الصدق والصبر سبيل الرفعة.",
+   "lessonEn": "Truthfulness and patience lead to elevation."
+  },
+  {
+   "id": "p3",
    "nameAr": "نوح",
    "nameEn": "Nuh (Noah)",
    "bodyAr": "دعا نوح عليه السلام قومه إلى عبادة الله وحده قرابة ألف سنة إلا خمسين عامًا فلم يؤمن معه إلا قليل. أمره الله ببناء السفينة، ونجّاه ومن آمن معه من الطوفان.",
@@ -24,7 +35,7 @@
    "lessonEn": "Patience in calling to Allah; salvation lies with faith."
   },
   {
-   "id": "p3",
+   "id": "p4",
    "nameAr": "هود وصالح",
    "nameEn": "Hud and Salih",
    "bodyAr": "أرسل الله هودًا إلى قوم عاد، وصالحًا إلى ثمود، فدعوا قومهما إلى التوحيد. كذّب القومان رسولهما فأهلكهم الله، ونجّى الرسولين والمؤمنين.",
@@ -35,7 +46,7 @@
    "lessonEn": "Strength and wealth cannot replace truth."
   },
   {
-   "id": "p4",
+   "id": "p5",
    "nameAr": "إبراهيم",
    "nameEn": "Ibrahim (Abraham)",
    "bodyAr": "خليل الله إبراهيم عليه السلام تأمّل في الكون حتى عرف ربه، وحطّم أصنام قومه وألقوه في النار فجعلها الله بردًا وسلامًا عليه. ثم هاجر، ورفع مع ابنه إسماعيل قواعد الكعبة.",
@@ -46,7 +57,29 @@
    "lessonEn": "Pure monotheism and submission to Allah."
   },
   {
-   "id": "p5",
+   "id": "p6",
+   "nameAr": "إسماعيل",
+   "nameEn": "Isma‘il (Ishmael)",
+   "bodyAr": "ابن إبراهيم عليهما السلام، وصفه الله بصادق الوعد، ورأى أبوه في المنام أنه يذبحه فاستسلما لأمر الله ففداه الله بذبح عظيم. وشارك أباه في رفع قواعد الكعبة.",
+   "bodyEn": "Son of Ibrahim; Allah called him true to his promise. His father saw in a dream that he should sacrifice him, and both submitted to Allah, who ransomed him with a great sacrifice. He also helped raise the foundations of the Ka‘bah.",
+   "refAr": "الصافات ١٠٠–١١١ · البقرة ١٢٧",
+   "refEn": "As-Saffat 100–111 · Al-Baqarah 127",
+   "lessonAr": "التسليم لأمر الله وبرّ الأب.",
+   "lessonEn": "Submission to Allah and obedience to a righteous father."
+  },
+  {
+   "id": "p7",
+   "nameAr": "إسحاق ويعقوب",
+   "nameEn": "Ishaq (Isaac) and Ya‘qub (Jacob)",
+   "bodyAr": "بشّرت الملائكة إبراهيم وسارة بإسحاق ومن وراء إسحاق يعقوب. وأوصى يعقوب بنيه بعبادة الله وحده عند موته.",
+   "bodyEn": "The angels gave Ibrahim and Sarah the glad tidings of Ishaq and, after him, Ya‘qub. At his death Ya‘qub charged his sons to worship Allah alone.",
+   "refAr": "هود ٧١–٧٣ · البقرة ١٣٢–١٣٣",
+   "refEn": "Hud 71–73 · Al-Baqarah 132–133",
+   "lessonAr": "وصية الآباء بالتوحيد.",
+   "lessonEn": "Parents’ greatest legacy is tawhid."
+  },
+  {
+   "id": "p8",
    "nameAr": "لوط",
    "nameEn": "Lut (Lot)",
    "bodyAr": "أرسل الله لوطًا إلى قومه ينهاهم عن فاحشة لم يسبقهم بها أحد، فأصرّوا وكذّبوا، فنجّاه الله وأهله إلا امرأته وأمطر عليهم حجارة.",
@@ -57,7 +90,18 @@
    "lessonEn": "Sound nature must be protected."
   },
   {
-   "id": "p6",
+   "id": "p9",
+   "nameAr": "شعيب",
+   "nameEn": "Shu‘ayb",
+   "bodyAr": "أُرسل إلى أهل مدين وكانوا يطففون الكيل والميزان، فدعاهم إلى العدل في البيع وعبادة الله وحده، فكذّبه أكثرهم فأخذتهم الصيحة.",
+   "bodyEn": "He was sent to the people of Madyan, who cheated in measure and weight. He called them to honesty in trade and to worship Allah alone; most denied him and the Cry seized them.",
+   "refAr": "هود ٨٤–٩٥ · الأعراف ٨٥–٩٣",
+   "refEn": "Hud 84–95 · Al-A‘raf 85–93",
+   "lessonAr": "الأمانة في المعاملات من الإيمان.",
+   "lessonEn": "Honesty in dealings is part of faith."
+  },
+  {
+   "id": "p10",
    "nameAr": "يوسف",
    "nameEn": "Yusuf (Joseph)",
    "bodyAr": "رأى يوسف رؤيا في صغره، فكاده إخوته وألقوه في الجب، ثم بيع في مصر، وصبر على فتنة وسجن، ثم مكّن الله له وصار على خزائن الأرض، وجمع الله شمله بأهله.",
@@ -68,7 +112,7 @@
    "lessonEn": "“The best of stories”: patience, forgiveness and trust in Allah’s plan."
   },
   {
-   "id": "p7",
+   "id": "p11",
    "nameAr": "أيوب",
    "nameEn": "Ayyub (Job)",
    "bodyAr": "ابتلاه الله في جسده وماله وأهله فصبر صبرًا جميلًا ولم يشكُ إلا إلى الله، فكشف الله ضرّه وأعاد إليه أهله ومثلهم معهم.",
@@ -79,7 +123,7 @@
    "lessonEn": "Patience in hardship is followed by relief."
   },
   {
-   "id": "p8",
+   "id": "p12",
    "nameAr": "موسى",
    "nameEn": "Musa (Moses)",
    "bodyAr": "وُلد موسى عليه السلام في زمن فرعون الذي كان يقتل أبناء بني إسرائيل، فحفظه الله وربّاه في قصر فرعون. ثم كلّمه الله وأرسله إلى فرعون وقومه، وشقّ له البحر فنجا هو ومن معه وأغرق الله فرعون.",
@@ -90,7 +134,40 @@
    "lessonEn": "Allah supports the oppressed through faith and patience."
   },
   {
-   "id": "p9",
+   "id": "p13",
+   "nameAr": "هارون",
+   "nameEn": "Harun (Aaron)",
+   "bodyAr": "أخو موسى ووزيره، سأل موسى ربه أن يشركه في أمره، فكان عونًا له في دعوة فرعون وفي قومه.",
+   "bodyEn": "The brother and helper of Musa, who asked his Lord to let Harun share his mission; he supported him before Pharaoh and among their people.",
+   "refAr": "طه ٢٩–٣٦ · الأعراف ١٤٢",
+   "refEn": "Ta-Ha 29–36 · Al-A‘raf 142",
+   "lessonAr": "التعاون على الدعوة والخير.",
+   "lessonEn": "Cooperation in calling to good."
+  },
+  {
+   "id": "p14",
+   "nameAr": "موسى والخضر",
+   "nameEn": "Musa and al-Khidr",
+   "bodyAr": "طلب موسى أن يتعلم من عبد آتاه الله علمًا، فرافقه وشاهد أمورًا خفيت حكمتها عليه، ثم بيّن له الخضر أسرارها.",
+   "bodyEn": "Musa sought to learn from a servant to whom Allah had given knowledge. He accompanied him and witnessed events whose wisdom was hidden from him until al-Khidr explained them.",
+   "refAr": "الكهف ٦٠–٨٢",
+   "refEn": "Al-Kahf 60–82",
+   "lessonAr": "الصبر وسعة علم الله وحكمته.",
+   "lessonEn": "Patience, and the vastness of Allah’s knowledge and wisdom."
+  },
+  {
+   "id": "p15",
+   "nameAr": "طالوت وجالوت",
+   "nameEn": "Talut and Jalut",
+   "bodyAr": "اختار الله طالوتًا ملكًا لبني إسرائيل، فاختبرهم بالنهر، وقلّة ثبتت، فانتصر الجيش الصغير بإذن الله وقتل داود جالوت.",
+   "bodyEn": "Allah chose Talut as king of Bani Isra’il and tested them at a river; only a few remained firm, and the small army prevailed by Allah’s leave, with Dawud slaying Jalut.",
+   "refAr": "البقرة ٢٤٦–٢٥١",
+   "refEn": "Al-Baqarah 246–251",
+   "lessonAr": "النصر من عند الله لا بالكثرة.",
+   "lessonEn": "Victory is from Allah, not from numbers."
+  },
+  {
+   "id": "p16",
    "nameAr": "داود وسليمان",
    "nameEn": "Dawud and Sulayman",
    "bodyAr": "آتى الله داود الزبور وألان له الحديد وسخّر معه الجبال والطير. وورث سليمان ملكه، فسخّر الله له الريح والجن، وفهّمه منطق الطير والنمل، وكان شاكرًا.",
@@ -101,7 +178,29 @@
    "lessonEn": "Blessings call for gratitude."
   },
   {
-   "id": "p10",
+   "id": "p17",
+   "nameAr": "ذو القرنين",
+   "nameEn": "Dhul-Qarnayn",
+   "bodyAr": "ملك صالح مكّنه الله في الأرض، سار شرقًا وغربًا ينصر المظلوم ويقيم العدل، وبنى سدًّا يحمي قومًا من يأجوج ومأجوج، ونسب الفضل كله إلى ربه.",
+   "bodyEn": "A righteous ruler whom Allah established on earth. He travelled east and west upholding justice and helping the oppressed, built a barrier protecting a people from Ya’juj and Ma’juj, and ascribed all credit to his Lord.",
+   "refAr": "الكهف ٨٣–٩٨",
+   "refEn": "Al-Kahf 83–98",
+   "lessonAr": "القوة مع الإيمان والتواضع.",
+   "lessonEn": "Power joined with faith and humility."
+  },
+  {
+   "id": "p18",
+   "nameAr": "أصحاب الكهف",
+   "nameEn": "The Companions of the Cave",
+   "bodyAr": "فتية آمنوا بربهم فخافوا على دينهم فلجؤوا إلى كهف، فألقى الله عليهم نومًا طويلًا ثم بعثهم ليكونوا آية على البعث والقدرة.",
+   "bodyEn": "Young men who believed in their Lord and, fearing for their faith, took refuge in a cave. Allah cast a long sleep upon them and then raised them as a sign of resurrection and His power.",
+   "refAr": "الكهف ٩–٢٦",
+   "refEn": "Al-Kahf 9–26",
+   "lessonAr": "الثبات على الدين وقت الفتن.",
+   "lessonEn": "Holding to faith in times of trial."
+  },
+  {
+   "id": "p19",
    "nameAr": "يونس",
    "nameEn": "Yunus (Jonah)",
    "bodyAr": "ذهب يونس عليه السلام مغاضبًا قبل أن يؤذن له، فالتقمه الحوت، فنادى في الظلمات بدعاء التوحيد والتوبة المذكور في سورة الأنبياء (٨٧)، فنجّاه الله.",
@@ -112,7 +211,40 @@
    "lessonEn": "The supplication of Dhun-Nun relieves every distress."
   },
   {
-   "id": "p11",
+   "id": "p20",
+   "nameAr": "إلياس واليسع وذو الكفل",
+   "nameEn": "Ilyas, Al-Yasa‘ and Dhul-Kifl",
+   "bodyAr": "ذكر القرآن إلياس يدعو قومه إلى ترك عبادة بعل، وذكر اليسع وذا الكفل مع الأخيار من الأنبياء الصابرين.",
+   "bodyEn": "The Quran mentions Ilyas calling his people to abandon Ba‘l, and mentions Al-Yasa‘ and Dhul-Kifl among the steadfast, chosen prophets.",
+   "refAr": "الصافات ١٢٣–١٣٢ · الأنعام ٨٥–٨٦ · ص ٤٨",
+   "refEn": "As-Saffat 123–132 · Al-An‘am 85–86 · Sad 48",
+   "lessonAr": "الثبات على التوحيد.",
+   "lessonEn": "Steadfastness upon tawhid."
+  },
+  {
+   "id": "p21",
+   "nameAr": "زكريا ويحيى",
+   "nameEn": "Zakariyya and Yahya",
+   "bodyAr": "دعا زكريا ربه في كِبَر سنه أن يرزقه ولدًا، فبشّره الله بيحيى، وكان يحيى براً بوالديه تقيًّا وأوتي الحكم صبيًّا.",
+   "bodyEn": "In old age Zakariyya called upon his Lord for a child, and Allah gave him the good news of Yahya, who was dutiful to his parents and devout, and was given wisdom as a boy.",
+   "refAr": "مريم ١–١٥ · آل عمران ٣٧–٤١",
+   "refEn": "Maryam 1–15 · Al ‘Imran 37–41",
+   "lessonAr": "لا يأس من رحمة الله مهما بلغ العمر.",
+   "lessonEn": "Never despair of Allah’s mercy, whatever one’s age."
+  },
+  {
+   "id": "p22",
+   "nameAr": "مريم",
+   "nameEn": "Maryam (Mary)",
+   "bodyAr": "اصطفاها الله وطهّرها، ونذرتها أمها لخدمة بيت الله، وكفلها زكريا. بشّرتها الملائكة بعيسى فوُلد بأمر الله دون أب.",
+   "bodyEn": "Allah chose and purified her; her mother dedicated her to the service of the House, and Zakariyya took care of her. The angels gave her the news of ‘Isa, who was born by Allah’s command without a father.",
+   "refAr": "آل عمران ٣٥–٤٧ · مريم ١٦–٣٣",
+   "refEn": "Al ‘Imran 35–47 · Maryam 16–33",
+   "lessonAr": "العفة والتوكل على الله.",
+   "lessonEn": "Chastity and reliance on Allah."
+  },
+  {
+   "id": "p23",
    "nameAr": "عيسى",
    "nameEn": "‘Isa (Jesus)",
    "bodyAr": "وُلد عيسى عليه السلام من مريم العذراء بأمر الله دون أب، وتكلّم في المهد، وأيّده الله بالمعجزات بإذنه، ودعا بني إسرائيل إلى عبادة الله وحده، ورفعه الله إليه.",
@@ -121,6 +253,28 @@
    "refEn": "Maryam 16–36 · Al ‘Imran 45–59",
    "lessonAr": "عبد الله ورسوله وكلمته ألقاها إلى مريم.",
    "lessonEn": "The servant and messenger of Allah, His word cast to Maryam."
+  },
+  {
+   "id": "p24",
+   "nameAr": "لقمان",
+   "nameEn": "Luqman",
+   "bodyAr": "عبد صالح آتاه الله الحكمة، وأوصى ابنه بتوحيد الله وبرّ الوالدين وإقامة الصلاة والأمر بالمعروف والصبر والتواضع.",
+   "bodyEn": "A righteous servant to whom Allah gave wisdom. He advised his son to worship Allah alone, honour his parents, establish prayer, enjoin good, be patient and humble.",
+   "refAr": "لقمان ١٢–١٩",
+   "refEn": "Luqman 12–19",
+   "lessonAr": "الحكمة في تربية الأبناء.",
+   "lessonEn": "Wisdom in raising children."
+  },
+  {
+   "id": "p25",
+   "nameAr": "أصحاب الفيل",
+   "nameEn": "The People of the Elephant",
+   "bodyAr": "جاء أبرهة بجيش فيه فيل ليهدم الكعبة، فأرسل الله عليهم طيرًا أبابيل ترميهم بحجارة من سجّيل فجعلهم كعصف مأكول، في العام الذي وُلد فيه النبي ﷺ.",
+   "bodyEn": "Abrahah marched with an army and an elephant to destroy the Ka‘bah; Allah sent flocks of birds hurling stones of baked clay, leaving them like eaten straw — in the year the Prophet ﷺ was born.",
+   "refAr": "سورة الفيل",
+   "refEn": "Surat al-Fil (105)",
+   "lessonAr": "للبيت ربٌّ يحميه.",
+   "lessonEn": "The House has a Lord who protects it."
   }
  ]
 }
