@@ -41,6 +41,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  # Firebase 13 and GoogleSignIn 9 conflict on gtm-session-fetcher under
+  # SwiftPM; CocoaPods only resolves the pods actually used.
+  config:
+    enable-swift-package-manager: false
   assets:
     - assets/data/
     - assets/data/quran/
