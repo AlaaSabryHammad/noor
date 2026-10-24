@@ -1,0 +1,32 @@
+name: Update golden screenshots
+
+# Re-renders test/screens/shots on Windows, where the committed goldens are
+# made, and uploads them. Run it from the Actions tab after a UI change,
+# download the "goldens" artifact and commit its PNGs into test/screens/shots.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FLUTTER_VERSION: 3.47.7
+
+jobs:
+  render:
+    name: Render goldens (Windows)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter test test/screens --update-goldens
+      - uses: actions/upload-artifact@v4
+        with:
+          name: goldens
+          path: test/screens/shots/*.png
+          if-no-files-found: error

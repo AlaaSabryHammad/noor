@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   adhan: ^2.0.0+1
+  audio_service: ^0.18.19
   audio_session: ^0.2.2
   crypto: ^3.0.7
   firebase_auth: ^7.0.1
@@ -47,6 +48,7 @@ flutter:
   config:
     enable-swift-package-manager: false
   assets:
+    - assets/icon/artwork.jpg
     - assets/data/
     - assets/data/quran/
     - assets/data/books/

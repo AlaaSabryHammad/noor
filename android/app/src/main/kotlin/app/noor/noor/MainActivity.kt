@@ -1,5 +1,7 @@
 package app.noor.noor
 
-import io.flutter.embedding.android.FlutterActivity
+import com.ryanheise.audioservice.AudioServiceActivity
 
-class MainActivity : FlutterActivity()
+// Shares its Flutter engine with audio_service so playback controls in the
+// notification and on the lock screen reach the running app.
+class MainActivity : AudioServiceActivity()

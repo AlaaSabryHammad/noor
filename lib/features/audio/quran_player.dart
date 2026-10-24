@@ -1,12 +1,15 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:audio_session/audio_session.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
 import '../../core/providers.dart';
+import '../settings/settings_controller.dart';
+import 'system_audio.dart';
 
 /// Something the app-wide player can play: a surah by a reciter or a live radio.
 @immutable
@@ -76,7 +79,9 @@ abstract interface class AudioBackend {
   Stream<Duration?> get duration;
   Duration get currentPosition;
 
-  Future<void> load(List<Uri> urls, {int index = 0, Duration position = Duration.zero});
+  /// Replaces the list. [arabic] picks the language of the titles shown by
+  /// the system (lock screen, notification).
+  Future<void> load(List<AudioTrack> tracks, {int index = 0, Duration position = Duration.zero, bool arabic = true});
   Future<void> play();
   Future<void> pause();
   Future<void> seek(Duration position, {int? index});
@@ -112,14 +117,19 @@ class JustAudioBackend implements AudioBackend {
   Duration get currentPosition => _player.position;
 
   @override
-  Future<void> load(List<Uri> urls, {int index = 0, Duration position = Duration.zero}) async {
+  Future<void> load(List<AudioTrack> tracks, {int index = 0, Duration position = Duration.zero, bool arabic = true}) async {
     if (!_sessionReady) {
       // Long-form listening: keeps playing with the screen locked (iOS background mode "audio").
       final session = await AudioSession.instance;
       await session.configure(const AudioSessionConfiguration.music());
       _sessionReady = true;
     }
-    await _player.setAudioSources([for (final u in urls) AudioSource.uri(u)], initialIndex: index, initialPosition: position);
+    final handler = await initSystemAudio(_player);
+    final art = await artworkUri();
+    handler?.setItems([
+      for (final t in tracks) MediaItem(id: t.key, title: t.title(arabic), artist: t.subtitle(arabic), album: arabic ? 'نور' : 'NOOR', artUri: art, isLive: t.live),
+    ], index);
+    await _player.setAudioSources([for (final t in tracks) AudioSource.uri(t.url)], initialIndex: index, initialPosition: position);
   }
 
   @override
@@ -260,7 +270,7 @@ class QuranPlayer extends Notifier<PlayerSnapshot> {
     final i = start.clamp(0, tracks.length - 1);
     state = state.copyWith(queue: tracks, index: i, failed: false, loading: true);
     try {
-      await _b.load([for (final t in tracks) t.url], index: i, position: position);
+      await _b.load(tracks, index: i, position: position, arabic: ref.read(settingsProvider).locale.languageCode == 'ar');
       // Loaded; any later buffering is reported by the backend's own stream.
       state = state.copyWith(loading: false);
       await _b.setSpeed(tracks[i].live ? 1 : state.speed);

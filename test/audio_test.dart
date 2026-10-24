@@ -47,10 +47,13 @@ class FakeBackend implements AudioBackend {
   @override
   Duration get currentPosition => pos;
 
+  bool? arabic;
+
   @override
-  Future<void> load(List<Uri> urls, {int index = 0, Duration position = Duration.zero}) async {
+  Future<void> load(List<AudioTrack> tracks, {int index = 0, Duration position = Duration.zero, bool arabic = true}) async {
     if (failLoad) throw const SocketException('offline');
-    loaded = urls;
+    loaded = [for (final t in tracks) t.url];
+    this.arabic = arabic;
     loadIndex = index;
     loadPosition = position;
     indexC.add(index);
@@ -211,6 +214,7 @@ void main() {
       final s = c.read(quranPlayerProvider);
       expect(b.loaded, hasLength(3));
       expect(b.loadIndex, 1);
+      expect(b.arabic, isTrue); // lock-screen titles follow the app language
       expect(b.speed, 1.25);
       expect(b.repeat, ListenRepeat.one);
       expect(s.current!.surah, 2);
