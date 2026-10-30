@@ -5,10 +5,19 @@ import '../../core/providers.dart';
 import '../../l10n/app_localizations.dart';
 import '../settings/settings_controller.dart';
 import 'data/notification_scheduler.dart';
+import 'domain/alert_models.dart';
 import 'domain/alert_planner.dart';
 import 'prayer_providers.dart';
 
 final notificationSchedulerProvider = Provider<NotificationScheduler>((ref) => LocalNotificationScheduler());
+
+/// Self-check, test alert and settings shortcuts. The real scheduler provides them;
+/// any scheduler that does not (tests, unsupported platforms) gets a do-nothing one.
+final alertDiagnosticsProvider = Provider<AlertDiagnostics>((ref) {
+  final s = ref.watch(notificationSchedulerProvider);
+  if (s is AlertDiagnostics) return s as AlertDiagnostics;
+  return const NoopAlertDiagnostics();
+});
 
 const _kAsked = 'prayer.notifPermissionAsked';
 
@@ -43,6 +52,7 @@ final alertSyncProvider = Provider<void>((ref) {
           enabled: enabled,
           now: DateTime.now(),
           l: l,
+          sound: ref.read(alertSoundProvider),
         ));
       } while (dirty);
     } finally {
@@ -52,6 +62,7 @@ final alertSyncProvider = Provider<void>((ref) {
 
   ref.listen(prayerLocationProvider, (_, _) => run());
   ref.listen(prayerAlertsProvider, (_, _) => run());
+  ref.listen(alertSoundProvider, (_, _) => run());
   ref.listen(prayerRepositoryProvider, (_, _) => run()); // method or Asr rule changed
   ref.listen(settingsProvider.select((s) => s.locale), (_, _) => run());
   final lifecycle = AppLifecycleListener(onResume: run);

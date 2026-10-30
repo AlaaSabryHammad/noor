@@ -6,6 +6,7 @@ import 'package:noor/core/providers.dart';
 import 'package:noor/features/prayer/alert_sync.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/data/prayer_times_repository.dart';
+import 'package:noor/features/prayer/domain/alert_models.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
 import 'package:noor/features/prayer/domain/prayer_models.dart';
 import 'package:noor/features/prayer/prayer_providers.dart';
@@ -82,5 +83,26 @@ void main() {
     c.read(settingsProvider.notifier).setLocale(const Locale('en'));
     await Future<void>.delayed(const Duration(milliseconds: 20));
     expect(fake.plans.last.first.title, startsWith("It's time for"));
+  });
+
+  test('alerts carry the chosen sound, the adhan by default', () {
+    final plan = planAlerts(repo: repo, location: PrayerLocation.dammam, enabled: {PrayerKind.dhuhr}, now: now, l: l);
+    expect(plan.every((a) => a.sound == AdhanSound.adhan), isTrue);
+    final quiet = planAlerts(repo: repo, location: PrayerLocation.dammam, enabled: {PrayerKind.dhuhr}, now: now, l: l, sound: AdhanSound.silent);
+    expect(quiet.every((a) => a.sound == AdhanSound.silent), isTrue);
+  });
+
+  test('the sound choice is restored on the next launch and falls back to the adhan on bad data', () async {
+    SharedPreferences.setMockInitialValues({'prayer.alertSound': 'tone'});
+    var prefs = await SharedPreferences.getInstance();
+    var c = ProviderContainer(overrides: [sharedPreferencesProvider.overrideWithValue(prefs)]);
+    expect(c.read(alertSoundProvider), AdhanSound.tone);
+    c.dispose();
+
+    SharedPreferences.setMockInitialValues({'prayer.alertSound': 'nonsense'});
+    prefs = await SharedPreferences.getInstance();
+    c = ProviderContainer(overrides: [sharedPreferencesProvider.overrideWithValue(prefs)]);
+    addTearDown(c.dispose);
+    expect(c.read(alertSoundProvider), AdhanSound.adhan);
   });
 }

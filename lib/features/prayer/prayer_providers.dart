@@ -8,6 +8,7 @@ import '../../l10n/app_localizations.dart';
 import 'data/location_service.dart';
 import 'data/place_names.dart';
 import 'data/prayer_times_repository.dart';
+import 'domain/alert_models.dart';
 import 'domain/prayer_cities.dart';
 import 'domain/prayer_method.dart';
 import 'domain/prayer_models.dart';
@@ -170,6 +171,24 @@ class PrayerAlertsController extends Notifier<Set<PrayerKind>> {
 }
 
 final prayerAlertsProvider = NotifierProvider<PrayerAlertsController, Set<PrayerKind>>(PrayerAlertsController.new);
+
+/// What the alerts play: the adhan recording (default), the phone's tone, or vibration only. Persisted.
+class AlertSoundController extends Notifier<AdhanSound> {
+  static const _k = 'prayer.alertSound';
+
+  @override
+  AdhanSound build() {
+    final saved = ref.watch(sharedPreferencesProvider).getString(_k);
+    return AdhanSound.values.where((s) => s.name == saved).firstOrNull ?? AdhanSound.adhan;
+  }
+
+  void select(AdhanSound s) {
+    state = s;
+    ref.read(sharedPreferencesProvider).setString(_k, s.name);
+  }
+}
+
+final alertSoundProvider = NotifierProvider<AlertSoundController, AdhanSound>(AlertSoundController.new);
 
 String methodName(AppLocalizations l, PrayerMethod m) => switch (m) {
       PrayerMethod.ummAlQura => l.methodUmmAlQura,

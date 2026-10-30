@@ -12,6 +12,7 @@ import '../../core/utils/noor_format.dart';
 import '../../core/widgets/adaptive.dart';
 import '../../core/widgets/noor_widgets.dart';
 import '../../l10n/app_localizations.dart';
+import 'alert_settings_card.dart';
 import 'alert_sync.dart';
 import 'calc_sheet.dart';
 import 'domain/prayer_method.dart';
@@ -116,6 +117,7 @@ class PrayerScreen extends ConsumerWidget {
           ),
             ]);
           }),
+          const AlertSettingsCard(),
           const SizedBox(height: 12),
           Row(spacing: 10, crossAxisAlignment: CrossAxisAlignment.start, children: [
             Expanded(

@@ -1,15 +1,17 @@
 import '../../../l10n/app_localizations.dart';
 import '../data/prayer_times_repository.dart';
 import '../prayer_providers.dart' show prayerName;
+import 'alert_models.dart';
 import 'prayer_models.dart';
 
 /// One adhan notification to schedule. [time] is an absolute instant.
 class PlannedAlert {
-  const PlannedAlert({required this.id, required this.kind, required this.time, required this.title, required this.body});
+  const PlannedAlert({required this.id, required this.kind, required this.time, required this.title, required this.body, this.sound = AdhanSound.adhan});
   final int id;
   final PrayerKind kind;
   final DateTime time;
   final String title, body;
+  final AdhanSound sound;
 }
 
 /// iOS keeps at most 64 pending local notifications; 7 days × 5 prayers stays
@@ -25,6 +27,7 @@ List<PlannedAlert> planAlerts({
   required Set<PrayerKind> enabled,
   required DateTime now,
   required AppLocalizations l,
+  AdhanSound sound = AdhanSound.adhan,
   int days = alertHorizonDays,
 }) {
   final today = DateTime(now.year, now.month, now.day);
@@ -40,6 +43,7 @@ List<PlannedAlert> planAlerts({
         time: s.time,
         title: l.adhanNotifTitle(prayerName(l, s.kind, friday: day.isFriday)),
         body: place,
+        sound: sound,
       ));
     }
   }

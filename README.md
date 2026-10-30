@@ -18,6 +18,7 @@ Islamic companion app for Android and iOS, built with Flutter. Arabic-first (RTL
 | **Make-up tracker** | Missed prayers (per prayer, or whole days at once) and fasts still owed, with a made-up tally; stored on the device. |
 | **Sermons** | 15 Friday khutbahs (first and second khutbah, opening and closing formulas) across faith, worship, character, family, the heart and the seasons, plus the Farewell Sermon from authentic narrations. "This week’s khutbah" rotates weekly and switches to Ramadan / Dhul-Hijjah in season; adjustable text size, translation toggle, copy and save. |
 | **Prayer times** | On-device calculation with 11 methods (automatic by region, or your choice) and Shafi‘i/Hanafi Asr, Umm al-Qura Ramadan rule, 29 offline cities or GPS, scheduled adhan notifications. |
+| **Adhan alerts** | A real adhan recording at each prayer time (on the alarm volume, so it is heard even on silent; or the phone’s tone; or vibration only), a test button, a self-check of notification / exact-alarm permissions, and per-maker steps (Huawei, Xiaomi, Oppo, Vivo, Samsung) for phones that stop background apps. |
 | **Qibla** | Real compass with smoothing, calibration warning and an alignment haptic; preview slider only when the device has no sensor. |
 | **Adhkar & duas** | The complete Hisn al-Muslim (132 chapters, 267 adhkar, searchable), 12 curated categories with sources, 59 Quranic supplications taken verbatim from the dataset, per-day counters. |
 | **Books** | Forty Hadith of an-Nawawi, Forty Qudsi and Dehlawi (offline); Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasa’i, Ibn Majah and Malik fetched per chapter and cached. |
@@ -64,6 +65,7 @@ State is Riverpod; routing is go_router. Everything that touches the outside wor
 - Translation: Saheeh International via Tanzil.
 - Hadith text: [fawazahmed0/hadith-api](https://github.com/fawazahmed0/hadith-api) — The Unlicense.
 - Hisn al-Muslim: [YousefAsalya/Islamic-Pro-azkar-API](https://github.com/YousefAsalya/Islamic-Pro-azkar-API) — MIT (text by Sa‘id al-Qahtani).
+- Adhan alert sound: “Beautiful adhan” by Adam-synagda, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Beautiful_adhan.ogg) — **CC0**. Android uses `android/app/src/main/res/raw/adhan.ogg`; iOS uses `ios/Runner/adhan.caf` (its first 28 s, iOS’s limit for notification sounds).
 - Recitation: streamed from everyayah.com (reader) and mp3quran.net (Audio section, catalogue snapshot in `assets/data/audio.json`, refreshed in the background).
 - Tafsir: [spa5k/tafsir_api](https://github.com/spa5k/tafsir_api) — MIT, pinned to release v1.2.1.
 - Spotlights (`assets/data/spotlights.json`, `tool/build_spotlights.py`) and sermons (`assets/data/khutab.json`) were written for this app; Quranic quotations are copied from the bundled Tanzil text by `tool/build_khutab.py`, hadith cite collection and number.
