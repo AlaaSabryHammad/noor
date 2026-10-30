@@ -98,7 +98,7 @@ git add assets/data/privacy.json site && git commit -m "Privacy contact"
 firebase deploy --only hosting --project noor-app-alaa-4829
 ```
 
-Pages: `/privacy` and `/account-deletion` on `https://noor-app-alaa-4829.web.app`. The policy text was drafted from what the code does; have it reviewed before launch.
+Pages: `/privacy` and `/account-deletion` on `https://noor-app-alaa-4829.web.app`. They were generated on 2026-10-30 with the contact `alaa.handaza@gmail.com` (the same address appears in the in-app policy); regenerate with another `--email` to change it. The policy text was drafted from what the code does; have it reviewed before launch.
 
 ## 8. After the first upload
 
