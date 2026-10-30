@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ import 'package:noor/features/prayer/alert_sync.dart';
 import 'package:noor/features/prayer/data/notification_scheduler.dart';
 import 'package:noor/features/prayer/domain/alert_models.dart';
 import 'package:noor/features/prayer/domain/alert_planner.dart';
+import 'package:noor/features/prayer/domain/prayer_cities.dart';
 import 'package:noor/features/prayer/prayer_providers.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'test_clock.dart';
@@ -40,7 +42,8 @@ class FakeDiagnostics implements AlertDiagnostics {
 }
 
 Future<ProviderContainer> _open(WidgetTester tester, {AlertDiagnostics? diagnostics, _Scheduler? scheduler}) async {
-  SharedPreferences.setMockInitialValues({});
+  // A chosen city (so the "set your location" card is not in the way), and no automatic location request.
+  SharedPreferences.setMockInitialValues({'prayer.location': jsonEncode(prayerCities.first.toJson()), 'prayer.location.asked': true});
   final prefs = await SharedPreferences.getInstance();
   tester.view.physicalSize = const Size(390 * 3, 1400 * 3);
   tester.view.devicePixelRatio = 3;

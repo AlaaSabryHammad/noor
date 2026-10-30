@@ -18,6 +18,7 @@ import '../library/favorites.dart';
 import '../library/share_image.dart';
 import '../adhkar/adhkar_screen.dart' show adhkarTitle;
 import '../prayer/domain/prayer_models.dart';
+import '../prayer/locate_card.dart';
 import '../prayer/location_sheet.dart';
 import '../prayer/prayer_providers.dart';
 import '../quran/quran_data.dart';
@@ -85,7 +86,7 @@ class HomeScreen extends ConsumerWidget {
           const SizedBox(height: 18),
           NextPrayerHero(day: day, method: ref.watch(effectiveMethodProvider)),
           const SizedBox(height: 16),
-          if (!ref.watch(locationChosenProvider)) ...[const _LocateCard(), const SizedBox(height: 16)],
+          if (!ref.watch(locationChosenProvider)) ...[const LocateCard(), const SizedBox(height: 16)],
           const CrashConsentCard(), // one-time question; takes no space once answered
           if (day.isFriday) ...[_FridayCard(), const SizedBox(height: 16)],
           const _ContinueReadingCard(),
@@ -185,31 +186,6 @@ class _HeroPrayerCell extends StatelessWidget {
       child: Column(spacing: 3, children: [
         Text(prayerName(l, slot.kind, friday: friday), style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600, color: color), maxLines: 1, overflow: TextOverflow.fade),
         Text(NoorFormat.time(context, shown, withPeriod: false), style: TextStyle(fontSize: 11, color: color)),
-      ]),
-    );
-  }
-}
-
-/// Shown while times are for the Dammam default: nothing picked, location not allowed.
-class _LocateCard extends StatelessWidget {
-  const _LocateCard();
-  @override
-  Widget build(BuildContext context) {
-    final t = context.noor;
-    return NoorCard(
-      color: t.goldSoft,
-      borderColor: t.goldLine,
-      padding: const EdgeInsets.all(14),
-      onTap: () => showLocationSheet(context),
-      child: Row(spacing: 12, children: [
-        Icon(Icons.location_searching_rounded, color: t.goldText),
-        Expanded(
-          child: Text(
-            NoorFormat.tr(context, 'المواقيت الآن للدمام افتراضيًا. حدّد موقعك لمواقيت دقيقة لمدينتك.', 'Times are for Dammam by default. Set your location for exact times in your city.'),
-            style: const TextStyle(fontSize: 13.5, height: 1.5),
-          ),
-        ),
-        NoorPrimaryButton(label: NoorFormat.tr(context, 'حدّد موقعي', 'Set location'), soft: true, onPressed: () => showLocationSheet(context)),
       ]),
     );
   }

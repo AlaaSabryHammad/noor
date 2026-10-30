@@ -65,6 +65,7 @@ State is Riverpod; routing is go_router. Everything that touches the outside wor
 - Translation: Saheeh International via Tanzil.
 - Hadith text: [fawazahmed0/hadith-api](https://github.com/fawazahmed0/hadith-api) — The Unlicense.
 - Hisn al-Muslim: [YousefAsalya/Islamic-Pro-azkar-API](https://github.com/YousefAsalya/Islamic-Pro-azkar-API) — MIT (text by Sa‘id al-Qahtani).
+- City names (offline lookup of your location): [GeoNames](https://www.geonames.org) cities of 5,000+ people — **CC BY 4.0** (credited in *About*); `assets/data/places.json`, built by `tool/build_places.py`.
 - Adhan alert sound: “Beautiful adhan” by Adam-synagda, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Beautiful_adhan.ogg) — **CC0**. Android uses `android/app/src/main/res/raw/adhan.ogg`; iOS uses `ios/Runner/adhan.caf` (its first 28 s, iOS’s limit for notification sounds).
 - Recitation: streamed from everyayah.com (reader) and mp3quran.net (Audio section, catalogue snapshot in `assets/data/audio.json`, refreshed in the background).
 - Tafsir: [spa5k/tafsir_api](https://github.com/spa5k/tafsir_api) — MIT, pinned to release v1.2.1.

@@ -25,7 +25,7 @@ class VideoStrip extends StatelessWidget {
     final ar = NoorFormat.isAr(context);
     final scale = MediaQuery.textScalerOf(context).scale(1).clamp(1.0, 1.4);
     return SizedBox(
-      height: 112 + 50 * scale,
+      height: 112 + 58 * scale, // thumbnail + two text lines; the Latin font's lines are a little taller than the Arabic one's
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: padding,

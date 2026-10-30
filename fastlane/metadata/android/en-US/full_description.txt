@@ -1,0 +1,39 @@
+NOOR is a complete Islamic app: the Quran, prayer times, a real adhan, adhkar, the Qibla and more, in Arabic (RTL) and English, and most of it works offline.
+
+PRAYER TIMES AND ADHAN
+• Accurate times calculated on your device, with automatic location or any city in the world; your location is named even without internet.
+• Eleven calculation methods (Umm al-Qura, Muslim World League, Egyptian, Karachi and more), chosen automatically for your country, with the standard or Hanafi Asr rule.
+• A real adhan at every prayer time. Play it on the alarm volume so it is heard even when the phone is on silent, or choose the normal tone or vibration only.
+• A test button and a built-in check that tells you if your phone blocks background alerts.
+• A Qibla compass with calibration help.
+
+THE QURAN
+• The complete Quran in Uthmani script with the Saheeh International translation.
+• A smooth reader that remembers your place, offline search of the verses, and khatma tracking.
+• Several tafsir editions: Al-Muyassar, Al-Mukhtasar, As-Sa‘di, Al-Jalalayn, Ibn Kathir, Al-Baghawi, Al-Qurtubi and At-Tabari.
+• Ayah-by-ayah recitation by eight reciters, with repeat and speed control.
+
+AUDIO
+• More than 200 reciters, Quran radio, lessons and audio tafsir.
+• Keeps playing in the background and from the lock screen.
+
+ADHKAR AND DUAS
+• The complete Hisn al-Muslim (132 chapters), morning, evening, sleep and after-prayer adhkar, and the supplications of the Quran.
+• A counter for every dhikr, and a digital tasbeeh.
+
+HADITH AND LEARNING
+• The Forty Hadith of an-Nawawi, Hadith Qudsi and the Dehlawi Forty offline; Sahih al-Bukhari, Muslim and the Sunan books when online.
+• The Seerah, stories of the prophets, simple lessons (wudu, prayer, tajweed and more), questions and answers, the 99 Names of Allah and Friday sermons.
+
+MUSLIM TOOLS
+• Hijri calendar with occasions, Ramadan tracker, Hajj and Umrah guide, zakat calculator.
+• Daily worship planner, qada prayer tracker, in-app search, share verses as images, and a Kids corner.
+• Light and dark themes.
+
+YOUR PRIVACY
+• No ads and no tracking tools.
+• An account is optional (e-mail, Google, Apple or guest) and can be deleted in the app.
+• Crash reports are optional and sent only if you agree.
+• Your location is used on your device to calculate prayer times and the Qibla.
+
+Note: the content is for learning and reminding; for religious rulings consult trusted scholars.

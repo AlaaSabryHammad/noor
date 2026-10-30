@@ -155,6 +155,44 @@ void main() {
     expect(c.read(prayerLocationProvider), prayerCities.first);
   });
 
+  test('a first launch that got no answer (GPS without a fix, location switched off) asks again next time', () async {
+    for (final failure in [LocationFailure.unavailable, LocationFailure.serviceOff]) {
+      final c = await _container(LocationResult.fail(failure));
+      final ctrl = c.read(prayerLocationProvider.notifier);
+      final gps = c.read(locationServiceProvider) as _Fake;
+      await ctrl.bootstrap();
+      await ctrl.bootstrap();
+      expect(gps.prompts, [true, true], reason: '$failure: nothing was decided, so it is not "asked"');
+      gps.result = const LocationResult.ok(28.4328, 45.9708);
+      await ctrl.bootstrap();
+      expect(c.read(locationChosenProvider), isTrue, reason: '$failure: the third try works');
+    }
+  });
+
+  test('a remembered position (weak signal) is used and known to be old; a new fix is not', () async {
+    expect(const LocationResult.ok(1, 2).stale, isFalse);
+    expect(const LocationResult.ok(1, 2, age: Duration(minutes: 9)).stale, isFalse);
+    expect(const LocationResult.ok(1, 2, age: Duration(minutes: 70)).stale, isTrue);
+
+    final c = await _container(const LocationResult.ok(28.4328, 45.9708, age: Duration(minutes: 70), accuracyMeters: 20), const {}, _Namer(_hafar));
+    final ctrl = c.read(prayerLocationProvider.notifier);
+    expect(await ctrl.useDeviceLocation(), isNull, reason: 'better than staying on the default city');
+    expect(c.read(prayerLocationProvider).nameEn, startsWith('Hafar'));
+    expect((ctrl.lastFixStale, ctrl.lastFixAge), (true, const Duration(minutes: 70)));
+
+    (c.read(locationServiceProvider) as _Fake).result = const LocationResult.ok(28.4329, 45.9709, accuracyMeters: 12);
+    await ctrl.useDeviceLocation();
+    expect((ctrl.lastFixStale, ctrl.lastFixAccuracy), (false, 12.0));
+  });
+
+  test('a first launch interrupted behind the permission dialog is not counted as asked', () async {
+    // The app is closed while the dialog is up: bootstrap never finishes, so nothing is saved.
+    final c = await _container(const LocationResult.fail(LocationFailure.denied));
+    expect(c.read(sharedPreferencesProvider).containsKey('prayer.location.asked'), isFalse);
+    await c.read(prayerLocationProvider.notifier).bootstrap();
+    expect(c.read(sharedPreferencesProvider).getBool('prayer.location.asked'), isTrue, reason: 'an answer was given');
+  });
+
   test('a place found by name keeps its exact coordinates and the device time zone', () async {
     final c = await _container(const LocationResult.fail(LocationFailure.unavailable));
     final hits = await c.read(placeNamerProvider).search('حفر الباطن');

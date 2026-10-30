@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24",
+ "updated": "2026-10-30",
  "sections": [
   {
    "id": "summary",
@@ -33,10 +33,12 @@
    "titleEn": "Location",
    "ar": [
     "إذا سمحت بالوصول إلى الموقع تُحسب مواقيت الصلاة واتجاه القبلة على جهازك نفسه. لا يُرسل موقعك إلينا ولا يُخزَّن على أي خادم لدينا. يمكنك أيضًا اختيار مدينة يدويًا دون منح إذن الموقع.",
+    "لعرض اسم مدينتك قد تتلقى خدمة الخرائط في هاتفك (خدمة Google على أندرويد وApple على iOS) إحداثيات موقعك لتحويلها إلى اسم مدينة. وإن لم تتوفر هذه الخدمة يستعمل التطبيق قائمة مدن مضمّنة فيه دون إرسال شيء.",
     "عند الضغط على «مساجد قريبة» يفتح التطبيق رابط بحث في تطبيق الخرائط أو المتصفح (خرائط Google) متضمنًا إحداثيات موقعك، فتخضع للخدمة التي تفتح الرابط ولسياستها."
    ],
    "en": [
     "If you allow location access, prayer times and the Qibla direction are calculated on your device. Your location is not sent to us and is not stored on any server of ours. You can also pick a city manually without granting location permission.",
+    "To show your city’s name, your phone’s own map service (Google on Android, Apple on iOS) may receive your coordinates to turn them into a city name. When that service is not available the app uses a list of cities bundled with it and sends nothing.",
     "When you tap “Nearby mosques” the app opens a search link in your maps app or browser (Google Maps) that contains your coordinates, so that service and its policy apply to that request."
    ]
   },

@@ -22,6 +22,12 @@ String formatCoordinates(BuildContext context, double lat, double lng) {
   return ar ? '${part(lat, 'ش', 'ج')}، ${part(lng, 'ق', 'غ')}' : '${part(lat, 'N', 'S')}, ${part(lng, 'E', 'W')}';
 }
 
+/// "٧٠ دقيقة" / "3 hours": how old a remembered position is.
+String _age(BuildContext context, Duration d) {
+  if (d.inMinutes < 120) return NoorFormat.tr(context, '${NoorFormat.digits(context, d.inMinutes)} دقيقة', '${d.inMinutes} min');
+  return NoorFormat.tr(context, '${NoorFormat.digits(context, d.inHours)} ساعة', '${d.inHours} h');
+}
+
 class LocationSheet extends ConsumerStatefulWidget {
   const LocationSheet({super.key});
   @override
@@ -51,21 +57,43 @@ class _LocationSheetState extends ConsumerState<LocationSheet> {
     setState(() => _busy = false);
     if (failure == null) {
       final loc = ref.read(prayerLocationProvider);
+      final ctrl = ref.read(prayerLocationProvider.notifier);
+      final name = NoorFormat.isAr(context) ? loc.nameAr : loc.nameEn;
+      final String text;
+      if (ctrl.lastFixStale) {
+        // The signal was too weak for a new fix (indoors): say so, and how old the position is.
+        text = NoorFormat.tr(
+          context,
+          '$name — من آخر موقع معروف قبل ${_age(context, ctrl.lastFixAge)} لضعف الإشارة. اخرج إلى مكان مفتوح واضغط «تحديد موقعي الآن» لتحديث أدق.',
+          '$name — from the last known position, ${_age(context, ctrl.lastFixAge)} ago, because the signal is weak. Go outside and tap “Locate me now” for a fresh fix.',
+        );
+      } else {
+        final m = ctrl.lastFixAccuracy;
+        text = m == null || m <= 0 ? '${l.locationUpdated}: $name' : '${l.locationUpdated}: $name (${NoorFormat.tr(context, 'دقة ±${NoorFormat.digits(context, m.round())} م', '±${m.round()} m')})';
+      }
       nav.pop();
       messenger
         ..hideCurrentSnackBar()
-        ..showSnackBar(SnackBar(content: Text('${l.locationUpdated}: ${NoorFormat.isAr(context) ? loc.nameAr : loc.nameEn}', textAlign: TextAlign.center)));
+        ..showSnackBar(SnackBar(content: Text(text, textAlign: TextAlign.center), duration: Duration(seconds: ctrl.lastFixStale ? 9 : 4)));
       return;
     }
-    showNoorSnack(
-      context,
-      switch (failure) {
-        LocationFailure.serviceOff => l.locServiceOff,
-        LocationFailure.denied => l.locDenied,
-        LocationFailure.deniedForever => l.locDeniedForever,
-        LocationFailure.unavailable => l.locUnavailable,
-      },
+    final message = switch (failure) {
+      LocationFailure.serviceOff => l.locServiceOff,
+      LocationFailure.denied => l.locDenied,
+      LocationFailure.deniedForever => l.locDeniedForever,
+      LocationFailure.unavailable => l.locUnavailable,
+    };
+    // Say what to do about it: open the right system screen, or simply try again.
+    final fixInSettings = failure == LocationFailure.serviceOff || failure == LocationFailure.deniedForever;
+    final action = SnackBarAction(
+      label: fixInSettings
+          ? (failure == LocationFailure.serviceOff ? NoorFormat.tr(context, 'تفعيل الموقع', 'Turn on') : NoorFormat.tr(context, 'فتح الإعدادات', 'Open settings'))
+          : NoorFormat.tr(context, 'حاول مجددًا', 'Try again'),
+      onPressed: () => fixInSettings ? ref.read(openLocationSettingsProvider)(failure) : _useDevice(),
     );
+    messenger
+      ..hideCurrentSnackBar()
+      ..showSnackBar(SnackBar(content: Text(message), action: action, duration: const Duration(seconds: 8)));
   }
 
   void _onQuery(String v) {

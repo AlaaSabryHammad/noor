@@ -55,3 +55,6 @@ test/screens/failures/
 .claude-flow/
 .swarm/
 .mcp.json
+
+# Signed Play bundles (the upload keystore lives in android/keys, also ignored)
+release/

@@ -1,5 +1,7 @@
 # Release checklist
 
+> Google Play submission pack (signed bundle, graphics, listing text, form answers): **[PLAY_STORE.md](PLAY_STORE.md)**.
+
 What the code already does for store review, and what is still manual. Items marked ⚠️ cannot be done from the repository: they need an Apple Developer / Google Play / Firebase console account.
 
 ## Done in the code

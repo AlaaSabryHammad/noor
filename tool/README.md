@@ -19,4 +19,6 @@ Run everything from the project root with Python 3 (`python -I tool/<script>.py`
 | `quran_quote.py` | Not run directly: shared helpers that copy (and cut) Quranic text from the Quran files for the sermon and spotlight scripts. |
 | `build_books.py` | `assets/data/books/*` from the open hadith-api dataset (needs internet). |
 | `build_privacy.py . --email you@example.com` | The privacy policy: `assets/data/privacy.json` (in-app) and `site/privacy/index.html` (public page). The contact e-mail is passed on the command line, not stored. |
+| `build_places.py <geonames folder> .` | `assets/data/places.json`: about 50,000 towns from GeoNames (CC BY 4.0) that name the device location offline. Download `cities5000.zip` and `countryInfo.txt` from geonames.org into a folder of their own first. |
+| `store/store_graphics_test.dart` | Run with `flutter test tool/store/store_graphics_test.dart`: renders the Google Play graphics (icon, feature graphic, phone and 10-inch tablet screenshots, Arabic and English) into `fastlane/metadata/android/<locale>/images`. See `docs/PLAY_STORE.md`. |
 | `make_icons.py` | App icon: `assets/icon/noor_icon.png`, Android mipmaps, iOS AppIcon set (needs Pillow). |

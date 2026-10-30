@@ -33,6 +33,30 @@ String? composePlaceName(geo.Placemark p, {required bool arabic}) {
   return arabic ? '$city، $country' : '$city, $country';
 }
 
+/// The phone's map service first (it knows streets and districts), then the
+/// bundled list of towns when that service is missing, offline or empty.
+/// Searching by name needs the map service.
+class FallbackPlaceNamer implements PlaceNamer {
+  FallbackPlaceNamer(this.primary, this.offline);
+  final PlaceNamer primary;
+  final Future<PlaceName?> Function(double latitude, double longitude) offline;
+
+  @override
+  Future<PlaceName?> nameOf(double latitude, double longitude) async {
+    final named = await primary.nameOf(latitude, longitude);
+    if (named != null) return named;
+    try {
+      return await offline(latitude, longitude);
+    } catch (e) {
+      debugPrint('Offline place lookup failed: $e');
+      return null;
+    }
+  }
+
+  @override
+  Future<List<PlaceHit>> search(String query) => primary.search(query);
+}
+
 class PlatformPlaceNamer implements PlaceNamer {
   PlatformPlaceNamer();
 

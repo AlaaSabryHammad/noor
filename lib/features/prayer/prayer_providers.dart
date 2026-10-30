@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/providers.dart';
 import '../../l10n/app_localizations.dart';
 import 'data/location_service.dart';
+import 'data/offline_places.dart';
 import 'data/place_names.dart';
 import 'data/prayer_times_repository.dart';
 import 'domain/alert_models.dart';
@@ -49,7 +50,13 @@ final prayerRepositoryProvider = Provider<PrayerTimesRepository>((ref) => AdhanP
 
 final locationServiceProvider = Provider<LocationService>((ref) => const GeolocatorLocationService());
 
-final placeNamerProvider = Provider<PlaceNamer>((ref) => PlatformPlaceNamer());
+/// The bundled list of towns, decoded once and only when a name is needed that the phone's map service could not give.
+final offlinePlacesProvider = FutureProvider<OfflinePlaces>((ref) => OfflinePlaces.load(ref.watch(contentLoaderProvider)));
+
+final placeNamerProvider = Provider<PlaceNamer>((ref) => FallbackPlaceNamer(PlatformPlaceNamer(), (lat, lng) async => (await ref.read(offlinePlacesProvider.future)).nameOf(lat, lng)));
+
+/// Opens the system settings that can fix a location failure (app permission page, or the location switch).
+final openLocationSettingsProvider = Provider<Future<bool> Function(LocationFailure)>((ref) => openLocationSettingsFor);
 
 /// The active location: a picked city, a searched place or the device
 /// position, persisted. Dammam until the person allows location or chooses.
@@ -92,10 +99,19 @@ class PrayerLocationController extends Notifier<PrayerLocation> {
     return near != null ? (ar: near.nameAr, en: near.nameEn, country: null) : (ar: 'موقعي الحالي', en: 'My location', country: null);
   }
 
+  /// About the position [useDeviceLocation] last applied, for the message shown to the person.
+  Duration lastFixAge = Duration.zero;
+  double? lastFixAccuracy;
+
+  /// True when the last device position was a remembered one (weak signal), not a new fix.
+  bool get lastFixStale => lastFixAge > GeolocatorLocationService.maxFixAge;
+
   /// Uses the device position. Returns the failure, or null on success.
   Future<LocationFailure?> useDeviceLocation({bool prompt = true}) async {
     final r = await ref.read(locationServiceProvider).current(prompt: prompt);
     if (!r.ok) return r.failure;
+    lastFixAge = r.age;
+    lastFixAccuracy = r.accuracyMeters;
     final name = await _nameOf(r.latitude, r.longitude);
     select(PrayerLocation(nameAr: name.ar, nameEn: name.en, countryCode: name.country, latitude: r.latitude, longitude: r.longitude, fromDevice: true));
     return null;
@@ -110,8 +126,10 @@ class PrayerLocationController extends Notifier<PrayerLocation> {
     final prefs = ref.read(sharedPreferencesProvider);
     if (!chosen) {
       if (prefs.getBool(_kAsked) ?? false) return;
-      await prefs.setBool(_kAsked, true);
-      await useDeviceLocation();
+      final failure = await useDeviceLocation();
+      // "Asked" only once the person has answered (or it worked): if the app was closed behind the
+      // permission dialog, or the GPS had no fix yet, the next launch tries again.
+      if (failure == null || failure == LocationFailure.denied || failure == LocationFailure.deniedForever) await prefs.setBool(_kAsked, true);
       return;
     }
     if (!state.fromDevice) return;

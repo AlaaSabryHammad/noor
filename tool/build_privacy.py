@@ -2,6 +2,7 @@
 
   assets/data/privacy.json     read by the in-app screen (Settings > Privacy)
   site/privacy/index.html      the public page the app stores ask for (Firebase Hosting, see firebase.json)
+  site/account-deletion/index.html   how to delete an account (Google Play's "data deletion" link)
 
 Usage:  python -X utf8 tool/build_privacy.py . --email you@example.com [--name "Your name"]
 
@@ -14,7 +15,7 @@ import html
 import json
 import os
 
-UPDATED = "2026-10-24"
+UPDATED = "2026-10-30"
 
 # (id, titleAr, titleEn, [paragraphAr...], [paragraphEn...])
 SECTIONS = [
@@ -30,8 +31,10 @@ SECTIONS = [
       "This data is stored locally on your device, we cannot access it, and it is removed by clearing the app’s data or uninstalling the app."]),
     ("location", "الموقع", "Location",
      ["إذا سمحت بالوصول إلى الموقع تُحسب مواقيت الصلاة واتجاه القبلة على جهازك نفسه. لا يُرسل موقعك إلينا ولا يُخزَّن على أي خادم لدينا. يمكنك أيضًا اختيار مدينة يدويًا دون منح إذن الموقع.",
+      "لعرض اسم مدينتك قد تتلقى خدمة الخرائط في هاتفك (خدمة Google على أندرويد وApple على iOS) إحداثيات موقعك لتحويلها إلى اسم مدينة. وإن لم تتوفر هذه الخدمة يستعمل التطبيق قائمة مدن مضمّنة فيه دون إرسال شيء.",
       "عند الضغط على «مساجد قريبة» يفتح التطبيق رابط بحث في تطبيق الخرائط أو المتصفح (خرائط Google) متضمنًا إحداثيات موقعك، فتخضع للخدمة التي تفتح الرابط ولسياستها."],
      ["If you allow location access, prayer times and the Qibla direction are calculated on your device. Your location is not sent to us and is not stored on any server of ours. You can also pick a city manually without granting location permission.",
+      "To show your city’s name, your phone’s own map service (Google on Android, Apple on iOS) may receive your coordinates to turn them into a city name. When that service is not available the app uses a list of cities bundled with it and sends nothing.",
       "When you tap “Nearby mosques” the app opens a search link in your maps app or browser (Google Maps) that contains your coordinates, so that service and its policy apply to that request."]),
     ("account", "الحساب (اختياري)", "Account (optional)",
      ["الحساب اختياري. إذا أنشأت حسابًا أو سجّلت الدخول (بالبريد وكلمة المرور أو Google أو Apple أو كزائر) فالمصادقة تتم عبر خدمة Firebase Authentication من Google.",
@@ -130,6 +133,53 @@ def page(sections, email):
 """
 
 
+def deletion_page(email):
+    """The web page Google Play asks for: how to delete an account and its data (required for apps with accounts)."""
+    contact_ar = f"أرسل رسالة من البريد المسجّل في حسابك إلى {html.escape(email)} بعنوان «حذف الحساب»، وسنحذفه." if email else "راسلنا من البريد المسجّل في حسابك بعنوان «حذف الحساب»، وسنحذفه."
+    contact_en = f"Write from the e-mail registered on your account to {html.escape(email)} with the subject “Delete account” and we will delete it." if email else "Write to us from the e-mail registered on your account with the subject “Delete account” and we will delete it."
+    return f"""<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOOR | نور — Delete your account · حذف الحساب</title>
+<style>
+  :root {{ color-scheme: light dark; --bg:#faf9f5; --fg:#18231f; --muted:#5d6a64; --line:#e4e1d6; --accent:#0b6e5a; }}
+  @media (prefers-color-scheme: dark) {{ :root {{ --bg:#0f1714; --fg:#e8efe9; --muted:#9aa8a0; --line:#25322c; --accent:#5cc9ac; }} }}
+  body {{ margin:0; background:var(--bg); color:var(--fg); font:16px/1.85 system-ui, "Segoe UI", Tahoma, sans-serif; }}
+  main {{ max-width:46rem; margin:0 auto; padding:1.5rem 1.25rem 4rem; }}
+  h1 {{ font-size:1.5rem; margin:.5rem 0; }} h2 {{ font-size:1.1rem; margin:1.6rem 0 .25rem; color:var(--accent); }}
+  section + section {{ border-top:1px solid var(--line); margin-top:2.5rem; padding-top:1rem; }}
+</style>
+</head>
+<body>
+<main>
+<section lang="ar" dir="rtl">
+<h1>حذف حساب نور وبياناته</h1>
+<h2>من داخل التطبيق (الأسرع)</h2>
+<p>افتح الإعدادات ← حسابي ← حذف الحساب، ثم أكّد. يُحذف حسابك وبيانات الدخول المرتبطة به. إن كان حسابك بكلمة مرور فسيُطلب منك إدخالها، وإن كان بحساب Google أو Apple فستظهر نافذة الحساب للتأكيد.</p>
+<h2>إن لم يعد التطبيق متاحًا لديك</h2>
+<p>{contact_ar}</p>
+<h2>ما الذي يُحذف؟</h2>
+<p>عنوان البريد، والاسم وصورة الملف الشخصي إن وُجدا، ومعرّف المستخدم، وسجل طرق الدخول. لا نحفظ قراءتك ولا علاماتك على خوادمنا. ما على جهازك من إعدادات وتقدّم قراءة يبقى عليه حتى تمسح بيانات التطبيق أو تلغي تثبيته.</p>
+<p><a href="/privacy">سياسة الخصوصية</a></p>
+</section>
+<section lang="en" dir="ltr">
+<h1>Delete your NOOR account and its data</h1>
+<h2>In the app (fastest)</h2>
+<p>Open Settings → My account → Delete account, then confirm. Your account and its sign-in data are deleted. E-mail accounts are asked for the password; Google and Apple accounts confirm through their own sheet.</p>
+<h2>If you no longer have the app</h2>
+<p>{contact_en}</p>
+<h2>What is deleted?</h2>
+<p>Your e-mail address, name and profile photo if present, your user ID and your sign-in history. We do not store your reading or bookmarks on a server. Settings and reading progress on your device stay there until you clear the app’s data or uninstall it.</p>
+<p><a href="/privacy#en">Privacy Policy</a></p>
+</section>
+</main>
+</body>
+</html>
+"""
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("root", nargs="?", default=".")
@@ -148,6 +198,9 @@ def main():
         json.dump({"updated": UPDATED, "sections": [dict(id=i, titleAr=ta, titleEn=te, ar=pa, en=pe) for i, ta, te, pa, pe in sections]}, f, ensure_ascii=False, indent=1)
     with open(f"{a.root}/site/privacy/index.html", "w", encoding="utf-8") as f:
         f.write(page(sections, a.email))
+    os.makedirs(f"{a.root}/site/account-deletion", exist_ok=True)
+    with open(f"{a.root}/site/account-deletion/index.html", "w", encoding="utf-8") as f:
+        f.write(deletion_page(a.email.strip()))
     print(len(sections), "sections")
 
 

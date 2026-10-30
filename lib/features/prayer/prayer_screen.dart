@@ -17,6 +17,7 @@ import 'alert_sync.dart';
 import 'calc_sheet.dart';
 import 'domain/prayer_method.dart';
 import 'domain/prayer_models.dart';
+import 'locate_card.dart';
 import 'location_sheet.dart';
 import 'prayer_providers.dart';
 
@@ -52,6 +53,7 @@ class PrayerScreen extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 16),
+          if (!ref.watch(locationChosenProvider)) ...[const LocateCard(), const SizedBox(height: 16)],
           // Only this block follows the per-second clock.
           Consumer(builder: (context, ref, _) {
             final now = ref.watch(nowProvider);
